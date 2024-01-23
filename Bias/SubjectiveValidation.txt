@@ -1,0 +1,36 @@
+Definition of Subjective Validation: Subjective validation, also known as the personal validation effect, is a cognitive bias where people consider a statement or another piece of information to be correct if it has any personal meaning or significance to them12. This bias often leads people to perceive two unrelated events to be related because their personal beliefs demand that they be related1. An example of subjective validation can be seen when someone enjoys a certain food, and they come across an article that talks about that food being healthy. They will tend to believe it more because this “validates” their preference1.
+
+User Story: Let’s consider a user story that embodies this bias. Meet Lisa, a marketing manager. Lisa has always believed that her intuition about market trends is exceptionally accurate. One day, she reads a report that suggests a trend she had previously predicted is now emerging. Despite the fact that her previous predictions have not always been accurate, she takes this as validation of her belief in her intuitive abilities. This is an example of subjective validation, as Lisa is interpreting the information in a way that confirms her existing beliefs.
+
+Competency Questions: Based on the user story, here are some competency questions:
+
+What is the belief that Lisa is validating?
+What information does Lisa interpret as validation of her belief?
+How does subjective validation affect Lisa’s perception of her intuitive abilities?
+What might be the impact of subjective validation on Lisa’s decision-making process?
+I hope this helps with your project! If you have any more questions or need further assistance, feel free to ask.
+
+https://en.wikipedia.org/wiki/Subjective_validation
+https://www.alleydog.com/glossary/definition.php?term=Subjective+Validation
+https://www.youtube.com/watch?v=AfrJlanSCAI
+
+
+Classes:
+
+Cognitive Bias: This is the parent class for all cognitive biases.
+Subjective Validation: This is a subclass of Cognitive Bias. It represents the specific cognitive bias we’re focusing on.
+Properties:
+
+hasDefinition: This property links a cognitive bias to its definition.
+hasExample: This property links a cognitive bias to an example of the bias.
+affectsDecisionMaking: This property links a cognitive bias to the decision-making process it affects.
+Instances:
+
+Subjective Validation Instance: This is an instance of the Subjective Validation class. It represents a specific occurrence or example of Subjective Validation.
+Relationships:
+
+Subjective Validation Instance isA Subjective Validation
+Subjective Validation isA Cognitive Bias
+Subjective Validation hasDefinition "Subjective validation, sometimes called personal validation effect, is a cognitive bias by which people will consider a statement or another piece of information to be correct if it has any personal meaning or significance to them."1
+Subjective Validation Instance hasExample "A person enjoys going out dancing, medical evidence then proves that dancing is wonderful for promoting cardiac health. This 'validates' the importance of dancing to this person."
+Subjective Validation affectsDecisionMaking "Subjective validation can lead individuals to believe or accept an idea or statement if it presents to them in a personal and positive way."

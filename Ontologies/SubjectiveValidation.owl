@@ -1,0 +1,94 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.matteoguenci.it/CognitiveBiasOntology/SubjectiveValidation.owl#"
+     xml:base="http://www.matteoguenci.it/CognitiveBiasOntology/SubjectiveValidation.owl"
+     xmlns:dc="http://purl.org/dc/terms/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+
+    <owl:Ontology rdf:about="http://www.matteoguenci.it/CognitiveBiasOntology/SubjectiveValidation.owl">
+        <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl"/>
+        <dc:title xml:lang="en">Subjective Validation Ontology</dc:title>
+        <rdfs:comment xml:lang="en">An ontology representing the Subjective Validation as a specific cognitive bias.</rdfs:comment>
+    </owl:Ontology>
+
+    <!-- Classes -->
+    <owl:Class rdf:about="#CognitiveBias">
+        <rdfs:comment xml:lang="en">Parent class for all cognitive biases.</rdfs:comment>
+        <rdfs:label xml:lang="en">CognitiveBias</rdfs:label>
+    </owl:Class>
+
+    <owl:Class rdf:about="#SubjectiveValidation">
+        <rdfs:subClassOf rdf:resource="#CognitiveBias"/>
+        <rdfs:comment xml:lang="en">Represents the specific cognitive bias of considering information correct if it has personal meaning or significance to the individual.</rdfs:comment>
+        <rdfs:label xml:lang="en">SubjectiveValidation</rdfs:label>
+    </owl:Class>
+
+    <!-- Properties -->
+    <owl:ObjectProperty rdf:about="#hasDefinition">
+        <rdfs:domain rdf:resource="#CognitiveBias"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">hasDefinition</rdfs:label>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="#hasExample">
+        <rdfs:domain rdf:resource="#CognitiveBias"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">hasExample</rdfs:label>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="#affectsDecisionMaking">
+        <rdfs:domain rdf:resource="#CognitiveBias"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">affectsDecisionMaking</rdfs:label>
+    </owl:ObjectProperty>
+
+    <!-- Instances -->
+    <owl:NamedIndividual rdf:about="#SubjectiveValidationInstance">
+        <rdf:type rdf:resource="#SubjectiveValidation"/>
+        <rdf:type rdf:resource="#CognitiveBias"/>
+        <rdfs:label xml:lang="en">Subjective Validation Instance</rdfs:label>
+        <rdfs:comment xml:lang="en">Meet Lisa, a marketing manager. Lisa has always believed that her intuition about market trends is exceptionally accurate. One day, she reads a report that suggests a trend she had previously predicted is now emerging. Despite the fact that her previous predictions have not always been accurate, she takes this as validation of her belief in her intuitive abilities. This is an example of subjective validation, as Lisa is interpreting the information in a way that confirms her existing beliefs.</rdfs:comment>
+    </owl:NamedIndividual>
+
+    <!-- Relationships -->
+    <rdf:Description rdf:about="#SubjectiveValidationInstance">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+        <owl:onProperty rdf:resource="#isA"/>
+        <owl:allValuesFrom rdf:resource="#SubjectiveValidation"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="#SubjectiveValidation">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+        <owl:onProperty rdf:resource="#isA"/>
+        <owl:allValuesFrom rdf:resource="#CognitiveBias"/>
+        <rdfs:comment xml:lang="en">Subjective validation, sometimes called personal validation effect, is a cognitive bias by which people will consider a statement or another piece of information to be correct if it has any personal meaning or significance to them.</rdfs:comment>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="#SubjectiveValidationInstance">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+        <owl:onProperty rdf:resource="#hasExample"/>
+        <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">A person enjoys going out dancing, medical evidence then proves that dancing is wonderful for promoting cardiac health. This 'validates' the importance of dancing to this person.</rdfs:comment>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="#SubjectiveValidation">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+        <owl:onProperty rdf:resource="#hasDefinition"/>
+        <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Subjective validation, sometimes called personal validation effect, is a cognitive bias by which people will consider a statement or another piece of information to be correct if it has any personal meaning or significance to them.</rdfs:comment>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="#SubjectiveValidation">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+        <owl:onProperty rdf:resource="#affectsDecisionMaking"/>
+        <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Subjective validation can lead individuals to believe or accept an idea or statement if it presents to them in a personal and positive way.</rdfs:comment>
+    </rdf:Description>
+
+</rdf:RDF>

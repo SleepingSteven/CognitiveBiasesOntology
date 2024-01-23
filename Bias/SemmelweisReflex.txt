@@ -1,0 +1,34 @@
+Definition of Semmelweis Reflex: The Semmelweis Reflex, also known as the “Semmelweis Effect”, is a cognitive bias that describes the reflex-like tendency to reject new evidence or new knowledge because it contradicts established norms, beliefs, or paradigms1. This term is named after Ignaz Semmelweis, a Hungarian physician who discovered in 1847 that childbed fever mortality rates fell ten-fold when doctors disinfected their hands with a chlorine solution before moving from one patient to another1. Despite the overwhelming empirical evidence, his fellow doctors rejected his hand-washing suggestions, often for non-medical reasons1.
+
+User Story: Let’s consider a user story that embodies this bias. Meet Dr. Smith, a seasoned medical practitioner. Dr. Smith has always believed in a certain treatment method for a particular disease based on his years of experience. When a new research study comes out suggesting a more effective treatment method, Dr. Smith immediately dismisses it, believing that his tried-and-true method is superior. This is an example of the Semmelweis Reflex, as Dr. Smith is rejecting new knowledge that contradicts his established beliefs.
+
+Competency Questions: Based on the user story, here are some competency questions:
+
+What is the new knowledge that Dr. Smith is rejecting?
+What are the established beliefs that Dr. Smith holds?
+How does the Semmelweis Reflex affect Dr. Smith’s decision-making process?
+What might be the impact of the Semmelweis Reflex on the treatment outcomes of Dr. Smith’s patients?
+
+https://en.wikipedia.org/wiki/Semmelweis_reflex
+https://www.clearerthinking.org/post/semmelweis-reflex-definition-examples-and-effects
+
+
+Classes:
+
+Cognitive Bias: This is the parent class for all cognitive biases.
+Semmelweis Reflex: This is a subclass of Cognitive Bias. It represents the specific cognitive bias we’re focusing on.
+Properties:
+
+hasDefinition: This property links a cognitive bias to its definition.
+hasExample: This property links a cognitive bias to an example of the bias.
+affectsDecisionMaking: This property links a cognitive bias to the decision-making process it affects.
+Instances:
+
+Semmelweis Reflex Instance: This is an instance of the Semmelweis Reflex class. It represents a specific occurrence or example of Semmelweis Reflex.
+Relationships:
+
+Semmelweis Reflex Instance isA Semmelweis Reflex
+Semmelweis Reflex isA Cognitive Bias
+Semmelweis Reflex hasDefinition "The Semmelweis Reflex or 'Semmelweis Effect' is a metaphor for the reflex-like tendency to reject new evidence or new knowledge because it contradicts established norms, beliefs, or paradigms."1
+Semmelweis Reflex Instance hasExample "Dr. Smith, a seasoned medical practitioner, immediately dismisses a new research study suggesting a more effective treatment method, believing that his tried-and-true method is superior."
+Semmelweis Reflex affectsDecisionMaking "The Semmelweis Reflex can lead individuals to reject new ideas or discoveries that contradict their existing beliefs, affecting their decision-making process."

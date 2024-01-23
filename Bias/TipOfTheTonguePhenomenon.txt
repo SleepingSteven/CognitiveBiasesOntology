@@ -1,0 +1,37 @@
+Definition of Tip of the Tongue Phenomenon: The Tip of the Tongue (TOT) phenomenon, also known as lethologica, is a cognitive bias where an individual fails to retrieve a word or term from memory, despite having partial recall and the feeling that retrieval is imminent12. People experiencing the TOT phenomenon can often recall one or more features of the target word, such as the first letter, its syllabic stress, and words similar in sound, meaning, or both sound and meaning1. This phenomenon reveals that lexical access occurs in stages1.
+
+User Story: Let’s consider a user story that embodies this bias. Meet Emily, a college student. Emily is studying for her final exam in art history. While reviewing her notes, she comes across the name of a famous painting that she can’t fully remember. She knows that it’s a well-known work by Van Gogh, and she can vividly recall the image of the painting in her mind, but she just can’t seem to remember the name. She has a strong feeling that she knows the name and that she’s about to remember it any second now. This is an example of the Tip of the Tongue phenomenon.
+
+Competency Questions: Based on the user story, here are some competency questions:
+
+What is the information that Emily is trying to retrieve?
+What details can Emily recall about the information she’s trying to retrieve?
+How does the Tip of the Tongue phenomenon affect Emily’s study process?
+What might be the impact of the Tip of the Tongue phenomenon on Emily’s performance in her final exam?
+
+https://en.wikipedia.org/wiki/Tip_of_the_tongue
+https://psycnet.apa.org/record/2016-49439-002
+
+
+
+
+
+Classes:
+
+Cognitive Bias: This is the parent class for all cognitive biases.
+Tip of the Tongue Phenomenon: This is a subclass of Cognitive Bias. It represents the specific cognitive bias we’re focusing on.
+Properties:
+
+hasDefinition: This property links a cognitive bias to its definition.
+hasExample: This property links a cognitive bias to an example of the bias.
+affectsDecisionMaking: This property links a cognitive bias to the decision-making process it affects.
+Instances:
+
+Tip of the Tongue Phenomenon Instance: This is an instance of the Tip of the Tongue Phenomenon class. It represents a specific occurrence or example of Tip of the Tongue Phenomenon.
+Relationships:
+
+Tip of the Tongue Phenomenon Instance isA Tip of the Tongue Phenomenon
+Tip of the Tongue Phenomenon isA Cognitive Bias
+Tip of the Tongue Phenomenon hasDefinition "The Tip of the Tongue (TOT) phenomenon, also known as lethologica, is a cognitive bias where an individual fails to retrieve a word or term from memory, despite having partial recall and the feeling that retrieval is imminent."1
+Tip of the Tongue Phenomenon Instance hasExample "Emily, a college student, is studying for her final exam in art history. While reviewing her notes, she comes across the name of a famous painting that she can't fully remember. She knows that it's a well-known work by Van Gogh, and she can vividly recall the image of the painting in her mind, but she just can't seem to remember the name."
+Tip of the Tongue Phenomenon affectsDecisionMaking "The Tip of the Tongue Phenomenon can lead individuals to struggle with decision-making or communication when they are unable to fully retrieve information from their memory."

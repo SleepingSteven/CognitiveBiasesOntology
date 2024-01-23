@@ -1,0 +1,35 @@
+Definition of Continued Influence Effect: The Continued Influence Effect (CIE) is a cognitive bias referring to the tendency for misinformation to continue influencing people’s thinking and decision-making even after it has been corrected or debunked12. This effect occurs when individuals maintain their belief in false information, and it continues to shape their understanding and interpretation of related topics, despite being exposed to factual corrections1.
+
+User Story: Let’s consider a user story that embodies this bias. Meet Sarah, a health-conscious individual. Sarah read an article online claiming that drinking eight glasses of water a day is essential for good health. Later, she came across several scientific articles debunking this myth, explaining that the amount of water needed varies from person to person. However, despite reading these corrections, Sarah continues to believe in the “8 glasses a day” rule and makes sure to follow it religiously. This is an example of the Continued Influence Effect, as the debunked information continues to influence Sarah’s behavior.
+
+Competency Questions: Based on the user story, here are some competency questions:
+
+What is the misinformation that Sarah believes in?
+What corrections has Sarah been exposed to regarding this misinformation?
+Despite the corrections, how does the misinformation continue to influence Sarah’s behavior?
+What might be the impact of the Continued Influence Effect on Sarah’s health decisions?
+
+https://en.wikipedia.org/wiki/Confirmation_bias
+https://www.thebehavioralscientist.com/glossary/continued-influence-effect
+
+
+
+Classes:
+
+Cognitive Bias: This is the parent class for all cognitive biases.
+Continued Influence Effect: This is a subclass of Cognitive Bias. It represents the specific cognitive bias we’re focusing on.
+Properties:
+
+hasDefinition: This property links a cognitive bias to its definition.
+hasExample: This property links a cognitive bias to an example of the bias.
+affectsDecisionMaking: This property links a cognitive bias to the decision-making process it affects.
+Instances:
+
+Continued Influence Effect Instance: This is an instance of the Continued Influence Effect class. It represents a specific occurrence or example of Continued Influence Effect.
+Relationships:
+
+Continued Influence Effect Instance isA Continued Influence Effect
+Continued Influence Effect isA Cognitive Bias
+Continued Influence Effect hasDefinition "The Continued Influence Effect (CIE) is a psychological phenomenon referring to the tendency for misinformation to continue influencing people's thinking and decision-making even after it has been corrected or debunked."1
+Continued Influence Effect Instance hasExample "Despite reading several scientific articles debunking the myth that one needs to drink eight glasses of water a day, Sarah continues to believe in this rule and makes sure to follow it religiously."
+Continued Influence Effect affectsDecisionMaking "The Continued Influence Effect can lead individuals to make decisions based on misinformation, even after being exposed to factual corrections."

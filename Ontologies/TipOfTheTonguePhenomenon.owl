@@ -1,0 +1,94 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.matteoguenci.it/CognitiveBiasOntology/TipOfTheTonguePhenomenon.owl#"
+     xml:base="http://www.matteoguenci.it/CognitiveBiasOntology/TipOfTheTonguePhenomenon.owl"
+     xmlns:dc="http://purl.org/dc/terms/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+
+    <owl:Ontology rdf:about="http://www.matteoguenci.it/CognitiveBiasOntology/TipOfTheTonguePhenomenon.owl">
+        <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl"/>
+        <dc:title xml:lang="en">Tip of the Tongue Phenomenon Ontology</dc:title>
+        <rdfs:comment xml:lang="en">An ontology representing the Tip of the Tongue Phenomenon as a specific cognitive bias.</rdfs:comment>
+    </owl:Ontology>
+
+    <!-- Classes -->
+    <owl:Class rdf:about="#CognitiveBias">
+        <rdfs:comment xml:lang="en">Parent class for all cognitive biases.</rdfs:comment>
+        <rdfs:label xml:lang="en">CognitiveBias</rdfs:label>
+    </owl:Class>
+
+    <owl:Class rdf:about="#TipOfTheTonguePhenomenon">
+        <rdfs:subClassOf rdf:resource="#CognitiveBias"/>
+        <rdfs:comment xml:lang="en">Represents the specific cognitive bias where an individual fails to retrieve a word or term from memory, despite having partial recall and the feeling that retrieval is imminent.</rdfs:comment>
+        <rdfs:label xml:lang="en">TipOfTheTonguePhenomenon</rdfs:label>
+    </owl:Class>
+
+    <!-- Properties -->
+    <owl:ObjectProperty rdf:about="#hasDefinition">
+        <rdfs:domain rdf:resource="#CognitiveBias"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">hasDefinition</rdfs:label>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="#hasExample">
+        <rdfs:domain rdf:resource="#CognitiveBias"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">hasExample</rdfs:label>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="#affectsDecisionMaking">
+        <rdfs:domain rdf:resource="#CognitiveBias"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">affectsDecisionMaking</rdfs:label>
+    </owl:ObjectProperty>
+
+    <!-- Instances -->
+    <owl:NamedIndividual rdf:about="#TipOfTheTonguePhenomenonInstance">
+        <rdf:type rdf:resource="#TipOfTheTonguePhenomenon"/>
+        <rdf:type rdf:resource="#CognitiveBias"/>
+        <rdfs:label xml:lang="en">Tip of the Tongue Phenomenon Instance</rdfs:label>
+        <rdfs:comment xml:lang="en">Meet Emily, a college student. Emily is studying for her final exam in art history. While reviewing her notes, she comes across the name of a famous painting that she can’t fully remember. She knows that it’s a well-known work by Van Gogh, and she can vividly recall the image of the painting in her mind, but she just can’t seem to remember the name. She has a strong feeling that she knows the name and that she’s about to remember it any second now. This is an example of the Tip of the Tongue phenomenon.</rdfs:comment>
+    </owl:NamedIndividual>
+
+    <!-- Relationships -->
+    <rdf:Description rdf:about="#TipOfTheTonguePhenomenonInstance">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+        <owl:onProperty rdf:resource="#isA"/>
+        <owl:allValuesFrom rdf:resource="#TipOfTheTonguePhenomenon"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="#TipOfTheTonguePhenomenon">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+        <owl:onProperty rdf:resource="#isA"/>
+        <owl:allValuesFrom rdf:resource="#CognitiveBias"/>
+        <rdfs:comment xml:lang="en">The Tip of the Tongue (TOT) phenomenon, also known as lethologica, is a cognitive bias where an individual fails to retrieve a word or term from memory, despite having partial recall and the feeling that retrieval is imminent.</rdfs:comment>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="#TipOfTheTonguePhenomenonInstance">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+        <owl:onProperty rdf:resource="#hasExample"/>
+        <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Emily, a college student, is studying for her final exam in art history. While reviewing her notes, she comes across the name of a famous painting that she can't fully remember. She knows that it's a well-known work by Van Gogh, and she can vividly recall the image of the painting in her mind, but she just can't seem to remember the name.</rdfs:comment>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="#TipOfTheTonguePhenomenon">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+        <owl:onProperty rdf:resource="#hasDefinition"/>
+        <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The Tip of the Tongue (TOT) phenomenon, also known as lethologica, is a cognitive bias where an individual fails to retrieve a word or term from memory, despite having partial recall and the feeling that retrieval is imminent.</rdfs:comment>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="#TipOfTheTonguePhenomenon">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+        <owl:onProperty rdf:resource="#affectsDecisionMaking"/>
+        <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The Tip of the Tongue Phenomenon can lead individuals to struggle with decision-making or communication when they are unable to fully retrieve information from their memory.</rdfs:comment>
+    </rdf:Description>
+
+</rdf:RDF>

@@ -1,0 +1,35 @@
+Definition of Ostrich Effect: The Ostrich Effect is a cognitive bias where people tend to avoid potentially negative but useful information, such as feedback on progress, to avoid psychological discomfort1. This effect was originally coined by Galai & Sade (2003) and is named after the common (but false) legend that ostriches bury their heads in the sand to avoid danger1. For example, people might avoid checking their bank account balance after spending a lot of money1.
+
+User Story: Let’s consider a user story that embodies this bias. Meet John, a software developer. John has been working on a project for several months. He’s aware that there are some bugs in his code, but he’s been avoiding looking at the bug reports because he’s afraid of the amount of work it might involve. Even though addressing these bugs could improve the performance of his software, he chooses to focus on adding new features instead. This is an example of the Ostrich Effect, as John is avoiding potentially negative but useful information.
+
+Competency Questions: Based on the user story, here are some competency questions:
+
+What is the nature of the information that John is avoiding?
+How could addressing the avoided information potentially benefit John’s project?
+What actions does John take as a result of the Ostrich Effect?
+How does the Ostrich Effect impact the progress of John’s project?
+
+https://en.wikipedia.org/wiki/Ostrich_effect
+https://effectiviology.com/ostrich-effect/
+https://www.techtello.com/ostrich-effect/
+
+
+Classes:
+
+Cognitive Bias: This is the parent class for all cognitive biases.
+Ostrich Effect: This is a subclass of Cognitive Bias. It represents the specific cognitive bias we’re focusing on.
+Properties:
+
+hasDefinition: This property links a cognitive bias to its definition.
+hasExample: This property links a cognitive bias to an example of the bias.
+affectsDecisionMaking: This property links a cognitive bias to the decision-making process it affects.
+Instances:
+
+Ostrich Effect Instance: This is an instance of the Ostrich Effect class. It represents a specific occurrence or example of the Ostrich Effect.
+Relationships:
+
+Ostrich Effect Instance isA Ostrich Effect
+Ostrich Effect isA Cognitive Bias
+Ostrich Effect hasDefinition "The Ostrich Effect is a cognitive bias where people tend to avoid potentially negative but useful information, such as feedback on progress, to avoid psychological discomfort."
+Ostrich Effect Instance hasExample "John, a software developer, avoids looking at bug reports because he's afraid of the amount of work it might involve."
+Ostrich Effect affectsDecisionMaking "The Ostrich Effect can lead individuals to make decisions based on incomplete information, as they avoid confronting potentially negative information."
