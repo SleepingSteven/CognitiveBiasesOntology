@@ -34,3 +34,105 @@ Subjective Validation isA Cognitive Bias
 Subjective Validation hasDefinition "Subjective validation, sometimes called personal validation effect, is a cognitive bias by which people will consider a statement or another piece of information to be correct if it has any personal meaning or significance to them."1
 Subjective Validation Instance hasExample "A person enjoys going out dancing, medical evidence then proves that dancing is wonderful for promoting cardiac health. This 'validates' the importance of dancing to this person."
 Subjective Validation affectsDecisionMaking "Subjective validation can lead individuals to believe or accept an idea or statement if it presents to them in a personal and positive way."
+
+
+v2:
+
+**Subjective Validation**, also known as the **personal validation effect**, is a cognitive bias where people consider a statement or another piece of information to be correct if it has any personal meaning or significance to them¹². In other words, individuals are more likely to believe or accept an idea or statement if it presents to them in a personal and positive way¹.
+
+This bias often leads people to perceive two unrelated events to be related because their personal beliefs demand that they be related¹. It's closely related to the Forer effect and is an important element in cold reading¹. Subjective validation is considered to be the main reason behind most reports of paranormal phenomena¹.
+
+An example of subjective validation can be found in horoscopes, which often make vague, easily generalized personal statements, sometimes referred to as "Barnum statements", designed to apply to nearly any individual¹. This can cause one to attribute future success to the horoscope and feel as if their belief in it has been validated¹.
+
+In essence, subjective validation is a confirmation bias towards information that personally benefits one's self-esteem¹. Many of the validations that are given are not necessarily because they are true about recipients but because people wish it was true about themselves¹. This effect can be seen when it comes to health. For example, if someone enjoys eating bacon and they were to come across an article that talks about bacon being healthy, they will tend to believe it more because this "validates" eating more bacon¹.
+
+Origine: conversazione con Bing, 25/1/2024
+(1) Subjective validation - Wikipedia. https://en.wikipedia.org/wiki/Subjective_validation.
+(2) Subjective Validation definition | Psychology Glossary | AlleyDog.com. https://www.alleydog.com/glossary/definition.php?term=Subjective+Validation.
+(3) What is Subjective Validation? - Capable Men. https://capablemen.com/guides/what-is-subjective-validation/.
+
+
+Give me 10 example scenarios of the Subjective Validation cognitive bias
+
+Sure, here are 10 example scenarios where the Subjective Validation cognitive bias might be observed:
+
+1. **Horoscopes**: People often find personal meaning in their horoscope predictions, even though they are intentionally vague and could apply to anyone.
+2. **Psychic Readings**: Individuals may believe in a psychic's vague and general statements, interpreting them as highly accurate and personal.
+3. **Self-Help Books**: Readers might resonate with generic advice, believing it to be tailored specifically for them.
+4. **Health Myths**: Someone might believe a health myth that aligns with their habits or desires, like thinking chocolate has health benefits because they love eating it.
+5. **Superstitions**: People often believe in superstitions that promise good luck, like carrying a lucky charm, because they want them to be true.
+6. **Confirmation Bias in News**: Individuals might believe news stories or rumors that confirm their pre-existing beliefs, even if the information is unverified or false.
+7. **Investment Decisions**: An investor might interpret market trends in a way that confirms their investment strategy, even if the interpretation is objectively incorrect.
+8. **Educational Achievement**: A student might attribute their success to their intelligence and hard work, while attributing failure to external factors like an unfair test, thereby validating their self-perception.
+9. **Social Media**: Users might believe and share posts that align with their views, even if the posts contain misinformation.
+10. **Sports Rituals**: Athletes might follow specific rituals before a game (like wearing a lucky pair of socks), believing it will improve their performance, even though there's no objective correlation.
+
+Remember, Subjective Validation is a cognitive bias where people consider a statement or another piece of information to be correct if it has any personal meaning or significance to them. It's important to be aware of this bias as it can lead to the acceptance of false or misleading information.
+
+
+Consider the scenario "Social Media" and give me a small user story from it
+
+Sure, here's a small user story based on the "Social Media" scenario:
+
+> Meet Sarah, an active social media user who enjoys staying updated with the latest news and trends. One day, she came across a post claiming that a certain type of tea can cure common colds within a day. As a tea lover and someone who frequently suffers from colds, this information was very appealing to her.
+
+> The post was shared by a friend she trusts, and it had numerous likes and shares, which made it seem credible. Sarah felt a sense of validation because the post aligned with her love for tea and her desire to find easy remedies for colds. She immediately shared the post on her profile, believing she was helping her friends and followers.
+
+> This is an example of the Subjective Validation cognitive bias. Despite the lack of scientific evidence supporting the claim, Sarah believed the information because it had personal significance to her. The post validated her preferences and desires, leading her to accept and share the information.
+
+> A few days later, Sarah came across a reliable health website debunking the claim made in the post. She realized that she had fallen prey to misinformation due to her biases. This experience made Sarah more cautious about the information she consumes and shares on social media, reminding her of the importance of fact-checking and critical thinking.
+
+
+
+If you had to make an ontology of the "Subject Validation", what classes and properties would you create?
+
+Absolutely, let's expand the ontology of the "Subjective Validation" to include more classes and properties that capture the complexity of this cognitive bias:
+
+**Classes:**
+1. `Individual`: The person exhibiting the Subjective Validation.
+2. `Information`: The statement or piece of information that the individual finds personally meaningful or significant.
+3. `Context`: The specific situation or domain in which the Subjective Validation is being exhibited.
+4. `Source`: The origin of the information (e.g., media, word of mouth, etc.).
+5. `Belief`: The pre-existing beliefs of the individual that influence their interpretation of the information.
+6. `Emotion`: The feelings experienced by the individual when they encounter the information.
+7. `CognitiveBias`: The underlying cognitive biases that contribute to the Subjective Validation (e.g., confirmation bias, belief perseverance, etc.).
+
+**Properties:**
+1. `believes (Individual, Information)`: This property indicates that the individual believes in the information because it is personally meaningful or significant.
+2. `originatesFrom (Information, Source)`: This property indicates the source of the information.
+3. `exhibitsIn (Individual, Context)`: This property shows the context in which the individual is exhibiting the Subjective Validation.
+4. `influencedBy (Information, Belief)`: This property shows the pre-existing beliefs that influence the individual's interpretation of the information.
+5. `feels (Individual, Emotion)`: This property captures the emotions felt by the individual when they encounter the information.
+6. `involves (SubjectiveValidation, CognitiveBias)`: This property shows the cognitive biases that contribute to the Subjective Validation.
+
+This expanded ontology provides a deeper understanding of the Subjective Validation by considering the source of information, the emotional aspect, the pre-existing beliefs of the individual, and the underlying cognitive biases. It can be further refined or expanded based on the specific use case or domain of interest. Remember, the goal of an ontology is to model the domain of interest in a way that captures its essential aspects and allows for useful reasoning.
+
+now create a list of competency questions in the form of sparql queries and solve them with the ontology you created
+
+Sure, here are some competency questions that can be answered using the ontology of the "Subjective Validation", along with the corresponding SPARQL queries and their solutions:
+
+1. **Question**: Who are the individuals exhibiting the Subjective Validation?
+    - **SPARQL Query**: `SELECT ?individual WHERE { ?individual :experiences :SubjectiveValidation . }`
+    - **Solution**: This query would return all individuals who are experiencing the Subjective Validation.
+
+2. **Question**: What information do individuals find personally meaningful or significant?
+    - **SPARQL Query**: `SELECT ?information WHERE { ?individual :believes ?information . }`
+    - **Solution**: This query would return all pieces of information that individuals find personally meaningful or significant.
+
+3. **Question**: In what contexts is the Subjective Validation being exhibited?
+    - **SPARQL Query**: `SELECT DISTINCT ?context WHERE { :SubjectiveValidation :occursIn ?context . }`
+    - **Solution**: This query would return all unique contexts in which the Subjective Validation is being exhibited.
+
+4. **Question**: What are the sources of the information that individuals find personally meaningful or significant?
+    - **SPARQL Query**: `SELECT ?source WHERE { ?information :originatesFrom ?source . }`
+    - **Solution**: This query would return all sources of the information that individuals find personally meaningful or significant.
+
+5. **Question**: What emotions are felt by individuals when they encounter the information?
+    - **SPARQL Query**: `SELECT ?emotion WHERE { ?individual :feels ?emotion . }`
+    - **Solution**: This query would return all emotions felt by individuals when they encounter the information.
+
+6. **Question**: What cognitive biases contribute to the Subjective Validation?
+    - **SPARQL Query**: `SELECT ?cognitiveBias WHERE { :SubjectiveValidation :involves ?cognitiveBias . }`
+    - **Solution**: This query would return all cognitive biases that contribute to the Subjective Validation.
+
+Please note that these queries are hypothetical and would require a populated RDF dataset based on the ontology to return actual results. The ontology provides a framework for structuring this data, and SPARQL queries can then be used to retrieve specific information from the dataset.
