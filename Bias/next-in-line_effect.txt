@@ -1,0 +1,158 @@
+NEXT IN LINE EFFECT 
+
+Consulted Bibliography:
+These resources were consulted to compile a first understanding of the bias' behavior.
+
+Emilie E. Caron et. al. "Performance Anticipation Diminishes Memory: Evidence From a Simulated Classroom" Journal of Applied Research in Memory and Cognition, Issue 10, 2021: pp.479–489
+
+Paul Baybutt. "The Validity of Engineering Judgment and Expert Opinion in Hazard and Risk Analysis: The Influence of Cognitive Biases" Process Safety Progress (Vol.37, No.2), 2018: pp.205-210
+
+
+1.Give me a definition of the Next-in-line Effect
+
+The next-in-line effect is a cognitive bias that refers to the tendency of individuals to have impaired recall for information presented immediately before or after their own turn in a group setting, such as a conversation or a discussion. In other words, people are more likely to remember what the person before them said (the item just presented) and what they themselves said but may have difficulty recalling what others said in between. This bias is thought to be influenced by the cognitive load of preparing for one's own turn and the limited attention and processing resources available. The next-in-line effect can impact the accuracy of information retention and recall in group communication contexts.
+
+2. Give me 10 example scenarios of the Next-in-line Effect
+
+Certainly! Here are ten scenarios that illustrate the next-in-line effect:
+
+1. **Group Discussions:**
+   - During a team meeting, each member takes turns sharing their ideas. You may better remember the idea of the person who spoke just before or after you, but have difficulty recalling the contributions of others.
+
+2. **Classroom Settings:**
+   - In a classroom discussion, students may find it easier to remember the comments made by the student who spoke just before or after them, while having a fuzzier recollection of classmates' contributions in between.
+
+3. **Panel Interviews:**
+   - In a panel interview, job candidates may remember the responses of the person who answered just before or after them more vividly than those of the other interviewees.
+
+4. **Family Conversations:**
+   - During a family discussion, each member shares their thoughts on a topic. Individuals may recall the opinions of family members who spoke immediately before or after them more clearly than the perspectives shared by others.
+
+5. **Focus Group Discussions:**
+   - In a focus group, participants share their opinions on a product or topic. Individuals might remember the viewpoints of the person who spoke just before or after them, but struggle to recall the opinions expressed in the middle of the discussion.
+
+6. **Team Brainstorming Sessions:**
+   - In a team brainstorming session, team members take turns suggesting ideas. People may remember the ideas presented by the person before or after them but may forget some of the contributions made by others in between.
+
+7. **Conference Call Discussions:**
+   - During a conference call, participants contribute to the discussion. Individuals might better remember the statements made by the person who spoke just before or after them, while having a weaker memory of the intervening comments.
+
+8. **Debates:**
+   - In a debate, each participant presents arguments in turn. Debaters may recall the points made by the person who spoke just before or after them more clearly than the arguments put forth by others in the middle of the debate.
+
+9. **Roundtable Discussions:**
+   - In a roundtable discussion, participants share their perspectives on a topic. People may have a stronger memory of the comments made by the person who spoke just before or after them, with a potential decrease in recall for the contributions in between.
+
+10. **Social Gatherings:**
+    - In casual conversations among friends, people may remember the anecdotes or stories shared by the person who spoke just before or after them, while finding it more challenging to recall the details of stories told by others in the group.
+
+3. Consider the scenario "Roundtable Discussions" and give me a small user story from it
+
+User Story:
+User: Sarah, a marketing professional
+Objective: To actively participate in a roundtable discussion about the upcoming product launch strategy.
+Scenario: Sarah is part of a marketing team conducting a roundtable discussion to brainstorm ideas for the upcoming product launch. Each team member takes turns sharing their thoughts and suggestions. Sarah, enthusiastic about contributing her ideas, eagerly waits for her turn in the discussion.
+
+Impact of the Effect:
+As the roundtable discussion progresses, Sarah notices that she can recall the suggestions and insights of her colleagues who spoke just before and after her more vividly. However, she finds it challenging to remember the specific recommendations and perspectives shared by her teammates in the middle of the discussion. This next-in-line effect influences Sarah's ability to fully grasp and consider all the input provided during the roundtable, potentially leading to a bias in her decision-making process toward ideas presented in closer temporal proximity to her own contribution.
+
+4. If you should make an ontology of the "Next-in-line Effect", what classes and properties would you create?
+
+Creating an ontology for the "Next-in-line Effect" involves defining classes that represent various concepts related to this cognitive bias and establishing properties to describe relationships between these concepts. Here's a simplified representation:
+
+Classes:
+1. **Participant:**
+   - Represents an individual taking part in a discussion or conversation.
+
+2. **Turn:**
+   - Represents a specific instance of an individual expressing their thoughts or ideas during a conversation.
+
+3. **Memory Record:**
+   - Represents the memory of an individual regarding what was said during the conversation.
+
+4. **Discussion:**
+   - Represents the overall context of a conversation where participants take turns.
+
+Properties:
+1. **hasParticipant:**
+   - Describes the relationship between a Discussion and the Participants involved.
+
+2. **hasTurn:**
+   - Connects a Discussion to the sequence of Turns taken by the Participants.
+
+3. **nextTurn:**
+   - Establishes the sequential order of Turns in a Discussion.
+
+4. **hasMemoryRecord:**
+   - Connects a Participant to their Memory Record, indicating what they remember from the discussion.
+
+5. **remembers:**
+   - Describes the relationship between a Memory Record and the content of a specific Turn, indicating what the participant recalls.
+
+6. **contextOf:**
+   - Links a Turn to the overarching Discussion, providing context for when it occurred.
+
+By representing the "Next-in-line Effect" using this ontology, one can model the relationships between participants, their turns, memory records, and the overall discussion context. This structure allows for a more systematic analysis of how individuals remember and recall information based on the order of turns in a conversation. The ontology can be further expanded to include additional details and nuances related to the cognitive bias.
+
+5. COMPETENCY QUESTIONS (TO FIX WITH MY OWN ONTOLOGY)
+
+Competency Questions (Natural Language):
+
+1. **Participants and Turns:**
+   - *Who participated in the discussion?*
+   - *What turns did a specific participant take during the discussion?*
+
+2. **Sequential Order:**
+   - *In what order did participants take their turns?*
+   - *What was the turn that occurred immediately after a specific turn?*
+
+3. **Memory Recall:**
+   - *What did a participant remember from a specific turn?*
+   - *Can we identify the turns that a participant recalled most vividly?*
+
+4. **Discussion Context:**
+   - *What was the overall context of a particular turn in the discussion?*
+   - *Which participants contributed to a specific part of the discussion?*
+
+SPARQL Queries:
+
+1. **Participants and Turns:**
+   ```sparql
+   SELECT ?participant
+   WHERE {
+      ?discussion rdf:type :Discussion .
+      ?discussion :hasParticipant ?participant .
+   }
+   ```
+
+2. **Sequential Order:**
+   ```sparql
+   SELECT ?currentTurn ?nextTurn
+   WHERE {
+      ?discussion rdf:type :Discussion .
+      ?discussion :hasTurn ?currentTurn .
+      ?currentTurn :nextTurn ?nextTurn .
+   }
+   ```
+
+3. **Memory Recall:**
+   ```sparql
+   SELECT ?participant ?recalledTurn
+   WHERE {
+      ?participant rdf:type :Participant .
+      ?participant :hasMemoryRecord ?memoryRecord .
+      ?memoryRecord :remembers ?recalledTurn .
+   }
+   ```
+
+4. **Discussion Context:**
+   ```sparql
+   SELECT ?turn ?discussionContext
+   WHERE {
+      ?discussion rdf:type :Discussion .
+      ?discussion :hasTurn ?turn .
+      ?turn :contextOf ?discussionContext .
+   }
+   ```
+
+These SPARQL queries are basic representations and may need modification based on the specific structure and complexity of the ontology you decide to implement. The queries can be customized further to accommodate additional details and relationships within the ontology.

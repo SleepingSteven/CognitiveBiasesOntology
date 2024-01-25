@@ -1,0 +1,171 @@
+LEVELS OF PROCESSING EFFECT
+
+Consulted Bibliography:
+These resources were consulted to compile a first understanding of the bias' behavior.
+
+Bradford H.Challis, Boris M.Velichkovsky, Fergus I.M. Craik. "Levels-of-Processing Effects on a Variety of Memory Tasks: New Findings and Theoretical Implications" Consciousness and Cognition 5, 1996: pp.142-164.
+
+Jonas Everaert, Marlies Tierens, Kasia Uzieblo & Ernst H. W. Koster. "The indirect effect of attention bias on memory via interpretation bias: Evidence for the combined cognitive bias hypothesis in subclinical depression" Cognition & Emotion 27:8, 2013:pp.
+1450-1459, DOI: 10.1080/02699931.2013.787972
+
+
+
+1.Give me a definition of the Levels of Processing Effect 
+
+The Levels of Processing Effect refers to a phenomenon in cognitive psychology that suggests the depth at which information is processed during encoding significantly influences how well it is later remembered. Proposed by Craik and Lockhart in 1972, this theory contrasts with earlier models of memory that focused on the structural and sensory aspects of information processing. According to the Levels of Processing framework, the more deeply information is processed during encoding, the more likely it is to be retained and retrieved later. Levels of processing range from shallow to deep, with shallow processing involving superficial features like visual or phonemic characteristics, while deep processing involves meaningful analysis, semantic processing, and a more profound engagement with the information. In practical terms, if you associate new information with existing knowledge, think about its meaning, or relate it to personal experiences, you are more likely to remember it compared to simply repeating or rehearsing the information. This effect highlights the importance of the cognitive processes involved in encoding information for long-term memory storage.
+
+2. Give me 10 example scenarios of the Levels of Processing Effect 
+
+Sure, here are 10 example scenarios illustrating the Levels of Processing Effect:
+
+1. **Shallow Processing:**
+   - Scenario: Glancing briefly at a list of words and only focusing on their visual appearance without considering their meaning.
+
+2. **Deep Processing:**
+   - Scenario: Actively relating a new concept in psychology to personal experiences or memories, contemplating its real-world applications.
+
+3. **Shallow Processing:**
+   - Scenario: Repeating a phone number over and over without giving any thought to its meaning or relevance.
+
+4. **Deep Processing:**
+   - Scenario: Forming associations between historical events and understanding their impact on the present world, connecting the facts with broader contexts.
+
+5. **Shallow Processing:**
+   - Scenario: Reading a passage without paying attention to the meaning, merely scanning the words without comprehension.
+
+6. **Deep Processing:**
+   - Scenario: Studying for an exam by creating mind maps, summarizing information, and actively engaging with the material to understand it thoroughly.
+
+7. **Shallow Processing:**
+   - Scenario: Looking at a painting and only noticing the colors and shapes without considering the artist's intention or the story behind it.
+
+8. **Deep Processing:**
+   - Scenario: Learning a new language by understanding the cultural context of words and phrases, rather than just memorizing them mechanically.
+
+9. **Shallow Processing:**
+   - Scenario: Hearing a lecture without actively listening, allowing the information to pass without mentally engaging with the content.
+
+10. **Deep Processing:**
+    - Scenario: Teaching a concept to someone else, requiring a thorough understanding and processing of the information to explain it effectively.
+
+3. Consider the scenario number 10 "Deep Processing" and give me a small user story from it
+
+User Story: Deep Processing for Exam Preparation
+
+User: As a university student majoring in psychology.
+
+Objective: To enhance understanding and retention of complex psychological concepts for an upcoming exam.
+
+Scenario: I decide to employ deep processing by actively teaching a challenging concept, cognitive dissonance, to my roommate who has limited knowledge of psychology. I create a simplified presentation and engage in a conversation, breaking down the concept, providing real-life examples, and encouraging questions to ensure comprehension.
+
+Impact of the Effect: Through this approach, I not only solidify my own understanding of cognitive dissonance but also create a memorable and relatable context for the information. The act of teaching forces me to process the material deeply, establishing stronger neural connections. This deep processing enhances my ability to recall and apply the concept during the exam, ultimately improving my academic performance in psychology.
+
+4. If you should make an ontology of the "Levels of Processing Effect", what classes and properties would you create?
+
+Creating an ontology for the Levels of Processing Effect involves defining classes to represent key concepts and properties to capture relationships between these concepts. Here is a simplified ontology:
+
+Classes:
+1. **Information Processing Level:**
+   - Subclasses: Shallow Processing, Deep Processing
+
+2. **Encoding Activity:**
+   - Subclasses: Rehearsal, Semantic Analysis, Association
+
+3. **Memory Performance:**
+   - Subclasses: Short-term Memory, Long-term Memory
+
+4. **Stimulus Characteristics:**
+   - Subclasses: Visual Features, Auditory Features, Semantic Features
+
+Properties:
+1. **involvesProcessingLevel:**
+   - Domain: Encoding Activity
+   - Range: Information Processing Level
+   - Description: Represents the type of processing activity involved in encoding, linking an activity to its processing depth.
+
+2. **influencesMemoryPerformance:**
+   - Domain: Encoding Activity
+   - Range: Memory Performance
+   - Description: Captures the impact of different encoding activities on short-term or long-term memory.
+
+3. **hasStimulusCharacteristics:**
+   - Domain: Encoding Activity
+   - Range: Stimulus Characteristics
+   - Description: Relates encoding activities to the sensory features of the stimulus being processed.
+
+4. **enhancesRetrieval:**
+   - Domain: Information Processing Level
+   - Range: Memory Performance
+   - Description: Indicates how a particular level of processing enhances the retrieval of information from memory.
+
+5. **requiresCognitiveEngagement:**
+   - Domain: Encoding Activity
+   - Range: Boolean (True/False)
+   - Description: Specifies whether a particular encoding activity necessitates cognitive engagement for effective processing.
+
+This ontology provides a basic structure for understanding the Levels of Processing Effect, connecting different levels of information processing to encoding activities and their subsequent impact on memory performance. Depending on specific requirements, additional classes and properties could be added for a more comprehensive representation.
+
+5. COMPETENCY QUESTIONS (TO FIX WITH MY OWN ONTOLOGY)
+
+Competency Questions:
+
+1. **Natural Language:**
+   - What are the different types of encoding activities involved in the Levels of Processing Effect?
+   
+   **SPARQL Query:**
+   ```sparql
+   SELECT ?encodingActivity
+   WHERE {
+      ?encodingActivity rdf:type :EncodingActivity .
+   }
+   ```
+
+2. **Natural Language:**
+   - How does the depth of information processing influence long-term memory performance?
+
+   **SPARQL Query:**
+   ```sparql
+   SELECT ?processingLevel ?memoryPerformance
+   WHERE {
+      ?processingLevel rdf:type :InformationProcessingLevel .
+      ?encodingActivity :involvesProcessingLevel ?processingLevel .
+      ?encodingActivity :influencesMemoryPerformance ?memoryPerformance .
+      ?memoryPerformance rdf:type :LongTermMemory .
+   }
+   ```
+
+3. **Natural Language:**
+   - Which encoding activities require cognitive engagement for effective processing?
+
+   **SPARQL Query:**
+   ```sparql
+   SELECT ?encodingActivity
+   WHERE {
+      ?encodingActivity rdf:type :EncodingActivity .
+      ?encodingActivity :requiresCognitiveEngagement true .
+   }
+   ```
+
+4. **Natural Language:**
+   - What are the different stimulus characteristics associated with encoding activities?
+
+   **SPARQL Query:**
+   ```sparql
+   SELECT ?encodingActivity ?stimulusCharacteristics
+   WHERE {
+      ?encodingActivity rdf:type :EncodingActivity .
+      ?encodingActivity :hasStimulusCharacteristics ?stimulusCharacteristics .
+   }
+   ```
+
+5. **Natural Language:**
+   - How does deep processing enhance retrieval compared to shallow processing?
+
+   **SPARQL Query:**
+   ```sparql
+   SELECT ?deepProcessing ?enhancesRetrieval
+   WHERE {
+      ?deepProcessing rdf:type :InformationProcessingLevel .
+      ?deepProcessing :enhancesRetrieval ?enhancesRetrieval .
+   }
+   ```

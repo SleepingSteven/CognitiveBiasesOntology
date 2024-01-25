@@ -1,0 +1,151 @@
+TESTING EFFECT
+
+Consulted Bibliography:
+These resources were consulted to compile a first understanding of the bias' behavior.
+
+Dr.Darren H.Iwamoto et.al. "Analysing the efficacy of the testing effect using KahootTM on student performance" Turkish Online Journal of Distance Education-TOJDE, Volume: 18 Number: 2,  April 2017: pp.80-93
+
+Bert Jonsson, Lars Nyberg. "A Learning Method for All: The Testing Effect Is
+Independent of Cognitive Ability" Journal of Educational Psychology, advance online publication: 2020, September 28, DOI: http://dx.doi.org/10.1037/edu0000627
+
+
+1.Give me a definition of the Testing Effect
+
+The Testing Effect, also known as retrieval practice or the test-enhanced learning effect, refers to the phenomenon in cognitive psychology where the act of actively recalling information from memory through testing or self-assessment enhances long-term retention of that information. In other words, the process of retrieving information from memory, as opposed to passive learning methods such as re-reading or reviewing, strengthens the memory trace and improves subsequent recall.
+
+Research has shown that engaging in periodic testing or quizzing during the learning process can lead to better retention and long-term learning outcomes compared to passive study methods. The Testing Effect is a valuable concept in educational contexts and is often utilized as a powerful learning strategy to optimize memory retention and enhance overall learning effectiveness.
+
+2. Give me 10 example scenarios of the Testing Effect
+
+Certainly! Here are ten example scenarios that illustrate the Testing Effect:
+
+1. **Flashcard Quizzing:**
+   - Scenario: A student uses flashcards to study vocabulary. Instead of just reading through them, they cover one side and try to recall the term or concept on the other side before flipping it to check.
+
+2. **Practice Exams:**
+   - Scenario: A college student preparing for final exams takes practice tests under timed conditions to simulate the exam environment and enhance the retrieval of course material.
+
+3. **Self-Generated Questions:**
+   - Scenario: A learner creates their own questions based on the material they are studying and then answers those questions to reinforce the information.
+
+4. **Interactive Online Modules:**
+   - Scenario: An online learning platform incorporates interactive quizzes within its modules, encouraging learners to actively engage with and retrieve information during the learning process.
+
+5. **Group Quizzing:**
+   - Scenario: In a study group, members take turns quizzing each other on different topics, actively recalling and discussing information to deepen their understanding.
+
+6. **Daily Review Sessions:**
+   - Scenario: A professional learning a new skill schedules regular short review sessions to recall and reinforce key concepts learned during training.
+
+7. **Mind Mapping Retrieval:**
+   - Scenario: A student creates a mind map summarizing a topic from memory, actively recalling and organizing information without referring to textbooks or notes.
+
+8. **Peer Teaching:**
+   - Scenario: A student explains a concept to a peer or a study group, reinforcing their own understanding through the act of teaching and answering questions.
+
+9. **Spaced Retrieval Practice:**
+   - Scenario: Instead of cramming, a learner spaces out their study sessions over time, actively recalling information at increasing intervals to strengthen long-term retention.
+
+10. **Application-Based Testing:**
+    - Scenario: A programming student, instead of just reading code examples, actively writes and debugs code to apply and reinforce programming concepts.
+
+In these scenarios, the emphasis is on actively engaging with the material, whether through self-assessment, practice tests, discussions, or other forms of retrieval practice, to leverage the Testing Effect for improved learning outcomes.
+
+3. Consider the scenario "Group Quizzing" and give me a small user story from it
+
+**User Story: Enhancing Group Learning through Quizzing**
+
+**User:** 
+As a member of a study group preparing for our upcoming biology exam,
+
+**Objective:**
+I want to actively engage with the course material through group quizzing,
+
+**Scenario:**
+So that I can reinforce my understanding of key concepts and collaboratively fill gaps in my knowledge.
+
+**Impact of the Effect:**
+- **Improved Retention:** Actively participating in group quizzing sessions will leverage the Testing Effect, enhancing my ability to retain and recall important biology concepts.
+  
+- **Collaborative Learning:** By discussing and clarifying answers within the group, the Testing Effect not only benefits individual understanding but also fosters collaborative learning and a deeper grasp of the material.
+
+- **Effective Study Strategy:** Utilizing group quizzing as a study strategy ensures a dynamic and engaging learning environment, promoting active recall and reinforcing knowledge more effectively than passive study methods.
+
+- **Targeted Focus on Weaknesses:** The Testing Effect aids in identifying areas of weakness through feedback and adaptation, allowing the study group to tailor future sessions to address specific challenges and collectively improve overall comprehension.
+
+
+4. If you should make an ontology of the "testing effect", what classes and properties would you create?
+
+Creating an ontology for the "testing effect" involves defining classes, properties, and relationships to represent the key elements and interactions associated with this cognitive phenomenon. The "testing effect" refers to the enhanced retention and long-term learning that occurs when individuals actively retrieve information from memory. Here's a basic ontology structure:
+
+1. **Classes:**
+   - **Individual:** Represents a person engaged in the learning process.
+   - **LearningMaterial:** Represents the educational content or material being studied.
+   - **TestingEvent:** Represents an instance of actively recalling information through testing or self-assessment.
+
+2. **Properties:**
+   - **engagesInLearning:** Relates an Individual to the concept of actively participating in a learning process.
+   - **studiesMaterial:** Relates an Individual to LearningMaterial, indicating the educational content being studied.
+   - **participatesInTesting:** Relates an Individual to a TestingEvent, indicating their engagement in an active recall or testing session.
+
+3. **Relationships:**
+   - **EnhancesRetention:** Represents the impact of actively recalling information on long-term retention, connecting an Individual to a TestingEvent.
+
+4. **Axioms:**
+   - **Testing Effect Axiom:** States that active participation in testing or self-assessment enhances long-term retention and learning.
+
+With this ontology, you can model scenarios where individuals engage in learning activities, study specific educational materials, and participate in testing events to leverage the "testing effect" for improved retention. The ontology provides a foundation for representing and analyzing the relationships between individuals, learning materials, and testing events in the context of this cognitive phenomenon.
+
+5. COMPETENCY QUESTIONS (TO FIX WITH MY OWN ONTOLOGY)
+
+**Competency Questions:**
+
+1. **Natural Language:**
+   - *Which individuals have actively engaged in the learning process by participating in testing events?*
+
+   - *Can we identify the learning materials that were studied by individuals who experienced enhanced retention through the testing effect?*
+
+
+Which testing events have shown a notable impact on the enhancement of long-term retention for learning materials?
+
+Can we identify individuals who have consistently demonstrated improved retention through multiple testing events?
+
+2. **SPARQL Queries:**
+   
+   ```sparql
+   # Query 1: Retrieve individuals actively engaged in the learning process through testing events
+   SELECT ?individual
+   WHERE {
+     ?individual engagesInLearning ?testingEvent.
+     ?testingEvent rdf:type :TestingEvent.
+   }
+   ```
+
+   ```sparql
+   # Query 2: Identify learning materials studied by individuals who experienced enhanced retention through the testing effect
+   SELECT ?learningMaterial
+   WHERE {
+     ?individual participatesInTesting ?testingEvent.
+     ?testingEvent EnhancesRetention ?learningMaterial.
+   }
+   ```
+
+# Query 3: Retrieve testing events with a notable impact on long-term retention for learning materials
+SELECT ?testingEvent
+WHERE {
+  ?testingEvent rdf:type :TestingEvent.
+  ?testingEvent EnhancesRetention ?learningMaterial.
+}
+
+
+# Query 4: Identify individuals with consistent improved retention through multiple testing events
+SELECT ?individual
+WHERE {
+  ?individual engagesInLearning ?testingEvent.
+  ?testingEvent EnhancesRetention ?learningMaterial.
+}
+GROUP BY ?individual
+HAVING (COUNT(?testingEvent) > 1)
+
+
+These competency questions and SPARQL queries assume that the ontology uses the specified properties and classes to represent the relationships and events related to the "testing effect." Adjustments may be needed based on the specific implementation details of the ontology.

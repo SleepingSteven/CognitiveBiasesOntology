@@ -1,0 +1,189 @@
+GOOGLE EFFECT
+
+Consulted Bibliography:
+These resources were consulted to compile a first understanding of the bias' behavior.
+Dr. Asha Yadav. "‘Digital Amnesia’ on The Rise as We Outsource Our 
+Memory to The Web", Journal of Critical Reviews, Vol 6 Issue 03, 2019: pp.234-241.
+Jessica Siler, Kristy A. Hamilton, Aaron S. Benjamin. "Did you look that up? How retrieving from smartphones affects memory for source". Applied Cognitive Psychology, Issue 36, 2022: pp.738–747.
+
+1.Give me a definition of the Google Effect
+
+
+The Google Effect, also known as the digital or internet or online information effect, refers to the cognitive phenomenon where individuals rely on the internet, particularly search engines like Google, to access information instead of relying on their own memory. This effect is characterized by a tendency to forget information that can be easily found online and an increased ability to remember where to find that information rather than the information itself. In essence, people may not commit facts to memory as readily when they know they can easily access them online, leading to a shift in the way individuals acquire, store, and recall information.
+
+
+2. Give me 10 example scenarios of the Google Effect
+
+Certainly! Here are ten example scenarios illustrating the Google Effect:
+
+Trivia Night at a Pub:
+During a trivia night, participants may refrain from memorizing random facts since they know they can quickly search for answers on their smartphones.
+
+Recipe Recall:
+Rather than memorizing a recipe, someone might rely on searching for it online each time they want to cook a specific dish.
+
+Historical Events:
+Instead of memorizing historical dates or details, individuals might feel comfortable knowing they can look up information about historical events whenever needed.
+
+Learning a New Skill:
+When learning a new skill or language, individuals may focus more on understanding the learning process and where to find resources online rather than committing every detail to memory.
+
+Phone Numbers and Addresses:
+With the convenience of smartphones, people may be less inclined to memorize phone numbers and addresses, relying on their devices to store and retrieve this information.
+
+Scientific Formulas:
+Students studying scientific disciplines might opt to understand the principles behind formulas and equations rather than memorizing them, relying on the internet for quick reference during exams.
+
+Map Navigation:
+Instead of memorizing routes and locations, individuals may heavily depend on navigation apps, trusting their smartphones to guide them wherever they need to go.
+
+Foreign Language Vocabulary:
+Language learners might focus on understanding grammar and basic vocabulary, relying on translation apps or online dictionaries for more complex or unfamiliar words.
+
+Event Details:
+People attending events or meetings might not bother memorizing details such as schedules or locations, assuming they can find the information online when needed.
+
+Meeting Agendas:
+Participants in meetings may not feel the need to memorize every agenda item, trusting that they can access the meeting agenda or related documents online during the discussion.
+
+These scenarios highlight instances where individuals leverage the availability of online information rather than committing specific details to memory due to the prevalence of the Google Effect.
+
+3. Consider the scenario "Map Navigation" and give me a small user story from it
+
+ChatGPT
+User Story: Navigating a New City
+
+User:
+Jane, a tourist visiting a new city, wants to explore its attractions and landmarks.
+
+Objective:
+Jane aims to efficiently navigate the city to visit key points of interest without the hassle of getting lost.
+
+Scenario:Jane arrives at the city's central station and plans to visit a famous museum, a popular park, and a historic site. Instead of studying a physical map or memorizing directions, she relies on her smartphone and a navigation app. Jane inputs the destinations into the app, which provides step-by-step directions, estimated travel times, and alternative routes. During the journey, she feels confident and stress-free, enjoying the surroundings without the worry of taking wrong turns.As Jane arrives at each destination, the app seamlessly updates the route for the next point of interest.
+
+Impact of the Google Effect:
+Jane prioritizes the convenience of real-time navigation over memorizing the city's layout. The Google Effect allows her to explore confidently, knowing she can rely on her smartphone for accurate directions, and she may not feel the need to commit the city's streets and landmarks to memory.
+
+4. If you should make an ontology of the "google effect", what classes and properties would you create?
+
+Creating an ontology involves defining classes, properties, and relationships between them. Here's a simplified example of an ontology for the Google Effect:
+
+**Classes:**
+
+1. **Person:**
+   - Represents an individual.
+
+2. **Memory:**
+   - Represents the cognitive ability to store and recall information.
+
+3. **Information Source:**
+   - Represents a channel or medium from which information can be obtained.
+
+4. **Internet:**
+   - Represents the global network of interconnected computers, particularly the online space.
+
+5. **Search Engine:**
+   - Represents a tool or service that enables users to search for information on the internet.
+
+6. **Knowledge:**
+   - Represents facts, concepts, or skills acquired through experience, education, or information sources.
+
+**Properties:**
+
+1. **ReliesOn:**
+   - Relates a Person to an Information Source, indicating dependence on external sources for information.
+
+2. **Accesses:**
+   - Relates a Person to the Internet or a Search Engine, indicating the ability to connect to online resources.
+
+3. **Forgets:**
+   - Relates a Person to Memory, indicating the tendency to forget information that is easily accessible online.
+
+4. **Utilizes:**
+   - Relates a Person to Knowledge, indicating the application of information obtained from various sources.
+
+5. **PreferenceFor:**
+   - Relates a Person to a specific Information Source or Search Engine, indicating a preferred choice for obtaining information.
+
+6. **Navigates:**
+   - Relates a Person to the process of finding directions or information, particularly relevant in scenarios like map navigation.
+
+**Relationships:**
+
+1. **ReliesOn → Information Source or Search Engine**
+   - Indicates the dependency of a Person on external sources or search engines for information.
+
+2. **Accesses → Internet or Search Engine**
+   - Represents the capability of a Person to connect to the internet or use a specific search engine.
+
+3. **Forgets → Memory**
+   - Represents the impact of external information sources on the retention of information in a Person's memory.
+
+4. **Utilizes → Knowledge**
+   - Shows the application of acquired information in a Person's knowledge base.
+
+5. **PreferenceFor → Information Source or Search Engine**
+   - Captures a Person's choice or inclination towards a particular source or search engine.
+
+6. **Navigates → Knowledge, Internet, Search Engine**
+   - Indicates the process of finding directions or information, involving the application of knowledge, internet access, and possibly the use of search engines.
+
+This ontology provides a basic structure to capture relationships and dependencies related to the Google Effect in terms of how individuals interact with information sources, the internet, and their memory. Depending on specific use cases and requirements, this ontology can be extended and refined.
+
+5. COMPETENCY QUESTIONS (TO FIX WITH MY OWN ONTOLOGY)
+
+Competency questions are queries that an ontology should be able to answer. They help ensure that the ontology adequately captures the information needed for a specific domain. Here are some sample competency questions that a SPARQL query could aim to answer based on the ontology for the Google Effect:
+
+PREFIX: 
+GoE : http://www.semanticweb.org/lucia/ontologies/2023/11/google_effect/
+
+1. **Which individuals rely heavily on online sources for information?**
+   ```sparql
+   SELECT ?person
+   WHERE {
+      ?person GoE:ReliesOn ?informationSource .
+      ?informationSource rdf:type GoE:OnlineSource .
+   }
+   ```
+
+2. **What are the preferred search engines of users who frequently forget information they can find online?**
+   ```sparql
+   SELECT ?person ?searchEngine
+   WHERE {
+      ?person GoE:ReliesOn ?informationSource .
+      ?informationSource rdf:type GoE:SearchEngine .
+      ?person GoE:Forgets GoE:memory .
+   }
+   ```
+
+3. **How often do people access the internet for navigation purposes?**
+   ```sparql
+   SELECT ?person (COUNT(?navigationEvent) AS ?navigationFrequency)
+   WHERE {
+      ?person GoE:Accesses GoE:internet .
+      ?person GoE:Navigates ?navigationEvent .
+   }
+   GROUP BY ?person
+   ```
+
+4. **What types of information do individuals commonly forget when they have easy access to online sources?**
+   ```sparql
+   SELECT ?informationType
+   WHERE {
+      	?person GoE:Forgets ?memory
+	? memory a GoE:memory .
+      	?memory rdf:type ?informationType .
+   }
+   ```
+
+5. **Which online sources do people utilize the most in building their knowledge?**
+   ```sparql
+   SELECT ?person ?informationSource
+   WHERE {
+      ?person GoE:ReliesOn ?InformationSource .
+      ?InformationSource rdf:type GoE:OnlineSource .
+   }
+   ```
+
+These sample SPARQL queries illustrate how the ontology can be queried to obtain relevant information about individuals, their reliance on online sources, and the impact on their memory and knowledge. The actual queries would depend on the specific structure and details of the ontology you've developed.
+

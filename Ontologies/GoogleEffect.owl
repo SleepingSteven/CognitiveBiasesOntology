@@ -1,0 +1,249 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/lucia/ontologies/2023/11/google_effect#"
+     xml:base="http://www.semanticweb.org/lucia/ontologies/2023/11/google_effect"
+     xmlns:cbo="http://www.semanticweb.org/lucia/ontologies/2023/11/CognitiveBiasOntology/google_effect#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/lucia/ontologies/2023/11/google_effect">
+        <rdfs:comment>The ontology for the cognitive bias &quot;Google Effect&quot;</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/lucia/ontologies/2023/11/google_effect#Accesses -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lucia/ontologies/2023/11/google_effect#Accesses">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/lucia/ontologies/2023/11/google_effect#IsAccessedBy"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lucia/ontologies/2023/11/google_effect#Person"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lucia/ontologies/2023/11/google_effect#Virtual"/>
+        <rdfs:comment>Relates a Person to the Virtual Place, indicating the ability to connect to online resources</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lucia/ontologies/2023/11/google_effect#DerivedFrom -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lucia/ontologies/2023/11/google_effect#DerivedFrom">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lucia/ontologies/2023/11/google_effect#Knowledge"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lucia/ontologies/2023/11/google_effect#InformationSource"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lucia/ontologies/2023/11/google_effect#Forgets -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lucia/ontologies/2023/11/google_effect#Forgets">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lucia/ontologies/2023/11/google_effect#Person"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lucia/ontologies/2023/11/google_effect#Knowledge"/>
+        <rdfs:comment>Relates a Person to Memory, indicating the tendency to forget information that is easily accessible online</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lucia/ontologies/2023/11/google_effect#Has -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lucia/ontologies/2023/11/google_effect#Has">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lucia/ontologies/2023/11/google_effect#Person"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lucia/ontologies/2023/11/google_effect#Knowledge"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lucia/ontologies/2023/11/google_effect#IsAccessedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lucia/ontologies/2023/11/google_effect#IsAccessedBy">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lucia/ontologies/2023/11/google_effect#Virtual"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lucia/ontologies/2023/11/google_effect#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lucia/ontologies/2023/11/google_effect#IsPreferredBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lucia/ontologies/2023/11/google_effect#IsPreferredBy">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/lucia/ontologies/2023/11/google_effect#PreferenceFor"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lucia/ontologies/2023/11/google_effect#InformationSource"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lucia/ontologies/2023/11/google_effect#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lucia/ontologies/2023/11/google_effect#IsReliedUponBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lucia/ontologies/2023/11/google_effect#IsReliedUponBy">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/lucia/ontologies/2023/11/google_effect#ReliesOn"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lucia/ontologies/2023/11/google_effect#InformationSource"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lucia/ontologies/2023/11/google_effect#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lucia/ontologies/2023/11/google_effect#Memorizes -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lucia/ontologies/2023/11/google_effect#Memorizes">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lucia/ontologies/2023/11/google_effect#Person"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lucia/ontologies/2023/11/google_effect#Knowledge"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lucia/ontologies/2023/11/google_effect#Navigates -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lucia/ontologies/2023/11/google_effect#Navigates">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lucia/ontologies/2023/11/google_effect#Person"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lucia/ontologies/2023/11/google_effect#Place"/>
+        <rdfs:comment>Relates a Person to the process of finding directions or information, particularly relevant in scenarios like map navigation</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lucia/ontologies/2023/11/google_effect#PreferenceFor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lucia/ontologies/2023/11/google_effect#PreferenceFor">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lucia/ontologies/2023/11/google_effect#Person"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lucia/ontologies/2023/11/google_effect#InformationSource"/>
+        <rdfs:comment>Relates a Person to a specific Information Source or Search Engine, indicating a preferred choice for obtaining information</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lucia/ontologies/2023/11/google_effect#ReliesOn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lucia/ontologies/2023/11/google_effect#ReliesOn">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lucia/ontologies/2023/11/google_effect#Person"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lucia/ontologies/2023/11/google_effect#InformationSource"/>
+        <rdfs:comment>Relates a Person to an Information Source, indicating dependence on external sources for information</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/lucia/ontologies/2023/11/google_effect#InformationSource -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lucia/ontologies/2023/11/google_effect#InformationSource">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lucia/ontologies/2023/11/google_effect#Virtual"/>
+        <rdfs:comment>a channel or medium from which information can be obtained</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lucia/ontologies/2023/11/google_effect#Internet -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lucia/ontologies/2023/11/google_effect#Internet">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lucia/ontologies/2023/11/google_effect#InformationSource"/>
+        <rdfs:comment>the global network of interconnected computers, particularly the online space</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lucia/ontologies/2023/11/google_effect#Knowledge -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lucia/ontologies/2023/11/google_effect#Knowledge">
+        <rdfs:comment>facts, concepts, or skills acquired through experience, education, or information sources</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lucia/ontologies/2023/11/google_effect#Memory -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lucia/ontologies/2023/11/google_effect#Memory">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lucia/ontologies/2023/11/google_effect#Real"/>
+        <rdfs:comment>the cognitive ability to store and recall information</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lucia/ontologies/2023/11/google_effect#OnlineSource -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lucia/ontologies/2023/11/google_effect#OnlineSource">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lucia/ontologies/2023/11/google_effect#InformationSource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lucia/ontologies/2023/11/google_effect#Person -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lucia/ontologies/2023/11/google_effect#Person">
+        <rdfs:comment>an individual</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lucia/ontologies/2023/11/google_effect#Place -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lucia/ontologies/2023/11/google_effect#Place">
+        <rdfs:comment>A place in which a person roams to execute or look for information</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lucia/ontologies/2023/11/google_effect#Practical -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lucia/ontologies/2023/11/google_effect#Practical">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lucia/ontologies/2023/11/google_effect#Knowledge"/>
+        <rdfs:comment>A type of knowledge that can be used for practical tasks</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lucia/ontologies/2023/11/google_effect#Real -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lucia/ontologies/2023/11/google_effect#Real">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lucia/ontologies/2023/11/google_effect#Place"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lucia/ontologies/2023/11/google_effect#SearchEngine -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lucia/ontologies/2023/11/google_effect#SearchEngine">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lucia/ontologies/2023/11/google_effect#InformationSource"/>
+        <rdfs:comment>a tool or service that enables users to search for information on the internet</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lucia/ontologies/2023/11/google_effect#Theoretical -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lucia/ontologies/2023/11/google_effect#Theoretical">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lucia/ontologies/2023/11/google_effect#Knowledge"/>
+        <rdfs:comment>A type of knowledge that can be used for theoretical tasks</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lucia/ontologies/2023/11/google_effect#Virtual -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lucia/ontologies/2023/11/google_effect#Virtual">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lucia/ontologies/2023/11/google_effect#Place"/>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi -->
+
