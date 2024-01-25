@@ -89,6 +89,7 @@ Sure, let's expand the ontology of the "Ostrich Effect" to include more classes 
 4. `Emotion`: The feelings experienced by the individual when faced with the negative information.
 5. `Outcome`: The result of the individual's avoidance behavior.
 6. `CopingStrategy`: The methods used by the individual to deal with the negative information.
+7. 'OstrichEffect': Instances of the phenomenon where an individual avoids negative information.
 
 **Properties:**
 1. `avoids (Individual, NegativeInformation)`: This property indicates that the individual is avoiding the negative information.
@@ -97,7 +98,7 @@ Sure, let's expand the ontology of the "Ostrich Effect" to include more classes 
 4. `feels (Individual, Emotion)`: This property captures the emotions felt by the individual when faced with the negative information.
 5. `leadsTo (OstrichEffect, Outcome)`: This property shows the outcome of the individual's avoidance behavior.
 6. `uses (Individual, CopingStrategy)`: This property indicates the coping strategies used by the individual to deal with the negative information.
-
+7. 'occursIn' (OstrichEffect, Context)
 This expanded ontology provides a deeper understanding of the Ostrich Effect by considering the emotional aspect, the outcomes of avoidance behavior, and the coping strategies used by individuals. It can be further refined or expanded based on the specific use case or domain of interest. Remember, the goal of an ontology is to model the domain of interest in a way that captures its essential aspects and allows for useful reasoning.
 
 now create a list of competency questions in the form of sparql queries and solve them with the ontology you created
