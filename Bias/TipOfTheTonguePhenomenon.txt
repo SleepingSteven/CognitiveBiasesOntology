@@ -35,3 +35,111 @@ Tip of the Tongue Phenomenon isA Cognitive Bias
 Tip of the Tongue Phenomenon hasDefinition "The Tip of the Tongue (TOT) phenomenon, also known as lethologica, is a cognitive bias where an individual fails to retrieve a word or term from memory, despite having partial recall and the feeling that retrieval is imminent."1
 Tip of the Tongue Phenomenon Instance hasExample "Emily, a college student, is studying for her final exam in art history. While reviewing her notes, she comes across the name of a famous painting that she can't fully remember. She knows that it's a well-known work by Van Gogh, and she can vividly recall the image of the painting in her mind, but she just can't seem to remember the name."
 Tip of the Tongue Phenomenon affectsDecisionMaking "The Tip of the Tongue Phenomenon can lead individuals to struggle with decision-making or communication when they are unable to fully retrieve information from their memory."
+
+
+v2:
+
+Give me a definition of the Tip of The Tongue Phenomenon (cognitive bias)
+
+The **Tip of The Tongue Phenomenon**, also known as **lethologica**, is a cognitive bias where an individual fails to retrieve a specific word or term from memory, despite having partial recall and the feeling that retrieval is imminent¹². The phenomenon's name comes from the saying, "It's on the tip of my tongue"¹.
+
+People experiencing this phenomenon can often recall one or more features of the target word, such as the first letter, its syllabic stress, and words similar in sound and/or meaning¹. They report a feeling of being seized by the state, feeling something like mild anguish while searching for the word, and a sense of relief when the word is found¹.
+
+This phenomenon is universal and can occur more frequently with age². It's important to note that while an occasional tip-of-the-tongue state is normal, it can be referred to as an actual medical condition, known as anomic aphasia, when it becomes frequent enough to interfere with learning or daily life².
+
+Origine: conversazione con Bing, 25/1/2024
+(1) Tip of the tongue - Wikipedia. https://en.wikipedia.org/wiki/Tip_of_the_tongue.
+(2) Lethologica or Tip-of-the-Tongue Phenomenon - Verywell Mind. https://www.verywellmind.com/lethologica-tip-of-the-tongue-phenomenon-4154947.
+(3) Punta della lingua - Wikipedia. https://it.wikipedia.org/wiki/Punta_della_lingua.
+
+
+Give me 10 example scenarios of the Tip of The Tongue Phenomenon
+
+Sure, here are 10 example scenarios where the Tip of The Tongue Phenomenon might be observed:
+
+1. **Names**: You run into an old acquaintance and can't remember their name, even though you can recall specific details about them.
+2. **Movies**: You're trying to remember the title of a movie. You remember the plot and the actors, but the title eludes you.
+3. **Song Lyrics**: A song is playing, and you know the melody and most of the lyrics, but there's one line that you just can't recall.
+4. **Vocabulary**: During a conversation or while writing, you struggle to find a specific word that perfectly expresses what you want to say.
+5. **Exams**: During a test, you struggle to recall an answer that you studied and knew well before.
+6. **Geography**: You're trying to name a country or city that you know the location of on a map, but the name escapes you.
+7. **Historical Dates**: You're trying to remember the date of a significant historical event. You remember the event in detail, but the exact year is just out of reach.
+8. **Book Titles**: You can describe the plot of a book and its characters, but you can't remember the book's title.
+9. **Famous Quotes**: You remember the gist of a famous quote and who said it, but can't recall the exact wording.
+10. **Recipes**: You're trying to remember a recipe. You remember most of the ingredients and steps, but there's one part that you can't recall.
+
+Remember, the Tip of The Tongue Phenomenon is a cognitive bias where an individual fails to retrieve a specific word or term from memory, despite having partial recall and the feeling that retrieval is imminent.
+
+
+Consider the scenario "names" and give me a small user story from it
+
+Sure, here's a small user story based on the "Names" scenario:
+
+> Meet Emily, a social butterfly who loves meeting new people. At a networking event, she met a woman who shared interesting insights about a project similar to Emily's work. They had a great conversation, and Emily wanted to connect with her later on LinkedIn.
+
+> A few days later, Emily decided to find the woman on LinkedIn. She remembered the woman's face, her project details, and even the color of her dress, but she couldn't recall her name. Emily knew it started with an 'A', and it was on the tip of her tongue, but she just couldn't retrieve it from her memory.
+
+> This is an example of the Tip of The Tongue Phenomenon. Despite having partial recall (the first letter of the name), Emily was unable to fully retrieve the name from her memory. She felt a sense of frustration as she knew that she knew the name, but just couldn't recall it at that moment.
+
+> Eventually, after some time, the name "Amanda" suddenly popped into Emily's mind. She felt a sense of relief and quickly searched for Amanda on LinkedIn. This experience reminded Emily of the peculiarities of human memory and how the feeling of knowing something can sometimes be just out of reach.
+
+
+If you had to make an ontology of the "Tip of the tongue phenomenon", what classes and properties would you create?
+
+
+Sure, let's expand the ontology of the "Tip of The Tongue Phenomenon" to include more classes and properties that capture the complexity of this cognitive bias:
+
+**Classes:**
+1. `Individual`: The person experiencing the Tip of The Tongue Phenomenon.
+2. `TargetWord`: The word or piece of information that the individual is trying to recall.
+3. `PartialInformation`: The bits of information about the target word that the individual can recall.
+4. `Context`: The specific situation or domain in which the Tip of The Tongue Phenomenon is being experienced.
+5. `Emotion`: The feelings experienced by the individual during the phenomenon.
+6. `CognitiveProcess`: The cognitive processes involved in memory retrieval.
+7. `MemoryTrace`: The trace that a memory leaves in the brain.
+
+**Properties:**
+1. `experiences (Individual, TipOfTheTonguePhenomenon)`: This property indicates that the individual is experiencing the Tip of The Tongue Phenomenon.
+2. `triesToRecall (Individual, TargetWord)`: This property shows that the individual is trying to recall the target word.
+3. `recalls (Individual, PartialInformation)`: This property indicates the bits of information that the individual can recall about the target word.
+4. `occursIn (TipOfTheTonguePhenomenon, Context)`: This property shows the context in which the Tip of The Tongue Phenomenon is being experienced.
+5. `feels (Individual, Emotion)`: This property captures the emotions felt by the individual during the phenomenon.
+6. `involves (TipOfTheTonguePhenomenon, CognitiveProcess)`: This property shows the cognitive processes involved in the Tip of The Tongue Phenomenon.
+7. `leaves (TargetWord, MemoryTrace)`: This property indicates the memory trace left by the target word in the brain.
+
+This expanded ontology provides a deeper understanding of the Tip of The Tongue Phenomenon by considering the emotional aspect, the cognitive processes involved in memory retrieval, and the concept of memory traces. It can be further refined or expanded based on the specific use case or domain of interest. Remember, the goal of an ontology is to model the domain of interest in a way that captures its essential aspects and allows for useful reasoning.
+
+now create a list of competency questions in the form of sparql queries and solve them with the ontology you created
+
+
+Sure, here are some competency questions that can be answered using the ontology of the "Tip of The Tongue Phenomenon", along with the corresponding SPARQL queries and their solutions:
+
+1. **Question**: Who are the individuals experiencing the Tip of The Tongue Phenomenon?
+    - **SPARQL Query**: `SELECT ?individual WHERE { ?individual :experiences :TipOfTheTonguePhenomenon . }`
+    - **Solution**: This query would return all individuals who are experiencing the Tip of The Tongue Phenomenon.
+
+2. **Question**: What words or pieces of information are individuals trying to recall?
+    - **SPARQL Query**: `SELECT ?targetWord WHERE { ?individual :triesToRecall ?targetWord . }`
+    - **Solution**: This query would return all words or pieces of information that individuals are trying to recall.
+
+3. **Question**: What bits of information can individuals recall about the target word?
+    - **SPARQL Query**: `SELECT ?partialInformation WHERE { ?individual :recalls ?partialInformation . }`
+    - **Solution**: This query would return all bits of information that individuals can recall about the target word.
+
+4. **Question**: In what contexts is the Tip of The Tongue Phenomenon being experienced?
+    - **SPARQL Query**: `SELECT DISTINCT ?context WHERE { :TipOfTheTonguePhenomenon :occursIn ?context . }`
+    - **Solution**: This query would return all unique contexts in which the Tip of The Tongue Phenomenon is being experienced.
+
+5. **Question**: What emotions are felt by individuals during the Tip of The Tongue Phenomenon?
+    - **SPARQL Query**: `SELECT ?emotion WHERE { ?individual :feels ?emotion . }`
+    - **Solution**: This query would return all emotions felt by individuals during the Tip of The Tongue Phenomenon.
+
+6. **Question**: What cognitive processes are involved in the Tip of The Tongue Phenomenon?
+    - **SPARQL Query**: `SELECT ?cognitiveProcess WHERE { :TipOfTheTonguePhenomenon :involves ?cognitiveProcess . }`
+    - **Solution**: This query would return all cognitive processes involved in the Tip of The Tongue Phenomenon.
+
+7. **Question**: What memory traces are left by the target word in the brain?
+    - **SPARQL Query**: `SELECT ?memoryTrace WHERE { ?targetWord :leaves ?memoryTrace . }`
+    - **Solution**: This query would return all memory traces left by the target word in the brain.
+
+Please note that these queries are hypothetical and would require a populated RDF dataset based on the ontology to return actual results. The ontology provides a framework for structuring this data, and SPARQL queries can then be used to retrieve specific information from the dataset.

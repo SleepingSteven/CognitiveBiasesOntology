@@ -32,3 +32,123 @@ Semmelweis Reflex isA Cognitive Bias
 Semmelweis Reflex hasDefinition "The Semmelweis Reflex or 'Semmelweis Effect' is a metaphor for the reflex-like tendency to reject new evidence or new knowledge because it contradicts established norms, beliefs, or paradigms."1
 Semmelweis Reflex Instance hasExample "Dr. Smith, a seasoned medical practitioner, immediately dismisses a new research study suggesting a more effective treatment method, believing that his tried-and-true method is superior."
 Semmelweis Reflex affectsDecisionMaking "The Semmelweis Reflex can lead individuals to reject new ideas or discoveries that contradict their existing beliefs, affecting their decision-making process."
+
+
+v2:
+give me a definition of Semmelweis Reflex 
+
+The **Semmelweis Reflex**, also known as the **Semmelweis Effect**, is a metaphor for the reflex-like tendency to reject new evidence or new knowledge because it contradicts established norms, beliefs, or paradigms¹. This term is named after Ignaz Semmelweis, a Hungarian physician who discovered in 1847 that childbed fever mortality rates fell significantly when doctors disinfected their hands with a chlorine solution before moving from one patient to another¹. Despite the empirical evidence, his fellow doctors rejected his hand-washing suggestions, often for non-medical reasons¹. This phenomenon can impede scientific advancement and progress by rejecting new ideas and discoveries².
+
+Origine: conversazione con Bing, 25/1/2024
+(1) Semmelweis reflex - Wikipedia. https://en.wikipedia.org/wiki/Semmelweis_reflex.
+(2) Semmelweis Reflex: Definition, Examples and Effects. https://www.clearerthinking.org/post/semmelweis-reflex-definition-examples-and-effects.
+(3) The Semmelweis Reflex — Hypnosis for Humans. https://hypnosisforhumans.com/articles/the-semmelweis-reflex.
+(4) Semmelweis Reflex - Thinking Toolbox by Ness Labs. https://toolbox.nesslabs.com/semmelweis-reflex.
+
+Give me 10 example scenarios of the Semmelweis Reflex
+
+Sure, here are some examples of the Semmelweis Reflex:
+
+1. **Rejection of Ignaz Semmelweis's Discovery**: The most famous example is the rejection of Ignaz Semmelweis's discovery that handwashing could prevent the spread of disease¹. Despite his discovery being backed up by scientific evidence, it was rejected by the medical community at the time¹.
+2. **Rejection of Germ Theory**: The germ theory of disease in the 19th century was met with skepticism and disbelief¹.
+3. **Able Archer Nuclear Scare**: The Able Archer nuclear scare in 1983 is an example of how the Semmelweis reflex can affect collective behavior³.
+4. **Vaccine Resistance**: The introduction of vaccines has revolutionized disease prevention and eradication. However, even today, some individuals and groups resist the overwhelming scientific evidence supporting the efficacy and safety of vaccines⁴.
+5. **Climate Change Denial**: Despite overwhelming scientific consensus, some people reject the idea that climate change is caused by human activities.
+6. **Flat Earth Belief**: Some people continue to believe that the Earth is flat, despite centuries of scientific evidence to the contrary.
+7. **Rejection of Evolution**: The theory of evolution, despite being widely accepted in the scientific community, is still rejected by some groups due to religious or ideological beliefs.
+8. **Resistance to Technological Advancements**: Some people resist new technologies (like electric cars or renewable energy sources) because they contradict established norms or threaten existing industries.
+9. **Denial of Health Risks**: Despite clear evidence linking certain behaviors to health risks (like smoking or unhealthy diets), some people reject this information because it contradicts their existing beliefs or habits.
+10. **Rejection of Psychological Research**: Some people reject findings from psychological research, such as the benefits of therapy or the impact of mental health on overall well-being, because it contradicts their personal beliefs or stigmas.
+
+These examples illustrate how the Semmelweis Reflex can impede progress and lead to a lack of trust in science and scientific institutions¹.
+
+Origine: conversazione con Bing, 25/1/2024
+(1) Semmelweis Reflex: Definition, Examples and Effects. https://www.clearerthinking.org/post/semmelweis-reflex-definition-examples-and-effects.
+(2) Semmelweis Effect: When Ideas Control Governments - Grey Dynamics. https://greydynamics.com/semmelweis-effect-ideological-stubbornness-when-ideas-control-governments/.
+(3) What is the Semmelweis Reflex? - Capable Men. https://capablemen.com/guides/what-is-the-semmelweis-reflex/.
+(4) Semmelweis reflex - Wikipedia. https://en.wikipedia.org/wiki/Semmelweis_reflex.
+(5) The Semmelweis reflex or “Semmelweis effect” is a metaphor for the .... https://u.osu.edu/korzen.1/2016/11/26/the-semmelweis-reflex-or-semmelweis-effect-is-a-metaphor-for-the-reflex-like-tendency-to-reject-new-evidence-or-new-knowledge-because-it-contradicts-established-norms-beliefs-or-paradigms/.
+
+Consider the scenario "Rejection of Psychological Research" and give me a small user story from it
+
+Sure, here's a user story that illustrates the "Rejection of Psychological Research" scenario:
+
+> Meet John, a middle-aged man who has been feeling persistently sad and uninterested in his usual activities for several weeks. His friends notice these changes and suggest that he might be dealing with depression, a common mental health condition. They recommend that he seek help from a mental health professional.
+
+> However, John has always held the belief that mental health issues are a sign of weakness and that they can be overcome simply by "toughening up". He rejects the idea that he could be suffering from depression and refuses to consider therapy, despite numerous studies showing its effectiveness in treating mental health conditions.
+
+> Over time, John's symptoms worsen, and his quality of life deteriorates. He struggles at work and in his personal relationships, and his physical health begins to decline. Despite the clear evidence that he needs help, John's Semmelweis Reflex prevents him from accepting the psychological research and seeking the treatment he needs. This story illustrates how the Semmelweis Reflex can lead to harmful outcomes when individuals reject established scientific findings due to pre-existing beliefs or biases.
+
+
+If you had to make an ontology of the "Semmelweis Reflex", what classes and properties would you create?
+
+Sure, let's expand the ontology of the "Semmelweis Reflex" to include more classes and properties that capture the complexity of this cognitive bias:
+
+**Classes:**
+1. `Semmelweis Reflex`: The main class representing the cognitive bias itself.
+2. `Individual`: Represents the person or group exhibiting the Semmelweis Reflex.
+3. `Belief System`: Represents the established norms, beliefs, or paradigms that the individual or group holds.
+4. `Evidence`: Represents the new evidence or knowledge that contradicts the existing belief system.
+5. `Scenario`: Represents the specific context or situation in which the Semmelweis Reflex is exhibited.
+6. `Field`: Represents the field of study or area (like medicine, technology, climate science) where the Semmelweis Reflex is exhibited.
+7. `Impact`: Represents the consequences or effects of the Semmelweis Reflex.
+
+**Properties:**
+1. `hasBeliefSystem`: Links the `Individual` or `Group` to their `Belief System`.
+2. `rejectsEvidence`: Links the `Individual` or `Group` to the `Evidence` they reject.
+3. `contradictsBeliefSystem`: Links the `Evidence` to the `Belief System` it contradicts.
+4. `exhibitsInScenario`: Links the `Semmelweis Reflex` to the `Scenario` in which it is exhibited.
+5. `occursInField`: Links the `Semmelweis Reflex` to the `Field` in which it occurs.
+6. `hasImpact`: Links the `Semmelweis Reflex` to its `Impact`.
+
+This expanded ontology captures more aspects of the Semmelweis Reflex, including the field in which it occurs and the impact it has. It provides a more comprehensive framework for understanding and analyzing this cognitive bias. However, it's important to note that creating an ontology is an iterative process that often involves refining the classes and properties based on feedback and new insights. It's also important to remember that an ontology is a model of reality, not reality itself, and therefore it may not capture all aspects of the Semmelweis Reflex.
+
+
+
+now create a list of competency questions in the form of sparql queries and solve them with the ontology you created
+
+
+Sure, here are some competency questions that could be asked about the Semmelweis Reflex, along with corresponding SPARQL queries and how they could be answered using the ontology:
+
+1. **Question:** Who are the individuals that exhibit the Semmelweis Reflex in a specific scenario?
+   **SPARQL Query:**
+   ```
+   SELECT ?individual
+   WHERE {
+     ?individual :exhibitsInScenario "Specific Scenario".
+   }
+   ```
+   **Answer:** This query would return all individuals who exhibit the Semmelweis Reflex in the specified scenario.
+
+2. **Question:** What are the belief systems that are contradicted by new evidence?
+   **SPARQL Query:**
+   ```
+   SELECT ?beliefSystem
+   WHERE {
+     ?evidence :contradictsBeliefSystem ?beliefSystem.
+   }
+   ```
+   **Answer:** This query would return all belief systems that are contradicted by new evidence.
+
+3. **Question:** What is the impact of the Semmelweis Reflex in a specific field?
+   **SPARQL Query:**
+   ```
+   SELECT ?impact
+   WHERE {
+     ?semmelweisReflex :occursInField "Specific Field";
+                        :hasImpact ?impact.
+   }
+   ```
+   **Answer:** This query would return the impact of the Semmelweis Reflex in the specified field.
+
+4. **Question:** What are the scenarios in which the Semmelweis Reflex is exhibited?
+   **SPARQL Query:**
+   ```
+   SELECT ?scenario
+   WHERE {
+     ?semmelweisReflex :exhibitsInScenario ?scenario.
+   }
+   ```
+   **Answer:** This query would return all scenarios in which the Semmelweis Reflex is exhibited.
+
+Please note that these are hypothetical queries and answers. The actual results would depend on the specific instances and relationships defined in the ontology. Also, the ontology and the data would need to be stored in a SPARQL-enabled database or triplestore to execute these queries.
