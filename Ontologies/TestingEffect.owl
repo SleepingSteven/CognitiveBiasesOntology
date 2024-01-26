@@ -6,10 +6,57 @@
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:terms="http://purl.org/dc/terms/">
     <owl:Ontology rdf:about="http://www.semanticweb.org/lucia/ontologies/2024/0/testing_effect">
+        <terms:creator>2024-01-26</terms:creator>
+        <terms:creator>Lucia Bertoldini</terms:creator>
+        <terms:description>An ontology of the cognitive bias known as the testing effect</terms:description>
+        <terms:title>Testing Effect Ontology</terms:title>
+        <scenario xml:lang="en">Group Quizzing: In a study group, members take turns quizzing each other on different topics, actively recalling and discussing information to deepen their understanding.</scenario>
         <rdfs:comment>This is an ontology of the cognitive bias of the testing effect</rdfs:comment>
     </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/terms/created -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/created"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/creator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/description -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
+    
+
+
+    <!-- http://www.semanticweb.org/lucia/ontologies/2024/0/testing_effect#scenario -->
+
+    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/lucia/ontologies/2024/0/testing_effect#scenario"/>
     
 
 
@@ -27,19 +74,40 @@
     <!-- http://www.semanticweb.org/lucia/ontologies/2024/0/testing_effect#EnhancesRetention -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lucia/ontologies/2024/0/testing_effect#EnhancesRetention">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/lucia/ontologies/2024/0/testing_effect#IsRememberedBecause"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/lucia/ontologies/2024/0/testing_effect#TestingEvent"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lucia/ontologies/2024/0/testing_effect#Knowledge"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/lucia/ontologies/2024/0/testing_effect#LearningMaterial"/>
         <rdfs:comment>Represents the impact of actively recalling information on long-term retention, connecting an Individual to a TestingEvent</rdfs:comment>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/lucia/ontologies/2024/0/testing_effect#engagesInLearning -->
+    <!-- http://www.semanticweb.org/lucia/ontologies/2024/0/testing_effect#IsRememberedBecause -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lucia/ontologies/2024/0/testing_effect#engagesInLearning">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/lucia/ontologies/2024/0/testing_effect#Individual"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lucia/ontologies/2024/0/testing_effect#IsRememberedBecause">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lucia/ontologies/2024/0/testing_effect#Knowledge"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lucia/ontologies/2024/0/testing_effect#LearningMaterial"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lucia/ontologies/2024/0/testing_effect#TestingEvent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lucia/ontologies/2024/0/testing_effect#IsStudiedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lucia/ontologies/2024/0/testing_effect#IsStudiedBy">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/lucia/ontologies/2024/0/testing_effect#studiesMaterial"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lucia/ontologies/2024/0/testing_effect#LearningMaterial"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lucia/ontologies/2024/0/testing_effect#Human"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lucia/ontologies/2024/0/testing_effect#engagesIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lucia/ontologies/2024/0/testing_effect#engagesIn">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lucia/ontologies/2024/0/testing_effect#Human"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/lucia/ontologies/2024/0/testing_effect#LearningProcess"/>
-        <rdfs:comment>Relates an Individual to the concept of actively participating in a learning process</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -47,7 +115,7 @@
     <!-- http://www.semanticweb.org/lucia/ontologies/2024/0/testing_effect#participatesInTesting -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lucia/ontologies/2024/0/testing_effect#participatesInTesting">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/lucia/ontologies/2024/0/testing_effect#Individual"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lucia/ontologies/2024/0/testing_effect#Human"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/lucia/ontologies/2024/0/testing_effect#TestingEvent"/>
         <rdfs:comment>Relates an Individual to a TestingEvent, indicating their engagement in an active recall or testing session</rdfs:comment>
     </owl:ObjectProperty>
@@ -57,10 +125,30 @@
     <!-- http://www.semanticweb.org/lucia/ontologies/2024/0/testing_effect#studiesMaterial -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lucia/ontologies/2024/0/testing_effect#studiesMaterial">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/lucia/ontologies/2024/0/testing_effect#Individual"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lucia/ontologies/2024/0/testing_effect#Human"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/lucia/ontologies/2024/0/testing_effect#LearningMaterial"/>
         <rdfs:comment>Relates an Individual to LearningMaterial, indicating the educational content being studied</rdfs:comment>
     </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/lucia/ontologies/2024/0/testing_effect#hasHappened -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/lucia/ontologies/2024/0/testing_effect#hasHappened">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment>Number of times a specific testing event has taken place</rdfs:comment>
+    </owl:DatatypeProperty>
     
 
 
@@ -75,10 +163,54 @@
     
 
 
+    <!-- http://www.semanticweb.org/lucia/ontologies/2024/0/testing_effect#Book -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lucia/ontologies/2024/0/testing_effect#Book">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lucia/ontologies/2024/0/testing_effect#LearningMaterial"/>
+        <rdfs:comment>A source of the learning material: a book</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lucia/ontologies/2024/0/testing_effect#Computer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lucia/ontologies/2024/0/testing_effect#Computer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lucia/ontologies/2024/0/testing_effect#LearningMaterial"/>
+        <rdfs:comment>A source of the learning material: the personal computer</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lucia/ontologies/2024/0/testing_effect#Group -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lucia/ontologies/2024/0/testing_effect#Group">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lucia/ontologies/2024/0/testing_effect#Human"/>
+        <rdfs:comment>A group of people</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lucia/ontologies/2024/0/testing_effect#Human -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lucia/ontologies/2024/0/testing_effect#Human">
+        <rdfs:comment>A human (either alone, or in a group)</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/lucia/ontologies/2024/0/testing_effect#Individual -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/lucia/ontologies/2024/0/testing_effect#Individual">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lucia/ontologies/2024/0/testing_effect#Human"/>
         <rdfs:comment>Represents a person participating in a group activity</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lucia/ontologies/2024/0/testing_effect#Knowledge -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lucia/ontologies/2024/0/testing_effect#Knowledge">
+        <rdfs:comment>facts, concepts, or skills acquired through experience, education, or information sources</rdfs:comment>
     </owl:Class>
     
 
@@ -94,7 +226,25 @@
     <!-- http://www.semanticweb.org/lucia/ontologies/2024/0/testing_effect#LearningProcess -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/lucia/ontologies/2024/0/testing_effect#LearningProcess">
-        <rdfs:comment>The process of learning the an individual undertakes in order to memorise the learning material</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lucia/ontologies/2024/0/testing_effect#Unofficial"/>
+        <rdfs:comment>The process of learning the material to memorize it</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lucia/ontologies/2024/0/testing_effect#Official -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lucia/ontologies/2024/0/testing_effect#Official">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lucia/ontologies/2024/0/testing_effect#TestingEvent"/>
+        <rdfs:comment>An official testing event, like an exam at university</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lucia/ontologies/2024/0/testing_effect#Practical -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lucia/ontologies/2024/0/testing_effect#Practical">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lucia/ontologies/2024/0/testing_effect#Knowledge"/>
     </owl:Class>
     
 
@@ -110,6 +260,83 @@
         </rdfs:subClassOf>
         <rdfs:comment>Represents an instance of actively recalling information through testing or self-assessment</rdfs:comment>
     </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lucia/ontologies/2024/0/testing_effect#Theoretical -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lucia/ontologies/2024/0/testing_effect#Theoretical">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lucia/ontologies/2024/0/testing_effect#Knowledge"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lucia/ontologies/2024/0/testing_effect#Unofficial -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lucia/ontologies/2024/0/testing_effect#Unofficial">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lucia/ontologies/2024/0/testing_effect#TestingEvent"/>
+        <rdfs:comment>An unofficial testing event, like a quiz amongst friends</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/lucia/ontologies/2024/0/testing_effect#biology -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lucia/ontologies/2024/0/testing_effect#biology">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lucia/ontologies/2024/0/testing_effect#Knowledge"/>
+        <IsRememberedBecause rdf:resource="http://www.semanticweb.org/lucia/ontologies/2024/0/testing_effect#biology"/>
+        <IsRememberedBecause rdf:resource="http://www.semanticweb.org/lucia/ontologies/2024/0/testing_effect#biology_book"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lucia/ontologies/2024/0/testing_effect#biology_book -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lucia/ontologies/2024/0/testing_effect#biology_book">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lucia/ontologies/2024/0/testing_effect#Book"/>
+        <IsStudiedBy rdf:resource="http://www.semanticweb.org/lucia/ontologies/2024/0/testing_effect#group_member"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lucia/ontologies/2024/0/testing_effect#biology_quiz -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lucia/ontologies/2024/0/testing_effect#biology_quiz">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lucia/ontologies/2024/0/testing_effect#Unofficial"/>
+        <EnhancesRetention rdf:resource="http://www.semanticweb.org/lucia/ontologies/2024/0/testing_effect#biology"/>
+        <EnhancesRetention rdf:resource="http://www.semanticweb.org/lucia/ontologies/2024/0/testing_effect#biology_book"/>
+        <hasHappened rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</hasHappened>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lucia/ontologies/2024/0/testing_effect#group_correction_test -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lucia/ontologies/2024/0/testing_effect#group_correction_test">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lucia/ontologies/2024/0/testing_effect#LearningProcess"/>
+        <hasHappened rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</hasHappened>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lucia/ontologies/2024/0/testing_effect#group_member -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lucia/ontologies/2024/0/testing_effect#group_member">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lucia/ontologies/2024/0/testing_effect#Individual"/>
+        <engagesIn rdf:resource="http://www.semanticweb.org/lucia/ontologies/2024/0/testing_effect#group_correction_test"/>
+        <participatesInTesting rdf:resource="http://www.semanticweb.org/lucia/ontologies/2024/0/testing_effect#biology_quiz"/>
+    </owl:NamedIndividual>
 </rdf:RDF>
 
 

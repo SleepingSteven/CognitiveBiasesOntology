@@ -6,10 +6,57 @@
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:terms="http://purl.org/dc/terms/">
     <owl:Ontology rdf:about="http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness">
-        <rdfs:comment>This is the ontology on the cognitive bias of absent-mindedness</rdfs:comment>
+        <terms:created>2024-01-26</terms:created>
+        <terms:creator>Lucia Bertoldini</terms:creator>
+        <terms:description>An ontology on the cognitive bias of absent mindedness</terms:description>
+        <terms:title>Absent Mindedness Ontology</terms:title>
+        <scenario xml:lang="en">Frequently forgetting the names of acquaintances or even close friends</scenario>
+        <rdfs:comment xml:lang="en">This is the ontology on the cognitive bias of absent-mindedness</rdfs:comment>
     </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/terms/created -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/created"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/creator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/description -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
+    
+
+
+    <!-- http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#scenario -->
+
+    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#scenario"/>
     
 
 
@@ -24,69 +71,141 @@
     
 
 
-    <!-- http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#affects -->
+    <!-- http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#areInvolvedBy -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#affects"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#areInvolvedBy">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#involvesObjects"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#CognitiveItems"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#Forgetfulness"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#characterizes -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#characterizes">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#isCharacterizedBy"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#AttentionLapse"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#Distraction"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#Forgetfulness"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#AbsentMindedness"/>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#disruptsActivity -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#disruptsActivity"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#disruptsActivity">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#isDisruptedBy"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#Distraction"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#Activity"/>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#hasAttentionLevel -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#hasAttentionLevel"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#hasAttentionLevel">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#Individual"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#AttentionLevel"/>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#hasImpactOn -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#hasImpactOn"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#hasImpactOn">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#isImpactedBy"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#AbsentMindedness"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#SocialInteraction"/>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#involvesObjects -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#involvesObjects"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#involvesObjects">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#Forgetfulness"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#CognitiveItems"/>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#isCharacterizedBy -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#isCharacterizedBy"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#isCharacterizedBy">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#AbsentMindedness"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#AttentionLapse"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#Distraction"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#Forgetfulness"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#isDisruptedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#isDisruptedBy">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#Activity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#AttentionLapse"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#Distraction"/>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#isEvidentIn -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#isEvidentIn"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#isEvidentIn">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#AbsentMindedness"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#SocialInteraction"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#isImpactedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#isImpactedBy">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#SocialInteraction"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#AbsentMindedness"/>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#isTriggeredBy -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#isTriggeredBy"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#isTriggeredBy">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#triggers"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#Distraction"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#DistractingFactors"/>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#occursDuring -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#occursDuring"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#occursDuring">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#AttentionLapse"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#Distraction"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#Forgetfulness"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#Activity"/>
+    </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#occursDuringActivity -->
+    <!-- http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#participates -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#occursDuringActivity"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#participates">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#Individual"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#Activity"/>
+    </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#resultsIn -->
+    <!-- http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#triggers -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#resultsIn"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#triggers">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#DistractingFactors"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#Distraction"/>
+    </owl:ObjectProperty>
     
 
 
@@ -101,88 +220,11 @@
     
 
 
-    <!-- http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#affects -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#affects">
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#disruptsActivity -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#disruptsActivity">
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#hasAttentionLevel -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#hasAttentionLevel">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#AttentionLevel"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#hasImpactOn -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#hasImpactOn">
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#involvesObjects -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#involvesObjects"/>
-    
-
-
-    <!-- http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#isCharacterizedBy -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#isCharacterizedBy">
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#isEvidentIn -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#isEvidentIn">
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#isTriggeredBy -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#isTriggeredBy">
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#occursDuring -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#occursDuring">
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#occursDuringActivity -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#occursDuringActivity">
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#resultsIn -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#resultsIn">
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
 
@@ -206,10 +248,35 @@
     
 
 
+    <!-- http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#Activity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#Activity">
+        <rdfs:comment>Activities that an individual might be involved in</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#AttentionLapse -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#AttentionLapse">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#AbsentMindedness"/>
         <rdfs:comment>Represents a temporary failure to maintain attention</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#AttentionLevel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#AttentionLevel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#CognitiveState"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#CognitiveItems -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#CognitiveItems">
+        <rdfs:comment>Items an individual is remebering or in any case are stored in the memory of the individual itself</rdfs:comment>
     </owl:Class>
     
 
@@ -222,9 +289,18 @@
     
 
 
+    <!-- http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#DistractingFactors -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#DistractingFactors">
+        <rdfs:comment>Factors that might cause distraction in the cognitive state of the individual</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#Distraction -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#Distraction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#AbsentMindedness"/>
         <rdfs:comment>Represents the state of being easily diverted from a task or train of thought</rdfs:comment>
     </owl:Class>
     
@@ -233,22 +309,23 @@
     <!-- http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#Forgetfulness -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#Forgetfulness">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#AbsentMindedness"/>
         <rdfs:comment>Represents the specific aspect of absent-mindedness related to forgetting tasks or information</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#Relationships -->
+    <!-- http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#Individual -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#Relationships">
-        <rdfs:comment>Type of social interaction that might be affected by absent-mindedness</rdfs:comment>
+    <owl:Class rdf:about="http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#Individual">
+        <rdfs:comment>A person</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#SocialInteractionEffect -->
+    <!-- http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#SocialInteraction -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#SocialInteractionEffect">
+    <owl:Class rdf:about="http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#SocialInteraction">
         <rdfs:comment>Represents the impact of absent-mindedness on social interactions</rdfs:comment>
     </owl:Class>
     
@@ -257,44 +334,84 @@
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
-    // Annotations
+    // Individuals
     //
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    <rdf:Description rdf:about="http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#affects">
-        <rdfs:comment>Describes how absent-mindedness can have external consequences</rdfs:comment>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#disruptsActivity">
-        <rdfs:comment>Describes the impact of distraction on ongoing activities</rdfs:comment>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#hasAttentionLevel">
-        <rdfs:comment>Indicates the level of attention the individual currently has</rdfs:comment>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#hasImpactOn">
-        <rdfs:comment>Describes the potential consequences or impact of absent-mindedness</rdfs:comment>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#involvesObjects">
-        <rdfs:comment>Lists the objects or information commonly forgotten</rdfs:comment>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#isCharacterizedBy">
-        <rdfs:comment>Describes specific traits or behaviors associated with absent-mindedness</rdfs:comment>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#isEvidentIn">
-        <rdfs:comment>Describes specific scenarios where absent-mindedness may become evident in social settings</rdfs:comment>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#isTriggeredBy">
-        <rdfs:comment>Describes factors that commonly lead to distraction</rdfs:comment>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#occursDuring">
-        <rdfs:comment>Describes situations or activities where attention lapses are likely to happen</rdfs:comment>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#occursDuringActivity">
-        <rdfs:comment>Describes the activities during which forgetfulness is likely to occur</rdfs:comment>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#resultsIn">
-        <rdfs:comment>Describes the consequences of attention lapses</rdfs:comment>
-    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#act_forgetting -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#act_forgetting">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#Forgetfulness"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#attention -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#attention">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#AttentionLevel"/>
+        <hasAttentionLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</hasAttentionLevel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#book_club_meeting -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#book_club_meeting">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#Activity"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#SocialInteraction"/>
+        <isImpactedBy rdf:resource="http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#act_forgetting"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#discussion_on_books -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#discussion_on_books">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#DistractingFactors"/>
+        <triggers rdf:resource="http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#distraction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#distraction -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#distraction">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#Distraction"/>
+        <isTriggeredBy rdf:resource="http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#discussion_on_books"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#name_of_new_member -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#name_of_new_member">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#CognitiveItems"/>
+        <areInvolvedBy rdf:resource="http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#act_forgetting"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#new_member -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#new_member">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#Individual"/>
+        <participates rdf:resource="http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#book_club_meeting"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#user -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#user">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#Individual"/>
+        <hasAttentionLevel rdf:resource="http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#attention"/>
+        <participates rdf:resource="http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness#book_club_meeting"/>
+    </owl:NamedIndividual>
 </rdf:RDF>
 
 
