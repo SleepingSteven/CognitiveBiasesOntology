@@ -56,83 +56,143 @@ Give me 10 example scenarios of the Subjective Validation cognitive bias
 
 Sure, here are 10 example scenarios where the Subjective Validation cognitive bias might be observed:
 
-1. **Horoscopes**: People often find personal meaning in their horoscope predictions, even though they are intentionally vague and could apply to anyone.
-2. **Psychic Readings**: Individuals may believe in a psychic's vague and general statements, interpreting them as highly accurate and personal.
-3. **Self-Help Books**: Readers might resonate with generic advice, believing it to be tailored specifically for them.
-4. **Health Myths**: Someone might believe a health myth that aligns with their habits or desires, like thinking chocolate has health benefits because they love eating it.
-5. **Superstitions**: People often believe in superstitions that promise good luck, like carrying a lucky charm, because they want them to be true.
-6. **Confirmation Bias in News**: Individuals might believe news stories or rumors that confirm their pre-existing beliefs, even if the information is unverified or false.
-7. **Investment Decisions**: An investor might interpret market trends in a way that confirms their investment strategy, even if the interpretation is objectively incorrect.
-8. **Educational Achievement**: A student might attribute their success to their intelligence and hard work, while attributing failure to external factors like an unfair test, thereby validating their self-perception.
-9. **Social Media**: Users might believe and share posts that align with their views, even if the posts contain misinformation.
-10. **Sports Rituals**: Athletes might follow specific rituals before a game (like wearing a lucky pair of socks), believing it will improve their performance, even though there's no objective correlation.
 
-Remember, Subjective Validation is a cognitive bias where people consider a statement or another piece of information to be correct if it has any personal meaning or significance to them. It's important to be aware of this bias as it can lead to the acceptance of false or misleading information.
+Horoscopes: Individuals may read their daily horoscope and find that the general statements made about their personality or upcoming events resonate with them, even though the same horoscope applies to people of various zodiac signs.
+
+Personality Tests: Participants in a personality test receive a generic personality description that could apply to a wide range of individuals. Despite its generality, they perceive the description as highly accurate and tailored to their unique characteristics.
+
+Fortune Telling: A fortune teller provides a vague prediction about the future to a client. The client interprets the prediction as highly accurate and specific to their life circumstances.
+
+Cold Reading: During a psychic reading, the reader makes general statements that seem specific to an individual's life. The person being read believes the psychic has unique insights into their personal situation.
+
+Astrology: People read their astrological birth charts and feel that the descriptions of their personality traits and future prospects are spot-on, even though the information is often broadly applicable to various individuals.
+
+Self-Help Advice: Someone reads a self-help book containing general advice on happiness and success. They feel a strong personal connection to the advice, believing it is uniquely relevant to their life.
+
+Online Quizzes: Individuals take online quizzes that claim to reveal specific aspects of their personality, intelligence, or compatibility. The vague questions and results are perceived as highly accurate and personally tailored.
+
+Feedback from Others: A person receives feedback from others that is general and not necessarily specific to them, but they interpret it as highly insightful and applicable to their personal qualities.
+
+Psychic Readings: In a psychic reading, the psychic makes general statements about the client's relationships, career, or health. The client feels a strong connection to the predictions and believes the psychic has unique insights.
+
+Personality Horoscopes: Some publications offer personality assessments based on birth months or seasons. Individuals may resonate with the characteristics assigned to their birth period, even though the descriptions are broad and could apply to many people.
 
 
-Consider the scenario "Social Media" and give me a small user story from it
 
-Sure, here's a small user story based on the "Social Media" scenario:
 
-> Meet Sarah, an active social media user who enjoys staying updated with the latest news and trends. One day, she came across a post claiming that a certain type of tea can cure common colds within a day. As a tea lover and someone who frequently suffers from colds, this information was very appealing to her.
 
-> The post was shared by a friend she trusts, and it had numerous likes and shares, which made it seem credible. Sarah felt a sense of validation because the post aligned with her love for tea and her desire to find easy remedies for colds. She immediately shared the post on her profile, believing she was helping her friends and followers.
+Consider the scenario "Personality Horoscopes" and give me a small user story from it
 
-> This is an example of the Subjective Validation cognitive bias. Despite the lack of scientific evidence supporting the claim, Sarah believed the information because it had personal significance to her. The post validated her preferences and desires, leading her to accept and share the information.
 
-> A few days later, Sarah came across a reliable health website debunking the claim made in the post. She realized that she had fallen prey to misinformation due to her biases. This experience made Sarah more cautious about the information she consumes and shares on social media, reminding her of the importance of fact-checking and critical thinking.
+User Story: Sarah, a 28-year-old marketing professional, regularly reads her monthly personality horoscope in a popular magazine. One day, she comes across her horoscope for the month of February, which suggests that she will face challenges at work but will find success through collaboration and creativity.
 
+Excitedly, Sarah reflects on her current work projects and ongoing collaborations within her team. While the horoscope's predictions are somewhat general, she interprets them as strikingly accurate for her situation. Feeling motivated and reassured, Sarah decides to focus more on teamwork and innovative approaches in her projects throughout the month.
+
+As the month progresses, Sarah encounters some work-related challenges, as predicted by the horoscope. However, she actively embraces collaboration and introduces creative solutions to overcome obstacles. At the end of the month, she reflects on the successful completion of her projects and attributes her achievements to following the guidance outlined in her horoscope.
+
+In this user story, Sarah experiences subjective validation by finding personal relevance in the general statements of her monthly horoscope, influencing her behavior and approach to work throughout the month.
 
 
 If you had to make an ontology of the "Subject Validation", what classes and properties would you create?
 
-Absolutely, let's expand the ontology of the "Subjective Validation" to include more classes and properties that capture the complexity of this cognitive bias:
+Building an ontology for "Subjective Validation" involves defining classes to represent key concepts and properties to capture relationships between these concepts. Here's a basic outline for an ontology:
 
-**Classes:**
-1. `Individual`: The person exhibiting the Subjective Validation.
-2. `Information`: The statement or piece of information that the individual finds personally meaningful or significant.
-3. `Context`: The specific situation or domain in which the Subjective Validation is being exhibited.
-4. `Source`: The origin of the information (e.g., media, word of mouth, etc.).
-5. `Belief`: The pre-existing beliefs of the individual that influence their interpretation of the information.
-6. `Emotion`: The feelings experienced by the individual when they encounter the information.
-7. `CognitiveBias`: The underlying cognitive biases that contribute to the Subjective Validation (e.g., confirmation bias, belief perseverance, etc.).
+Class: CognitiveBias
 
-**Properties:**
-1. `believes (Individual, Information)`: This property indicates that the individual believes in the information because it is personally meaningful or significant.
-2. `originatesFrom (Information, Source)`: This property indicates the source of the information.
-3. `exhibitsIn (Individual, Context)`: This property shows the context in which the individual is exhibiting the Subjective Validation.
-4. `influencedBy (Information, Belief)`: This property shows the pre-existing beliefs that influence the individual's interpretation of the information.
-5. `feels (Individual, Emotion)`: This property captures the emotions felt by the individual when they encounter the information.
-6. `involves (SubjectiveValidation, CognitiveBias)`: This property shows the cognitive biases that contribute to the Subjective Validation.
+Description: Represents various cognitive biases, including Subjective Validation.
+Class: SubjectiveValidation
 
+Subclass of: CognitiveBias
+Description: Specific class representing the Subjective Validation cognitive bias.
+Class: Context
+
+Description: Represents the context in which subjective validation occurs, such as horoscopes, personality tests, and psychic readings.
+Class: Individual
+
+Description: Represents a person who experiences subjective validation.
+Class: Statement
+
+Description: Represents a general or vague statement that could be subject to subjective validation.
+Property: isExperiencedBy
+
+Domain: SubjectiveValidation
+Range: Individual
+Description: Indicates that an individual experiences subjective validation.
+Property: occursInContext
+
+Domain: SubjectiveValidation
+Range: Context
+Description: Specifies the context in which subjective validation takes place.
+Property: involvesStatement
+
+Domain: SubjectiveValidation
+Range: Statement
+Description: Relates subjective validation to the specific statements or information subject to interpretation.
+Property: resultsInBehavior
+
+Domain: Individual
+Range: Context
+Description: Captures the behavioral changes or actions of an individual resulting from subjective validation in a particular context.
+Property: isInstanceOf
+
+Domain: CognitiveBias
+Range: SubjectiveValidation
+Description: Denotes that subjective validation is an instance of the broader category of cognitive biases.
+This ontology provides a basic structure for understanding subjective validation, its context, the individuals involved, and the statements that contribute to the bias. Keep in mind that ontologies can be more complex and detailed based on specific use cases and requirements.
 This expanded ontology provides a deeper understanding of the Subjective Validation by considering the source of information, the emotional aspect, the pre-existing beliefs of the individual, and the underlying cognitive biases. It can be further refined or expanded based on the specific use case or domain of interest. Remember, the goal of an ontology is to model the domain of interest in a way that captures its essential aspects and allows for useful reasoning.
 
 now create a list of competency questions in the form of sparql queries and solve them with the ontology you created
 
-Sure, here are some competency questions that can be answered using the ontology of the "Subjective Validation", along with the corresponding SPARQL queries and their solutions:
+Sure, here are some example competency questions in the form of SPARQL queries for the ontology:
 
-1. **Question**: Who are the individuals exhibiting the Subjective Validation?
-    - **SPARQL Query**: `SELECT ?individual WHERE { ?individual :experiences :SubjectiveValidation . }`
-    - **Solution**: This query would return all individuals who are experiencing the Subjective Validation.
+1. **Query: Retrieve all instances of the SubjectiveValidation class.**
+   ```sparql
+   SELECT ?subjectiveValidation
+   WHERE {
+      ?subjectiveValidation rdf:type :SubjectiveValidation .
+   }
+   ```
 
-2. **Question**: What information do individuals find personally meaningful or significant?
-    - **SPARQL Query**: `SELECT ?information WHERE { ?individual :believes ?information . }`
-    - **Solution**: This query would return all pieces of information that individuals find personally meaningful or significant.
+2. **Query: Find individuals who have experienced subjective validation and the context in which it occurred.**
+   ```sparql
+   SELECT ?individual ?context
+   WHERE {
+      ?individual :isExperiencedBy ?subjectiveValidation .
+      ?subjectiveValidation :occursInContext ?context .
+   }
+   ```
 
-3. **Question**: In what contexts is the Subjective Validation being exhibited?
-    - **SPARQL Query**: `SELECT DISTINCT ?context WHERE { :SubjectiveValidation :occursIn ?context . }`
-    - **Solution**: This query would return all unique contexts in which the Subjective Validation is being exhibited.
+3. **Query: List all the statements involved in instances of subjective validation.**
+   ```sparql
+   SELECT ?subjectiveValidation ?statement
+   WHERE {
+      ?subjectiveValidation :involvesStatement ?statement .
+   }
+   ```
 
-4. **Question**: What are the sources of the information that individuals find personally meaningful or significant?
-    - **SPARQL Query**: `SELECT ?source WHERE { ?information :originatesFrom ?source . }`
-    - **Solution**: This query would return all sources of the information that individuals find personally meaningful or significant.
+4. **Query: Retrieve individuals and the specific behavioral outcomes resulting from subjective validation.**
+   ```sparql
+   SELECT ?individual ?context
+   WHERE {
+      ?individual :resultsInBehavior ?context .
+   }
+   ```
 
-5. **Question**: What emotions are felt by individuals when they encounter the information?
-    - **SPARQL Query**: `SELECT ?emotion WHERE { ?individual :feels ?emotion . }`
-    - **Solution**: This query would return all emotions felt by individuals when they encounter the information.
+5. **Query: Identify the different contexts in which subjective validation occurs.**
+   ```sparql
+   SELECT ?context
+   WHERE {
+      ?subjectiveValidation :occursInContext ?context .
+   }
+   GROUP BY ?context
+   ```
 
-6. **Question**: What cognitive biases contribute to the Subjective Validation?
-    - **SPARQL Query**: `SELECT ?cognitiveBias WHERE { :SubjectiveValidation :involves ?cognitiveBias . }`
-    - **Solution**: This query would return all cognitive biases that contribute to the Subjective Validation.
+6. **Query: Find all cognitive biases, including instances of SubjectiveValidation.**
+   ```sparql
+   SELECT ?cognitiveBias
+   WHERE {
+      ?cognitiveBias rdf:type :CognitiveBias .
+   }
+   ```
 
-Please note that these queries are hypothetical and would require a populated RDF dataset based on the ontology to return actual results. The ontology provides a framework for structuring this data, and SPARQL queries can then be used to retrieve specific information from the dataset.
+Note: These SPARQL queries are examples and might need adjustments based on the specific structure and data in your ontology. Additionally, the queries assume a namespace prefix (`rdf:` and `:`) for the ontology, and you may need to replace those with your actual namespace declarations.
