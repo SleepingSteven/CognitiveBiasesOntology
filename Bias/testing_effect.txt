@@ -96,56 +96,31 @@ Creating an ontology for the "testing effect" involves defining classes, propert
 
 With this ontology, you can model scenarios where individuals engage in learning activities, study specific educational materials, and participate in testing events to leverage the "testing effect" for improved retention. The ontology provides a foundation for representing and analyzing the relationships between individuals, learning materials, and testing events in the context of this cognitive phenomenon.
 
-5. COMPETENCY QUESTIONS (TO FIX WITH MY OWN ONTOLOGY)
+5. Competency Questions
 
-**Competency Questions:**
-
-1. **Natural Language:**
-   - *Which individuals have actively engaged in the learning process by participating in testing events?*
-
-   - *Can we identify the learning materials that were studied by individuals who experienced enhanced retention through the testing effect?*
-
-
-Which testing events have shown a notable impact on the enhancement of long-term retention for learning materials?
-
-Can we identify individuals who have consistently demonstrated improved retention through multiple testing events?
-
-2. **SPARQL Queries:**
-   
-   ```sparql
-   # Query 1: Retrieve individuals actively engaged in the learning process through testing events
-   SELECT ?individual
-   WHERE {
-     ?individual engagesInLearning ?testingEvent.
-     ?testingEvent rdf:type :TestingEvent.
-   }
-   ```
-
-   ```sparql
-   # Query 2: Identify learning materials studied by individuals who experienced enhanced retention through the testing effect
-   SELECT ?learningMaterial
-   WHERE {
-     ?individual participatesInTesting ?testingEvent.
-     ?testingEvent EnhancesRetention ?learningMaterial.
-   }
-   ```
-
-# Query 3: Retrieve testing events with a notable impact on long-term retention for learning materials
-SELECT ?testingEvent
-WHERE {
-  ?testingEvent rdf:type :TestingEvent.
-  ?testingEvent EnhancesRetention ?learningMaterial.
-}
-
-
-# Query 4: Identify individuals with consistent improved retention through multiple testing events
+# Query 1: Retrieve individuals actively engaged in the learning process through testing events
 SELECT ?individual
 WHERE {
-  ?individual engagesInLearning ?testingEvent.
-  ?testingEvent EnhancesRetention ?learningMaterial.
+  ?individual pcp:isParticipantIn ?testingEvent.
+  ?testingEvent rdf:type edu:Test.
 }
-GROUP BY ?individual
-HAVING (COUNT(?testingEvent) > 1)
+# Query 2: Identify learning materials studied by individuals who experienced enhanced retention through the testing effect
+SELECT ?learningMaterial
+WHERE {
+  ?individual pcp:isParticipantIn ?testingEvent.
+  ?testingEvent cbo:EnhancesRetention ?learningMaterial.
+}
+#Query 3: Check whether testing events enhance the retention of learning materials
+SELECT ?testingEvent WHERE { 
+    ?testingEvent rdf:type edu:Test. 
+    ?testingEvent cbo:EnhancesRetention ?learningMaterial. 
+}
+#Query 4: The amount of testing events makes the retetion of the material enhanced?
+SELECT ?individual WHERE { 
+    ?individual pcp:isParticipantIn ?testingEvent. 
+    ?testingEvent cbo:EnhancesRetention ?learningMaterial.
+} 
+GROUP BY ?individual HAVING (COUNT(?testingEvent) > 1)
 
 
 These competency questions and SPARQL queries assume that the ontology uses the specified properties and classes to represent the relationships and events related to the "testing effect." Adjustments may be needed based on the specific implementation details of the ontology.

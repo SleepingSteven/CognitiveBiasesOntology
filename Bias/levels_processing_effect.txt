@@ -105,67 +105,46 @@ Properties:
 
 This ontology provides a basic structure for understanding the Levels of Processing Effect, connecting different levels of information processing to encoding activities and their subsequent impact on memory performance. Depending on specific requirements, additional classes and properties could be added for a more comprehensive representation.
 
-5. COMPETENCY QUESTIONS (TO FIX WITH MY OWN ONTOLOGY)
+5. Competency Questions
 
-Competency Questions:
-
-1. **Natural Language:**
-   - What are the different types of encoding activities involved in the Levels of Processing Effect?
-   
-   **SPARQL Query:**
-   ```sparql
-   SELECT ?encodingActivity
-   WHERE {
-      ?encodingActivity rdf:type :EncodingActivity .
-   }
-   ```
-
-2. **Natural Language:**
-   - How does the depth of information processing influence long-term memory performance?
-
-   **SPARQL Query:**
-   ```sparql
-   SELECT ?processingLevel ?memoryPerformance
-   WHERE {
-      ?processingLevel rdf:type :InformationProcessingLevel .
-      ?encodingActivity :involvesProcessingLevel ?processingLevel .
-      ?encodingActivity :influencesMemoryPerformance ?memoryPerformance .
-      ?memoryPerformance rdf:type :LongTermMemory .
-   }
-   ```
-
-3. **Natural Language:**
-   - Which encoding activities require cognitive engagement for effective processing?
-
-   **SPARQL Query:**
-   ```sparql
-   SELECT ?encodingActivity
-   WHERE {
-      ?encodingActivity rdf:type :EncodingActivity .
-      ?encodingActivity :requiresCognitiveEngagement true .
-   }
-   ```
-
-4. **Natural Language:**
-   - What are the different stimulus characteristics associated with encoding activities?
-
-   **SPARQL Query:**
-   ```sparql
-   SELECT ?encodingActivity ?stimulusCharacteristics
-   WHERE {
-      ?encodingActivity rdf:type :EncodingActivity .
-      ?encodingActivity :hasStimulusCharacteristics ?stimulusCharacteristics .
-   }
-   ```
-
-5. **Natural Language:**
-   - How does deep processing enhance retrieval compared to shallow processing?
-
-   **SPARQL Query:**
-   ```sparql
-   SELECT ?deepProcessing ?enhancesRetrieval
-   WHERE {
-      ?deepProcessing rdf:type :InformationProcessingLevel .
-      ?deepProcessing :enhancesRetrieval ?enhancesRetrieval .
-   }
-   ```
+Natural Language:
+What are the different types of encoding activities involved in the Levels of Processing Effect?
+SPARQL Query:
+SELECT ?encodingActivity
+WHERE {
+   ?encodingActivity rdf:type cbo:EncodingActivity .
+}
+Natural Language:
+How does the depth of information processing influence long-term memory performance?
+SPARQL Query:
+SELECT ?processingLevel ?memoryPerformance
+WHERE {
+   ?processingLevel rdf:type cbo:InformationProcessingLevel .
+   ?encodingActivity cbo:involvesProcessingLevel ?processingLevel .
+   ?encodingActivity sor:influences ?memoryPerformance .
+   ?memoryPerformance rdf:type cbo:Long-termMemory .
+}
+Natural Language:
+Which encoding activities require cognitive engagement for effective processing?
+SPARQL Query:
+SELECT ?encodingActivity
+WHERE {
+   ?encodingActivity rdf:type cbo:EncodingActivity.
+   ?encodingActivity cbo:requiresCognitiveEngagement true .
+}
+Natural Language:
+What are the different stimulus characteristics associated with encoding activities?
+SPARQL Query:
+SELECT ?encodingActivity ?stimulusCharacteristics
+WHERE {
+   ?encodingActivity rdf:type cbo:EncodingActivity .
+   ?encodingActivity cbo:hasStimulusFeatures ?stimulusCharacteristics .
+}
+Natural Language:
+How does deep processing enhance retrieval compared to shallow processing?
+SPARQL Query:
+SELECT ?deepProcessing ?enhancesRetrieval
+WHERE {
+   ?deepProcessing rdf:type cbo:InformationProcessingLevel .
+   ?deepProcessing cbo:enhancesRetrieval ?enhancesRetrieval .
+}

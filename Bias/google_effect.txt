@@ -130,60 +130,42 @@ Creating an ontology involves defining classes, properties, and relationships be
 
 This ontology provides a basic structure to capture relationships and dependencies related to the Google Effect in terms of how individuals interact with information sources, the internet, and their memory. Depending on specific use cases and requirements, this ontology can be extended and refined.
 
-5. COMPETENCY QUESTIONS (TO FIX WITH MY OWN ONTOLOGY)
+5. Competency Questions
 
 Competency questions are queries that an ontology should be able to answer. They help ensure that the ontology adequately captures the information needed for a specific domain. Here are some sample competency questions that a SPARQL query could aim to answer based on the ontology for the Google Effect:
 
-PREFIX: 
-GoE : http://www.semanticweb.org/lucia/ontologies/2023/11/google_effect/
-
-1. **Which individuals rely heavily on online sources for information?**
-   ```sparql
-   SELECT ?person
-   WHERE {
-      ?person GoE:ReliesOn ?informationSource .
-      ?informationSource rdf:type GoE:OnlineSource .
-   }
-   ```
-
-2. **What are the preferred search engines of users who frequently forget information they can find online?**
-   ```sparql
-   SELECT ?person ?searchEngine
-   WHERE {
-      ?person GoE:ReliesOn ?informationSource .
-      ?informationSource rdf:type GoE:SearchEngine .
-      ?person GoE:Forgets GoE:memory .
-   }
-   ```
-
-3. **How often do people access the internet for navigation purposes?**
-   ```sparql
-   SELECT ?person (COUNT(?navigationEvent) AS ?navigationFrequency)
-   WHERE {
-      ?person GoE:Accesses GoE:internet .
-      ?person GoE:Navigates ?navigationEvent .
-   }
-   GROUP BY ?person
-   ```
-
-4. **What types of information do individuals commonly forget when they have easy access to online sources?**
-   ```sparql
-   SELECT ?informationType
-   WHERE {
-      	?person GoE:Forgets ?memory
-	? memory a GoE:memory .
-      	?memory rdf:type ?informationType .
-   }
-   ```
-
-5. **Which online sources do people utilize the most in building their knowledge?**
-   ```sparql
-   SELECT ?person ?informationSource
-   WHERE {
-      ?person GoE:ReliesOn ?InformationSource .
-      ?InformationSource rdf:type GoE:OnlineSource .
-   }
-   ```
-
+Which individuals rely heavily on online sources for information?
+SELECT ?person
+WHERE {
+   ?person cbo:ReliesOn ?informationSource .
+   ?informationSource rdf:type cbo:OnlineSource .
+}
+What are the preferred search engines of users who frequently forget information they can find online?
+SELECT ?person ?searchEngine
+WHERE {
+   ?person cbo:ReliesOn ?informationSource .
+   ?informationSource rdf:type cbo:SearchEngine .
+   ?person cbo:Forgets trait:Knowledge .
+}
+How often do people access the internet for navigation purposes?
+SELECT ?person (COUNT(?navigationEvent) AS ?navigationFrequency)
+WHERE {
+   ?person cbo:Accesses cbo:Virtual.
+   ?person cbo:Navigates ?navigationEvent .
+}
+GROUP BY ?person
+What types of information do individuals commonly forget when they have easy access to online sources?
+SELECT ?informationType
+WHERE {
+   	?person cbo:Forgets ?knowledge
+ ?knowledge a trait:Knowledge.
+   	?knowledge rdf:type ?informationType .
+}
+Which online sources do people utilize the most in building their knowledge?
+SELECT ?person ?informationSource
+WHERE {
+   ?person cbo:ReliesOn ?InformationSource .
+   ?InformationSource rdf:type cbo:OnlineSource .
+}
 These sample SPARQL queries illustrate how the ontology can be queried to obtain relevant information about individuals, their reliance on online sources, and the impact on their memory and knowledge. The actual queries would depend on the specific structure and details of the ontology you've developed.
 

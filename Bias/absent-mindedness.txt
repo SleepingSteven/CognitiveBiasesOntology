@@ -86,123 +86,55 @@ Creating an ontology for absent-mindedness involves defining classes, properties
 
 These classes and properties provide a basic structure for representing absent-mindedness in an ontology. Depending on the specific goals and requirements, additional details, relationships, or more refined classes could be added to capture a more comprehensive understanding of absent-mindedness.
 
-5. COMPETENCY QUESTIONS (TO FIX WITH MY OWN ONTOLOGY)
+5. Competency Questions
 
 Certainly! Here are the natural language versions followed by the corresponding SPARQL queries:
 
-1. **General Understanding:**
-
-   - Q1: *Retrieve all classes that represent mental states.*
-     ```sparql
-     SELECT ?class
-     WHERE {
-       ?class rdf:type owl:Class .
-       FILTER(CONTAINS(STR(?class), "MentalState"))
-     }
-     ```
-
-   - Q2: *Retrieve instances of the AbsentMindedness class.*
-     ```sparql
-     SELECT ?absentMindedness
-     WHERE {
-       ?absentMindedness rdf:type :AbsentMindedness .
-     }
-     ```
-
-   - Q3: *Retrieve traits characterizing absent-mindedness.*
-     ```sparql
-     SELECT ?traits
-     WHERE {
-       :AbsentMindedness :isCharacterizedBy ?traits .
-     }
-     ```
-
-2. **Specific Aspects of Absent-Mindedness:**
-
-   - Q4: *Retrieve instances of the Distraction class.*
-     ```sparql
-     SELECT ?distractionClass
-     WHERE {
-       ?distractionClass rdf:type :Distraction .
-     }
-     ```
-
-   - Q5: *Retrieve triggers for attention lapses.*
-     ```sparql
-     SELECT ?triggers
-     WHERE {
-       :AttentionLapse :isTriggeredBy ?triggers .
-     }
-     ```
-
-   - Q6: *Retrieve objects involved in forgetfulness.*
-     ```sparql
-     SELECT ?objects
-     WHERE {
-       :Forgetfulness :involvesObjects ?objects .
-     }
-     ```
-
-3. **Impact and Consequences:**
-
-   - Q7: *Retrieve impacts of absent-mindedness on social interactions.*
-     ```sparql
-     SELECT ?impact
-     WHERE {
-       :SocialInteractionEffect :affectsRelationships ?impact .
-     }
-     ```
-
-   - Q8: *Retrieve consequences of attention lapses.*
-     ```sparql
-     SELECT ?consequences
-     WHERE {
-       :AttentionLapse :resultsIn ?consequences .
-     }
-     ```
-
-   - Q9: *Retrieve consequences of distraction on tasks.*
-     ```sparql
-     SELECT ?distractionConsequences
-     WHERE {
-       :Distraction :resultsIn ?distractionConsequences .
-     }
-     ```
-
-4. **Usage in Real-World Scenarios:**
-
-   - Q10: *Retrieve instances where the ontology is used to analyze and improve attention levels.*
-     ```sparql
-     SELECT ?usage
-     WHERE {
-       ?usage :utilizes ?ontology .
-       ?ontology rdf:type :AbsentMindednessOntology .
-     }
-     ```
-
-   - Q11: *Retrieve objects involved in a task.*
-     ```sparql
-     SELECT ?objectsInvolved
-     WHERE {
-       ?task :involves ?objectsInvolved .
-       ?task rdf:type :Task .
-     }
-     ```
-
-5. **Relationships and Dependencies:**
-
-   - Q12: *Retrieve relationships involving the CognitiveState class.*
-     ```sparql
-     SELECT ?relationships
-     WHERE {
-       :CognitiveState ?relationships ?otherClass .
-     }
-     ```
-
-   - Q13: *Retrieve connections evident in absent-mindedness.*
-     ```sparql
-     SELECT ?connections
-     WHERE {
-       :AbsentMindedness :isEvidentIn ?connections .
-     }
-     ```
+General Understanding:
+Q1: Retrieve all classes that represent mental states.
+SELECT ?class
+WHERE {
+  ?class rdf:type cbo:CognitiveState.
+}
+Q2: Retrieve instances of the AbsentMindedness class.
+SELECT ?absentMindedness
+WHERE {
+  ?absentMindedness rdf:type cbo:AbsentMindedness .
+}
+Q3: Retrieve traits characterizing absent-mindedness.
+SELECT ?traits
+WHERE {
+  ?traits rdfs:subClassOf cbo:AbsentMindedness .
+}
+Specific Aspects of Absent-Mindedness:
+Q4: Retrieve instances of the Distraction class.
+SELECT ?distractionClass
+WHERE {
+  ?distractionClass rdf:type cbo:Distraction .
+}
+Q5: Retrieve triggers for attention lapses.
+SELECT ?triggers
+WHERE {
+  cbo:AttentionLapse cbo:isTriggeredBy ?triggers .
+}
+Q6: Retrieve objects involved in forgetfulness.
+SELECT ?objects
+WHERE {
+  cbo:Forgetfulness cbo:involvesObjects ?objects .
+}
+Impact and Consequences:
+Q7: Retrieve impacts of absent-mindedness on social interactions.
+SELECT ?impact
+WHERE {
+  cbo:AbsentMindedness sbeo:hasImpact ?impact .
+}
+Q8: Retrieve consequences of attention lapses.
+SELECT ?activity
+WHERE {
+  cbo:AttentionLapse cbo:occursDuring ?activity.
+}
+Q9: Retrieve consequences of distraction on tasks.
+SELECT ?activity
+WHERE {
+  cbo:Distraction cbo:disruptsActivity ?activity.
+}

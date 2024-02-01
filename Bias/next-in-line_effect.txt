@@ -94,65 +94,33 @@ Properties:
 
 By representing the "Next-in-line Effect" using this ontology, one can model the relationships between participants, their turns, memory records, and the overall discussion context. This structure allows for a more systematic analysis of how individuals remember and recall information based on the order of turns in a conversation. The ontology can be further expanded to include additional details and nuances related to the cognitive bias.
 
-5. COMPETENCY QUESTIONS (TO FIX WITH MY OWN ONTOLOGY)
+5. Competency questions 
 
-Competency Questions (Natural Language):
+#Query 1: Who participated in a specific discussion?
+SELECT ?participant WHERE { 
+    ?discussion a cbo:Discussion ; 
+                pcp:hasParticipant ?participant . 
+}
 
-1. **Participants and Turns:**
-   - *Who participated in the discussion?*
-   - *What turns did a specific participant take during the discussion?*
+#Query 2: What is the next turn after a specific turn in a discussion?
+SELECT ?nextTurn WHERE { 
+    ?turn cbo:Next ?nextTurn . 
+}
 
-2. **Sequential Order:**
-   - *In what order did participants take their turns?*
-   - *What was the turn that occurred immediately after a specific turn?*
+#Query 3: What did a participant remember from a specific turn in a discussion?
+SELECT ?memoryRecord WHERE { 
+    ?participant cbo:hasMemoryRecord ?memoryRecord . 
+    ?memoryRecord cbo:hasHighLevel true . 
+}
 
-3. **Memory Recall:**
-   - *What did a participant remember from a specific turn?*
-   - *Can we identify the turns that a participant recalled most vividly?*
+#Query 4: What was the context of a particular turn in a discussion?
+SELECT ?discussion WHERE { 
+    ?turn cbo:contextOf ?discussion . 
+}
 
-4. **Discussion Context:**
-   - *What was the overall context of a particular turn in the discussion?*
-   - *Which participants contributed to a specific part of the discussion?*
-
-SPARQL Queries:
-
-1. **Participants and Turns:**
-   ```sparql
-   SELECT ?participant
-   WHERE {
-      ?discussion rdf:type :Discussion .
-      ?discussion :hasParticipant ?participant .
-   }
-   ```
-
-2. **Sequential Order:**
-   ```sparql
-   SELECT ?currentTurn ?nextTurn
-   WHERE {
-      ?discussion rdf:type :Discussion .
-      ?discussion :hasTurn ?currentTurn .
-      ?currentTurn :nextTurn ?nextTurn .
-   }
-   ```
-
-3. **Memory Recall:**
-   ```sparql
-   SELECT ?participant ?recalledTurn
-   WHERE {
-      ?participant rdf:type :Participant .
-      ?participant :hasMemoryRecord ?memoryRecord .
-      ?memoryRecord :remembers ?recalledTurn .
-   }
-   ```
-
-4. **Discussion Context:**
-   ```sparql
-   SELECT ?turn ?discussionContext
-   WHERE {
-      ?discussion rdf:type :Discussion .
-      ?discussion :hasTurn ?turn .
-      ?turn :contextOf ?discussionContext .
-   }
-   ```
+#Query 5: What participants remembered a specific turn in a discussion?
+SELECT ?participant WHERE { 
+    ?participant cbo:hasMemoryRecord [ cbo:hasHighLevel true] . 
+}
 
 These SPARQL queries are basic representations and may need modification based on the specific structure and complexity of the ontology you decide to implement. The queries can be customized further to accommodate additional details and relationships within the ontology.
