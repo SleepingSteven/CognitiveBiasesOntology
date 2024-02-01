@@ -4,10 +4,14 @@
      xmlns:cbo="http://www.semanticweb.org/lucia/ontologies/2024/0/CognitiveBiasOntology/levels_processing/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:sor="http://purl.org/net/soron/"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:terms="http://purl.org/dc/terms/">
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:emotion="http://ns.inria.fr/emoca#"
+     xmlns:mexalgo="http://mex.aksw.org/mex-algo#">
     <owl:Ontology rdf:about="http://www.semanticweb.org/lucia/ontologies/2024/0/levels_processing">
         <terms:created>2024-01-26</terms:created>
         <terms:creator>Lucia Bertoldini</terms:creator>
@@ -64,12 +68,33 @@
     
 
 
+    <!-- http://mex.aksw.org/mex-algo#hasLearningMethod -->
+
+    <owl:ObjectProperty rdf:about="http://mex.aksw.org/mex-algo#hasLearningMethod">
+        <owl:equivalentProperty rdf:resource="http://www.semanticweb.org/lucia/ontologies/2024/0/levels_processing#practices"/>
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lucia/ontologies/2024/0/levels_processing#EncodingActivity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/net/soron/influences -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/net/soron/influences">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/lucia/ontologies/2024/0/levels_processing#isInfluencedBy"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lucia/ontologies/2024/0/levels_processing#EncodingActivity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lucia/ontologies/2024/0/levels_processing#MemoryPerformance"/>
+        <rdfs:comment>Captures the impact of different encoding activities on short-term or long-term memory</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.semanticweb.org/lucia/ontologies/2024/0/levels_processing#IsPracticedBy -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lucia/ontologies/2024/0/levels_processing#IsPracticedBy">
         <owl:inverseOf rdf:resource="http://www.semanticweb.org/lucia/ontologies/2024/0/levels_processing#practices"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/lucia/ontologies/2024/0/levels_processing#EncodingActivity"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/lucia/ontologies/2024/0/levels_processing#Individual"/>
+        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
     </owl:ObjectProperty>
     
 
@@ -89,19 +114,8 @@
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lucia/ontologies/2024/0/levels_processing#hasStimulusFeatures">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/lucia/ontologies/2024/0/levels_processing#EncodingActivity"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/lucia/ontologies/2024/0/levels_processing#StimulusFeatures"/>
+        <rdfs:range rdf:resource="http://ns.inria.fr/emoca#Stimulus"/>
         <rdfs:comment>Relates encoding activities to the sensory features of the stimulus being processed</rdfs:comment>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/lucia/ontologies/2024/0/levels_processing#influences -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lucia/ontologies/2024/0/levels_processing#influences">
-        <owl:inverseOf rdf:resource="http://www.semanticweb.org/lucia/ontologies/2024/0/levels_processing#isInfluencedBy"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/lucia/ontologies/2024/0/levels_processing#EncodingActivity"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/lucia/ontologies/2024/0/levels_processing#MemoryPerformance"/>
-        <rdfs:comment>Captures the impact of different encoding activities on short-term or long-term memory</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -149,7 +163,7 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lucia/ontologies/2024/0/levels_processing#isLearntBy">
         <owl:inverseOf rdf:resource="http://www.semanticweb.org/lucia/ontologies/2024/0/levels_processing#learns"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/lucia/ontologies/2024/0/levels_processing#Information"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/lucia/ontologies/2024/0/levels_processing#Individual"/>
+        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
     </owl:ObjectProperty>
     
 
@@ -157,7 +171,7 @@
     <!-- http://www.semanticweb.org/lucia/ontologies/2024/0/levels_processing#learns -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lucia/ontologies/2024/0/levels_processing#learns">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/lucia/ontologies/2024/0/levels_processing#Individual"/>
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/lucia/ontologies/2024/0/levels_processing#Information"/>
     </owl:ObjectProperty>
     
@@ -166,7 +180,7 @@
     <!-- http://www.semanticweb.org/lucia/ontologies/2024/0/levels_processing#practices -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lucia/ontologies/2024/0/levels_processing#practices">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/lucia/ontologies/2024/0/levels_processing#Individual"/>
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/lucia/ontologies/2024/0/levels_processing#EncodingActivity"/>
     </owl:ObjectProperty>
     
@@ -186,6 +200,7 @@
     <!-- http://www.semanticweb.org/lucia/ontologies/2024/0/levels_processing#requiresCognitiveEngagement -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/lucia/ontologies/2024/0/levels_processing#requiresCognitiveEngagement">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lucia/ontologies/2024/0/levels_processing#EncodingActivity"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
     </owl:DatatypeProperty>
     
@@ -202,6 +217,14 @@
     
 
 
+    <!-- http://ns.inria.fr/emoca#Stimulus -->
+
+    <owl:Class rdf:about="http://ns.inria.fr/emoca#Stimulus">
+        <rdfs:comment>Types of stimuli that are involved in a specific encoding activity</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/lucia/ontologies/2024/0/levels_processing#Association -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/lucia/ontologies/2024/0/levels_processing#Association">
@@ -214,7 +237,7 @@
     <!-- http://www.semanticweb.org/lucia/ontologies/2024/0/levels_processing#Auditory -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/lucia/ontologies/2024/0/levels_processing#Auditory">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lucia/ontologies/2024/0/levels_processing#StimulusFeatures"/>
+        <rdfs:subClassOf rdf:resource="http://ns.inria.fr/emoca#Stimulus"/>
         <rdfs:comment>Auditory stimuli refer to sounds and spoken words that are processed by the human brain and transformed into a readily retained format, a cognitive mechanism known as acoustic encoding.</rdfs:comment>
     </owl:Class>
     
@@ -233,14 +256,6 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/lucia/ontologies/2024/0/levels_processing#EncodingActivity">
         <rdfs:comment>Type of encoding activity in order to memorize the information</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/lucia/ontologies/2024/0/levels_processing#Individual -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/lucia/ontologies/2024/0/levels_processing#Individual">
-        <rdfs:comment>A person</rdfs:comment>
     </owl:Class>
     
 
@@ -290,7 +305,7 @@
     <!-- http://www.semanticweb.org/lucia/ontologies/2024/0/levels_processing#Semantic -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/lucia/ontologies/2024/0/levels_processing#Semantic">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lucia/ontologies/2024/0/levels_processing#StimulusFeatures"/>
+        <rdfs:subClassOf rdf:resource="http://ns.inria.fr/emoca#Stimulus"/>
         <rdfs:comment>Semantic stimuli are those that convey meaning, such as words, phrases, and symbols.</rdfs:comment>
     </owl:Class>
     
@@ -323,19 +338,19 @@
     
 
 
-    <!-- http://www.semanticweb.org/lucia/ontologies/2024/0/levels_processing#StimulusFeatures -->
+    <!-- http://www.semanticweb.org/lucia/ontologies/2024/0/levels_processing#Visual -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/lucia/ontologies/2024/0/levels_processing#StimulusFeatures">
-        <rdfs:comment>Types of stimuli that are involved in a specific encoding activity</rdfs:comment>
+    <owl:Class rdf:about="http://www.semanticweb.org/lucia/ontologies/2024/0/levels_processing#Visual">
+        <rdfs:subClassOf rdf:resource="http://ns.inria.fr/emoca#Stimulus"/>
+        <rdfs:comment>Visual stimuli are any external objects or elements that trigger a visual sensation in an individual.</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/lucia/ontologies/2024/0/levels_processing#Visual -->
+    <!-- http://xmlns.com/foaf/0.1/Person -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/lucia/ontologies/2024/0/levels_processing#Visual">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lucia/ontologies/2024/0/levels_processing#StimulusFeatures"/>
-        <rdfs:comment>Visual stimuli are any external objects or elements that trigger a visual sensation in an individual.</rdfs:comment>
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Person">
+        <rdfs:comment>A person</rdfs:comment>
     </owl:Class>
     
 
@@ -391,8 +406,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lucia/ontologies/2024/0/levels_processing#teaching">
         <rdf:type rdf:resource="http://www.semanticweb.org/lucia/ontologies/2024/0/levels_processing#Rehearsal"/>
+        <sor:influences rdf:resource="http://www.semanticweb.org/lucia/ontologies/2024/0/levels_processing#memory"/>
         <hasStimulusFeatures rdf:resource="http://www.semanticweb.org/lucia/ontologies/2024/0/levels_processing#listening"/>
-        <influences rdf:resource="http://www.semanticweb.org/lucia/ontologies/2024/0/levels_processing#memory"/>
         <involvesProcessingLevel rdf:resource="http://www.semanticweb.org/lucia/ontologies/2024/0/levels_processing#deep_understanding"/>
         <requiresCognitiveEngagement rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</requiresCognitiveEngagement>
     </owl:NamedIndividual>
@@ -402,7 +417,7 @@
     <!-- http://www.semanticweb.org/lucia/ontologies/2024/0/levels_processing#university_student -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lucia/ontologies/2024/0/levels_processing#university_student">
-        <rdf:type rdf:resource="http://www.semanticweb.org/lucia/ontologies/2024/0/levels_processing#Individual"/>
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
         <learns rdf:resource="http://www.semanticweb.org/lucia/ontologies/2024/0/levels_processing#psychology"/>
         <practices rdf:resource="http://www.semanticweb.org/lucia/ontologies/2024/0/levels_processing#teaching"/>
     </owl:NamedIndividual>
