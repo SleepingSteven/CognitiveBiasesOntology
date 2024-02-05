@@ -1,0 +1,159 @@
+OBSERVER-EXPECTANCY EFFECT
+
+Consulted bibliography:
+
+- https://en.wikipedia.org/wiki/Observer-expectancy_effect
+- https://thedecisionlab.com/biases/observer-expectancy-effect
+
+1) Give me a definition of the observer-expectancy bias
+
+The observer-expectancy bias, also known as experimenter's bias or expectancy effect, refers to a cognitive bias wherein a researcher's expectations or beliefs about the outcome of an experiment subtly influence their observations or data collection, leading to unintentional confirmation of those expectations. This bias can occur in various scientific or observational settings and may impact the objectivity and validity of research results. It highlights the importance of maintaining objectivity, minimizing preconceived notions, and employing rigorous methodologies to mitigate the potential influence of the observer's expectations on the study's outcome.
+
+2) Give me 10 example scenarios of the the observer-expectancy bias
+
+In a Classroom Observation:
+A teacher is told that certain students in a classroom are exceptionally gifted. Due to this expectation, the teacher may unknowingly pay more attention to these students, resulting in biased observations of their academic performance.
+
+Clinical Trials:
+A researcher conducting a clinical trial anticipates a particular drug to be more effective than a placebo. As a result, the researcher might unconsciously interpret and record the results in a way that favors the perceived efficacy of the drug.
+
+Psychological Studies:
+In a psychology experiment, if a researcher expects participants to exhibit certain behaviors based on a specific manipulation, they may unintentionally guide or interpret participant responses in a way that aligns with those expectations.
+
+Performance Reviews:
+A supervisor believes that an employee is exceptionally skilled, influencing the supervisor to notice and remember positive aspects of the employee's performance while overlooking or downplaying any shortcomings.
+
+Sports Coaching:
+A coach who expects a particular athlete to be a star player may inadvertently focus on and highlight instances of the athlete's success, even if other team members contribute equally or more significantly.
+
+Policing and Profiling:
+Law enforcement officers expecting criminal behavior from certain demographics may be more likely to interpret ambiguous actions as suspicious when dealing with individuals from those groups.
+
+Product Testing:
+In consumer product testing, if testers are aware of a product's marketing claims, they may subconsciously evaluate the product in a way that aligns with those expectations, potentially overlooking or downplaying negative aspects.
+
+Educational Assessments:
+A teacher administering standardized tests may inadvertently influence student performance based on their expectations. For example, unintentionally providing subtle cues about correct answers to certain questions.
+
+Market Research:
+If market researchers expect a particular product to be well-received, they may interpret consumer feedback more favorably, potentially overlooking critical concerns or negative responses.
+
+Criminal Investigations:
+Investigators expecting a suspect to be guilty might unconsciously focus more on evidence that supports guilt, potentially neglecting alternative explanations or evidence that contradicts their initial expectations.
+
+3) Consider the scenario "Sports Coaching" and give me a small user story from it
+
+User Story - "Sports Coaching":
+
+As a seasoned basketball coach with years of experience, Coach Anderson received a new player, Jake, on the team. Jake was known for his outstanding performance in high school, and Coach Anderson had high expectations for him based on reputation alone.
+
+One day, during a practice session, Coach Anderson observed Jake's shooting drills. Due to the preconceived notion that Jake was an exceptional shooter, Coach Anderson found himself subtly focusing on and praising Jake's successful shots, almost instinctively overlooking other players' achievements.
+
+In a subsequent game, Jake missed several crucial shots, and the team faced an unexpected challenge. Coach Anderson, influenced by his initial expectations, struggled to provide constructive feedback to Jake and found it difficult to acknowledge the areas where improvement was needed. The observer-expectancy bias subtly colored Coach Anderson's assessments, potentially impacting the overall dynamics and development of the team. Recognizing this, Coach Anderson took steps to consciously reassess each player's performance, ensuring a fair and unbiased approach to coaching.
+
+4) If you should make an ontology of the "observer-expectancy", what classes and properties would you create? 
+
+**Classes**
+
+Observer: represents an individual or entity conducting the observation or research.
+
+Subject: represents the object of observation, which could be a person, group, system, or any entity being studied.
+
+Expectation: represents the preconceived beliefs, hypotheses, or predictions that the observer holds regarding the subject or the outcome of the observation.
+
+Observation: represents the act of systematically watching, perceiving, or studying the subject.
+
+Bias: represents the systematic deviation from objectivity or fairness in the observation process.
+
+**Properties**
+
+hasExpectation: relates an Observer to their Expectation(s).
+
+influencesObservation: indicates how Expectations may impact the act of Observation.
+
+observes: relates an Observer to the Subject being observed.
+
+leadsToBias: indicates how the presence of Expectation may result in Bias during Observation.
+
+isAffectedByBias: indicates that an Observation is affected by Bias.
+
+**Example ontology**
+
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix ex: <http://example.org/observer-expectancy#>.
+
+# Classes
+ex:Observer rdf:type owl:Class.
+ex:Subject rdf:type owl:Class.
+ex:Expectation rdf:type owl:Class.
+ex:Observation rdf:type owl:Class.
+ex:Bias rdf:type owl:Class.
+
+# Properties
+ex:hasExpectation rdf:type owl:ObjectProperty.
+ex:influencesObservation rdf:type owl:ObjectProperty.
+ex:observes rdf:type owl:ObjectProperty.
+ex:leadsToBias rdf:type owl:ObjectProperty.
+ex:isAffectedByBias rdf:type owl:ObjectProperty.
+
+# Individuals
+ex:John rdf:type ex:Observer.
+ex:BasketballGame rdf:type ex:Subject.
+ex:WinExpectation rdf:type ex:Expectation.
+ex:Game1 rdf:type ex:Observation.
+ex:OutcomeBias rdf:type ex:Bias.
+
+# Relationships
+ex:John ex:hasExpectation ex:WinExpectation.
+ex:WinExpectation ex:influencesObservation ex:Game1.
+ex:John ex:observes ex:BasketballGame.
+ex:WinExpectation ex:leadsToBias ex:OutcomeBias.
+ex:Game1 ex:isAffectedByBias ex:OutcomeBias.
+
+5) Can you make competency questions that this ontology should answer and express them both via natural language and via sparql?
+
+Competency Question 1:
+"What are the expectations held by a specific observer?"
+
+SELECT ?expectation 
+WHERE {
+   ex:John ex:hasExpectation ?expectation.
+}
+
+Competency Question 2:
+"How do expectations influence a particular observation?"
+
+SELECT ?observation
+WHERE {
+   ex:WinExpectation ex:influencesObservation ?observation.
+}
+
+Competency Question 3:
+"Which subjects are observed by a given observer?"
+
+SELECT ?subject
+WHERE {
+   ex:John ex:observes ?subject.
+}
+
+Competency Question 4:
+"What biases are associated with a specific expectation?"
+
+SELECT ?bias
+WHERE {
+   ex:WinExpectation ex:leadsToBias ?bias.
+}
+
+
+Competency Question 5:
+"In which observations is bias present?"
+
+SELECT ?observation
+WHERE {
+   ?observation ex:isAffectedByBias ?bias.
+}
+
+
+
