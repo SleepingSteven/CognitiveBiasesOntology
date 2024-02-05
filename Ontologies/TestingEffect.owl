@@ -4,17 +4,14 @@
      xmlns:cbo="http://www.semanticweb.org/lucia/ontologies/2024/0/CognitiveBiasOntology/testing_effect/"
      xmlns:edu="https://schema.edu.ee/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
-     xmlns:pcp="http://www.ontologydesignpatterns.org/cp/examples/naryparticipation/naryparticipationex.owl"
+     xmlns:pcp="http://www.ontologydesignpatterns.org/cp/examples/naryparticipation/naryparticipationex#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:bibo="http://purl.org/ontology/bibo/"
      xmlns:foaf="http://xmlns.com/foaf/0.1/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:terms="http://purl.org/dc/terms/"
-     xmlns:trait="http://contextus.net/ontology/ontomedia/ext/common/trait#"
-     xmlns:biotop="http://purl.org/biotop/biotop.owl#"
-     xmlns:naryparticipationex="http://www.ontologydesignpatterns.org/cp/examples/naryparticipation/naryparticipationex#">
+     xmlns:terms="http://purl.org/dc/terms/">
     <owl:Ontology rdf:about="http://www.semanticweb.org/lucia/ontologies/2024/0/testing_effect">
         <terms:creator>2024-01-26</terms:creator>
         <terms:creator>Lucia Bertoldini</terms:creator>
@@ -82,6 +79,8 @@
 
     <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/cp/examples/naryparticipation/naryparticipationex#hasParticipant">
         <owl:inverseOf rdf:resource="http://www.ontologydesignpatterns.org/cp/examples/naryparticipation/naryparticipationex#isParticipantIn"/>
+        <rdfs:domain rdf:resource="https://schema.edu.ee/Test"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lucia/ontologies/2024/0/testing_effect#Human"/>
     </owl:ObjectProperty>
     
 
@@ -89,7 +88,7 @@
     <!-- http://www.ontologydesignpatterns.org/cp/examples/naryparticipation/naryparticipationex#isParticipantIn -->
 
     <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/cp/examples/naryparticipation/naryparticipationex#isParticipantIn">
-        <rdfs:domain rdf:resource="http://purl.org/biotop/biotop.owl#HumanPopulation"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lucia/ontologies/2024/0/testing_effect#Human"/>
         <rdfs:range rdf:resource="https://schema.edu.ee/Test"/>
         <rdfs:comment>Relates an Individual to a TestingEvent, indicating their engagement in an active recall or testing session</rdfs:comment>
     </owl:ObjectProperty>
@@ -101,7 +100,7 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lucia/ontologies/2024/0/testing_effect#EnhancesRetention">
         <owl:inverseOf rdf:resource="http://www.semanticweb.org/lucia/ontologies/2024/0/testing_effect#IsRememberedBecause"/>
         <rdfs:domain rdf:resource="https://schema.edu.ee/Test"/>
-        <rdfs:range rdf:resource="http://contextus.net/ontology/ontomedia/ext/common/trait#Knowledge"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lucia/ontologies/2023/11/google_effect#Knowledge"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/lucia/ontologies/2024/0/testing_effect#LearningMaterial"/>
         <rdfs:comment>Represents the impact of actively recalling information on long-term retention, connecting an Individual to a TestingEvent</rdfs:comment>
     </owl:ObjectProperty>
@@ -111,7 +110,7 @@
     <!-- http://www.semanticweb.org/lucia/ontologies/2024/0/testing_effect#IsRememberedBecause -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lucia/ontologies/2024/0/testing_effect#IsRememberedBecause">
-        <rdfs:domain rdf:resource="http://contextus.net/ontology/ontomedia/ext/common/trait#Knowledge"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lucia/ontologies/2023/11/google_effect#Knowledge"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/lucia/ontologies/2024/0/testing_effect#LearningMaterial"/>
         <rdfs:range rdf:resource="https://schema.edu.ee/Test"/>
     </owl:ObjectProperty>
@@ -123,7 +122,7 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lucia/ontologies/2024/0/testing_effect#IsStudiedBy">
         <owl:inverseOf rdf:resource="http://www.semanticweb.org/lucia/ontologies/2024/0/testing_effect#studiesMaterial"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/lucia/ontologies/2024/0/testing_effect#LearningMaterial"/>
-        <rdfs:range rdf:resource="http://purl.org/biotop/biotop.owl#HumanPopulation"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lucia/ontologies/2024/0/testing_effect#Human"/>
     </owl:ObjectProperty>
     
 
@@ -131,7 +130,7 @@
     <!-- http://www.semanticweb.org/lucia/ontologies/2024/0/testing_effect#engagesIn -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lucia/ontologies/2024/0/testing_effect#engagesIn">
-        <rdfs:domain rdf:resource="http://purl.org/biotop/biotop.owl#HumanPopulation"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lucia/ontologies/2024/0/testing_effect#Human"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/lucia/ontologies/2024/0/testing_effect#LearningProcess"/>
     </owl:ObjectProperty>
     
@@ -140,7 +139,7 @@
     <!-- http://www.semanticweb.org/lucia/ontologies/2024/0/testing_effect#studiesMaterial -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lucia/ontologies/2024/0/testing_effect#studiesMaterial">
-        <rdfs:domain rdf:resource="http://purl.org/biotop/biotop.owl#HumanPopulation"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lucia/ontologies/2024/0/testing_effect#Human"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/lucia/ontologies/2024/0/testing_effect#LearningMaterial"/>
         <rdfs:comment>Relates an Individual to LearningMaterial, indicating the educational content being studied</rdfs:comment>
     </owl:ObjectProperty>
@@ -179,27 +178,27 @@
     
 
 
-    <!-- http://contextus.net/ontology/ontomedia/ext/common/trait#Knowledge -->
+    <!-- http://purl.org/ontology/bibo/Book -->
 
-    <owl:Class rdf:about="http://contextus.net/ontology/ontomedia/ext/common/trait#Knowledge">
+    <owl:Class rdf:about="http://purl.org/ontology/bibo/Book">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lucia/ontologies/2024/0/testing_effect#RealWorldResource"/>
+        <rdfs:comment>A source of the learning material: a book</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lucia/ontologies/2023/11/google_effect#Knowledge -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lucia/ontologies/2023/11/google_effect#Knowledge">
         <rdfs:comment>facts, concepts, or skills acquired through experience, education, or information sources</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://purl.org/biotop/biotop.owl#HumanPopulation -->
+    <!-- http://www.semanticweb.org/lucia/ontologies/2024/0/testing_effect#Human -->
 
-    <owl:Class rdf:about="http://purl.org/biotop/biotop.owl#HumanPopulation">
+    <owl:Class rdf:about="http://www.semanticweb.org/lucia/ontologies/2024/0/testing_effect#Human">
         <rdfs:comment>A human (either alone, or in a group)</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.org/ontology/bibo/Book -->
-
-    <owl:Class rdf:about="http://purl.org/ontology/bibo/Book">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lucia/ontologies/2024/0/testing_effect#LearningMaterial"/>
-        <rdfs:comment>A source of the learning material: a book</rdfs:comment>
     </owl:Class>
     
 
@@ -233,7 +232,23 @@
     <!-- http://www.semanticweb.org/lucia/ontologies/2024/0/testing_effect#Practical -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/lucia/ontologies/2024/0/testing_effect#Practical">
-        <rdfs:subClassOf rdf:resource="http://contextus.net/ontology/ontomedia/ext/common/trait#Knowledge"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lucia/ontologies/2023/11/google_effect#Knowledge"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lucia/ontologies/2024/0/testing_effect#RealWorldResource -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lucia/ontologies/2024/0/testing_effect#RealWorldResource">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lucia/ontologies/2024/0/testing_effect#LearningMaterial"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lucia/ontologies/2024/0/testing_effect#TestingEvent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lucia/ontologies/2024/0/testing_effect#TestingEvent">
+        <owl:equivalentClass rdf:resource="https://schema.edu.ee/Test"/>
     </owl:Class>
     
 
@@ -241,7 +256,7 @@
     <!-- http://www.semanticweb.org/lucia/ontologies/2024/0/testing_effect#Theoretical -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/lucia/ontologies/2024/0/testing_effect#Theoretical">
-        <rdfs:subClassOf rdf:resource="http://contextus.net/ontology/ontomedia/ext/common/trait#Knowledge"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lucia/ontologies/2023/11/google_effect#Knowledge"/>
     </owl:Class>
     
 
@@ -267,7 +282,7 @@
     <!-- http://xmlns.com/foaf/0.1/Group -->
 
     <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Group">
-        <rdfs:subClassOf rdf:resource="http://purl.org/biotop/biotop.owl#HumanPopulation"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lucia/ontologies/2024/0/testing_effect#Human"/>
         <rdfs:comment>A group of people</rdfs:comment>
     </owl:Class>
     
@@ -276,7 +291,7 @@
     <!-- http://xmlns.com/foaf/0.1/Person -->
 
     <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Person">
-        <rdfs:subClassOf rdf:resource="http://purl.org/biotop/biotop.owl#HumanPopulation"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lucia/ontologies/2024/0/testing_effect#Human"/>
         <rdfs:comment>Represents a person participating in a group activity</rdfs:comment>
     </owl:Class>
     
@@ -310,7 +325,7 @@
     <!-- http://www.semanticweb.org/lucia/ontologies/2024/0/testing_effect#biology -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lucia/ontologies/2024/0/testing_effect#biology">
-        <rdf:type rdf:resource="http://contextus.net/ontology/ontomedia/ext/common/trait#Knowledge"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/lucia/ontologies/2023/11/google_effect#Knowledge"/>
         <IsRememberedBecause rdf:resource="http://www.semanticweb.org/lucia/ontologies/2024/0/testing_effect#biology"/>
         <IsRememberedBecause rdf:resource="http://www.semanticweb.org/lucia/ontologies/2024/0/testing_effect#biology_book"/>
     </owl:NamedIndividual>
@@ -341,7 +356,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lucia/ontologies/2024/0/testing_effect#group_member">
         <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
-        <naryparticipationex:isParticipantIn rdf:resource="http://www.semanticweb.org/lucia/ontologies/2024/0/testing_effect#biology_quiz"/>
+        <pcp:isParticipantIn rdf:resource="http://www.semanticweb.org/lucia/ontologies/2024/0/testing_effect#biology_quiz"/>
         <engagesIn rdf:resource="http://www.semanticweb.org/lucia/ontologies/2024/0/testing_effect#group_test"/>
     </owl:NamedIndividual>
     
