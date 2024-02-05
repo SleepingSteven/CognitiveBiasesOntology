@@ -12,8 +12,7 @@
      xmlns:prov="http://www.w3.org/ns/prov#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:fabio="http://purl.org/spar/fabio/"
-     xmlns:terms="http://purl.org/dc/terms/"
-     xmlns:trait="http://contextus.net/ontology/ontomedia/ext/common/trait#">
+     xmlns:terms="http://purl.org/dc/terms/">
     <owl:Ontology rdf:about="http://www.semanticweb.org/lucia/ontologies/2023/11/google_effect">
         <terms:created>2024-01-26</terms:created>
         <terms:created>An ontology for the cognitive bias of google effect</terms:created>
@@ -91,7 +90,7 @@
 
     <owl:ObjectProperty rdf:about="http://purl.org/spar/fabio/stores">
         <rdfs:domain rdf:resource="https://w3id.org/framester/data/framestercore/Memory"/>
-        <rdfs:range rdf:resource="http://contextus.net/ontology/ontomedia/ext/common/trait#Knowledge"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lucia/ontologies/2023/11/google_effect#Knowledge"/>
     </owl:ObjectProperty>
     
 
@@ -106,12 +105,20 @@
     
 
 
+    <!-- http://www.semanticweb.org/lucia/ontologies/2023/11/google_effect#DerivedFrom -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lucia/ontologies/2023/11/google_effect#DerivedFrom">
+        <owl:equivalentProperty rdf:resource="http://www.w3.org/ns/prov#wasDerivedFrom"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.semanticweb.org/lucia/ontologies/2023/11/google_effect#Forgets -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lucia/ontologies/2023/11/google_effect#Forgets">
         <owl:inverseOf rdf:resource="http://www.semanticweb.org/lucia/ontologies/2023/11/google_effect#IsForgottenBy"/>
         <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
-        <rdfs:range rdf:resource="http://contextus.net/ontology/ontomedia/ext/common/trait#Knowledge"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lucia/ontologies/2023/11/google_effect#Knowledge"/>
         <rdfs:comment>Relates a Person to Memory, indicating the tendency to forget information that is easily accessible online</rdfs:comment>
     </owl:ObjectProperty>
     
@@ -129,7 +136,7 @@
     <!-- http://www.semanticweb.org/lucia/ontologies/2023/11/google_effect#IsForgottenBy -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lucia/ontologies/2023/11/google_effect#IsForgottenBy">
-        <rdfs:domain rdf:resource="http://contextus.net/ontology/ontomedia/ext/common/trait#Knowledge"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lucia/ontologies/2023/11/google_effect#Knowledge"/>
         <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
     </owl:ObjectProperty>
     
@@ -199,7 +206,7 @@
     <!-- http://www.w3.org/ns/prov#wasDerivedFrom -->
 
     <owl:ObjectProperty rdf:about="http://www.w3.org/ns/prov#wasDerivedFrom">
-        <rdfs:domain rdf:resource="http://contextus.net/ontology/ontomedia/ext/common/trait#Knowledge"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lucia/ontologies/2023/11/google_effect#Knowledge"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/lucia/ontologies/2023/11/google_effect#InformationSource"/>
     </owl:ObjectProperty>
     
@@ -216,10 +223,10 @@
     
 
 
-    <!-- http://contextus.net/ontology/ontomedia/ext/common/trait#Knowledge -->
+    <!-- http://www.semanticweb.org/lucia/ontologies/2023/11/google_effect#Individual -->
 
-    <owl:Class rdf:about="http://contextus.net/ontology/ontomedia/ext/common/trait#Knowledge">
-        <rdfs:comment>facts, concepts, or skills acquired through experience, education, or information sources</rdfs:comment>
+    <owl:Class rdf:about="http://www.semanticweb.org/lucia/ontologies/2023/11/google_effect#Individual">
+        <owl:equivalentClass rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
     </owl:Class>
     
 
@@ -238,6 +245,14 @@
     <owl:Class rdf:about="http://www.semanticweb.org/lucia/ontologies/2023/11/google_effect#Internet">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lucia/ontologies/2023/11/google_effect#InformationSource"/>
         <rdfs:comment>the global network of interconnected computers, particularly the online space</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lucia/ontologies/2023/11/google_effect#Knowledge -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lucia/ontologies/2023/11/google_effect#Knowledge">
+        <rdfs:comment>facts, concepts, or skills acquired through experience, education, or information sources</rdfs:comment>
     </owl:Class>
     
 
@@ -271,7 +286,7 @@
     <!-- http://www.semanticweb.org/lucia/ontologies/2023/11/google_effect#Practical -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/lucia/ontologies/2023/11/google_effect#Practical">
-        <rdfs:subClassOf rdf:resource="http://contextus.net/ontology/ontomedia/ext/common/trait#Knowledge"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lucia/ontologies/2023/11/google_effect#Knowledge"/>
         <rdfs:comment>A type of knowledge that can be used for practical tasks</rdfs:comment>
     </owl:Class>
     
@@ -298,7 +313,7 @@
     <!-- http://www.semanticweb.org/lucia/ontologies/2023/11/google_effect#Theoretical -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/lucia/ontologies/2023/11/google_effect#Theoretical">
-        <rdfs:subClassOf rdf:resource="http://contextus.net/ontology/ontomedia/ext/common/trait#Knowledge"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lucia/ontologies/2023/11/google_effect#Knowledge"/>
         <rdfs:comment>A type of knowledge that can be used for theoretical tasks</rdfs:comment>
     </owl:Class>
     
