@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://www.semanticweb.org/mguen/ontologies/2024/0/cognitive_bias_ontology_semmelweis_reflex#"
-     xml:base="http://www.semanticweb.org/mguen/ontologies/2024/0/cognitive_bias_ontology_semmelweis_reflex"
+<rdf:RDF xmlns="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/semmelweis_reflex#"
+     xml:base="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/semmelweis_reflex"
      xmlns:cbo="http://www.semanticweb.org/mguen/ontologies/2024/0/cognitive_bias_ontology_semmelweis_reflex/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -8,7 +8,7 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:dbpedia-owl="https://en.wiktionary.org/wiki/">
-    <owl:Ontology rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/0/cognitive_bias_ontology_semmelweis_reflex"/>
+    <owl:Ontology rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/semmelweis_reflex"/>
     
 
 
@@ -23,29 +23,19 @@
     
 
 
-    <!-- http://www.semanticweb.org/mguen/ontologies/2024/0/cognitive_bias_ontology_semmelweis_reflex#contradictsBeliefSystem -->
+    <!-- http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/semmelweis_reflex#exhibitsIn -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/0/cognitive_bias_ontology_semmelweis_reflex#contradictsBeliefSystem">
-        <rdfs:domain rdf:resource="http://etna.istc.cnr.it/framester2/data/framestercore/Evidence"/>
-        <rdfs:range rdf:resource="https://dbpedia.org/Belief"/>
-        <rdfs:comment>Links the `Evidence` to the `Belief System` it contradicts.</rdfs:comment>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/mguen/ontologies/2024/0/cognitive_bias_ontology_semmelweis_reflex#exhibitsInScenario -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/0/cognitive_bias_ontology_semmelweis_reflex#exhibitsInScenario">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/0/cognitive_bias_ontology_semmelweis_reflex#Semmelweis_Reflex"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/semmelweis_reflex#exhibitsIn">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/semmelweis_reflex#SemmelweisReflex"/>
         <rdfs:range rdf:resource="https://en.wiktionary.org/wiki/scenario"/>
         <rdfs:comment>Links the `Semmelweis Reflex` to the `Scenario` in which it is exhibited.</rdfs:comment>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/mguen/ontologies/2024/0/cognitive_bias_ontology_semmelweis_reflex#hasBeliefSystem -->
+    <!-- http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/semmelweis_reflex#hasBelief -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/0/cognitive_bias_ontology_semmelweis_reflex#hasBeliefSystem">
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/semmelweis_reflex#hasBelief">
         <rdfs:domain rdf:resource="http://etna.istc.cnr.it/framester2/conceptnet/5.7.0/c/en/individual"/>
         <rdfs:range rdf:resource="https://dbpedia.org/Belief"/>
         <rdfs:comment>Links the `Individual` or `Group` to their `Belief System`.</rdfs:comment>
@@ -53,29 +43,39 @@
     
 
 
-    <!-- http://www.semanticweb.org/mguen/ontologies/2024/0/cognitive_bias_ontology_semmelweis_reflex#hasImpact -->
+    <!-- http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/semmelweis_reflex#hasImpact -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/0/cognitive_bias_ontology_semmelweis_reflex#hasImpact">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/0/cognitive_bias_ontology_semmelweis_reflex#Semmelweis_Reflex"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/semmelweis_reflex#hasImpact">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/semmelweis_reflex#SemmelweisReflex"/>
         <rdfs:range rdf:resource="http://etna.istc.cnr.it/framester2/data/framestercore/Impact"/>
         <rdfs:comment>Links the `Semmelweis Reflex` to its `Impact`.</rdfs:comment>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/mguen/ontologies/2024/0/cognitive_bias_ontology_semmelweis_reflex#occursInField -->
+    <!-- http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/semmelweis_reflex#occursIn -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/0/cognitive_bias_ontology_semmelweis_reflex#occursInField">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/0/cognitive_bias_ontology_semmelweis_reflex#Semmelweis_Reflex"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/semmelweis_reflex#occursIn">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/semmelweis_reflex#SemmelweisReflex"/>
         <rdfs:range rdf:resource="https://en.wiktionary.org/wiki/field"/>
         <rdfs:comment>Links the `Semmelweis Reflex` to the `Field` in which it occurs.</rdfs:comment>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/mguen/ontologies/2024/0/cognitive_bias_ontology_semmelweis_reflex#rejectsEvidence -->
+    <!-- https://en.wiktionary.org/wiki/contradict -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/0/cognitive_bias_ontology_semmelweis_reflex#rejectsEvidence">
+    <owl:ObjectProperty rdf:about="https://en.wiktionary.org/wiki/contradict">
+        <rdfs:domain rdf:resource="http://etna.istc.cnr.it/framester2/data/framestercore/Evidence"/>
+        <rdfs:range rdf:resource="https://dbpedia.org/Belief"/>
+        <rdfs:comment>Links the `Evidence` to the `Belief System` it contradicts.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://en.wiktionary.org/wiki/reject -->
+
+    <owl:ObjectProperty rdf:about="https://en.wiktionary.org/wiki/reject">
         <rdfs:domain rdf:resource="http://etna.istc.cnr.it/framester2/conceptnet/5.7.0/c/en/individual"/>
         <rdfs:range rdf:resource="http://etna.istc.cnr.it/framester2/data/framestercore/Evidence"/>
         <rdfs:comment>Links the `Individual` or `Group` to the `Evidence` they reject.</rdfs:comment>
@@ -118,9 +118,9 @@
     
 
 
-    <!-- http://www.semanticweb.org/mguen/ontologies/2024/0/cognitive_bias_ontology_semmelweis_reflex#Semmelweis_Reflex -->
+    <!-- http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/semmelweis_reflex#SemmelweisReflex -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/0/cognitive_bias_ontology_semmelweis_reflex#Semmelweis_Reflex">
+    <owl:Class rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/semmelweis_reflex#SemmelweisReflex">
         <rdfs:comment>The main class representing the cognitive bias itself.</rdfs:comment>
     </owl:Class>
     
@@ -161,57 +161,57 @@
     
 
 
-    <!-- http://www.semanticweb.org/mguen/ontologies/2024/0/cognitive_bias_ontology_semmelweis_reflex#FriendSuggestion -->
+    <!-- http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/semmelweis_reflex#FriendSuggestion -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/0/cognitive_bias_ontology_semmelweis_reflex#FriendSuggestion">
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/semmelweis_reflex#FriendSuggestion">
         <rdf:type rdf:resource="http://etna.istc.cnr.it/framester2/data/framestercore/Evidence"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/mguen/ontologies/2024/0/cognitive_bias_ontology_semmelweis_reflex#John -->
+    <!-- http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/semmelweis_reflex#John -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/0/cognitive_bias_ontology_semmelweis_reflex#John">
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/semmelweis_reflex#John">
         <rdf:type rdf:resource="http://etna.istc.cnr.it/framester2/conceptnet/5.7.0/c/en/individual"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/mguen/ontologies/2024/0/cognitive_bias_ontology_semmelweis_reflex#MentalHealth -->
+    <!-- http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/semmelweis_reflex#MentalHealth -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/0/cognitive_bias_ontology_semmelweis_reflex#MentalHealth">
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/semmelweis_reflex#MentalHealth">
         <rdf:type rdf:resource="https://en.wiktionary.org/wiki/field"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/mguen/ontologies/2024/0/cognitive_bias_ontology_semmelweis_reflex#Symptoms -->
+    <!-- http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/semmelweis_reflex#Symptoms -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/0/cognitive_bias_ontology_semmelweis_reflex#Symptoms">
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/semmelweis_reflex#Symptoms">
         <rdf:type rdf:resource="http://etna.istc.cnr.it/framester2/data/framestercore/Impact"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/mguen/ontologies/2024/0/cognitive_bias_ontology_semmelweis_reflex#John&apos;sBelief -->
+    <!-- http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/semmelweis_reflex#John&apos;sBelief -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/0/cognitive_bias_ontology_semmelweis_reflex#John&apos;sBelief">
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/semmelweis_reflex#John&apos;sBelief">
         <rdf:type rdf:resource="https://dbpedia.org/Belief"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/mguen/ontologies/2024/0/cognitive_bias_ontology_semmelweis_reflex#John&apos;sRejection -->
+    <!-- http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/semmelweis_reflex#John&apos;sRejection -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/0/cognitive_bias_ontology_semmelweis_reflex#John&apos;sRejection">
-        <rdf:type rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/0/cognitive_bias_ontology_semmelweis_reflex#Semmelweis_Reflex"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/semmelweis_reflex#John&apos;sRejection">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/semmelweis_reflex#SemmelweisReflex"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/mguen/ontologies/2024/0/cognitive_bias_ontology_semmelweis_reflex#John&apos;sSasSituation -->
+    <!-- http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/semmelweis_reflex#John&apos;sSasSituation -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/0/cognitive_bias_ontology_semmelweis_reflex#John&apos;sSasSituation">
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/semmelweis_reflex#John&apos;sSasSituation">
         <rdf:type rdf:resource="https://en.wiktionary.org/wiki/scenario"/>
     </owl:NamedIndividual>
 </rdf:RDF>

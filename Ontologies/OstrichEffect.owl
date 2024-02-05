@@ -37,7 +37,7 @@
 
     <owl:ObjectProperty rdf:about="http://etna.istc.cnr.it/framester2/conceptnet/5.7.0/c/en/occurs">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/ostrich_effect#OstrichEffect"/>
-        <rdfs:range rdf:resource="http://etna.istc.cnr.it/framesterpage/conceptnet/5.7.0/c/en/context"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/ostrich_effect#Context"/>
         <rdfs:comment>property that links instances of the OstrichEffect class to the Context in which they occur.</rdfs:comment>
     </owl:ObjectProperty>
     
@@ -47,7 +47,6 @@
 
     <owl:ObjectProperty rdf:about="http://etna.istc.cnr.it/framester2/conceptnet/5.7.0/c/en/relates">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/ostrich_effect#NegativeInformation"/>
-        <rdfs:range rdf:resource="http://etna.istc.cnr.it/framesterpage/conceptnet/5.7.0/c/en/context"/>
         <rdfs:comment>This property links the negative information to the context in which it exists.</rdfs:comment>
     </owl:ObjectProperty>
     
@@ -87,7 +86,6 @@
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/ostrich_effect#exhibitsIn">
         <rdfs:domain rdf:resource="http://etna.istc.cnr.it/framester2/conceptnet/5.7.0/c/en/individual"/>
-        <rdfs:range rdf:resource="http://etna.istc.cnr.it/framesterpage/conceptnet/5.7.0/c/en/context"/>
         <rdfs:comment>This property shows the context in which the individual is exhibiting the Ostrich Effect.</rdfs:comment>
     </owl:ObjectProperty>
     
@@ -112,10 +110,10 @@
     
 
 
-    <!-- http://etna.istc.cnr.it/framesterpage/conceptnet/5.7.0/c/en/context -->
+    <!-- http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/ostrich_effect#Context -->
 
-    <owl:Class rdf:about="http://etna.istc.cnr.it/framesterpage/conceptnet/5.7.0/c/en/context">
-        <rdfs:comment>The specific situation or domain in which the Ostrich Effect is being exhibited.</rdfs:comment>
+    <owl:Class rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/ostrich_effect#Context">
+        <rdfs:comment>The specific context in which the cogntivie bias occurs in</rdfs:comment>
     </owl:Class>
     
 
@@ -174,7 +172,7 @@
     <!-- http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/ostrich_effect#AcademicSetting -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/ostrich_effect#AcademicSetting">
-        <rdf:type rdf:resource="http://etna.istc.cnr.it/framesterpage/conceptnet/5.7.0/c/en/context"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/ostrich_effect#Context"/>
     </owl:NamedIndividual>
     
 
