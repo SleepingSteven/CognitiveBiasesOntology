@@ -1,0 +1,154 @@
+OBSERVER EFFECT 
+
+Consulted bibliography:
+
+- https://en.wikipedia.org/wiki/Observer_bias
+- https://www.sciencedirect.com/topics/nursing-and-health-professions/observer-bias
+
+1) Give me a definition of the observer effect bias
+
+The observer effect bias refers to the potential distortion or alteration of the phenomenon being observed due to the presence or actions of the observer. In various fields such as physics, psychology, and social sciences, the act of observation itself can impact the behavior or characteristics of the subject under study. This bias arises because the act of observing may influence the participants, objects, or processes being studied, leading to results that may not accurately represent their natural state.
+
+In scientific research, it is crucial to be aware of and account for the observer effect bias to ensure the reliability and validity of study findings. Researchers often implement strategies to minimize the impact of their presence or actions on the observed phenomenon, such as using double-blind experimental designs or employing non-intrusive observation methods.
+
+2) Give me 10 example scenarios of the the observer effect bias
+
+Physics Experiment: 
+Scenario: Observing the behavior of subatomic particles in a particle accelerator.
+Observer Effect Bias: The act of measurement or observation may alter the trajectory or properties of the particles, making it challenging to obtain their true, unaffected state.
+
+Classroom Observation in Education:
+Scenario: Researchers observing a classroom to study teacher-student interactions.
+Observer Effect Bias: The awareness of being observed might lead both teachers and students to modify their behavior, potentially influencing the natural dynamics of the classroom.
+
+Social Science Research:
+Scenario: Conducting a study on public behavior in a park.
+Observer Effect Bias: The presence of researchers might cause individuals to alter their behavior, consciously or unconsciously, leading to observations that do not reflect typical, everyday conduct.
+
+Animal Behavior Research:
+Scenario: Studying the mating rituals of a particular species in the wild.
+Observer Effect Bias: The mere presence of researchers may disturb the natural behavior of the animals, affecting mating rituals or social interactions.
+
+Psychological Experiments:
+Scenario: Conducting a study on decision-making under pressure.
+Observer Effect Bias: The awareness of being observed may cause participants to change their decision-making processes, potentially leading to results that differ from real-world scenarios.
+
+Manufacturing Quality Control:
+Scenario: Inspecting a production line to ensure product quality.
+Observer Effect Bias: Workers may be more meticulous in their tasks when they know they are being observed, potentially leading to overrepresentation of high-quality outcomes.
+
+Crime Observation in Urban Areas:
+Scenario: Studying criminal behavior in a city by conducting visible patrols.
+Observer Effect Bias: Criminals may alter their activities in response to the increased police presence, making it challenging to observe their typical behavior.
+
+Medical Diagnosis:
+Scenario: Physicians observing patients during a clinical examination.
+Observer Effect Bias: Patients may exhibit different symptoms or reactions due to the awareness of being observed, potentially complicating accurate diagnosis.
+
+Consumer Behavior Research:
+Scenario: Studying shoppers in a retail store to understand their purchasing habits.
+Observer Effect Bias: Shoppers may modify their buying behavior when they know they are being observed, leading to results that don't accurately represent their usual choices.
+
+Environmental Monitoring:
+Scenario: Conducting a study on wildlife in a natural habitat.
+Observer Effect Bias: The presence of researchers may disturb the ecological balance, influencing the behavior of animals or plant life in ways that wouldn't occur without observation.
+
+3) Consider the scenario "Crime Observation in Urban Areas" and give me a small user story from it
+
+As an experienced educational researcher, Professor Taylor welcomed a new student, Olivia, into his advanced mathematics class. Olivia came highly recommended for her exceptional problem-solving skills, and Professor Taylor had high expectations based on her academic reputation.
+
+During a class observation session, Professor Taylor focused on monitoring Olivia's participation and engagement in class discussions. Due to the preconceived notion that Olivia was an outstanding student, the professor found himself subtly gravitating towards and commending Olivia's contributions, unintentionally neglecting the achievements of other students.
+
+In the subsequent class assignments, Olivia struggled with a particularly challenging problem, leading to unexpected academic hurdles. Professor Taylor, influenced by his initial expectations, faced difficulty in providing balanced feedback to Olivia and found it challenging to address areas where improvement was needed. The observer-expectancy bias subtly tinted Professor Taylor's assessments, potentially affecting the overall dynamics and learning environment in the classroom.
+
+Acknowledging this potential bias, Professor Taylor took deliberate steps to reassess each student's performance, making a conscious effort to appreciate diverse strengths and areas for improvement. By doing so, he aimed to ensure fair and unbiased evaluations, fostering an inclusive and supportive learning atmosphere for all students in the class.
+
+4) If you should make an ontology of the "observer effect bias", what classes and properties would you create? 
+
+**Classes**
+
+Observer: represents the entity conducting the observation.
+
+Subject: represents the entity or phenomenon being observed.
+
+Observation: represents the act of observing a subject by an observer.
+
+ObserverEffectBias: represents the overarching concept of bias introduced by the observer effect.
+
+**Properties**
+
+hasObserver: relates an Observation to an Observer.
+
+hasSubject: relates an Observation to a Subject.
+
+influencesBehavior: describes how the act of observation may influence the behavior of the Subject.
+
+resultsInBias: indicates that the act of observation can lead to bias in the interpretation of the observed behavior.
+
+awarenessOfObservation: represents the level of awareness of the Subject about being observed, influencing the observer effect.
+
+minimizesObserverEffect: describes strategies or methods implemented to minimize the impact of the observer effect.
+
+**Relationships**
+
+Observation hasObserver Observer: connects a specific Observation to the Observer conducting the observation.
+
+Observation hasSubject Subject: connects a specific Observation to the Subject being observed.
+
+ObserverEffectBias influencesBehavior Subject: indicates that the bias introduced by the observer effect influences the behavior of the observed Subject.
+
+ObserverEffectBias resultsInBias Observation: links the concept of observer effect bias to specific instances of Observation.
+
+Subject awarenessOfObservation Observer: captures the level of awareness of the Subject regarding being observed by a specific Observer.
+
+Observation minimizesObserverEffect ObserverEffectBias: represents instances where specific Observations are designed or conducted to minimize the impact of the observer effect.
+
+5) Can you make competency questions that this ontology should answer and express them both via natural language and via sparql?
+
+Competency Question 1:
+"Can you list all the observers who have conducted observations of a particular subject?"
+
+SELECT ?observer
+WHERE {
+  ?observation rdf:type :Observation ;
+                :hasObserver ?observer ;
+                :hasSubject :SpecificSubject .
+}
+
+Competency Question 2:
+"Which subjects has Observer X observed?"
+
+SELECT ?subject
+WHERE {
+  ?observation rdf:type :Observation ;
+                :hasObserver :ObserverX ;
+                :hasSubject ?subject .
+}
+
+Competency Question 3:
+"What is the level of awareness of being observed for different subjects?"
+
+SELECT ?subject ?awarenessLevel
+WHERE {
+  ?subject :awarenessOfObservation ?awarenessLevel .
+}
+
+
+Competency Question 4:
+"Identify instances where the observer effect has led to notable bias in observations"
+
+SELECT ?observation
+WHERE {
+  ?observation rdf:type :Observation ;
+                :resultsInBias ?bias .
+}
+
+
+Competency Question 5:
+"Can you provide examples of strategies used to minimize the observer effect in particular observations?"
+
+SELECT ?observation ?minimizationStrategy
+WHERE {
+  ?observation rdf:type :Observation ;
+                :minimizesObserverEffect ?minimizationStrategy .
+}
