@@ -22,20 +22,10 @@
     
 
 
-    <!-- http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#experiences -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#experiences">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#Individual"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#TargetWord"/>
-        <rdfs:comment>Relates an individual to the specific word or piece of information they are trying to recall during the Tip of the Tongue phenomenon.</rdfs:comment>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#experiencesEmotion -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#experiencesEmotion">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#Individual"/>
+        <rdfs:domain rdf:resource="http://etna.istc.cnr.it/framester2/conceptnet/5.7.0/c/en/individual"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#CognitiveProcess"/>
         <rdfs:comment>Relates an individual to the cognitive processes involved in memory retrieval during the Tip of the Tongue phenomenon.</rdfs:comment>
     </owl:ObjectProperty>
@@ -45,7 +35,7 @@
     <!-- http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#hasPartialInformation -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#hasPartialInformation">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#Individual"/>
+        <rdfs:domain rdf:resource="http://etna.istc.cnr.it/framester2/conceptnet/5.7.0/c/en/individual"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#PartialInformation"/>
         <rdfs:comment>Relates an individual to the bits of information they can recall about the target word during the Tip of the Tongue phenomenon.</rdfs:comment>
     </owl:ObjectProperty>
@@ -62,10 +52,12 @@
     
 
 
-    <!-- http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#occursInContext -->
+    <!-- https://en.wiktionary.org/wiki/experiences -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#occursInContext">
-        <rdfs:comment>Relates an individual to the specific situation or domain in which the Tip of the Tongue phenomenon is being experienced.</rdfs:comment>
+    <owl:ObjectProperty rdf:about="https://en.wiktionary.org/wiki/experiences">
+        <rdfs:domain rdf:resource="http://etna.istc.cnr.it/framester2/conceptnet/5.7.0/c/en/individual"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#TargetWord"/>
+        <rdfs:comment>Relates an individual to the specific word or piece of information they are trying to recall during the Tip of the Tongue phenomenon.</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -81,34 +73,26 @@
     
 
 
-    <!-- http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#CognitiveProcess -->
+    <!-- http://etna.istc.cnr.it/framester2/conceptnet/5.7.0/c/en/individual -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#CognitiveProcess">
-        <rdfs:comment>The cognitive processes involved in memory retrieval.</rdfs:comment>
+    <owl:Class rdf:about="http://etna.istc.cnr.it/framester2/conceptnet/5.7.0/c/en/individual">
+        <rdfs:comment>The person experiencing the Tip of The Tongue Phenomenon.</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#Context -->
+    <!-- http://etna.istc.cnr.it/framesterpage/conceptnet/5.7.0/c/en/context -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#Context">
+    <owl:Class rdf:about="http://etna.istc.cnr.it/framesterpage/conceptnet/5.7.0/c/en/context">
         <rdfs:comment>The specific situation or domain in which the Tip of The Tongue Phenomenon is being experienced.</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#Emotion -->
+    <!-- http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#CognitiveProcess -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#Emotion">
-        <rdfs:comment>The feelings experienced by the individual during the phenomenon.</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#Individual -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#Individual">
-        <rdfs:comment>The person experiencing the Tip of The Tongue Phenomenon.</rdfs:comment>
+    <owl:Class rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#CognitiveProcess">
+        <rdfs:comment>The cognitive processes involved in memory retrieval.</rdfs:comment>
     </owl:Class>
     
 
@@ -137,6 +121,14 @@
     
 
 
+    <!-- https://dbpedia.org/Emotion -->
+
+    <owl:Class rdf:about="https://dbpedia.org/Emotion">
+        <rdfs:comment>The feelings experienced by the individual during the phenomenon.</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -151,7 +143,7 @@
     <!-- http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#Amanda -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#Amanda">
-        <rdf:type rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#Individual"/>
+        <rdf:type rdf:resource="http://etna.istc.cnr.it/framester2/conceptnet/5.7.0/c/en/individual"/>
     </owl:NamedIndividual>
     
 
@@ -159,7 +151,7 @@
     <!-- http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#Emily -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#Emily">
-        <rdf:type rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#Individual"/>
+        <rdf:type rdf:resource="http://etna.istc.cnr.it/framester2/conceptnet/5.7.0/c/en/individual"/>
     </owl:NamedIndividual>
     
 
@@ -167,7 +159,7 @@
     <!-- http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#Frustration -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#Frustration">
-        <rdf:type rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#Emotion"/>
+        <rdf:type rdf:resource="https://dbpedia.org/Emotion"/>
     </owl:NamedIndividual>
     
 
@@ -183,7 +175,7 @@
     <!-- http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#NetworkingEvent -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#NetworkingEvent">
-        <rdf:type rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#Context"/>
+        <rdf:type rdf:resource="http://etna.istc.cnr.it/framesterpage/conceptnet/5.7.0/c/en/context"/>
     </owl:NamedIndividual>
     
 
