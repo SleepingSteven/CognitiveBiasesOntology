@@ -1,0 +1,151 @@
+SELECTIVE PERCEPTION BIAS
+
+Consulted bibliography:
+
+- https://en.wikipedia.org/wiki/Selective_perception
+- https://courses.eller.arizona.edu/mgmt/delaney/p_chapter1.pdf
+
+1) Give me a definition of the selective perception bias
+
+Selective perception bias refers to the tendency of individuals to interpret or      perceive information in a way that aligns with their existing beliefs, attitudes, or expectations. This cognitive bias can lead people to filter out, ignore, or distort information that contradicts their preconceived notions, while selectively attending to information that supports their existing views.
+
+In essence, selective perception bias influences how individuals process and make sense of the vast amount of information they encounter daily, shaping their understanding of events, people, or ideas based on their personal biases. This bias can impact decision-making, as individuals may prioritize information that confirms their existing perspectives and overlook information that challenges or contradicts them.
+
+2) Give me 10 example scenarios of the the selective perception bias
+
+Political Beliefs:
+An individual with strong political affiliations may selectively perceive news articles or information that supports their party's ideology, while dismissing or downplaying information that presents an opposing viewpoint.
+
+Confirmation Bias in Research:
+A researcher studying a particular topic may unconsciously focus more on data that confirms their hypotheses, neglecting or downplaying data that contradicts their expectations.
+
+Social Media Echo Chambers:
+People within online communities or social media groups may selectively engage with content that aligns with their views, creating echo chambers where dissenting opinions are ignored or dismissed.
+
+Performance Appraisal:
+In a workplace, a supervisor may only notice and remember instances of good performance from an employee they favor, while overlooking or attributing negative actions to external factors.
+
+Relationship Expectations:
+A person entering a new relationship might selectively perceive their partner's positive qualities while minimizing or rationalizing any negative behaviors, especially in the early stages of the relationship.
+
+Product Loyalty:
+Consumers loyal to a particular brand may selectively notice positive reviews or experiences related to that brand, while ignoring or discrediting negative reviews or experiences.
+
+Cultural Stereotypes:
+Individuals may selectively focus on information that confirms stereotypes about a particular culture or group, while disregarding instances that challenge or contradict those stereotypes.
+
+Educational Bias:
+A student with a strong preference for a certain subject may be more likely to absorb and remember information related to that subject, while neglecting information from less favored subjects.
+
+Health-related Beliefs:
+Someone with a strong belief in alternative medicine may selectively perceive anecdotes or studies supporting the efficacy of alternative treatments, while dismissing conventional medical research that contradicts those beliefs.
+
+Sports Team Allegiance:
+Fans of a particular sports team may selectively notice favorable statistics or referee decisions in their team's favor, while overlooking similar instances when the opposing team benefits.
+
+3) Consider the scenario "Relationship expectations" and give me a small user story from it 
+
+User Story: "Selective Perception in Relationship Expectations"
+
+As Sarah starts a new romantic relationship with Alex, she enters it with certain expectations and ideals about love and partnership. Sarah has always valued communication and kindness in a partner. In the early stages of their relationship, Alex is generally attentive and considerate, meeting Sarah's expectations.
+
+One evening, however, they have a disagreement. Sarah notices that Alex is less communicative during this time, and his behavior is not as warm as usual. Sarah, being influenced by her selective perception bias, attributes this temporary change in behavior to external stressors like work pressure or a bad day.
+
+Later, Sarah recounts the incident to a friend, emphasizing how understanding and supportive Alex is, citing examples of his kindness from earlier days. She downplays the recent disagreement, interpreting it as an anomaly rather than considering it as a potential indicator of differing communication styles or conflict resolution approaches.
+
+In this user story, Sarah's selective perception bias influences how she interprets and remembers the events in her relationship. Her tendency is to emphasize and remember instances that align with her positive expectations, while downplaying or attributing negative instances to external factors.
+
+4) If you should make an ontology of the "google effect", what classes and properties would you create?
+
+Creating an ontology for the selective perception bias involves defining classes (categories) and properties (relationships) that represent different aspects of this cognitive bias. Here's a simplified example:
+
+**Classes**:
+
+Individual: represents a person or an entity prone to selective perception bias.
+
+Information: represents data, facts, or stimuli that individuals encounter.
+
+Belief System: represents the set of pre-existing beliefs, attitudes, or expectations an individual holds.
+
+Confirmation Bias: a subclass of selective perception bias, representing the tendency to seek, interpret, and remember information that confirms one's pre-existing beliefs.
+
+Filtering Mechanism: represents the cognitive process through which individuals selectively attend to certain information and filter out others based on their biases.
+
+**Properties**:
+
+hasBeliefSystem: relates an individual to their set of pre-existing beliefs.
+
+encounters: relates an individual to information they come across.
+
+selectivelyPerceives: describes the relationship between an individual and the information they selectively perceive based on their biases.
+
+confirms: relates an instance of information to the belief system it supports, indicating confirmation bias.
+
+ignores: relates an instance of information to the belief system it contradicts, indicating the information is being ignored due to the bias.
+
+hasFilteringMechanism: associates an individual with their cognitive process of selectively filtering information.
+
+5) Can you make competency questions that this ontology should answer and express them both via natural language and via sparql?
+
+Competency questions help articulate what information the ontology should be able to answer. Here are some competency questions expressed in both natural language and SPARQL:
+
+Competency Question 1:
+
+"Which individuals in the system have a strong confirmation bias towards a particular political ideology?"
+
+SELECT ?individual
+WHERE {
+  ?individual rdf:type :Individual.
+  ?individual :hasBeliefSystem ?beliefSystem.
+  ?beliefSystem rdf:type :ConfirmationBias.
+}
+
+Competency Question 2:
+
+"What are the specific instances of information that an individual selectively perceives to confirm their existing beliefs?"
+
+SELECT ?information
+WHERE {
+  ?individual rdf:type :Individual.
+  ?individual :selectivelyPerceives ?information.
+}
+
+Competency Question 3:
+
+"Which individuals tend to ignore information that contradicts their belief system?"
+
+SELECT ?individual
+WHERE {
+  ?individual rdf:type :Individual.
+  ?individual :ignores ?information.
+}
+
+Competency Question 4:
+
+"What are the filtering mechanisms employed by individuals with confirmation bias?"
+
+SELECT ?individual ?filteringMechanism
+WHERE {
+  ?individual rdf:type :Individual.
+  ?individual :hasFilteringMechanism ?filteringMechanism.
+}
+
+Competency Question 5:
+
+"Which belief systems have a strong impact on an individual's selective perception bias?"
+
+SELECT ?beliefSystem
+WHERE {
+  ?individual rdf:type :Individual.
+  ?individual :hasBeliefSystem ?beliefSystem.
+}
+
+
+
+
+
+
+
+
+
+
