@@ -1,0 +1,142 @@
+EXPECTATION BIAS 
+
+Consulted bibliography:
+
+- https://www.sciencedirect.com/science/article/abs/pii/S0924933812748071
+- https://www.cambridge.org/core/journals/european-psychiatry/article/p640-the-power-of-expectation-bias/0A7653864C9E6A86E931060D6C39C9AC
+
+1) Give me a definition of the expectation bias
+
+Expectation bias refers to a cognitive phenomenon where individuals allow their pre-existing beliefs, attitudes, or expectations to influence their perception, interpretation, and judgment of information or events. This bias can lead people to selectively process information in a way that aligns with their existing expectations, potentially distorting their understanding of reality. Expectation bias can impact decision-making, problem-solving, and overall reasoning by favoring information that confirms preconceived notions while disregarding or downplaying conflicting evidence. It is a type of cognitive bias that can affect various aspects of human cognition and behavior.
+
+2) Give me 10 example scenarios of the the expectation bias
+
+Job Interview Evaluation:
+An interviewer may unconsciously favor a candidate whose resume aligns with their expectations of an ideal candidate, potentially overlooking shortcomings or dismissing achievements that don't fit their preconceived notions.
+
+Medical Diagnosis:
+A doctor might be more likely to interpret ambiguous symptoms in a way that confirms their initial diagnosis or expectations, potentially leading to misdiagnosis or delayed treatment.
+
+Performance Appraisals:
+A manager could assess an employee's performance based on their pre-existing perceptions, favoring those who fit the perceived mold of a high performer and overlooking the accomplishments of individuals with different working styles.
+
+Legal Decision-Making:
+Jurors might be influenced by their pre-existing beliefs when interpreting evidence in a trial, potentially leading to biased judgments or verdicts.
+
+Consumer Product Reviews:
+A person reading reviews about a product may be more likely to notice and believe positive reviews if they have a prior positive expectation about the brand, and vice versa.
+
+Investment Decisions:
+Investors may be inclined to interpret financial news in a way that aligns with their expectations about a particular stock or market trend, potentially leading to biased investment decisions.
+
+Educational Assessments:
+Teachers may inadvertently grade students based on their expectations, favoring those who they believe to be high achievers and marking down those they perceive as lower-performing.
+
+Athletic Judging:
+Judges in sports competitions may have expectations about certain athletes, influencing their scoring and potentially leading to biased outcomes.
+
+Political Debates:
+Viewers might interpret the statements of political candidates through the lens of their pre-existing political affiliations, reinforcing their existing beliefs and potentially hindering an objective evaluation of the candidates' positions.
+
+Scientific Research:
+Researchers might interpret experimental results in a way that aligns with their initial hypotheses, potentially overlooking alternative explanations or dismissing unexpected findings that don't conform to their expectations.
+
+3) Consider the scenario "Job Interview Evaluation" and give me a small user story from it
+
+As a hiring manager with a busy schedule and numerous interviews to conduct, I want to efficiently identify the most suitable candidate for a software development position. I have a list of qualifications and skills that I believe are crucial for success in the role.
+
+However, my expectation bias may influence my perception during the interviews. To address this, I will consciously strive to evaluate each candidate objectively, focusing on their responses to technical questions and real-world problem-solving scenarios. I will make an effort to set aside any preconceived notions I may have based on the candidates' resumes or previous experiences.
+
+By mitigating my expectation bias, I aim to ensure a fair and thorough assessment of each candidate's abilities, ultimately selecting the individual who best demonstrates the skills and qualities necessary for success in the software development role. This user story emphasizes the importance of self-awareness and conscious effort to avoid biased decision-making during the hiring process.
+
+4) If you should make an ontology of the "expectation bias", what classes and properties would you create? 
+
+**Classes**
+
+Individual: represents a person or entity susceptible to expectation bias.
+Expectation: represents pre-existing beliefs, attitudes, or assumptions that an individual holds.
+Information/Event: represents data or occurrences that an individual processes.
+Perception: represents how an individual interprets or perceives information or events.
+Bias: represents the inclination or distortion in perception due to pre-existing expectations.
+
+**Properties**
+
+hasExpectation:
+Domain: Individual
+Range: Expectation
+Description: Relates an individual to their pre-existing expectations.
+
+encountersInformation:
+Domain: Individual
+Range: Information/Event
+Description: Indicates the information or events encountered by an individual.
+
+interpretsAs:
+Domain: Individual
+Range: Perception
+Description: Relates an individual to their interpretation of information or events.
+
+exhibitsBias:
+Domain: Individual
+Range: Bias
+Description: Indicates the presence and type of bias exhibited by an individual.
+
+influencesPerception:
+Domain: Expectation
+Range: Perception
+Description: Describes the impact of expectations on the interpretation of information.
+
+**Relationships**
+
+Confirmation Relationship:
+Definition: Represents the tendency to interpret information in a way that confirms pre-existing expectations.
+Related Properties: hasExpectation, encountersInformation, interpretsAs, exhibitsBias.
+
+Selective Perception Relationship:
+Definition: Represents the selective attention to certain aspects of information based on pre-existing expectations.
+Related Properties: hasExpectation, encountersInformation, interpretsAs, exhibitsBias.
+
+Mitigation Relationship:
+Definition: Represents efforts made by an individual to mitigate the influence of expectation bias.
+Related Properties: hasExpectation, exhibitsBias.
+
+5) Can you make competency questions that this ontology should answer and express them both via natural language and via sparql?
+
+Competency Question 1:
+- "What are the pre-existing expectations of a particular individual?"
+- "How does an individual interpret a specific piece of information based on their expectations?"
+- "In what ways does expectation bias manifest in an individual's decision-making process?"
+
+SELECT ?expectation
+WHERE {
+  ?individual rdf:type :Individual.
+  ?individual :hasExpectation ?expectation.
+  FILTER (?individual = :specificIndividual)
+}
+
+Competency Question 2:
+- "Can you provide instances where an individual exhibited confirmation bias?"
+- "What information has been encountered by an individual, and how did they interpret it in the context of bias?"
+
+SELECT ?individual ?information ?biasType
+WHERE {
+  ?individual rdf:type :Individual.
+  ?individual :encountersInformation ?information.
+  ?individual :interpretsAs ?perception.
+  ?individual :exhibitsBias ?biasType.
+}
+
+
+Competency Question 3:
+- "What efforts has an individual taken to mitigate the influence of expectation bias?"
+- "Can you identify instances where an individual successfully avoided bias in their decision-making?"
+
+SELECT ?individual ?mitigationEffort
+WHERE {
+  ?individual rdf:type :Individual.
+  ?individual :hasExpectation ?expectation.
+  ?individual :exhibitsBias ?biasType.
+  ?individual :mitigatesBiasWith ?mitigationEffort.
+}
+
+
