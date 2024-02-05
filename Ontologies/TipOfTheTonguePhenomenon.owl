@@ -53,6 +53,15 @@
     
 
 
+    <!-- http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#occursIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#occursIn">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#TipOfTheTonguePhenomenon"/>
+        <rdfs:range rdf:resource="http://etna.istc.cnr.it/framesterpage/conceptnet/5.7.0/c/en/context"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://en.wiktionary.org/wiki/experiences -->
 
     <owl:ObjectProperty rdf:about="https://en.wiktionary.org/wiki/experiences">
@@ -122,6 +131,14 @@
     
 
 
+    <!-- http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#TipOfTheTonguePhenomenon -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#TipOfTheTonguePhenomenon">
+        <rdfs:comment>Istance of the experience of the bias</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- https://dbpedia.org/Emotion -->
 
     <owl:Class rdf:about="https://dbpedia.org/Emotion">
@@ -149,10 +166,28 @@
     
 
 
+    <!-- http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#DressColor -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#DressColor">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#MemoryTrace"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#PartialInformation"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#Emily -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#Emily">
         <rdf:type rdf:resource="http://etna.istc.cnr.it/framester2/conceptnet/5.7.0/c/en/individual"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#Face -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#Face">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#MemoryTrace"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#PartialInformation"/>
     </owl:NamedIndividual>
     
 
@@ -173,10 +208,27 @@
     
 
 
+    <!-- http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#Name -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#Name">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#MemoryTrace"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#TargetWord"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#NetworkingEvent -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#NetworkingEvent">
         <rdf:type rdf:resource="http://etna.istc.cnr.it/framesterpage/conceptnet/5.7.0/c/en/context"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#ProjectDetails -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#ProjectDetails">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#PartialInformation"/>
     </owl:NamedIndividual>
     
 
