@@ -1,0 +1,146 @@
+EXPERIMENTER BIAS 
+
+Consulted bibliography:
+
+- https://www.thebehavioralscientist.com/glossary/experimenter-bias
+- https://www.researchgate.net/publication/257797399_Experimenter_Philosophy_The_Problem_of_Experimenter_Bias_in_Experimental_Philosophy
+
+1) Give me a definition of the experimenter bias
+
+Experimenter bias refers to a situation in which the experimenter's expectations, beliefs, or preconceived notions about the outcomes of an experiment unintentionally influence the study's results. This bias can occur when the experimenter, consciously or unconsciously, treats participants differently based on their expectations, leading to distorted or inaccurate findings. Experimenter bias can manifest in various ways, such as subtle cues, nonverbal communication, or unintentional actions that impact participants' behavior and responses. To minimize experimenter bias, researchers often employ double-blind experimental designs, where neither the participants nor the individuals interacting with them (including experimenters) are aware of critical aspects of the study.
+
+2) Give me 10 example scenarios of the the experimenter bias
+
+Positive Reinforcement Bias:
+An experimenter may unintentionally reinforce participants who provide responses aligning with the experimenter's expectations, leading to a more positive and encouraging environment for those participants.
+
+Nonverbal Cues:
+Subtle facial expressions, body language, or tone of voice from the experimenter might unknowingly convey expectations to participants, influencing their behavior or responses.
+
+Interpretation of Ambiguous Responses:
+An experimenter might interpret ambiguous participant responses in a way that aligns with their expectations, potentially affecting the coding or analysis of data.
+
+Selective Attention:
+The experimenter might unconsciously pay more attention to behaviors or responses that confirm their hypotheses, overlooking or downplaying conflicting information.
+
+Subconscious Guidance:
+Even without explicit intention, an experimenter might provide subtle cues or guidance during the experiment that directs participants toward desired outcomes.
+
+Feedback Variability:
+The feedback given to participants may unintentionally vary based on the experimenter's expectations, leading to inconsistent reinforcement that can affect participant performance.
+
+Data Recording Biases:
+During data collection, an experimenter might inadvertently record or interpret data in a way that aligns with their expectations, introducing bias into the analysis.
+
+Unconscious Influence on Participants:
+The experimenter's beliefs about the study's purpose or expected outcomes may inadvertently influence participants' behavior, even if this influence is not explicitly communicated.
+
+Confirmation Bias in Analysis:
+When analyzing data, an experimenter might selectively focus on results that confirm their expectations while downplaying or dismissing data that contradicts those expectations.
+
+Post-Experiment Interpretation:
+The experimenter may interpret the results in a way that aligns with their initial hypotheses, potentially overlooking alternative explanations or failing to explore unexpected findings thoroughly.
+
+3) Consider the scenario "Selective Attention" and give me a small user story from it
+
+As an experimenter conducting a study on the effects of music on concentration, I want to remain unbiased and ensure that my observations are not influenced by my expectations. However, I catch myself focusing more on participants who appear engaged and focused when they are listening to classical music, as this aligns with my hypothesis that classical music enhances concentration. I realize that my selective attention might lead to a skewed perception of the results. To mitigate this, I decide to implement a systematic approach to observe and record all participant behaviors, irrespective of whether they support or contradict my initial expectations. This involves using predefined criteria for concentration levels and avoiding any unconscious emphasis on behaviors that align with my hypothesis. By addressing selective attention, I aim to enhance the objectivity of my observations and promote a more accurate analysis of the study's outcomes.
+
+4) If you should make an ontology of the "experimenter bias", what classes and properties would you create? 
+
+**Classes**
+
+Experiment
+
+Experimenter
+
+Participant
+
+Data
+
+**Properties**
+
+ConductedBy (Experiment, Experimenter):
+Domain: Experiment
+Range: Experimenter
+
+Includes (Experiment, Variable/Condition):
+Domain: Experiment
+Range: Variable/Condition
+
+BiasType (Experimenter, Bias):
+Domain: Experimenter
+Range: Bias
+
+KnowledgeLevel (Experimenter, Awareness):
+Domain: Experimenter
+Range: Awareness
+
+MitigationStrategy (Experimenter, Strategy):
+Domain: Experimenter
+Range: Strategy
+
+InteractedWith (Participant, Experimenter):
+Domain: Participant
+Range: Experimenter
+
+AssignedToExperiment (Participant, Experiment):
+Domain: Participant
+Range: Experiment
+
+CollectedFrom (Data, Participant):
+Domain: Data
+Range: Participant
+
+RecordedBy (Data, Experimenter):
+Domain: Data
+Range: Experimenter
+
+AnalyzedFor (Data, Outcome):
+Domain: Data
+Range: Outcome
+
+5) Can you make competency questions that this ontology should answer and express them both via natural language and via sparql?
+
+Competency Question 1:
+"What are the key variables included in a particular experiment?"
+
+SELECT ?variable
+WHERE {
+   ?experiment rdf:type :Experiment ;
+               :Includes ?variable .
+}
+
+Competency Question 2:
+"Which experiment was conducted by a specific experimenter?"
+
+SELECT ?experiment
+WHERE {
+   ?experiment rdf:type :Experiment ;
+               :ConductedBy :SpecificExperimenter .
+}
+
+
+Competency Question 3:
+"How does an experimenter's bias manifest in a given study?"
+
+SELECT ?biasType
+WHERE {
+   :SpecificExperimenter :BiasType ?biasType .
+}
+
+Competency Question 4:
+"What strategies do experimenters employ to mitigate bias?"
+
+SELECT ?strategy
+WHERE {
+   :SpecificExperimenter :MitigationStrategy ?strategy .
+}
+
+Competency Question 5:
+"Which participants were assigned to a specific experiment?"
+
+SELECT ?participant
+WHERE {
+   ?participant rdf:type :Participant ;
+                :AssignedToExperiment :SpecificExperiment .
+}
