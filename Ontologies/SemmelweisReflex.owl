@@ -6,7 +6,8 @@
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:dbpedia-owl="https://en.wiktionary.org/wiki/">
     <owl:Ontology rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/0/cognitive_bias_ontology_semmelweis_reflex"/>
     
 
@@ -25,8 +26,8 @@
     <!-- http://www.semanticweb.org/mguen/ontologies/2024/0/cognitive_bias_ontology_semmelweis_reflex#contradictsBeliefSystem -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/0/cognitive_bias_ontology_semmelweis_reflex#contradictsBeliefSystem">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/0/cognitive_bias_ontology_semmelweis_reflex#Evidence"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/0/cognitive_bias_ontology_semmelweis_reflex#Belief_System"/>
+        <rdfs:domain rdf:resource="http://etna.istc.cnr.it/framester2/data/framestercore/Evidence"/>
+        <rdfs:range rdf:resource="https://dbpedia.org/Belief"/>
         <rdfs:comment>Links the `Evidence` to the `Belief System` it contradicts.</rdfs:comment>
     </owl:ObjectProperty>
     
@@ -36,7 +37,7 @@
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/0/cognitive_bias_ontology_semmelweis_reflex#exhibitsInScenario">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/0/cognitive_bias_ontology_semmelweis_reflex#Semmelweis_Reflex"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/0/cognitive_bias_ontology_semmelweis_reflex#Scenario"/>
+        <rdfs:range rdf:resource="https://en.wiktionary.org/wiki/scenario"/>
         <rdfs:comment>Links the `Semmelweis Reflex` to the `Scenario` in which it is exhibited.</rdfs:comment>
     </owl:ObjectProperty>
     
@@ -45,8 +46,8 @@
     <!-- http://www.semanticweb.org/mguen/ontologies/2024/0/cognitive_bias_ontology_semmelweis_reflex#hasBeliefSystem -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/0/cognitive_bias_ontology_semmelweis_reflex#hasBeliefSystem">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/0/cognitive_bias_ontology_semmelweis_reflex#Individual"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/0/cognitive_bias_ontology_semmelweis_reflex#Belief_System"/>
+        <rdfs:domain rdf:resource="http://etna.istc.cnr.it/framester2/conceptnet/5.7.0/c/en/individual"/>
+        <rdfs:range rdf:resource="https://dbpedia.org/Belief"/>
         <rdfs:comment>Links the `Individual` or `Group` to their `Belief System`.</rdfs:comment>
     </owl:ObjectProperty>
     
@@ -56,7 +57,7 @@
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/0/cognitive_bias_ontology_semmelweis_reflex#hasImpact">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/0/cognitive_bias_ontology_semmelweis_reflex#Semmelweis_Reflex"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/0/cognitive_bias_ontology_semmelweis_reflex#Impact"/>
+        <rdfs:range rdf:resource="http://etna.istc.cnr.it/framester2/data/framestercore/Impact"/>
         <rdfs:comment>Links the `Semmelweis Reflex` to its `Impact`.</rdfs:comment>
     </owl:ObjectProperty>
     
@@ -66,7 +67,7 @@
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/0/cognitive_bias_ontology_semmelweis_reflex#occursInField">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/0/cognitive_bias_ontology_semmelweis_reflex#Semmelweis_Reflex"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/0/cognitive_bias_ontology_semmelweis_reflex#Field"/>
+        <rdfs:range rdf:resource="https://en.wiktionary.org/wiki/field"/>
         <rdfs:comment>Links the `Semmelweis Reflex` to the `Field` in which it occurs.</rdfs:comment>
     </owl:ObjectProperty>
     
@@ -75,8 +76,8 @@
     <!-- http://www.semanticweb.org/mguen/ontologies/2024/0/cognitive_bias_ontology_semmelweis_reflex#rejectsEvidence -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/0/cognitive_bias_ontology_semmelweis_reflex#rejectsEvidence">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/0/cognitive_bias_ontology_semmelweis_reflex#Individual"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/0/cognitive_bias_ontology_semmelweis_reflex#Evidence"/>
+        <rdfs:domain rdf:resource="http://etna.istc.cnr.it/framester2/conceptnet/5.7.0/c/en/individual"/>
+        <rdfs:range rdf:resource="http://etna.istc.cnr.it/framester2/data/framestercore/Evidence"/>
         <rdfs:comment>Links the `Individual` or `Group` to the `Evidence` they reject.</rdfs:comment>
     </owl:ObjectProperty>
     
@@ -93,50 +94,26 @@
     
 
 
-    <!-- http://www.semanticweb.org/mguen/ontologies/2024/0/cognitive_bias_ontology_semmelweis_reflex#Belief_System -->
+    <!-- http://etna.istc.cnr.it/framester2/conceptnet/5.7.0/c/en/individual -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/0/cognitive_bias_ontology_semmelweis_reflex#Belief_System">
-        <rdfs:comment>Represents the established norms, beliefs, or paradigms that the individual or group holds.</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/mguen/ontologies/2024/0/cognitive_bias_ontology_semmelweis_reflex#Evidence -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/0/cognitive_bias_ontology_semmelweis_reflex#Evidence">
-        <rdfs:comment>Represents the new evidence or knowledge that contradicts the existing belief system.</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/mguen/ontologies/2024/0/cognitive_bias_ontology_semmelweis_reflex#Field -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/0/cognitive_bias_ontology_semmelweis_reflex#Field">
-        <rdfs:comment>Represents the field of study or area (like medicine, technology, climate science) where the Semmelweis Reflex is exhibited.</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/mguen/ontologies/2024/0/cognitive_bias_ontology_semmelweis_reflex#Impact -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/0/cognitive_bias_ontology_semmelweis_reflex#Impact">
-        <rdfs:comment>Represents the consequences or effects of the Semmelweis Reflex.</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/mguen/ontologies/2024/0/cognitive_bias_ontology_semmelweis_reflex#Individual -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/0/cognitive_bias_ontology_semmelweis_reflex#Individual">
+    <owl:Class rdf:about="http://etna.istc.cnr.it/framester2/conceptnet/5.7.0/c/en/individual">
         <rdfs:comment>Represents the person or group exhibiting the Semmelweis Reflex.</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/mguen/ontologies/2024/0/cognitive_bias_ontology_semmelweis_reflex#Scenario -->
+    <!-- http://etna.istc.cnr.it/framester2/data/framestercore/Evidence -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/0/cognitive_bias_ontology_semmelweis_reflex#Scenario">
-        <rdfs:comment>Represents the specific context or situation in which the Semmelweis Reflex is exhibited.</rdfs:comment>
+    <owl:Class rdf:about="http://etna.istc.cnr.it/framester2/data/framestercore/Evidence">
+        <rdfs:comment>Represents the new evidence or knowledge that contradicts the existing belief system.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://etna.istc.cnr.it/framester2/data/framestercore/Impact -->
+
+    <owl:Class rdf:about="http://etna.istc.cnr.it/framester2/data/framestercore/Impact">
+        <rdfs:comment>Represents the consequences or effects of the Semmelweis Reflex.</rdfs:comment>
     </owl:Class>
     
 
@@ -145,6 +122,30 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/0/cognitive_bias_ontology_semmelweis_reflex#Semmelweis_Reflex">
         <rdfs:comment>The main class representing the cognitive bias itself.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://dbpedia.org/Belief -->
+
+    <owl:Class rdf:about="https://dbpedia.org/Belief">
+        <rdfs:comment>Represents the established norms, beliefs, or paradigms that the individual or group holds.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://en.wiktionary.org/wiki/field -->
+
+    <owl:Class rdf:about="https://en.wiktionary.org/wiki/field">
+        <rdfs:comment>Represents the field of study or area (like medicine, technology, climate science) where the Semmelweis Reflex is exhibited.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://en.wiktionary.org/wiki/scenario -->
+
+    <owl:Class rdf:about="https://en.wiktionary.org/wiki/scenario">
+        <rdfs:comment>Represents the specific context or situation in which the Semmelweis Reflex is exhibited.</rdfs:comment>
     </owl:Class>
     
 
@@ -163,7 +164,7 @@
     <!-- http://www.semanticweb.org/mguen/ontologies/2024/0/cognitive_bias_ontology_semmelweis_reflex#FriendSuggestion -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/0/cognitive_bias_ontology_semmelweis_reflex#FriendSuggestion">
-        <rdf:type rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/0/cognitive_bias_ontology_semmelweis_reflex#Evidence"/>
+        <rdf:type rdf:resource="http://etna.istc.cnr.it/framester2/data/framestercore/Evidence"/>
     </owl:NamedIndividual>
     
 
@@ -171,7 +172,7 @@
     <!-- http://www.semanticweb.org/mguen/ontologies/2024/0/cognitive_bias_ontology_semmelweis_reflex#John -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/0/cognitive_bias_ontology_semmelweis_reflex#John">
-        <rdf:type rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/0/cognitive_bias_ontology_semmelweis_reflex#Individual"/>
+        <rdf:type rdf:resource="http://etna.istc.cnr.it/framester2/conceptnet/5.7.0/c/en/individual"/>
     </owl:NamedIndividual>
     
 
@@ -179,7 +180,7 @@
     <!-- http://www.semanticweb.org/mguen/ontologies/2024/0/cognitive_bias_ontology_semmelweis_reflex#MentalHealth -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/0/cognitive_bias_ontology_semmelweis_reflex#MentalHealth">
-        <rdf:type rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/0/cognitive_bias_ontology_semmelweis_reflex#Field"/>
+        <rdf:type rdf:resource="https://en.wiktionary.org/wiki/field"/>
     </owl:NamedIndividual>
     
 
@@ -187,7 +188,7 @@
     <!-- http://www.semanticweb.org/mguen/ontologies/2024/0/cognitive_bias_ontology_semmelweis_reflex#Symptoms -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/0/cognitive_bias_ontology_semmelweis_reflex#Symptoms">
-        <rdf:type rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/0/cognitive_bias_ontology_semmelweis_reflex#Impact"/>
+        <rdf:type rdf:resource="http://etna.istc.cnr.it/framester2/data/framestercore/Impact"/>
     </owl:NamedIndividual>
     
 
@@ -195,7 +196,7 @@
     <!-- http://www.semanticweb.org/mguen/ontologies/2024/0/cognitive_bias_ontology_semmelweis_reflex#John&apos;sBelief -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/0/cognitive_bias_ontology_semmelweis_reflex#John&apos;sBelief">
-        <rdf:type rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/0/cognitive_bias_ontology_semmelweis_reflex#Belief_System"/>
+        <rdf:type rdf:resource="https://dbpedia.org/Belief"/>
     </owl:NamedIndividual>
     
 
@@ -211,7 +212,7 @@
     <!-- http://www.semanticweb.org/mguen/ontologies/2024/0/cognitive_bias_ontology_semmelweis_reflex#John&apos;sSasSituation -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/0/cognitive_bias_ontology_semmelweis_reflex#John&apos;sSasSituation">
-        <rdf:type rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/0/cognitive_bias_ontology_semmelweis_reflex#Scenario"/>
+        <rdf:type rdf:resource="https://en.wiktionary.org/wiki/scenario"/>
     </owl:NamedIndividual>
 </rdf:RDF>
 
