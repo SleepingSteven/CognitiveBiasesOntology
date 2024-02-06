@@ -89,26 +89,35 @@ If you had to make an ontology of the "Tip of the tongue phenomenon", what class
 
 Sure, let's expand the ontology of the "Tip of The Tongue Phenomenon" to include more classes and properties that capture the complexity of this cognitive bias:
 
-**Classes:**
-1. `Individual`: The person experiencing the Tip of The Tongue Phenomenon.
-2. `TargetWord`: The word or piece of information that the individual is trying to recall.
-3. `PartialInformation`: The bits of information about the target word that the individual can recall.
-4. `Context`: The specific situation or domain in which the Tip of The Tongue Phenomenon is being experienced.
-5. `Emotion`: The feelings experienced by the individual during the phenomenon.
-6. `CognitiveProcess`: The cognitive processes involved in memory retrieval.
-7. `MemoryTrace`: The trace that a memory leaves in the brain.
+Classes:
 
-**Properties:**
-1. `experiences (Individual, TipOfTheTonguePhenomenon)`: This property indicates that the individual is experiencing the Tip of The Tongue Phenomenon.
-2. `triesToRecall (Individual, TargetWord)`: This property shows that the individual is trying to recall the target word.
-3. `recalls (Individual, PartialInformation)`: This property indicates the bits of information that the individual can recall about the target word.
-4. `occursIn (TipOfTheTonguePhenomenon, Context)`: This property shows the context in which the Tip of The Tongue Phenomenon is being experienced.
-5. `feels (Individual, Emotion)`: This property captures the emotions felt by the individual during the phenomenon.
-6. `involves (TipOfTheTonguePhenomenon, CognitiveProcess)`: This property shows the cognitive processes involved in the Tip of The Tongue Phenomenon.
-7. `leaves (TargetWord, MemoryTrace)`: This property indicates the memory trace left by the target word in the brain.
+Person: Represents an individual human being.
+MemoryPhenomenon: Represents a phenomenon or event related to human memory.
+Information: Represents a piece of knowledge or data.
+RecallAttempt: Represents an attempt made by a person to recall information.
+UnsuccessfulRecall: Represents an unsuccessful attempt to recall information.
+MemoryBlock: Represents a block or obstacle in the process of recalling information.
+MemoryRetrieval: Represents the process of retrieving information from memory.
+Object Properties:
 
-This expanded ontology provides a deeper understanding of the Tip of The Tongue Phenomenon by considering the emotional aspect, the cognitive processes involved in memory retrieval, and the concept of memory traces. It can be further refined or expanded based on the specific use case or domain of interest. Remember, the goal of an ontology is to model the domain of interest in a way that captures its essential aspects and allows for useful reasoning.
+experiences: A relationship between a Person and a MemoryPhenomenon they experience.
+hasInformation: A relationship between a Person and the Information they have.
+attemptsRecall: A relationship between a Person and a RecallAttempt they make.
+hasUnsuccessfulRecall: A relationship between a Person and an UnsuccessfulRecall they experience.
+encountersBlock: A relationship between a Person and a MemoryBlock they encounter.
+performsRetrieval: A relationship between a Person and a MemoryRetrieval they perform.
+leadsTo: A relationship between a MemoryPhenomenon and an UnsuccessfulRecall it leads to.
+causedBy: A relationship between an UnsuccessfulRecall and a MemoryBlock it is caused by.
+resolvedBy: A relationship between a MemoryBlock and a MemoryRetrieval it is resolved by.
+involves: A relationship between a RecallAttempt and the Information it involves.
+blocks: A relationship between a MemoryBlock and a RecallAttempt it blocks.
+retrieves: A relationship between a MemoryRetrieval and the Information it retrieves.
+Data Properties:
 
+hasPartialRecall: A property of a Person indicating whether they have partial recall of information.
+hasFullRecall: A property of a Person indicating whether they have full recall of information.
+hasMemoryBlock: A property of a Person indicating whether they encounter a memory block.
+hasMemoryRetrieval: A property of a Person indicating whether they perform memory retrieval.
 now create a list of competency questions in the form of sparql queries and solve them with the ontology you created
 
 

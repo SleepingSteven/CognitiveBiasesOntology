@@ -131,9 +131,9 @@ Information: Represents data or evidence that can either confirm or challenge a 
 AmbiguousInformation: Represents information that is not clear or explicit in its meaning.
 Confirmation: Represents the act of perceiving information as supporting or confirming a belief.
 Challenge: Represents the act of perceiving information as opposing or challenging a belief.
+BehavioralOutcome: Represents the behavioral changes or actions resulting from subjective validation in a particular context.
 Properties:
 
-hasBelief: Relates an Observer to a Belief.
 holdsBelief: Relates an Observer to a Belief they subscribe to.
 providesInformation: Relates an Information to a Belief.
 isAmbiguous: Relates AmbiguousInformation to Information, indicating the lack of clarity.

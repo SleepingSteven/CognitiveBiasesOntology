@@ -23,52 +23,172 @@
     
 
 
-    <!-- http://etna.istc.cnr.it/framester2/data/framestercore/Feeling -->
+    <!-- http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#attemptsRecall -->
 
-    <owl:ObjectProperty rdf:about="http://etna.istc.cnr.it/framester2/data/framestercore/Feeling">
-        <rdfs:domain rdf:resource="http://etna.istc.cnr.it/framester2/conceptnet/5.7.0/c/en/individual"/>
-        <rdfs:range rdf:resource="https://dbpedia.org/Emotion"/>
-        <rdfs:comment>Relates an individual to the cognitive processes involved in memory retrieval during the Tip of the Tongue phenomenon.</rdfs:comment>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#attemptsRecall">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#Person"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#RecallAttempt"/>
+        <rdfs:comment>A relationship between a Person and a RecallAttempt they make.</rdfs:comment>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#hasPartialInformation -->
+    <!-- http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#blocks -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#hasPartialInformation">
-        <rdfs:domain rdf:resource="http://etna.istc.cnr.it/framester2/conceptnet/5.7.0/c/en/individual"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#PartialInformation"/>
-        <rdfs:comment>Relates an individual to the bits of information they can recall about the target word during the Tip of the Tongue phenomenon.</rdfs:comment>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#blocks">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#MemoryBlock"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#RecallAttempt"/>
+        <rdfs:comment>A relationship between a MemoryBlock and a RecallAttempt it blocks.</rdfs:comment>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#leavesMemoryTrace -->
+    <!-- http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#causedBy -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#leavesMemoryTrace">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#CognitiveProcess"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#MemoryTrace"/>
-        <rdfs:comment>Relates a cognitive process to the memory trace it leaves in the brain during the Tip of the Tongue phenomenon.</rdfs:comment>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#causedBy">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#UnsuccessfulRecall"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#MemoryBlock"/>
+        <rdfs:comment>A relationship between an UnsuccessfulRecall and a MemoryBlock it is caused by.</rdfs:comment>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#occursIn -->
+    <!-- http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#encountersBlock -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#occursIn">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#TipOfTheTonguePhenomenon"/>
-        <rdfs:range rdf:resource="http://etna.istc.cnr.it/framester2/conceptnet/5.7.0/c/en/context"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#encountersBlock">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#Person"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#MemoryBlock"/>
+        <rdfs:comment>A relationship between a Person and a MemoryBlock they encounter.</rdfs:comment>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://en.wiktionary.org/wiki/recallment -->
+    <!-- http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#experiences -->
 
-    <owl:ObjectProperty rdf:about="https://en.wiktionary.org/wiki/recallment">
-        <rdfs:domain rdf:resource="http://etna.istc.cnr.it/framester2/conceptnet/5.7.0/c/en/individual"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#TargetWord"/>
-        <rdfs:comment>Relates an individual to the specific word or piece of information they are trying to recall during the Tip of the Tongue phenomenon.</rdfs:comment>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#experiences">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#Person"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#MemoryPhenomenon"/>
+        <rdfs:comment>A relationship between a Person and a MemoryPhenomenon they experience.</rdfs:comment>
     </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#hasInformation -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#hasInformation">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#Person"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#Information"/>
+        <rdfs:comment>A relationship between a Person and the Information they have.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#hasUnsuccessfulRecall -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#hasUnsuccessfulRecall">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#Person"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#UnsuccessfulRecall"/>
+        <rdfs:comment>A relationship between a Person and an UnsuccessfulRecall they experience.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#involves -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#involves">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#RecallAttempt"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#Information"/>
+        <rdfs:comment>A relationship between a RecallAttempt and the Information it involves.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#leadsTo -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#leadsTo">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#MemoryPhenomenon"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#UnsuccessfulRecall"/>
+        <rdfs:comment>A relationship between a MemoryPhenomenon and an UnsuccessfulRecall it leads to.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#performsRetrieval -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#performsRetrieval">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#Person"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#MemoryRetrieval"/>
+        <rdfs:comment>A relationship between a Person and a MemoryRetrieval they perform.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#resolvedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#resolvedBy">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#MemoryBlock"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#MemoryRetrieval"/>
+        <rdfs:comment>A relationship between a MemoryBlock and a MemoryRetrieval it is resolved by.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#retrieves -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#retrieves">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#MemoryRetrieval"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#Information"/>
+        <rdfs:comment>A relationship between a MemoryRetrieval and the Information it retrieves</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#hasFullRecall -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#hasFullRecall">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment>A property of a Person indicating whether they have full recall of information.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#hasMemoryBlock -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#hasMemoryBlock">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#hasMemoryRetrieval -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#hasMemoryRetrieval">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#hasPartialRecall -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#hasPartialRecall">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment>A property of a Person indicating whether they have partial recall of information.</rdfs:comment>
+    </owl:DatatypeProperty>
     
 
 
@@ -83,66 +203,69 @@
     
 
 
-    <!-- http://etna.istc.cnr.it/framester2/conceptnet/5.7.0/c/en/context -->
+    <!-- http://etna.istc.cnr.it/framester2/data/framestercore/Memory -->
 
-    <owl:Class rdf:about="http://etna.istc.cnr.it/framester2/conceptnet/5.7.0/c/en/context">
-        <rdfs:comment>The specific context in which the cognitive bias occurs in</rdfs:comment>
+    <owl:Class rdf:about="http://etna.istc.cnr.it/framester2/data/framestercore/Memory">
+        <rdfs:comment>This frame is concerned with Cognizers remembering and forgetting mental Content.</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://etna.istc.cnr.it/framester2/conceptnet/5.7.0/c/en/individual -->
+    <!-- http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#Information -->
 
-    <owl:Class rdf:about="http://etna.istc.cnr.it/framester2/conceptnet/5.7.0/c/en/individual">
-        <rdfs:comment>The person experiencing the Tip of The Tongue Phenomenon.</rdfs:comment>
+    <owl:Class rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#Information">
+        <rdfs:comment>Represents a piece of knowledge or data.</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#CognitiveProcess -->
+    <!-- http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#MemoryBlock -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#CognitiveProcess">
-        <rdfs:comment>The cognitive processes involved in memory retrieval.</rdfs:comment>
+    <owl:Class rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#MemoryBlock">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#MemoryPhenomenon"/>
+        <rdfs:comment>Represents a block or obstacle in the process of recalling information.</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#MemoryTrace -->
+    <!-- http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#MemoryPhenomenon -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#MemoryTrace">
-        <rdfs:comment>The trace that a memory leaves in the brain.</rdfs:comment>
+    <owl:Class rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#MemoryPhenomenon">
+        <rdfs:subClassOf rdf:resource="http://etna.istc.cnr.it/framester2/data/framestercore/Memory"/>
+        <rdfs:comment>Represents a phenomenon or event related to human memory.</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#PartialInformation -->
+    <!-- http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#MemoryRetrieval -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#PartialInformation">
-        <rdfs:comment>The bits of information about the target word that the individual can recall.</rdfs:comment>
+    <owl:Class rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#MemoryRetrieval">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#MemoryPhenomenon"/>
+        <rdfs:comment>Represents the process of retrieving information from memory.</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#TargetWord -->
+    <!-- http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#Person -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#TargetWord">
-        <rdfs:comment>The word or piece of information that the individual is trying to recall.</rdfs:comment>
+    <owl:Class rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#Person">
+        <rdfs:comment>Represents an individual human being.</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#TipOfTheTonguePhenomenon -->
+    <!-- http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#RecallAttempt -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#TipOfTheTonguePhenomenon">
-        <rdfs:comment>Istance of the experience of the bias</rdfs:comment>
+    <owl:Class rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#RecallAttempt">
+        <rdfs:comment>Represents an attempt made by a person to recall information.</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- https://dbpedia.org/Emotion -->
+    <!-- http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#UnsuccessfulRecall -->
 
-    <owl:Class rdf:about="https://dbpedia.org/Emotion">
-        <rdfs:comment>The feelings experienced by the individual during the phenomenon.</rdfs:comment>
+    <owl:Class rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#UnsuccessfulRecall">
+        <rdfs:comment>Represents an unsuccessful attempt to recall information.</rdfs:comment>
     </owl:Class>
     
 
@@ -161,16 +284,7 @@
     <!-- http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#Amanda -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#Amanda">
-        <rdf:type rdf:resource="http://etna.istc.cnr.it/framester2/conceptnet/5.7.0/c/en/individual"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#DressColor -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#DressColor">
-        <rdf:type rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#MemoryTrace"/>
-        <rdf:type rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#PartialInformation"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#Person"/>
     </owl:NamedIndividual>
     
 
@@ -178,63 +292,55 @@
     <!-- http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#Emily -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#Emily">
-        <rdf:type rdf:resource="http://etna.istc.cnr.it/framester2/conceptnet/5.7.0/c/en/individual"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#Person"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#Face -->
+    <!-- http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#FirstRecallAttempt -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#Face">
-        <rdf:type rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#MemoryTrace"/>
-        <rdf:type rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#PartialInformation"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#FirstRecallAttempt">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#RecallAttempt"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#Frustration -->
+    <!-- http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#MemoryBlockIstance -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#Frustration">
-        <rdf:type rdf:resource="https://dbpedia.org/Emotion"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#MemoryBlockIstance">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#MemoryBlock"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#MemoryRetrieval -->
+    <!-- http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#MemoryRetrievalIstance -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#MemoryRetrieval">
-        <rdf:type rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#CognitiveProcess"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#MemoryRetrievalIstance">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#MemoryRetrieval"/>
     </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#Name -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#Name">
-        <rdf:type rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#MemoryTrace"/>
-        <rdf:type rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#TargetWord"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#NetworkingEvent -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#NetworkingEvent"/>
     
 
 
     <!-- http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#ProjectDetails -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#ProjectDetails">
-        <rdf:type rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#PartialInformation"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#Information"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#RecallFailure -->
+    <!-- http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#TipOfTheTonguePhenomenon -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#RecallFailure">
-        <rdf:type rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#CognitiveProcess"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#TipOfTheTonguePhenomenon">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#MemoryPhenomenon"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#UnsuccessfulRecallInstance -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#UnsuccessfulRecallInstance">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#UnsuccessfulRecall"/>
     </owl:NamedIndividual>
 </rdf:RDF>
 
