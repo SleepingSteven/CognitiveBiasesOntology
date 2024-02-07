@@ -1,6 +1,6 @@
 1. Give me a definition of the Congruence Bias
 
-CCongruence bias is a cognitive bias wherein individuals overvalue information that aligns with their existing beliefs, opinions, or expectations while disproportionately undervaluing or dismissing information that contradicts those beliefs. This bias leads individuals to interpret information in a manner that confirms their preconceived notions, reinforcing their existing beliefs rather than objectively evaluating evidence. Congruence bias can result in flawed decision-making processes and hinder individuals from considering alternative viewpoints or recognizing the potential limitations of their beliefs.
+Congruence bias is a cognitive bias wherein individuals overvalue information that aligns with their existing beliefs, opinions, or expectations while disproportionately undervaluing or dismissing information that contradicts those beliefs. This bias leads individuals to interpret information in a manner that confirms their preconceived notions, reinforcing their existing beliefs rather than objectively evaluating evidence. Congruence bias can result in flawed decision-making processes and hinder individuals from considering alternative viewpoints or recognizing the potential limitations of their beliefs.
 
 
 2. Give me 10 example scenarios of the Congruence Bias
