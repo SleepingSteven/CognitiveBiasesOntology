@@ -7,6 +7,172 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
     <owl:Ontology rdf:about="http://www.semanticweb.org/hp/ontologies/2024/1/untitled-ontology-13"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/1/untitled-ontology-13#AnalyzedFor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2024/1/untitled-ontology-13#AnalyzedFor">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/1/untitled-ontology-13#Data"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/1/untitled-ontology-13#Outcome"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/1/untitled-ontology-13#BiasType -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2024/1/untitled-ontology-13#BiasType">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/1/untitled-ontology-13#Experimenter"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/1/untitled-ontology-13#Bias"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/1/untitled-ontology-13#ConductedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2024/1/untitled-ontology-13#ConductedBy">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/1/untitled-ontology-13#Experiment"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/1/untitled-ontology-13#Experimenter"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/1/untitled-ontology-13#Includes -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2024/1/untitled-ontology-13#Includes">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/1/untitled-ontology-13#Experiment"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/1/untitled-ontology-13#Variable"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/1/untitled-ontology-13#KnowledgeLevel -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2024/1/untitled-ontology-13#KnowledgeLevel">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/1/untitled-ontology-13#Experimenter"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/1/untitled-ontology-13#Awareness"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/1/untitled-ontology-13#assignedToExperiment -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2024/1/untitled-ontology-13#assignedToExperiment">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/1/untitled-ontology-13#Participant"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/1/untitled-ontology-13#Experiment"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/1/untitled-ontology-13#collectedFrom -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2024/1/untitled-ontology-13#collectedFrom">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/1/untitled-ontology-13#Data"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/1/untitled-ontology-13#Participant"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/1/untitled-ontology-13#interactedWith -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2024/1/untitled-ontology-13#interactedWith">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/1/untitled-ontology-13#Participant"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/1/untitled-ontology-13#Experimenter"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/1/untitled-ontology-13#mitigationStrategy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2024/1/untitled-ontology-13#mitigationStrategy">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/1/untitled-ontology-13#Experimenter"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/1/untitled-ontology-13#Strategy"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/1/untitled-ontology-13#recordedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2024/1/untitled-ontology-13#recordedBy">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/1/untitled-ontology-13#Data"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/1/untitled-ontology-13#Experimenter"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/1/untitled-ontology-13#Awareness -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2024/1/untitled-ontology-13#Awareness"/>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/1/untitled-ontology-13#Bias -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2024/1/untitled-ontology-13#Bias"/>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/1/untitled-ontology-13#Data -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2024/1/untitled-ontology-13#Data"/>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/1/untitled-ontology-13#Experiment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2024/1/untitled-ontology-13#Experiment"/>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/1/untitled-ontology-13#Experimenter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2024/1/untitled-ontology-13#Experimenter"/>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/1/untitled-ontology-13#Outcome -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2024/1/untitled-ontology-13#Outcome"/>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/1/untitled-ontology-13#Participant -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2024/1/untitled-ontology-13#Participant"/>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/1/untitled-ontology-13#Strategy -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2024/1/untitled-ontology-13#Strategy"/>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/1/untitled-ontology-13#Variable -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2024/1/untitled-ontology-13#Variable"/>
 </rdf:RDF>
 
 
