@@ -57,6 +57,16 @@ Participant
 
 Data
 
+Variable/Condition
+
+Bias
+
+Strategy
+
+Awareness
+
+Outcome
+
 **Properties**
 
 ConductedBy (Experiment, Experimenter):
