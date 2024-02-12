@@ -152,3 +152,54 @@ Sure, here are some competency questions that can be answered using the ontology
     - **Solution**: This query would return all memory traces left by the target word in the brain.
 
 Please note that these queries are hypothetical and would require a populated RDF dataset based on the ontology to return actual results. The ontology provides a framework for structuring this data, and SPARQL queries can then be used to retrieve specific information from the dataset.
+
+
+postilla:
+In your ontology, the connection between UnsuccessfulRecall and Information can be established through the RecallAttempt class and the involves object property. Here’s how:
+
+A Person makes a RecallAttempt (via the attemptsRecall property).
+This RecallAttempt involves some Information (via the involves property).
+If the RecallAttempt is blocked by a MemoryBlock (via the blocks property), it leads to an UnsuccessfulRecall (via the leadsTo property).
+So, to connect UnsuccessfulRecall to Information, you could traverse from UnsuccessfulRecall to RecallAttempt via the leadsTo property (in reverse), and then from RecallAttempt to Information via the involves property.
+
+Here’s a SPARQL query that could represent this:
+
+PREFIX : <http://www.example.org/ontology#>
+
+SELECT ?unsuccessfulRecall ?information
+WHERE {
+  ?unsuccessfulRecall :leadsTo/^:blocks ?recallAttempt .
+  ?recallAttempt :involves ?information .
+}
+
+This query will return pairs of unsuccessful recalls and the information involved in the recall attempts that led to them. Please replace the PREFIX with your actual ontology URI.
+
+Remember, this is just a basic example. Depending on the specific competency questions you want to answer, you might need to adjust or extend this query. For example, you could add more conditions to filter the results, or use other SPARQL features to aggregate or order the results.
+
+
+
+Tu
+and with a specific object property?
+Copilot
+If you want to connect UnsuccessfulRecall to Information using a specific object property, you would need to introduce a new object property in your ontology that directly links these two classes.
+
+For example, you could introduce a new object property called relatesTo, which connects an UnsuccessfulRecall directly to the Information it relates to.
+
+Here’s how you could define this new object property:
+
+Object Property: relatesTo
+    Domain: UnsuccessfulRecall
+    Range: Information
+
+And here’s a SPARQL query that uses this new relatesTo property to connect UnsuccessfulRecall to Information:
+
+PREFIX : <http://www.example.org/ontology#>
+
+SELECT ?unsuccessfulRecall ?information
+WHERE {
+  ?unsuccessfulRecall :relatesTo ?information .
+}
+
+This query will return pairs of unsuccessful recalls and the information they relate to. Again, please replace the PREFIX with your actual ontology URI.
+
+Remember, introducing new object properties should be done carefully, considering the overall design and coherence of your ontology. It’s important to ensure that the new property fits well with the existing classes and properties, and that it doesn’t introduce redundancy or confusion. If you’re unsure, it’s always a good idea to consult with an ontology expert or use ontology design patterns.
