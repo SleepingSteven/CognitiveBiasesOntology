@@ -130,3 +130,29 @@ Sure, here are some competency questions that can be answered using the ontology
     - **Solution**: This query would return all coping strategies used by individuals to deal with negative information.
 
 Please note that these queries are hypothetical and would require a populated RDF dataset based on the ontology to return actual results. The ontology provides a framework for structuring this data, and SPARQL queries can then be used to retrieve specific information from the dataset.
+
+
+postille:
+
+Classes:
+
+Individual: Represents an individual human being.
+CognitiveBias: Represents a cognitive bias that an individual might experience.
+OstrichEffect: A subclass of CognitiveBias, represents the specific bias of avoiding negative information.
+Information: Represents a piece of knowledge or data.
+NegativeInformation: A subclass of Information, represents information that could potentially cause distress or discomfort.
+AvoidanceBehavior: Represents the behavior of avoiding negative information.
+ConfrontationBehavior: Represents the behavior of confronting previously avoided negative information.
+Emotion: Represents an emotion that an individual might experience.
+Fear: A subclass of Emotion, represents the specific emotion of fear.
+Object Properties:
+
+experiencesBias (domain: Individual, range: CognitiveBias): Represents the relationship between an individual and the cognitive bias they experience.
+avoidsInformation (domain: Individual, range: NegativeInformation): Represents the relationship between an individual and the negative information they avoid due to the Ostrich Effect.
+confrontsInformation (domain: Individual, range: NegativeInformation): Represents the relationship between an individual and the negative information they confront after overcoming the Ostrich Effect.
+experiencesEmotion (domain: Individual, range: Emotion): Represents the relationship between an individual and the emotion they experience.
+performsBehavior (domain: Individual, range: AvoidanceBehavior or ConfrontationBehavior): Represents the relationship between an individual and the behavior they perform.
+Data Properties:
+
+hasName (domain: Individual, CognitiveBias, range: xsd:string): Represents the name of an individual or a cognitive bias.
+hasFear (domain: Individual, range: xsd:boolean): Represents whether an individual has fear of confronting certain information.

@@ -3,6 +3,8 @@
      xml:base="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon"
      xmlns:ac="http://www.ontology.se/odp/content/owl/Action.owl"
      xmlns:ec="http://krisnadhi.github.io/onto/event.owl"
+     xmlns:fs="http://etna.istc.cnr.it/framester2/data/framestercore/"
+     xmlns:acf="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl"
      xmlns:cbo="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -11,14 +13,17 @@
      xmlns:foaf="http://xmlns.com/foaf/0.1/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:dcterms="http://purl.org/dc/terms/"
-     xmlns:dbpedia-owl="https://en.wiktionary.org/wiki/">
+     xmlns:dbpedia-owl="https://en.wiktionary.org/wiki/"
+     xmlns:tip_of_the_tongue_phenomenon="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#">
     <owl:Ontology rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon">
         <dcterms:created>06/02/2024</dcterms:created>
-        <dcterms:created>The Tip of The Tongue Phenomenon section of the Cognitive Bias Ontology.</dcterms:created>
-        <dcterms:created>Tip of The Tongue Ontology</dcterms:created>
         <dcterms:creator>Matteo Guenci</dcterms:creator>
+        <dcterms:description>The Tip of The Tongue Phenomenon section of the Cognitive Bias Ontology.</dcterms:description>
+        <dcterms:title>Tip of The Tongue Ontology</dcterms:title>
         <hasComponent>http://ontologydesignpatterns.org/wiki/Submissions:Action</hasComponent>
         <hasComponent>http://ontologydesignpatterns.org/wiki/Submissions:EventCore</hasComponent>
+        <hasComponent>http://www.ontologydesignpatterns.org/ont/dul/DUL.owl</hasComponent>
+        <hasComponent>http://xmlns.com/foaf/0.1/</hasComponent>
         <user_story>Meet Emily, a social butterfly who loves meeting new people. At a networking event, she met a woman who shared interesting insights about a project similar to Emily&apos;s work. They had a great conversation, and Emily wanted to connect with her later on LinkedIn.
 A few days later, Emily decided to find the woman on LinkedIn. She remembered the woman&apos;s face, her project details, and even the color of her dress, but she couldn&apos;t recall her name. Emily knew it started with an &apos;A&apos;, and it was on the tip of her tongue, but she just couldn&apos;t retrieve it from her memory.
 This is an example of the Tip of The Tongue Phenomenon. Despite having partial recall (the first letter of the name), Emily was unable to fully retrieve the name from her memory. She felt a sense of frustration as she knew that she knew the name, but just couldn&apos;t recall it at that moment.
@@ -101,7 +106,7 @@ Eventually, after some time, the name &quot;Amanda&quot; suddenly popped into Em
 
     <owl:ObjectProperty rdf:about="http://krisnadhi.github.io/onto/event.owl#hasInformationObject">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#Person"/>
+        <rdfs:domain rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#SocialAgent"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#RecallAttempt"/>
         <rdfs:range rdf:resource="http://krisnadhi.github.io/onto/event.owl#InformationObject"/>
         <rdfs:comment>A relationship between a Person and the Information they have.</rdfs:comment>
@@ -117,8 +122,8 @@ Eventually, after some time, the name &quot;Amanda&quot; suddenly popped into Em
         <owl:inverseOf rdf:resource="http://www.ontology.se/odp/content/owl/Action.owl#is_consequence"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#MemoryPhenomenon"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#UnsuccessfulRecall"/>
-        <rdfs:comment>A relationship between a MemoryPhenomenon and an UnsuccessfulRecall it leads to.</rdfs:comment>
         <rdfs:comment>(owl:TransitiveProperty) A causal relation between actions, i.e. one action is the cause of another action. For example, the action of &quot;swimming&quot; is a consequence of &quot;jumping into deep water&quot;. The property is transitive.</rdfs:comment>
+        <rdfs:comment>A relationship between a MemoryPhenomenon and an UnsuccessfulRecall it leads to.</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -129,8 +134,8 @@ Eventually, after some time, the name &quot;Amanda&quot; suddenly popped into Em
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#UnsuccessfulRecall"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#MemoryBlock"/>
-        <rdfs:comment>A relationship between an UnsuccessfulRecall and a MemoryBlock it is caused by.</rdfs:comment>
         <rdfs:comment>(owl:TransitiveProperty) A causal relation between actions, i.e. one action is the cause of another action. For example, the action of &quot;swimming&quot; is a consequence of &quot;jumping into deep water&quot;.</rdfs:comment>
+        <rdfs:comment>A relationship between an UnsuccessfulRecall and a MemoryBlock it is caused by.</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -139,7 +144,7 @@ Eventually, after some time, the name &quot;Amanda&quot; suddenly popped into Em
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#attemptsRecall">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#Person"/>
+        <rdfs:domain rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#SocialAgent"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#RecallAttempt"/>
         <rdfs:comment>A relationship between a Person and a RecallAttempt they make or at least try to.</rdfs:comment>
     </owl:ObjectProperty>
@@ -150,7 +155,7 @@ Eventually, after some time, the name &quot;Amanda&quot; suddenly popped into Em
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#encountersBlock">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#Person"/>
+        <rdfs:domain rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#SocialAgent"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#MemoryBlock"/>
         <rdfs:comment>A relationship between a Person and a MemoryBlock they encounter.</rdfs:comment>
     </owl:ObjectProperty>
@@ -161,7 +166,7 @@ Eventually, after some time, the name &quot;Amanda&quot; suddenly popped into Em
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#experiences">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#Person"/>
+        <rdfs:domain rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#SocialAgent"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#MemoryPhenomenon"/>
         <rdfs:comment>A relationship between a Person and a MemoryPhenomenon they experience.</rdfs:comment>
     </owl:ObjectProperty>
@@ -172,7 +177,7 @@ Eventually, after some time, the name &quot;Amanda&quot; suddenly popped into Em
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#hasUnsuccessfulRecall">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#Person"/>
+        <rdfs:domain rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#SocialAgent"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#UnsuccessfulRecall"/>
         <rdfs:comment>A relationship between a Person and an UnsuccessfulRecall they experience.</rdfs:comment>
     </owl:ObjectProperty>
@@ -193,7 +198,7 @@ Eventually, after some time, the name &quot;Amanda&quot; suddenly popped into Em
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#performsRetrieval">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#Person"/>
+        <rdfs:domain rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#SocialAgent"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#MemoryRetrieval"/>
         <rdfs:comment>A relationship between a Person and a MemoryRetrieval they perform.</rdfs:comment>
     </owl:ObjectProperty>
@@ -236,7 +241,7 @@ Eventually, after some time, the name &quot;Amanda&quot; suddenly popped into Em
     <!-- http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#hasFullRecall -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#hasFullRecall">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#Person"/>
+        <rdfs:domain rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#SocialAgent"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
         <rdfs:comment>A property of a Person indicating whether they have full recall of information.</rdfs:comment>
     </owl:DatatypeProperty>
@@ -246,7 +251,7 @@ Eventually, after some time, the name &quot;Amanda&quot; suddenly popped into Em
     <!-- http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#hasMemoryBlock -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#hasMemoryBlock">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#Person"/>
+        <rdfs:domain rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#SocialAgent"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
     </owl:DatatypeProperty>
     
@@ -255,7 +260,7 @@ Eventually, after some time, the name &quot;Amanda&quot; suddenly popped into Em
     <!-- http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#hasMemoryRetrieval -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#hasMemoryRetrieval">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#Person"/>
+        <rdfs:domain rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#SocialAgent"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
     </owl:DatatypeProperty>
     
@@ -264,7 +269,7 @@ Eventually, after some time, the name &quot;Amanda&quot; suddenly popped into Em
     <!-- http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#hasPartialRecall -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#hasPartialRecall">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#Person"/>
+        <rdfs:domain rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#SocialAgent"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
         <rdfs:comment>A property of a Person indicating whether they have partial recall of information.</rdfs:comment>
     </owl:DatatypeProperty>
@@ -301,8 +306,16 @@ Eventually, after some time, the name &quot;Amanda&quot; suddenly popped into Em
     <!-- http://krisnadhi.github.io/onto/event.owl#InformationObject -->
 
     <owl:Class rdf:about="http://krisnadhi.github.io/onto/event.owl#InformationObject">
-        <rdfs:comment>Represents a piece of knowledge or data.</rdfs:comment>
         <rdfs:comment>An entity that encapsulates all descriptive or non-defining information of the corresponding event, e.g., names, additional identifiers, textual descriptions, etc. Should normally be aligned to a separate Information Object pattern</rdfs:comment>
+        <rdfs:comment>Represents a piece of knowledge or data.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#SocialAgent -->
+
+    <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#SocialAgent">
+        <rdfs:comment>Represents an individual human being.</rdfs:comment>
     </owl:Class>
     
 
@@ -334,15 +347,6 @@ Eventually, after some time, the name &quot;Amanda&quot; suddenly popped into Em
     
 
 
-    <!-- http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#Person -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#Person">
-        <owl:equivalentClass rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
-        <rdfs:comment>Represents an individual human being.</rdfs:comment>
-    </owl:Class>
-    
-
-
     <!-- http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#RecallAttempt -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#RecallAttempt">
@@ -361,12 +365,6 @@ Eventually, after some time, the name &quot;Amanda&quot; suddenly popped into Em
     
 
 
-    <!-- http://xmlns.com/foaf/0.1/Person -->
-
-    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Person"/>
-    
-
-
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -381,7 +379,7 @@ Eventually, after some time, the name &quot;Amanda&quot; suddenly popped into Em
     <!-- http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#Amanda -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#Amanda">
-        <rdf:type rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#Person"/>
+        <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#SocialAgent"/>
     </owl:NamedIndividual>
     
 
@@ -389,7 +387,7 @@ Eventually, after some time, the name &quot;Amanda&quot; suddenly popped into Em
     <!-- http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#Emily -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#Emily">
-        <rdf:type rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon#Person"/>
+        <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#SocialAgent"/>
     </owl:NamedIndividual>
     
 
