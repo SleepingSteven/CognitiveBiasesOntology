@@ -195,3 +195,38 @@ Sure, here are some example competency questions in the form of SPARQL queries f
    ```
 
 Note: These SPARQL queries are examples and might need adjustments based on the specific structure and data in your ontology. Additionally, the queries assume a namespace prefix (`rdf:` and `:`) for the ontology, and you may need to replace those with your actual namespace declarations.
+
+
+postille
+
+Actor: Represents the individual who is experiencing the cognitive bias.
+Belief: Represents the belief that the actor holds.
+Information: Represents the information that the actor encounters.
+Statement: A specific piece of information or claim.
+AmbiguousInformation: Represents information that is not clear or can be interpreted in different ways.
+Confirmation: Represents information that supports the actor’s belief.
+Challenge: Represents information that challenges the actor’s belief.
+LearningOpportunity: Represents an opportunity for the actor to learn or gain insight.
+Action: Represents an action taken by the actor.
+BehavioralOutcome: Represents the outcome of the actor’s behavior or actions.
+Object Properties:
+
+holdsBelief (Domain: Actor, Range: Belief): Links the actor to the belief they hold.
+encountersInformation (Domain: Actor, Range: Information): Links the actor to the information they encounter.
+interpretsStatement (Domain: Actor, Range: Statement): Links the actor to the statement they interpret.
+supportsBelief (Domain: Confirmation, Range: Belief): Links the confirmation to the belief it supports.
+challengesBelief (Domain: Challenge, Range: Belief): Links the challenge to the belief it challenges.
+learnsFrom (Domain: Actor, Range: LearningOpportunity): Links the actor to the learning opportunity.
+takesAction (Domain: Actor, Range: Action): Links the actor to the action they take.
+confirms (Domain: Actor, Range: Confirmation): Links the actor to the confirmation of their belief.    possibilità di metterci "defines" degli odp
+isAmbiguous (Domain: Information, Range: AmbiguousInformation): Links the information to its ambiguous nature.
+leads (Domain: Action, Range: BehavioralOutcome): Links the actor’s actions to their outcomes.
+providesInformation (Domain: Actor, Range: Information): Links the actor to the information they provide.
+Data Properties:
+
+hasComplexity (Domain: Information, Range: boolean): Indicates whether the information has complexity (true or false).
+hasAmbiguity (Domain: Statement, Range: boolean): Indicates whether the statement has ambiguity (true or false).
+hasSupport (Domain: Confirmation, Range: boolean): Indicates whether the confirmation has support (true or false).
+hasChallenge (Domain: Challenge, Range: boolean): Indicates whether the challenge has challenge (true or false).
+hasAwareness (Domain: LearningOpportunity, Range: boolean): Indicates whether the learning opportunity has awareness (true or false).
+hasProactivity (Domain: Action, Range: boolean): Indicates whether the action has proactivity (true or false).
