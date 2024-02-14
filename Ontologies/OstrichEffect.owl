@@ -148,8 +148,8 @@ The term was originally coined by Galai &amp; Sade (2003), and there is neurosci
         <rdfs:domain rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/ostrich_effect#AvoidanceBehavior"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/ostrich_effect#ConfrontationBehavior"/>
         <rdfs:range rdf:resource="http://descartes-core.org/ontologies/activities/1.0/ActivityPattern.owl#Outcome"/>
-        <rdfs:comment>This property shows the outcome of the individual&apos;s avoidance behavior.</rdfs:comment>
         <rdfs:comment>(owl:TransitiveProperty) A causal relation between actions, i.e. one action is the cause of another action. For example, the action of &quot;swimming&quot; is a consequence of &quot;jumping into deep water&quot;. The property is transitive.</rdfs:comment>
+        <rdfs:comment>This property shows the outcome of the individual&apos;s avoidance behavior.</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -197,6 +197,7 @@ The term was originally coined by Galai &amp; Sade (2003), and there is neurosci
     <!-- http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/ostrich_effect#hasFear -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/ostrich_effect#hasFear">
+        <rdfs:domain rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#SocialAgent"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
     </owl:DatatypeProperty>
     
