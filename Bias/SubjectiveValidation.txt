@@ -230,3 +230,31 @@ hasSupport (Domain: Confirmation, Range: boolean): Indicates whether the confirm
 hasChallenge (Domain: Challenge, Range: boolean): Indicates whether the challenge has challenge (true or false).
 hasAwareness (Domain: LearningOpportunity, Range: boolean): Indicates whether the learning opportunity has awareness (true or false).
 hasProactivity (Domain: Action, Range: boolean): Indicates whether the action has proactivity (true or false).
+
+
+Individual
+  |--holdsBelief--> Belief
+  |     |--isInfluencedBy--> AmbiguousInformation
+  |     |     |--challenges--> Challenge
+  |     |     |     |--leadsTo--> Awareness
+  |     |     |           |--motivates--> Exploration
+  |     |     |                 |--resultsIn--> Insight
+  |     |     |
+  |     |--confirms--> Confirmation
+  |           |--reinforces--> Belief
+  |
+  |--encounters--> ComplexData
+        |--contains--> AmbiguousInformation
+        |--contains--> ConfirmingInformation
+        |--contains--> ChallengingInformation
+
+In questa ontologia:
+
+“Individual” rappresenta John, che detiene una “Belief” (la sua convinzione sul cambiamento climatico).
+“ComplexData” rappresenta i dati sulla temperatura che John incontra, che contengono sia “AmbiguousInformation” che “ConfirmingInformation” e “ChallengingInformation”.
+La “Belief” di John è influenzata dall’“AmbiguousInformation”, che può sia confermare (“Confirmation”) che sfidare (“Challenge”) la sua credenza.
+Quando la “Belief” di John viene confermata, questa viene rafforzata.
+Quando la “Belief” di John viene sfidata, ciò porta alla “Awareness” del bias di validazione soggettiva.
+Questa consapevolezza motiva John a intraprendere un’“Exploration” per cercare informazioni che sfidano le sue credenze.
+Questa esplorazione porta infine a un’“Insight” sulla necessità di considerare le informazioni con una mente aperta.
+Spero che questa ontologia ti sia utile! Se hai altre domande, sarò lieto di aiutarti

@@ -1,14 +1,102 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation#"
      xml:base="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation"
+     xmlns:ac="http://www.ontology.se/odp/content/owl/Action.owl"
+     xmlns:ec="http://krisnadhi.github.io/onto/event.owl"
+     xmlns:fs="http://etna.istc.cnr.it/framester2/data/framestercore/"
+     xmlns:acf="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl"
      xmlns:cbo="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:desc="http://www.ontologydesignpatterns.org/cp/owl/description.owl"
+     xmlns:exob="https://raw.githubusercontent.com/eureadit/crowdsourcing-ontology/master/owl/crowdsourcing-evidences.owl.ttl"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:dbpedia-owl="https://en.wiktionary.org/wiki/">
-    <owl:Ontology rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation"/>
+     xmlns:wiki="https://en.wiktionary.org/"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:dbpedia="https://www.dbpedia.org/">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation">
+        <terms:created>10-02-2024</terms:created>
+        <terms:creator>Matteo Guenci</terms:creator>
+        <terms:description>Subjective Validation Ontology</terms:description>
+        <terms:description>The Subjective Validation section of the Cognitive Bias Ontology.</terms:description>
+        <hasComponent>http://ontologydesignpatterns.org/wiki/Submissions:Action</hasComponent>
+        <hasComponent>http://ontologydesignpatterns.org/wiki/Submissions:EventCore</hasComponent>
+        <hasComponent>http://www.ontologydesignpatterns.org/ont/dul/DUL.owl</hasComponent>
+        <hasComponent>https://raw.githubusercontent.com/eureadit/crowdsourcing-ontology/master/owl/crowdsourcing-evidences.owl.ttl</hasComponent>
+        <user_story>John, an individual concerned about climate change, is our user. He holds a strong belief in the reality of climate change. John comes across a set of temperature data, the temperature data is complex and contains both supportive and ambiguous information about climate change.
+
+Within the temperature data, there is a vague statement that is not clear in its implications. John, being prone to subjective validation bias, tends to interpret ambiguous information in a way that aligns with his existing belief.
+
+John notices a piece of information in the data that appears to support his climate change belief. Due to his subjective validation bias, he readily accepts and reinforces this confirming information. Simultaneously, there is another piece of information challenging aspects of his climate change belief within the temperature data.
+John, influenced by subjective validation bias, may find it difficult to accept or acknowledge this conflicting information.
+
+As John navigates through the information, he realizes how his subjective validation bias plays a role in selectively perceiving data that aligns with his pre-existing beliefs.
+He becomes aware of the challenge of objectively assessing information when influenced by subjective validation bias.
+
+John acknowledges that being aware of his own biases is essential to critically evaluate information, especially when it comes to topics like climate change.
+He recognizes the importance of considering diverse perspectives and interpreting data objectively.
+
+Inspired by his newfound awareness, John decides to actively seek out information that challenges his beliefs about climate change.
+
+Through this exploration, John gains insights into his own cognitive biases and the impact of subjective validation on his beliefs.
+He becomes more conscious of the need to approach information with an open mind, considering both confirming and challenging aspects.</user_story>
+        <rdfs:comment>Subjective Validation, also known as the personal validation effect, is a cognitive bias where people consider a statement or another piece of information to be correct if it has any personal meaning or significance to them¹². In other words, individuals are more likely to believe or accept an idea or statement if it presents to them in a personal and positive way¹.
+
+This bias often leads people to perceive two unrelated events to be related because their personal beliefs demand that they be related¹. It&apos;s closely related to the Forer effect and is an important element in cold reading¹. Subjective validation is considered to be the main reason behind most reports of paranormal phenomena¹.
+
+An example of subjective validation can be found in horoscopes, which often make vague, easily generalized personal statements, sometimes referred to as &quot;Barnum statements&quot;, designed to apply to nearly any individual¹. This can cause one to attribute future success to the horoscope and feel as if their belief in it has been validated¹.
+
+In essence, subjective validation is a confirmation bias towards information that personally benefits one&apos;s self-esteem¹. Many of the validations that are given are not necessarily because they are true about recipients but because people wish it was true about themselves¹. This effect can be seen when it comes to health. For example, if someone enjoys eating bacon and they were to come across an article that talks about bacon being healthy, they will tend to believe it more because this &quot;validates&quot; eating more bacon¹.</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/terms/created -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/created"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/creator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/description -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
+    
+
+
+    <!-- http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation#hasComponent -->
+
+    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation#hasComponent"/>
+    
+
+
+    <!-- http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation#user_story -->
+
+    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation#user_story"/>
     
 
 
@@ -26,9 +114,10 @@
     <!-- http://etna.istc.cnr.it/framester2/conceptnet/5.7.0/c/en/challenges -->
 
     <owl:ObjectProperty rdf:about="http://etna.istc.cnr.it/framester2/conceptnet/5.7.0/c/en/challenges">
-        <rdfs:domain rdf:resource="https://en.wiktionary.org/wiki/challenge"/>
-        <rdfs:range rdf:resource="https://dbpedia.org/Information"/>
-        <rdfs:comment>Relates Challenge to Information, representing the act of challenging a belief.</rdfs:comment>
+        <owl:inverseOf rdf:resource="http://etna.istc.cnr.it/framester2/conceptnet/5.7.0/c/en/confirms"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation#Challenge"/>
+        <rdfs:range rdf:resource="https://dbpedia.org/Belief"/>
+        <rdfs:comment>Links the challenge to the belief it challenges.</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -36,29 +125,29 @@
     <!-- http://etna.istc.cnr.it/framester2/conceptnet/5.7.0/c/en/confirms -->
 
     <owl:ObjectProperty rdf:about="http://etna.istc.cnr.it/framester2/conceptnet/5.7.0/c/en/confirms">
-        <rdfs:domain rdf:resource="https://en.wiktionary.org/wiki/confirmation"/>
-        <rdfs:range rdf:resource="https://dbpedia.org/Information"/>
-        <rdfs:comment>Relates Confirmation to Information, representing the act of confirming a belief.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation#Confirmation"/>
+        <rdfs:range rdf:resource="https://dbpedia.org/Belief"/>
+        <rdfs:comment>Links the confirmation to the belief it supports.</rdfs:comment>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://etna.istc.cnr.it/framester2/conceptnet/5.7.0/c/en/leads -->
+    <!-- http://krisnadhi.github.io/onto/event.owl#hasInformationObject -->
 
-    <owl:ObjectProperty rdf:about="http://etna.istc.cnr.it/framester2/conceptnet/5.7.0/c/en/leads">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation#SubjectiveValidation"/>
+    <owl:ObjectProperty rdf:about="http://krisnadhi.github.io/onto/event.owl#hasInformationObject">
+        <rdfs:domain rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#SocialAgent"/>
+        <rdfs:range rdf:resource="http://krisnadhi.github.io/onto/event.owl#InformationObject"/>
+        <rdfs:comment>Links the actor to the information they encounter.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontology.se/odp/content/owl/Action.owl#hasConsequence -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontology.se/odp/content/owl/Action.owl#hasConsequence">
+        <rdfs:domain rdf:resource="http://www.ontology.se/odp/content/owl/Action.owl#Action"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation#BehavioralOutcome"/>
         <rdfs:comment>relationship between certain experiences or events and the resulting behavioral outcomes.</rdfs:comment>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation#experiencesSubjectiveValidation -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation#experiencesSubjectiveValidation">
-        <rdfs:domain rdf:resource="http://etna.istc.cnr.it/framester2/conceptnet/5.7.0/c/en/individual"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation#SubjectiveValidation"/>
-        <rdfs:comment>Relates an Observer to the act of experiencing subjective validation bias.</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -66,9 +155,30 @@
     <!-- http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation#holdsBelief -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation#holdsBelief">
-        <rdfs:domain rdf:resource="http://etna.istc.cnr.it/framester2/conceptnet/5.7.0/c/en/individual"/>
+        <rdfs:domain rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#SocialAgent"/>
         <rdfs:range rdf:resource="https://dbpedia.org/Belief"/>
-        <rdfs:comment>Relates an Observer to a Belief they subscribe to.</rdfs:comment>
+        <rdfs:comment>Links the social agent to the belief they hold.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation#influences -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation#influences">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation#AmbiguousInformation"/>
+        <rdfs:domain rdf:resource="https://dbpedia.org/Belief"/>
+        <rdfs:range rdf:resource="http://www.ontology.se/odp/content/owl/Action.owl#Action"/>
+        <rdfs:range rdf:resource="https://dbpedia.org/Belief"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation#interpret -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation#interpret">
+        <rdfs:domain rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#SocialAgent"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation#Statement"/>
+        <rdfs:comment>Links the actor to the statement they interpret.</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -77,7 +187,7 @@
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation#isAmbiguous">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation#AmbiguousInformation"/>
-        <rdfs:range rdf:resource="https://dbpedia.org/Information"/>
+        <rdfs:range rdf:resource="http://krisnadhi.github.io/onto/event.owl#InformationObject"/>
         <rdfs:comment>Relates AmbiguousInformation to Information, indicating the lack of clarity.</rdfs:comment>
     </owl:ObjectProperty>
     
@@ -86,10 +196,71 @@
     <!-- http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation#providesInformation -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation#providesInformation">
-        <rdfs:domain rdf:resource="https://dbpedia.org/Information"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation#Statement"/>
         <rdfs:range rdf:resource="https://dbpedia.org/Belief"/>
         <rdfs:comment>Relates an Information to a Belief.</rdfs:comment>
     </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation#takesAction -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation#takesAction">
+        <rdfs:domain rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#SocialAgent"/>
+        <rdfs:range rdf:resource="http://www.ontology.se/odp/content/owl/Action.owl#Action"/>
+        <rdfs:comment>Links the actor to the action they take.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation#hasAmbiguity -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation#hasAmbiguity">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation#Statement"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment>Indicates whether the statement has ambiguity</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation#hasChallenge -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation#hasChallenge">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation#Challenge"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment>Indicates whether the challenge is actually challenging.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation#hasComplexity -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation#hasComplexity">
+        <rdfs:domain rdf:resource="http://krisnadhi.github.io/onto/event.owl#InformationObject"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment>Indicates whether the information has complexity</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation#hasSupport -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation#hasSupport">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation#Confirmation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment>Indicates whether the confirmation has support</rdfs:comment>
+    </owl:DatatypeProperty>
     
 
 
@@ -104,9 +275,27 @@
     
 
 
-    <!-- http://etna.istc.cnr.it/framester2/conceptnet/5.7.0/c/en/individual -->
+    <!-- http://krisnadhi.github.io/onto/event.owl#InformationObject -->
 
-    <owl:Class rdf:about="http://etna.istc.cnr.it/framester2/conceptnet/5.7.0/c/en/individual">
+    <owl:Class rdf:about="http://krisnadhi.github.io/onto/event.owl#InformationObject">
+        <rdfs:comment>An entity that encapsulates all descriptive or non-defining information of the corresponding event, e.g., names, additional identifiers, textual descriptions, etc. Should normally be aligned to a separate Information Object pattern</rdfs:comment>
+        <rdfs:comment>Represents data or evidence that can either confirm or challenge a belief.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.se/odp/content/owl/Action.owl#Action -->
+
+    <owl:Class rdf:about="http://www.ontology.se/odp/content/owl/Action.owl#Action">
+        <rdfs:comment>(owl:Class) The process of doing something. An action is performed by an agent. An action can be proposed (proposed actions make up a plan), implemented or abandoned, and it has a status and possibly one or more suspension periods. Actions can have consequences and can be dependent on other actions, e.g. the action of pouring water from a cup is dependent on the action to first fill the cup with water.</rdfs:comment>
+        <rdfs:comment>Represents an action taken by the actor</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#SocialAgent -->
+
+    <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#SocialAgent">
         <rdfs:comment>Represents a person who experiences subjective validation.</rdfs:comment>
     </owl:Class>
     
@@ -115,6 +304,7 @@
     <!-- http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation#AmbiguousInformation -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation#AmbiguousInformation">
+        <rdfs:subClassOf rdf:resource="http://krisnadhi.github.io/onto/event.owl#InformationObject"/>
         <rdfs:comment>Represents a general or vague statement that could be subject to subjective validation.</rdfs:comment>
     </owl:Class>
     
@@ -123,15 +313,35 @@
     <!-- http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation#BehavioralOutcome -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation#BehavioralOutcome">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/eureadit/crowdsourcing-ontology/master/owl/crowdsourcing-evidences.owl.ttl#Observation"/>
         <rdfs:comment>Represents the behavioral changes or actions resulting from subjective validation in a particular context.</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation#SubjectiveValidation -->
+    <!-- http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation#Challenge -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation#SubjectiveValidation">
-        <rdfs:comment>Istance of the experience of the subjective validation bias</rdfs:comment>
+    <owl:Class rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation#Challenge">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/eureadit/crowdsourcing-ontology/master/owl/crowdsourcing-evidences.owl.ttl#Engagement"/>
+        <rdfs:comment>Represents the act of perceiving information as opposing or challenging a belief.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation#Confirmation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation#Confirmation">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/eureadit/crowdsourcing-ontology/master/owl/crowdsourcing-evidences.owl.ttl#Engagement"/>
+        <rdfs:comment>Represents the act of perceiving information as supporting or confirming a belief.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation#Statement -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation#Statement">
+        <rdfs:subClassOf rdf:resource="http://krisnadhi.github.io/onto/event.owl#InformationObject"/>
+        <rdfs:comment>Represents a specific piece of information or claim.</rdfs:comment>
     </owl:Class>
     
 
@@ -144,26 +354,18 @@
     
 
 
-    <!-- https://dbpedia.org/Information -->
+    <!-- https://raw.githubusercontent.com/eureadit/crowdsourcing-ontology/master/owl/crowdsourcing-evidences.owl.ttl#Engagement -->
 
-    <owl:Class rdf:about="https://dbpedia.org/Information">
-        <rdfs:comment>Represents data or evidence that can either confirm or challenge a belief.</rdfs:comment>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/eureadit/crowdsourcing-ontology/master/owl/crowdsourcing-evidences.owl.ttl#Engagement">
+        <rdfs:comment>(owl:Class) The product of a reflection upon an observation, which embodies subjective traits of an experience (Example: &quot;After reading this passage of &apos;To Kill a Mockingbird&apos;, I came to a clearer understanding of the many facets of social intolerance&quot;).</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- https://en.wiktionary.org/wiki/challenge -->
+    <!-- https://raw.githubusercontent.com/eureadit/crowdsourcing-ontology/master/owl/crowdsourcing-evidences.owl.ttl#Observation -->
 
-    <owl:Class rdf:about="https://en.wiktionary.org/wiki/challenge">
-        <rdfs:comment>Represents the act of perceiving information as opposing or challenging a belief.</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- https://en.wiktionary.org/wiki/confirmation -->
-
-    <owl:Class rdf:about="https://en.wiktionary.org/wiki/confirmation">
-        <rdfs:comment>Represents the act of perceiving information as supporting or confirming a belief.</rdfs:comment>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/eureadit/crowdsourcing-ontology/master/owl/crowdsourcing-evidences.owl.ttl#Observation">
+        <rdfs:comment>(owl:Class) The product of an act of scrutiny which may or may not have been performed with a critical disposition (Example: &quot;My thoughts from reading this passage of &apos;To Kill a Mockingbird&apos;&quot;).</rdfs:comment>
     </owl:Class>
     
 
@@ -182,7 +384,7 @@
     <!-- http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation#Challenge1 -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation#Challenge1">
-        <rdf:type rdf:resource="https://en.wiktionary.org/wiki/challenge"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation#Challenge"/>
         <rdfs:comment>An instance of the class Challenge.</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -200,7 +402,7 @@
     <!-- http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation#Confirmation1 -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation#Confirmation1">
-        <rdf:type rdf:resource="https://en.wiktionary.org/wiki/confirmation"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation#Confirmation"/>
         <rdfs:comment>An instance of the class Confirmation.</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -208,16 +410,14 @@
 
     <!-- http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation#DataInterpretation -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation#DataInterpretation">
-        <rdf:type rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation#SubjectiveValidation"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation#DataInterpretation"/>
     
 
 
     <!-- http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation#John -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation#John">
-        <rdf:type rdf:resource="http://etna.istc.cnr.it/framester2/conceptnet/5.7.0/c/en/individual"/>
+        <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#SocialAgent"/>
         <rdfs:comment>An instance of the class individual</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -234,7 +434,7 @@
     <!-- http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation#TemperatureData -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation#TemperatureData">
-        <rdf:type rdf:resource="https://dbpedia.org/Information"/>
+        <rdf:type rdf:resource="http://krisnadhi.github.io/onto/event.owl#InformationObject"/>
         <rdfs:comment>An instance of the class Information.</rdfs:comment>
     </owl:NamedIndividual>
     
