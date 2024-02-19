@@ -1,0 +1,204 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/confirmation_bias#"
+     xml:base="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/confirmation_bias"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/confirmation_bias"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/cp/owl/classification.owl#classifies -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/cp/owl/classification.owl#classifies">
+        <rdfs:domain rdf:resource="http://etna.istc.cnr.it/framester2/data/framestercore/Opinion"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/confirmation_bias#Information"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/confirmation_bias#contraddictsBeliefs -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/confirmation_bias#contraddictsBeliefs">
+        <rdfs:domain rdf:resource="http://etna.istc.cnr.it/framester2/data/framestercore/Differentiation"/>
+        <rdfs:range rdf:resource="http://etna.istc.cnr.it/framester2/data/framestercore/Opinion"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/confirmation_bias#determines -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/confirmation_bias#determines">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/confirmation_bias#Information"/>
+        <rdfs:range rdf:resource="http://etna.istc.cnr.it/framester2/data/framestercore/Categorization"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/confirmation_bias#hasBelief -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/confirmation_bias#hasBelief">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/confirmation_bias#Individual"/>
+        <rdfs:range rdf:resource="http://etna.istc.cnr.it/framester2/data/framestercore/Opinion"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/confirmation_bias#isDeterminedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/confirmation_bias#isDeterminedBy">
+        <rdfs:domain rdf:resource="http://etna.istc.cnr.it/framester2/data/framestercore/Categorization"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/confirmation_bias#Information"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/confirmation_bias#receivesInformation -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/confirmation_bias#receivesInformation">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/confirmation_bias#Individual"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/confirmation_bias#Information"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/confirmation_bias#supportsBelief -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/confirmation_bias#supportsBelief">
+        <rdfs:domain rdf:resource="http://etna.istc.cnr.it/framester2/data/framestercore/Evidence"/>
+        <rdfs:range rdf:resource="http://etna.istc.cnr.it/framester2/data/framestercore/Opinion"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#topObjectProperty -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#topObjectProperty">
+        <owl:inverseOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://etna.istc.cnr.it/framester2/data/framestercore/Categorization -->
+
+    <owl:Class rdf:about="http://etna.istc.cnr.it/framester2/data/framestercore/Categorization"/>
+    
+
+
+    <!-- http://etna.istc.cnr.it/framester2/data/framestercore/Differentiation -->
+
+    <owl:Class rdf:about="http://etna.istc.cnr.it/framester2/data/framestercore/Differentiation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/confirmation_bias#Information"/>
+    </owl:Class>
+    
+
+
+    <!-- http://etna.istc.cnr.it/framester2/data/framestercore/Evidence -->
+
+    <owl:Class rdf:about="http://etna.istc.cnr.it/framester2/data/framestercore/Evidence">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/confirmation_bias#Information"/>
+    </owl:Class>
+    
+
+
+    <!-- http://etna.istc.cnr.it/framester2/data/framestercore/Opinion -->
+
+    <owl:Class rdf:about="http://etna.istc.cnr.it/framester2/data/framestercore/Opinion"/>
+    
+
+
+    <!-- http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/confirmation_bias#Individual -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/confirmation_bias#Individual">
+        <owl:equivalentClass rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/confirmation_bias#Information -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/confirmation_bias#Information"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/Person -->
+
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Person"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/confirmation_bias#Categorization -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/confirmation_bias#Categorization">
+        <rdf:type rdf:resource="http://etna.istc.cnr.it/framester2/data/framestercore/Categorization"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/confirmation_bias#Evidence -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/confirmation_bias#Evidence">
+        <rdf:type rdf:resource="http://etna.istc.cnr.it/framester2/data/framestercore/Evidence"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/confirmation_bias#Information"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/confirmation_bias#Opinion -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/confirmation_bias#Opinion">
+        <rdf:type rdf:resource="http://etna.istc.cnr.it/framester2/data/framestercore/Opinion"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/confirmation_bias#Patient -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/confirmation_bias#Patient">
+        <rdf:type rdf:resource="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/confirmation_bias#Individual"/>
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi -->
+
