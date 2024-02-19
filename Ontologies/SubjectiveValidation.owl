@@ -116,7 +116,7 @@ In essence, subjective validation is a confirmation bias towards information tha
     <owl:ObjectProperty rdf:about="http://etna.istc.cnr.it/framester2/conceptnet/5.7.0/c/en/challenges">
         <owl:inverseOf rdf:resource="http://etna.istc.cnr.it/framester2/conceptnet/5.7.0/c/en/confirms"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation#Challenge"/>
-        <rdfs:range rdf:resource="https://dbpedia.org/Belief"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation#Belief"/>
         <rdfs:comment>Links the challenge to the belief it challenges.</rdfs:comment>
     </owl:ObjectProperty>
     
@@ -126,7 +126,7 @@ In essence, subjective validation is a confirmation bias towards information tha
 
     <owl:ObjectProperty rdf:about="http://etna.istc.cnr.it/framester2/conceptnet/5.7.0/c/en/confirms">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation#Confirmation"/>
-        <rdfs:range rdf:resource="https://dbpedia.org/Belief"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation#Belief"/>
         <rdfs:comment>Links the confirmation to the belief it supports.</rdfs:comment>
     </owl:ObjectProperty>
     
@@ -142,12 +142,13 @@ In essence, subjective validation is a confirmation bias towards information tha
     
 
 
-    <!-- http://www.ontology.se/odp/content/owl/Action.owl#hasConsequence -->
+    <!-- http://www.ontology.se/odp/content/owl/Action.owl#has_consequence -->
 
-    <owl:ObjectProperty rdf:about="http://www.ontology.se/odp/content/owl/Action.owl#hasConsequence">
+    <owl:ObjectProperty rdf:about="http://www.ontology.se/odp/content/owl/Action.owl#has_consequence">
         <rdfs:domain rdf:resource="http://www.ontology.se/odp/content/owl/Action.owl#Action"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation#BehavioralOutcome"/>
         <rdfs:comment>relationship between certain experiences or events and the resulting behavioral outcomes.</rdfs:comment>
+        <rdfs:comment>(owl:TransitiveProperty) A causal relation between actions, i.e. one action is the cause of another action. For example, the action of &quot;swimming&quot; is a consequence of &quot;jumping into deep water&quot;. The property is transitive.</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -156,7 +157,7 @@ In essence, subjective validation is a confirmation bias towards information tha
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation#holdsBelief">
         <rdfs:domain rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#SocialAgent"/>
-        <rdfs:range rdf:resource="https://dbpedia.org/Belief"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation#Belief"/>
         <rdfs:comment>Links the social agent to the belief they hold.</rdfs:comment>
     </owl:ObjectProperty>
     
@@ -166,9 +167,8 @@ In essence, subjective validation is a confirmation bias towards information tha
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation#influences">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation#AmbiguousInformation"/>
-        <rdfs:domain rdf:resource="https://dbpedia.org/Belief"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation#Belief"/>
         <rdfs:range rdf:resource="http://www.ontology.se/odp/content/owl/Action.owl#Action"/>
-        <rdfs:range rdf:resource="https://dbpedia.org/Belief"/>
     </owl:ObjectProperty>
     
 
@@ -187,7 +187,7 @@ In essence, subjective validation is a confirmation bias towards information tha
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation#providesInformation">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation#Statement"/>
-        <rdfs:range rdf:resource="https://dbpedia.org/Belief"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation#Belief"/>
         <rdfs:comment>Relates an Information to a Belief.</rdfs:comment>
     </owl:ObjectProperty>
     
@@ -287,6 +287,7 @@ In essence, subjective validation is a confirmation bias towards information tha
 
     <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#SocialAgent">
         <rdfs:comment>Represents a person who experiences subjective validation.</rdfs:comment>
+        <rdfs:comment>(owl:Class) Any individual whose existence is granted simply by its social communicability and capability of action (through some PhysicalAgent)</rdfs:comment>
     </owl:Class>
     
 
@@ -305,6 +306,14 @@ In essence, subjective validation is a confirmation bias towards information tha
     <owl:Class rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation#BehavioralOutcome">
         <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/eureadit/crowdsourcing-ontology/master/owl/crowdsourcing-evidences.owl.ttl#Observation"/>
         <rdfs:comment>Represents the behavioral changes or actions resulting from subjective validation in a particular context.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation#Belief -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation#Belief">
+        <rdfs:comment>The bielief in which affects the Social Agent</rdfs:comment>
     </owl:Class>
     
 
@@ -332,14 +341,6 @@ In essence, subjective validation is a confirmation bias towards information tha
     <owl:Class rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation#Statement">
         <rdfs:subClassOf rdf:resource="http://krisnadhi.github.io/onto/event.owl#InformationObject"/>
         <rdfs:comment>Represents a specific piece of information or claim.</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- https://dbpedia.org/Belief -->
-
-    <owl:Class rdf:about="https://dbpedia.org/Belief">
-        <rdfs:comment>Represents a conviction or acceptance that something is true or exists.</rdfs:comment>
     </owl:Class>
     
 
@@ -383,7 +384,6 @@ In essence, subjective validation is a confirmation bias towards information tha
     <!-- http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation#ClimateChangeBelief -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation#ClimateChangeBelief">
-        <rdf:type rdf:resource="https://dbpedia.org/Belief"/>
         <rdfs:comment>An instance of the class Belief.</rdfs:comment>
     </owl:NamedIndividual>
     

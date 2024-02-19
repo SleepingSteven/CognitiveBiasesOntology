@@ -1,14 +1,64 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/semmelweis_reflex#"
      xml:base="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/semmelweis_reflex"
+     xmlns:ac="http://www.ontology.se/odp/content/owl/Action.owl"
+     xmlns:st="http://www.ontologydesignpatterns.org/cp/owl/situation.owl"
+     xmlns:acf="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl"
+     xmlns:acp="http://descartes-core.org/ontologies/activities/1.0/ActivityPattern.owl"
      xmlns:cbo="http://www.semanticweb.org/mguen/ontologies/2024/0/cognitive_bias_ontology_semmelweis_reflex/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:dbpedia-owl="https://en.wiktionary.org/wiki/">
-    <owl:Ontology rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/semmelweis_reflex"/>
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:dbpedia-owl="https://en.wiktionary.org/wiki/"
+     xmlns:semmelweis_reflex="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/semmelweis_reflex#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/semmelweis_reflex">
+        <terms:creator>12-02-2024</terms:creator>
+        <terms:creator>Matteo Guenci</terms:creator>
+        <terms:description>The Semmelweiss Reflex Ontology</terms:description>
+        <hasComponent>http://descartes-core.org/ontologies/activities/1.0/ActivityPattern.owl</hasComponent>
+        <hasComponent>http://www.ontology.se/odp/content/owl/Action.owl</hasComponent>
+        <hasComponent>http://www.ontologydesignpatterns.org/cp/owl/situation.owl</hasComponent>
+        <hasComponent>http://www.ontologydesignpatterns.org/ont/dul/DUL.owl</hasComponent>
+        <rdfs:comment>The Semmelweis Reflex, also known as the Semmelweis Effect, is a metaphor for the reflex-like tendency to reject new evidence or new knowledge because it contradicts established norms, beliefs, or paradigms. This term is named after Ignaz Semmelweis, a Hungarian physician who discovered in 1847 that childbed fever mortality rates fell significantly when doctors disinfected their hands with a chlorine solution before moving from one patient to another¹. Despite the empirical evidence, his fellow doctors rejected his hand-washing suggestions, often for non-medical reasons. This phenomenon can impede scientific advancement and progress by rejecting new ideas and discoveries².</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/terms/created -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/created"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/creator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/description -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
+    
+
+
+    <!-- http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/semmelweis_reflex#hasComponent -->
+
+    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/semmelweis_reflex#hasComponent"/>
     
 
 
@@ -23,63 +73,157 @@
     
 
 
-    <!-- http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/semmelweis_reflex#exhibitsIn -->
+    <!-- http://www.ontology.se/odp/content/owl/Action.owl#has_consequence -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/semmelweis_reflex#exhibitsIn">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/semmelweis_reflex#SemmelweisReflex"/>
-        <rdfs:range rdf:resource="https://en.wiktionary.org/wiki/scenario"/>
-        <rdfs:comment>Links the `Semmelweis Reflex` to the `Scenario` in which it is exhibited.</rdfs:comment>
+    <owl:ObjectProperty rdf:about="http://www.ontology.se/odp/content/owl/Action.owl#has_consequence">
+        <rdfs:domain rdf:resource="http://www.ontology.se/odp/content/owl/Action.owl#Action"/>
+        <rdfs:range rdf:resource="http://descartes-core.org/ontologies/activities/1.0/ActivityPattern.owl#Outcome"/>
+        <rdfs:comment>(owl:TransitiveProperty) A causal relation between actions, i.e. one action is the cause of another action. For example, the action of &quot;swimming&quot; is a consequence of &quot;jumping into deep water&quot;. The property is transitive.</rdfs:comment>
+        <rdfs:comment>Links an action to the consequence it leads to.</rdfs:comment>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/semmelweis_reflex#hasBelief -->
+    <!-- http://www.ontologydesignpatterns.org/cp/owl/situation.owl#hasSetting -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/semmelweis_reflex#hasBelief">
-        <rdfs:domain rdf:resource="http://etna.istc.cnr.it/framester2/conceptnet/5.7.0/c/en/individual"/>
-        <rdfs:range rdf:resource="https://dbpedia.org/Belief"/>
-        <rdfs:comment>Links the `Individual` or `Group` to their `Belief System`.</rdfs:comment>
+    <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/cp/owl/situation.owl#hasSetting">
+        <rdfs:domain rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#SocialAgent"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/semmelweis_reflex#Environment"/>
+        <rdfs:comment>(owl:ObjectProperty) A relation between entities and situations, e.g. &apos;this morning I&apos;ve prepared my coffee with a new fantastic Arabica&apos; (i.e.: (an amount of) a new fantastic Arabica hasSetting the preparation of my coffee this morning).</rdfs:comment>
+        <rdfs:comment>Represent theconnection of the Social agent to the condition it is in</rdfs:comment>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/semmelweis_reflex#hasImpact -->
+    <!-- http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/semmelweis_reflex#contradicts -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/semmelweis_reflex#hasImpact">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/semmelweis_reflex#SemmelweisReflex"/>
-        <rdfs:range rdf:resource="http://etna.istc.cnr.it/framester2/data/framestercore/Impact"/>
-        <rdfs:comment>Links the `Semmelweis Reflex` to its `Impact`.</rdfs:comment>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/semmelweis_reflex#contradicts">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/semmelweis_reflex#Perception"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/semmelweis_reflex#Fact"/>
+        <owl:propertyDisjointWith rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/semmelweis_reflex#supports"/>
+        <rdfs:comment>Links a perception to the fact it contradicts.</rdfs:comment>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/semmelweis_reflex#occursIn -->
+    <!-- http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/semmelweis_reflex#holds -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/semmelweis_reflex#occursIn">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/semmelweis_reflex#SemmelweisReflex"/>
-        <rdfs:range rdf:resource="https://en.wiktionary.org/wiki/field"/>
-        <rdfs:comment>Links the `Semmelweis Reflex` to the `Field` in which it occurs.</rdfs:comment>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/semmelweis_reflex#holds">
+        <rdfs:domain rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#SocialAgent"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/semmelweis_reflex#Perception"/>
+        <rdfs:comment>Links an entity to the perception it holds.</rdfs:comment>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://en.wiktionary.org/wiki/contradict -->
+    <!-- http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/semmelweis_reflex#isAffectedBy -->
 
-    <owl:ObjectProperty rdf:about="https://en.wiktionary.org/wiki/contradict">
-        <rdfs:domain rdf:resource="http://etna.istc.cnr.it/framester2/data/framestercore/Evidence"/>
-        <rdfs:range rdf:resource="https://dbpedia.org/Belief"/>
-        <rdfs:comment>Links the `Evidence` to the `Belief System` it contradicts.</rdfs:comment>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/semmelweis_reflex#isAffectedBy">
+        <rdfs:domain rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#SocialAgent"/>
+        <rdfs:range rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/situation.owl#Situation"/>
+        <rdfs:comment>Links an entity to the environment it is affected by.</rdfs:comment>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://en.wiktionary.org/wiki/reject -->
+    <!-- http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/semmelweis_reflex#requires -->
 
-    <owl:ObjectProperty rdf:about="https://en.wiktionary.org/wiki/reject">
-        <rdfs:domain rdf:resource="http://etna.istc.cnr.it/framester2/conceptnet/5.7.0/c/en/individual"/>
-        <rdfs:range rdf:resource="http://etna.istc.cnr.it/framester2/data/framestercore/Evidence"/>
-        <rdfs:comment>Links the `Individual` or `Group` to the `Evidence` they reject.</rdfs:comment>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/semmelweis_reflex#requires">
+        <rdfs:domain rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#SocialAgent"/>
+        <rdfs:range rdf:resource="http://www.ontology.se/odp/content/owl/Action.owl#Action"/>
+        <rdfs:comment>Links an entity to the action it needs to take.</rdfs:comment>
     </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/semmelweis_reflex#supports -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/semmelweis_reflex#supports">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/semmelweis_reflex#Fact"/>
+        <rdfs:range rdf:resource="http://www.ontology.se/odp/content/owl/Action.owl#Action"/>
+        <rdfs:comment>Links a fact to the action it supports.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/semmelweis_reflex#isAware -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/semmelweis_reflex#isAware">
+        <rdfs:domain rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#SocialAgent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment>Indicates whether the entity is aware of their state.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/semmelweis_reflex#isChronic -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/semmelweis_reflex#isChronic">
+        <rdfs:domain rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/situation.owl#Situation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment>Indicates whether the state is chronic or long-lasting.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/semmelweis_reflex#isComplex -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/semmelweis_reflex#isComplex">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/semmelweis_reflex#Environment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment>Indicates whether the environment is complex or challenging.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/semmelweis_reflex#isDifficult -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/semmelweis_reflex#isDifficult">
+        <rdfs:domain rdf:resource="http://www.ontology.se/odp/content/owl/Action.owl#Action"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment>Indicates whether the action is difficult to perform.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/semmelweis_reflex#isNegative -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/semmelweis_reflex#isNegative">
+        <rdfs:domain rdf:resource="http://descartes-core.org/ontologies/activities/1.0/ActivityPattern.owl#Outcome"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment>Indicates whether the consequence is negative or harmful.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/semmelweis_reflex#isStrong -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/semmelweis_reflex#isStrong">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/semmelweis_reflex#Perception"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment>Indicates the strength or intensity of the perception.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/semmelweis_reflex#isVerified -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/semmelweis_reflex#isVerified">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/semmelweis_reflex#Fact"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment>Indicates whether the fact is verified or confirmed.</rdfs:comment>
+    </owl:DatatypeProperty>
     
 
 
@@ -94,58 +238,59 @@
     
 
 
-    <!-- http://etna.istc.cnr.it/framester2/conceptnet/5.7.0/c/en/individual -->
+    <!-- http://descartes-core.org/ontologies/activities/1.0/ActivityPattern.owl#Outcome -->
 
-    <owl:Class rdf:about="http://etna.istc.cnr.it/framester2/conceptnet/5.7.0/c/en/individual">
-        <rdfs:comment>Represents the person or group exhibiting the Semmelweis Reflex.</rdfs:comment>
+    <owl:Class rdf:about="http://descartes-core.org/ontologies/activities/1.0/ActivityPattern.owl#Outcome">
+        <rdfs:comment>Represents the result or effect of an action.</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://etna.istc.cnr.it/framester2/data/framestercore/Evidence -->
+    <!-- http://www.ontology.se/odp/content/owl/Action.owl#Action -->
 
-    <owl:Class rdf:about="http://etna.istc.cnr.it/framester2/data/framestercore/Evidence">
-        <rdfs:comment>Represents the new evidence or knowledge that contradicts the existing belief system.</rdfs:comment>
+    <owl:Class rdf:about="http://www.ontology.se/odp/content/owl/Action.owl#Action">
+        <rdfs:comment>(owl:Class) The process of doing something. An action is performed by an agent. An action can be proposed (proposed actions make up a plan), implemented or abandoned, and it has a status and possibly one or more suspension periods. Actions can have consequences and can be dependent on other actions, e.g. the action of pouring water from a cup is dependent on the action to first fill the cup with water.</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://etna.istc.cnr.it/framester2/data/framestercore/Impact -->
+    <!-- http://www.ontologydesignpatterns.org/cp/owl/situation.owl#Situation -->
 
-    <owl:Class rdf:about="http://etna.istc.cnr.it/framester2/data/framestercore/Impact">
-        <rdfs:comment>Represents the consequences or effects of the Semmelweis Reflex.</rdfs:comment>
+    <owl:Class rdf:about="http://www.ontologydesignpatterns.org/cp/owl/situation.owl#Situation">
+        <rdfs:comment>(owl:Class) A view on a set of entities. It can be seen as a &apos;relational context&apos;, reifying a relation.</rdfs:comment>
+        <rdfs:comment>Represents the surroundings or conditions in which an entity operates.</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/semmelweis_reflex#SemmelweisReflex -->
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#SocialAgent -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/semmelweis_reflex#SemmelweisReflex">
-        <rdfs:comment>The main class representing the cognitive bias itself.</rdfs:comment>
+    <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#SocialAgent">
+        <rdfs:comment>(owl:Class) Any individual whose existence is granted simply by its social communicability and capability of action (through some PhysicalAgent)</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- https://dbpedia.org/Belief -->
+    <!-- http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/semmelweis_reflex#Environment -->
 
-    <owl:Class rdf:about="https://dbpedia.org/Belief">
-        <rdfs:comment>Represents the established norms, beliefs, or paradigms that the individual or group holds.</rdfs:comment>
+    <owl:Class rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/semmelweis_reflex#Environment">
+        <rdfs:comment>Represents the surroundings or conditions in which an entity operates.</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- https://en.wiktionary.org/wiki/field -->
+    <!-- http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/semmelweis_reflex#Fact -->
 
-    <owl:Class rdf:about="https://en.wiktionary.org/wiki/field">
-        <rdfs:comment>Represents the field of study or area (like medicine, technology, climate science) where the Semmelweis Reflex is exhibited.</rdfs:comment>
+    <owl:Class rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/semmelweis_reflex#Fact">
+        <rdfs:comment>Represents verified information or truth.</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- https://en.wiktionary.org/wiki/scenario -->
+    <!-- http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/semmelweis_reflex#Perception -->
 
-    <owl:Class rdf:about="https://en.wiktionary.org/wiki/scenario">
-        <rdfs:comment>Represents the specific context or situation in which the Semmelweis Reflex is exhibited.</rdfs:comment>
+    <owl:Class rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/semmelweis_reflex#Perception">
+        <rdfs:comment>Represents the way an entity thinks or understands something.</rdfs:comment>
     </owl:Class>
     
 
@@ -163,57 +308,43 @@
 
     <!-- http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/semmelweis_reflex#FriendSuggestion -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/semmelweis_reflex#FriendSuggestion">
-        <rdf:type rdf:resource="http://etna.istc.cnr.it/framester2/data/framestercore/Evidence"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/semmelweis_reflex#FriendSuggestion"/>
     
 
 
     <!-- http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/semmelweis_reflex#John -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/semmelweis_reflex#John">
-        <rdf:type rdf:resource="http://etna.istc.cnr.it/framester2/conceptnet/5.7.0/c/en/individual"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/semmelweis_reflex#John"/>
     
 
 
     <!-- http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/semmelweis_reflex#MentalHealth -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/semmelweis_reflex#MentalHealth">
-        <rdf:type rdf:resource="https://en.wiktionary.org/wiki/field"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/semmelweis_reflex#MentalHealth"/>
     
 
 
     <!-- http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/semmelweis_reflex#Symptoms -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/semmelweis_reflex#Symptoms">
-        <rdf:type rdf:resource="http://etna.istc.cnr.it/framester2/data/framestercore/Impact"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/semmelweis_reflex#Symptoms"/>
     
 
 
     <!-- http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/semmelweis_reflex#John&apos;sBelief -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/semmelweis_reflex#John&apos;sBelief">
-        <rdf:type rdf:resource="https://dbpedia.org/Belief"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/semmelweis_reflex#John&apos;sBelief"/>
     
 
 
     <!-- http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/semmelweis_reflex#John&apos;sRejection -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/semmelweis_reflex#John&apos;sRejection">
-        <rdf:type rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/semmelweis_reflex#SemmelweisReflex"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/semmelweis_reflex#John&apos;sRejection"/>
     
 
 
     <!-- http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/semmelweis_reflex#John&apos;sSasSituation -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/semmelweis_reflex#John&apos;sSasSituation">
-        <rdf:type rdf:resource="https://en.wiktionary.org/wiki/scenario"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/semmelweis_reflex#John&apos;sSasSituation"/>
 </rdf:RDF>
 
 

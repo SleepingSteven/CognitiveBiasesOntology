@@ -250,6 +250,7 @@ The term was originally coined by Galai &amp; Sade (2003), and there is neurosci
 
     <owl:Class rdf:about="http://www.ontologydesignpatterns.org/cp/owl/situation.owl#Situation">
         <rdfs:comment>Thi class represent the context in which the negative informations are presented or relates to</rdfs:comment>
+        <rdfs:comment>(owl:Class) A view on a set of entities. It can be seen as a &apos;relational context&apos;, reifying a relation.</rdfs:comment>
     </owl:Class>
     
 

@@ -316,6 +316,7 @@ Eventually, after some time, the name &quot;Amanda&quot; suddenly popped into Em
 
     <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#SocialAgent">
         <rdfs:comment>Represents an individual human being.</rdfs:comment>
+        <rdfs:comment>(owl:Class) Any individual whose existence is granted simply by its social communicability and capability of action (through some PhysicalAgent)</rdfs:comment>
     </owl:Class>
     
 
