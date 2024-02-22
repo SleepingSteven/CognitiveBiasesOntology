@@ -73,6 +73,15 @@
     
 
 
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isParticipantIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isParticipantIn">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/gaia/expectationbias#Individual"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/gaia/expectationbias#Event"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.semanticweb.org/hp/ontologies/2024/gaia/expectationbias#exhibitsBias -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2024/gaia/expectationbias#exhibitsBias">
@@ -87,7 +96,7 @@
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2024/gaia/expectationbias#hasExpectation">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/gaia/expectationbias#Individual"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/gaia/expectationbias#Expectation"/>
+        <rdfs:range rdf:resource="https://w3id.org/framester/conceptnet/5.7.0/c/en/expectation"/>
         <rdfs:comment>Relates an individual to their pre-existing expectations.</rdfs:comment>
     </owl:ObjectProperty>
     
@@ -96,8 +105,8 @@
     <!-- http://www.semanticweb.org/hp/ontologies/2024/gaia/expectationbias#influencesPerception -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2024/gaia/expectationbias#influencesPerception">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/gaia/expectationbias#Expectation"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/gaia/expectationbias#Perception"/>
+        <rdfs:domain rdf:resource="https://w3id.org/framester/conceptnet/5.7.0/c/en/expectation"/>
+        <rdfs:range rdf:resource="ttps://w3id.org/framester/conceptnet/5.7.0/c/en/perception"/>
         <rdfs:comment>Describes the impact of expectations on the interpretation of information.</rdfs:comment>
     </owl:ObjectProperty>
     
@@ -107,18 +116,8 @@
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2024/gaia/expectationbias#interpretsAs">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/gaia/expectationbias#Individual"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/gaia/expectationbias#Perception"/>
+        <rdfs:range rdf:resource="ttps://w3id.org/framester/conceptnet/5.7.0/c/en/perception"/>
         <rdfs:comment>Relates an individual to their interpretation of events</rdfs:comment>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/hp/ontologies/2024/gaia/expectationbias#isParticipatinIn -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2024/gaia/expectationbias#isParticipatinIn">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/gaia/expectationbias#Individual"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/gaia/expectationbias#Event"/>
-        <rdfs:comment>Indicates the events encountered by an individual.</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -150,14 +149,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/hp/ontologies/2024/gaia/expectationbias#Expectation -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2024/gaia/expectationbias#Expectation">
-        <rdfs:comment>represents pre-existing beliefs, attitudes, or assumptions that an individual holds.</rdfs:comment>
-    </owl:Class>
-    
-
-
     <!-- http://www.semanticweb.org/hp/ontologies/2024/gaia/expectationbias#Individual -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2024/gaia/expectationbias#Individual">
@@ -166,9 +157,17 @@
     
 
 
-    <!-- http://www.semanticweb.org/hp/ontologies/2024/gaia/expectationbias#Perception -->
+    <!-- https://w3id.org/framester/conceptnet/5.7.0/c/en/expectation -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2024/gaia/expectationbias#Perception">
+    <owl:Class rdf:about="https://w3id.org/framester/conceptnet/5.7.0/c/en/expectation">
+        <rdfs:comment>represents pre-existing beliefs, attitudes, or assumptions that an individual holds.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- ttps://w3id.org/framester/conceptnet/5.7.0/c/en/perception -->
+
+    <owl:Class rdf:about="ttps://w3id.org/framester/conceptnet/5.7.0/c/en/perception">
         <rdfs:comment>represents how an individual interprets or perceives information or events.</rdfs:comment>
     </owl:Class>
     
@@ -190,7 +189,6 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2024/gaia/expectationbias#Hiring_Manager">
         <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/gaia/expectationbias#Individual"/>
         <expectationbias:exhibitsBias rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/gaia/expectationbias#ideal_candidate"/>
-        <expectationbias:isParticipatinIn rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/gaia/expectationbias#Interview"/>
     </owl:NamedIndividual>
     
 
