@@ -1,12 +1,23 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/choice_supportive_bias#"
-     xml:base="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/choice_supportive_bias"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
-    <owl:Ontology rdf:about="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/choice_supportive_bias"/>
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:eo="https://raw.githubusercontent.com/modellingDH/odp_experience/master/owl/cp_experience.owl.rdfxml#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:csb="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/choice_supportive_bias#"
+     xmlns:classification="http://www.ontologydesignpatterns.org/cp/owl/classification.owl#"
+     xmlns:fs="https://w3id.org/framester/">
+     <owl:Ontology rdf:about="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/choice_supportive_bias">
+        <terms:created>21-02-2024</terms:created>
+        <terms:creator>Stefano Sorrentino</terms:creator>
+        <terms:decription>An ontology of the cognitive bias of the choice supportive bias</terms:decription>
+        <terms:title>Choice Supportive Bias Ontology</terms:title>
+        <post_purchase_realization:scenario>A user buys a has to decide between two job offers and prioritizes pros about the one he eventually choses not considering the cons,while heavily considering the cons of the discarded option</post_purchase_realization:scenario>
+        <rdfs:comment>This is the ontology of the cognitive bias of choice supportive bias</rdfs:comment>
+     </owl:Ontology>
     
 
 
