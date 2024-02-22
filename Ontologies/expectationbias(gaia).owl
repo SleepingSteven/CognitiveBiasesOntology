@@ -96,7 +96,7 @@
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2024/gaia/expectationbias#hasExpectation">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/gaia/expectationbias#Individual"/>
-        <rdfs:range rdf:resource="https://w3id.org/framester/conceptnet/5.7.0/c/en/expectation"/>
+        <rdfs:range rdf:resource="https://w3id.org/framester/data/framestercore/Expectation"/>
         <rdfs:comment>Relates an individual to their pre-existing expectations.</rdfs:comment>
     </owl:ObjectProperty>
     
@@ -105,8 +105,8 @@
     <!-- http://www.semanticweb.org/hp/ontologies/2024/gaia/expectationbias#influencesPerception -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2024/gaia/expectationbias#influencesPerception">
-        <rdfs:domain rdf:resource="https://w3id.org/framester/conceptnet/5.7.0/c/en/expectation"/>
-        <rdfs:range rdf:resource="ttps://w3id.org/framester/conceptnet/5.7.0/c/en/perception"/>
+        <rdfs:domain rdf:resource="https://w3id.org/framester/data/framestercore/Expectation"/>
+        <rdfs:range rdf:resource="https://w3id.org/framester/data/framestercore/PerceptionExperience"/>
         <rdfs:comment>Describes the impact of expectations on the interpretation of information.</rdfs:comment>
     </owl:ObjectProperty>
     
@@ -116,7 +116,7 @@
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2024/gaia/expectationbias#interpretsAs">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/gaia/expectationbias#Individual"/>
-        <rdfs:range rdf:resource="ttps://w3id.org/framester/conceptnet/5.7.0/c/en/perception"/>
+        <rdfs:range rdf:resource="https://w3id.org/framester/data/framestercore/PerceptionExperience"/>
         <rdfs:comment>Relates an individual to their interpretation of events</rdfs:comment>
     </owl:ObjectProperty>
     
@@ -157,17 +157,17 @@
     
 
 
-    <!-- https://w3id.org/framester/conceptnet/5.7.0/c/en/expectation -->
+    <!-- https://w3id.org/framester/data/framestercore/Expectation -->
 
-    <owl:Class rdf:about="https://w3id.org/framester/conceptnet/5.7.0/c/en/expectation">
+    <owl:Class rdf:about="https://w3id.org/framester/data/framestercore/Expectation">
         <rdfs:comment>represents pre-existing beliefs, attitudes, or assumptions that an individual holds.</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- ttps://w3id.org/framester/conceptnet/5.7.0/c/en/perception -->
+    <!-- https://w3id.org/framester/data/framestercore/PerceptionExperience -->
 
-    <owl:Class rdf:about="ttps://w3id.org/framester/conceptnet/5.7.0/c/en/perception">
+    <owl:Class rdf:about="https://w3id.org/framester/data/framestercore/PerceptionExperience">
         <rdfs:comment>represents how an individual interprets or perceives information or events.</rdfs:comment>
     </owl:Class>
     

@@ -1,7 +1,6 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="http://www.semanticweb.org/hp/ontologies/2024/gaia/selectiveperception//"
      xml:base="http://www.semanticweb.org/hp/ontologies/2024/gaia/selectiveperception//"
-     xmlns:fs="https://w3id.org/framester/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
@@ -9,6 +8,7 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:dcterms="http://dublincore.org/specifications/dublin-core/dcmi-terms/2020-01-20/"
+     xmlns:conceptnet="http://api.conceptnet.io"
      xmlns:selectiveperception="http://www.semanticweb.org/hp/ontologies/2024/gaia/selectiveperception/#">
     <owl:Ontology rdf:about="http://www.semanticweb.org/hp/ontologies/2024/gaia/selectiveperception/">
         <terms:created>2024-02-16</terms:created>
