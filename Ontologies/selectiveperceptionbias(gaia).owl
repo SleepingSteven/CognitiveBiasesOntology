@@ -57,15 +57,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/hp/ontologies/2024/1/untitled-ontology-12#ignores -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2024/1/untitled-ontology-12#ignores">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/1/untitled-ontology-12#Information"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/1/untitled-ontology-12#Beliefsystem"/>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://www.semanticweb.org/hp/ontologies/2024/1/untitled-ontology-12#selectivelyPerceives -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2024/1/untitled-ontology-12#selectivelyPerceives">
@@ -89,12 +80,6 @@
     <!-- http://www.semanticweb.org/hp/ontologies/2024/1/untitled-ontology-12#Beliefsystem -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2024/1/untitled-ontology-12#Beliefsystem"/>
-    
-
-
-    <!-- http://www.semanticweb.org/hp/ontologies/2024/1/untitled-ontology-12#ConfirmationBias -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2024/1/untitled-ontology-12#ConfirmationBias"/>
     
 
 
