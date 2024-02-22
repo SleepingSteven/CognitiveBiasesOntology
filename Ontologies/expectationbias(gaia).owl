@@ -1,8 +1,7 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="http://www.semanticweb.org/hp/ontologies/2024/gaia/expectationbias/"
      xml:base="http://www.semanticweb.org/hp/ontologies/2024/gaia/expectationbias/"
-     xmlns:fs="https://w3id,org/framester"
-     xmlns:cbo="http://www.semanticweb.org/hp/ontologies/2024/gaia/CognitiveBiasOntology/expectationbias/"
+     xmlns:fs="https://w3id.org/framester"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
