@@ -15,9 +15,9 @@
      xmlns:terms="http://purl.org/dc/terms/">
     <owl:Ontology rdf:about="http://www.semanticweb.org/lucia/ontologies/2023/11/google_effect">
         <terms:created>2024-01-26</terms:created>
-        <terms:created>An ontology for the cognitive bias of google effect</terms:created>
-        <terms:created>Google Effect Ontology</terms:created>
         <terms:creator>Lucia Bertoldini</terms:creator>
+        <terms:description>An ontology for the cognitive bias of google effect</terms:description>
+        <terms:title>Google Effect Ontology</terms:title>
         <scenario xml:lang="en">Map Navigation: Instead of memorizing routes and locations, individuals may heavily depend on navigation apps, trusting their smartphones to guide them wherever they need to go.</scenario>
         <rdfs:comment>The ontology for the cognitive bias &quot;Google Effect&quot;</rdfs:comment>
     </owl:Ontology>
