@@ -145,11 +145,10 @@ The term was originally coined by Galai &amp; Sade (2003), and there is neurosci
     <!-- http://www.ontology.se/odp/content/owl/Action.owl#has_consequence -->
 
     <owl:ObjectProperty rdf:about="http://www.ontology.se/odp/content/owl/Action.owl#has_consequence">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/ostrich_effect#AvoidanceBehavior"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/ostrich_effect#ConfrontationBehavior"/>
-        <rdfs:range rdf:resource="http://descartes-core.org/ontologies/activities/1.0/ActivityPattern.owl#Outcome"/>
+        <rdfs:domain rdf:resource="http://descartes-core.org/ontologies/activities/1.0/ActivityPattern.owl#Outcome"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/ostrich_effect#AvoidanceBehavior"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/ostrich_effect#ConfrontationBehavior"/>
         <rdfs:comment>(owl:TransitiveProperty) A causal relation between actions, i.e. one action is the cause of another action. For example, the action of &quot;swimming&quot; is a consequence of &quot;jumping into deep water&quot;. The property is transitive.</rdfs:comment>
-        <rdfs:comment>This property shows the outcome of the individual&apos;s avoidance behavior.</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -164,9 +163,9 @@ The term was originally coined by Galai &amp; Sade (2003), and there is neurosci
     
 
 
-    <!-- http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/ostrich_effect#experiencesOutcome -->
+    <!-- http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/ostrich_effect#experiences -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/ostrich_effect#experiencesOutcome">
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/ostrich_effect#experiences">
         <rdfs:domain rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#SocialAgent"/>
         <rdfs:range rdf:resource="http://descartes-core.org/ontologies/activities/1.0/ActivityPattern.owl#Outcome"/>
     </owl:ObjectProperty>
@@ -217,7 +216,29 @@ The term was originally coined by Galai &amp; Sade (2003), and there is neurosci
     <!-- http://descartes-core.org/ontologies/activities/1.0/ActivityPattern.owl#Outcome -->
 
     <owl:Class rdf:about="http://descartes-core.org/ontologies/activities/1.0/ActivityPattern.owl#Outcome">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.ontology.se/odp/content/owl/Action.owl#has_consequence"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/ostrich_effect#CopingStrategy"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.ontology.se/odp/content/owl/Action.owl#has_consequence"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/ostrich_effect#AvoidanceBehavior"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/ostrich_effect#ConfrontationBehavior"/>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:comment>Represents the result or consequence of an individual’s behavior. In the context of the Ostrich Effect, the outcome could be the eventual confrontation of the negative information and the emotional response that follows.</rdfs:comment>
+        <rdfs:comment>an Outcome is equivalent to an outcome that has_consequence some CopingStrategy and has_consequence some AvoidanceBehavior or ConfrontationBehavior.</rdfs:comment>
     </owl:Class>
     
 
@@ -249,8 +270,8 @@ The term was originally coined by Galai &amp; Sade (2003), and there is neurosci
     <!-- http://www.ontologydesignpatterns.org/cp/owl/situation.owl#Situation -->
 
     <owl:Class rdf:about="http://www.ontologydesignpatterns.org/cp/owl/situation.owl#Situation">
-        <rdfs:comment>Thi class represent the context in which the negative informations are presented or relates to</rdfs:comment>
         <rdfs:comment>(owl:Class) A view on a set of entities. It can be seen as a &apos;relational context&apos;, reifying a relation.</rdfs:comment>
+        <rdfs:comment>Thi class represent the context in which the negative informations are presented or relates to</rdfs:comment>
     </owl:Class>
     
 
@@ -258,7 +279,90 @@ The term was originally coined by Galai &amp; Sade (2003), and there is neurosci
     <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#SocialAgent -->
 
     <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#SocialAgent">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://etna.istc.cnr.it/framester2/data/framestercore/Avoiding"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/ostrich_effect#NegativeInformation"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/ostrich_effect#experiences"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://descartes-core.org/ontologies/activities/1.0/ActivityPattern.owl#Outcome"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://www.ontology.se/odp/content/owl/Action.owl#has_consequence"/>
+                                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/ostrich_effect#AvoidanceBehavior"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/ostrich_effect#hasFear"/>
+                        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://etna.istc.cnr.it/framester2/data/framestercore/Avoiding"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/ostrich_effect#NegativeInformation"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/ostrich_effect#hasFear"/>
+                        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://etna.istc.cnr.it/framester2/data/framestercore/Feeling"/>
+                        <owl:someValuesFrom rdf:resource="http://etna.istc.cnr.it/framester2/data/framestercore/Fear"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/ostrich_effect#hasFear"/>
+                        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/ostrich_effect#experiences"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://descartes-core.org/ontologies/activities/1.0/ActivityPattern.owl#Outcome"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://www.ontology.se/odp/content/owl/Action.owl#has_consequence"/>
+                                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/ostrich_effect#ConfrontationBehavior"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/ostrich_effect#hasFear"/>
+                        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:comment>Any individual whose existence is granted simply by its social communicability and capability of action (through some PhysicalAgent).</rdfs:comment>
+        <rdfs:comment>a SocialAgent is equivalent to an individual that has a hasFear value of false and experiences an Outcome that is a consequence of a ConfrontationBehavior.</rdfs:comment>
+        <rdfs:comment>a SocialAgent is equivalent to an individual that has a hasFear value of true and is Avoiding some NegativeInformation.</rdfs:comment>
+        <rdfs:comment>a SocialAgent is equivalent to an individual that has a hasFear value of true, is Avoiding some NegativeInformation, and experiences an Outcome that is a consequence of an AvoidanceBehavior</rdfs:comment>
     </owl:Class>
     
 
