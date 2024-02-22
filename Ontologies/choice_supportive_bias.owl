@@ -5,6 +5,7 @@
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:terms="http://purl.org/dc/terms/"
      xmlns:eo="https://raw.githubusercontent.com/modellingDH/odp_experience/master/owl/cp_experience.owl.rdfxml#"
      xmlns:foaf="http://xmlns.com/foaf/0.1/"
      xmlns:csb="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/choice_supportive_bias#"
@@ -18,8 +19,48 @@
         <post_purchase_realization:scenario>A user buys a has to decide between two job offers and prioritizes pros about the one he eventually choses not considering the cons,while heavily considering the cons of the discarded option</post_purchase_realization:scenario>
         <rdfs:comment>This is the ontology of the cognitive bias of choice supportive bias</rdfs:comment>
      </owl:Ontology>
+
+
+
+     <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
     
 
+
+    <!-- http://purl.org/dc/terms/created -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/created"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/creator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/decription -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/decription"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
+
+
+     
+    <!-- http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/post_purchase_realization/scenario -->
+
+    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/post_purchase_realization/scenario"/>
+    
 
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
