@@ -260,6 +260,7 @@ However, as Detective Jack delved deeper into his investigation, he soon realize
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2024/gaia/observer-effect#Jack">
         <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/gaia/observer-effect#Detective"/>
+        <observer-effect:influences rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/gaia/observer-effect#pickpocketing"/>
     </owl:NamedIndividual>
     
 
@@ -276,6 +277,7 @@ However, as Detective Jack delved deeper into his investigation, he soon realize
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2024/gaia/observer-effect#Sly_Sam">
         <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/gaia/observer-effect#Criminal"/>
+        <observer-effect:performs rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/gaia/observer-effect#pickpocketing"/>
     </owl:NamedIndividual>
     
 
@@ -284,6 +286,7 @@ However, as Detective Jack delved deeper into his investigation, he soon realize
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2024/gaia/observer-effect#pickpocketing">
         <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/gaia/observer-effect#criminal_behaviour"/>
+        <observer-effect:isInfluencedBy rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/gaia/observer-effect#Jack"/>
     </owl:NamedIndividual>
 </rdf:RDF>
 
