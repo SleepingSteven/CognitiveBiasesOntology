@@ -7,6 +7,9 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:fs="https://w3id.org/framester/"
+     xmlns:classification="http://www.ontologydesignpatterns.org/cp/owl/classification.owl#"
      xmlns:confirmation_bias="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/confirmation_bias#">
     <owl:Ontology rdf:about="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/confirmation_bias.owl">
         <terms:created>2024-02-19</terms:created>
