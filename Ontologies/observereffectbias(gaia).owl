@@ -1,12 +1,71 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://www.semanticweb.org/hp/ontologies/2024/1/untitled-ontology-10/"
-     xml:base="http://www.semanticweb.org/hp/ontologies/2024/1/untitled-ontology-10/"
+<rdf:RDF xmlns="http://www.semanticweb.org/hp/ontologies/2024/gaia/observer-effect/"
+     xml:base="http://www.semanticweb.org/hp/ontologies/2024/gaia/observer-effect/"
+     xmlns:fs="https://w3id.org/framester/data/framestercore/"
+     xmlns:cbo="http://www.semanticweb.org/hp/ontologies/2024/gaia/CognitiveBiasOntology/observer-effect#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
-    <owl:Ontology rdf:about="http://www.semanticweb.org/hp/ontologies/2024/1/untitled-ontology-10"/>
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:event="http://w3id.org/daselab/onto/event#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:observer-effect="http://www.semanticweb.org/hp/ontologies/2024/gaia/observer-effect#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/hp/ontologies/2024/gaia/observer-effect">
+        <terms:created>2024-02-20</terms:created>
+        <terms:creator>Gaia Ortona</terms:creator>
+        <terms:description>The ontology designed for the formalization of the &quot;Observer effect&quot;</terms:description>
+        <terms:title>Observer Effect Ontology</terms:title>
+        <observer-effect:scenario>Once upon a time in the bustling city of Metroville, Detective Jack was assigned to lead a groundbreaking study on criminal behavior. Determined to unravel the complexities of urban crime, he devised a plan to conduct visible patrols in key areas known for criminal activity.
+
+As Detective Jack embarked on his mission, he encountered a diverse cast of characters inhabiting the streets of Metroville. Among them was Sly Sam, a seasoned pickpocket with a knack for evading the law. Sly Sam was known for his cunning ways, always staying one step ahead of the authorities.
+
+Unbeknownst to Sly Sam, Detective Jack&apos;s presence was about to shake up the status quo. With his keen eyes and unwavering determination, Detective Jack began his patrols, carefully observing the ebb and flow of activity in the city&apos;s darker corners.
+
+However, as Detective Jack delved deeper into his investigation, he soon realized the insidious nature of the observer effect bias. Sly Sam, ever the elusive trickster, caught wind of Detective Jack&apos;s presence and swiftly adapted his tactics. Knowing that the police were on the prowl, Sly Sam and his cohorts became more cautious, laying low and avoiding their usual haunts.</observer-effect:scenario>
+        <rdfs:comment>The ontology designed for the &quot;Observer effect&quot;</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/terms/created -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/created"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/creator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/description -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/gaia/observer-effect#scenario -->
+
+    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2024/gaia/observer-effect#scenario"/>
     
 
 
@@ -21,56 +80,73 @@
     
 
 
-    <!-- http://www.semanticweb.org/hp/ontologies/2024/1/untitled-ontology-10#awarenessOfObservation -->
+    <!-- http://w3id.org/daselab/onto/event#providesParticipantRole -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2024/1/untitled-ontology-10#awarenessOfObservation">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/1/untitled-ontology-10#Subject"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/1/untitled-ontology-10#Observer"/>
+    <owl:ObjectProperty rdf:about="http://w3id.org/daselab/onto/event#providesParticipantRole">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/gaia/observer-effect#Event"/>
+        <rdfs:range rdf:resource="http://w3id.org/daselab/onto/event#ParticipantRole"/>
+        <rdfs:comment>Relates a Patrol to the Criminals involved in criminal activities.</rdfs:comment>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/hp/ontologies/2024/1/untitled-ontology-10#hasObserver -->
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/gaia/observer-effect#conducts -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2024/1/untitled-ontology-10#hasObserver">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/1/untitled-ontology-10#Observation"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/1/untitled-ontology-10#Observer"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2024/gaia/observer-effect#conducts">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/gaia/observer-effect#Observer"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/gaia/observer-effect#Event"/>
+        <rdfs:comment>Relates a Detective to the Patrol they conduct.</rdfs:comment>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/hp/ontologies/2024/1/untitled-ontology-10#hasSubject -->
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/gaia/observer-effect#influences -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2024/1/untitled-ontology-10#hasSubject">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/1/untitled-ontology-10#Observation"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/1/untitled-ontology-10#Subject"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2024/gaia/observer-effect#influences">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/gaia/observer-effect#isInfluencedBy"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/gaia/observer-effect#Observer"/>
+        <rdfs:range rdf:resource="https://w3id.org/framester/data/framestercore/IntentionallyAct"/>
+        <rdfs:comment>It relates the Observer to the Crimanl Behaviour</rdfs:comment>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/hp/ontologies/2024/1/untitled-ontology-10#influencesBehaviour -->
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/gaia/observer-effect#isInfluencedBy -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2024/1/untitled-ontology-10#influencesBehaviour">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/1/untitled-ontology-10#ObserverEffectBias"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/1/untitled-ontology-10#Subject"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2024/gaia/observer-effect#isInfluencedBy">
+        <rdfs:domain rdf:resource="https://w3id.org/framester/data/framestercore/IntentionallyAct"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/gaia/observer-effect#Observer"/>
+        <rdfs:comment>Relates the Criminal Behaviour to the person who observes it</rdfs:comment>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/hp/ontologies/2024/1/untitled-ontology-10#minimizesObserverEffect -->
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/gaia/observer-effect#observes -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2024/1/untitled-ontology-10#minimizesObserverEffect">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/1/untitled-ontology-10#Observation"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/1/untitled-ontology-10#ObserverEffectBias"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2024/gaia/observer-effect#observes">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/gaia/observer-effect#Observer"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/gaia/observer-effect#Observation"/>
+        <rdfs:comment>Relates a Detective to the Observation they perform.</rdfs:comment>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/hp/ontologies/2024/1/untitled-ontology-10#resultsInBias -->
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/gaia/observer-effect#performs -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2024/1/untitled-ontology-10#resultsInBias">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/1/untitled-ontology-10#ObserverEffectBias"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/1/untitled-ontology-10#Observation"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2024/gaia/observer-effect#performs">
+        <rdfs:domain rdf:resource="http://w3id.org/daselab/onto/event#ParticipantRole"/>
+        <rdfs:range rdf:resource="https://w3id.org/framester/data/framestercore/IntentionallyAct"/>
+        <rdfs:comment>It relates the Criminal to the behaviour the are carrying out</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/gaia/observer-effect#takesPlaceIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2024/gaia/observer-effect#takesPlaceIn">
+        <rdfs:domain rdf:resource="http://w3id.org/daselab/onto/event#ParticipantRole"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/gaia/observer-effect#Place"/>
+        <rdfs:comment>Relates a Criminal to the Urban Area where they operate.</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -86,27 +162,129 @@
     
 
 
-    <!-- http://www.semanticweb.org/hp/ontologies/2024/1/untitled-ontology-10#Observation -->
+    <!-- http://w3id.org/daselab/onto/event#ParticipantRole -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2024/1/untitled-ontology-10#Observation"/>
+    <owl:Class rdf:about="http://w3id.org/daselab/onto/event#ParticipantRole"/>
     
 
 
-    <!-- http://www.semanticweb.org/hp/ontologies/2024/1/untitled-ontology-10#Observer -->
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/gaia/observer-effect#City -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2024/1/untitled-ontology-10#Observer"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2024/gaia/observer-effect#City">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/gaia/observer-effect#Place"/>
+        <rdfs:comment>Represents the geographical location where criminal activities occur, like Metroville.</rdfs:comment>
+    </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/hp/ontologies/2024/1/untitled-ontology-10#ObserverEffectBias -->
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/gaia/observer-effect#Criminal -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2024/1/untitled-ontology-10#ObserverEffectBias"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2024/gaia/observer-effect#Criminal">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/daselab/onto/event#ParticipantRole"/>
+        <rdfs:comment>Represents individuals involved in criminal activities, such as Sly Sam.</rdfs:comment>
+    </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/hp/ontologies/2024/1/untitled-ontology-10#Subject -->
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/gaia/observer-effect#Detective -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2024/1/untitled-ontology-10#Subject"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2024/gaia/observer-effect#Detective">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/gaia/observer-effect#Observer"/>
+        <rdfs:comment>Represents individuals like Detective Jack who are responsible for investigating crimes.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/gaia/observer-effect#Event -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2024/gaia/observer-effect#Event"/>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/gaia/observer-effect#Observation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2024/gaia/observer-effect#Observation">
+        <rdfs:comment>Represents the act of observing and gathering data on criminal behavior.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/gaia/observer-effect#Observer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2024/gaia/observer-effect#Observer"/>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/gaia/observer-effect#Patrol -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2024/gaia/observer-effect#Patrol">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/gaia/observer-effect#Event"/>
+        <rdfs:comment>Represents the act of conducting visible patrols in the city</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/gaia/observer-effect#Place -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2024/gaia/observer-effect#Place"/>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/gaia/observer-effect#criminal_behaviour -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2024/gaia/observer-effect#criminal_behaviour">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/framester/data/framestercore/IntentionallyAct"/>
+        <rdfs:comment>Represents the actions and activities exhibited by the criminals (aka the ParticipantRole)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/framester/data/framestercore/IntentionallyAct -->
+
+    <owl:Class rdf:about="https://w3id.org/framester/data/framestercore/IntentionallyAct"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/gaia/observer-effect#Jack -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2024/gaia/observer-effect#Jack">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/gaia/observer-effect#Detective"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/gaia/observer-effect#Metroville -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2024/gaia/observer-effect#Metroville">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/gaia/observer-effect#City"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/gaia/observer-effect#Sly_Sam -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2024/gaia/observer-effect#Sly_Sam">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/gaia/observer-effect#Criminal"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/gaia/observer-effect#pickpocketing -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2024/gaia/observer-effect#pickpocketing">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/gaia/observer-effect#criminal_behaviour"/>
+    </owl:NamedIndividual>
 </rdf:RDF>
 
 
