@@ -5,152 +5,75 @@ Consulted bibliography:
 - https://www.thebehavioralscientist.com/glossary/experimenter-bias
 - https://www.researchgate.net/publication/257797399_Experimenter_Philosophy_The_Problem_of_Experimenter_Bias_in_Experimental_Philosophy
 
-1) Give me a definition of the experimenter bias
+1) Can you talk to me about the experimenter Bias?
 
-Experimenter bias refers to a situation in which the experimenter's expectations, beliefs, or preconceived notions about the outcomes of an experiment unintentionally influence the study's results. This bias can occur when the experimenter, consciously or unconsciously, treats participants differently based on their expectations, leading to distorted or inaccurate findings. Experimenter bias can manifest in various ways, such as subtle cues, nonverbal communication, or unintentional actions that impact participants' behavior and responses. To minimize experimenter bias, researchers often employ double-blind experimental designs, where neither the participants nor the individuals interacting with them (including experimenters) are aware of critical aspects of the study.
+Experimenter bias is a type of bias that can occur in research when the experimenter's expectations or beliefs influence the results of the study. This bias can arise in various forms throughout the research process, from study design to data collection and analysis. 
 
-2) Give me 10 example scenarios of the the experimenter bias
+2) Can you create a user story based on this bias?
 
-Positive Reinforcement Bias:
-An experimenter may unintentionally reinforce participants who provide responses aligning with the experimenter's expectations, leading to a more positive and encouraging environment for those participants.
 
-Nonverbal Cues:
-Subtle facial expressions, body language, or tone of voice from the experimenter might unknowingly convey expectations to participants, influencing their behavior or responses.
+Once upon a time in the bustling city of Brightville, Dr. Smith embarked on a thrilling adventure to unravel the mysteries of human emotions. Armed with curiosity and a keen intellect, Dr. Smith set out to conduct a pioneering study on the effects of color on mood.
 
-Interpretation of Ambiguous Responses:
-An experimenter might interpret ambiguous participant responses in a way that aligns with their expectations, potentially affecting the coding or analysis of data.
+As participants eagerly entered the colorful rooms, Dr. Smith observed with anticipation, curious to see how their moods would be affected by the different hues. In the red room, participants seemed to exude happiness and energy, while in the blue room, they appeared relaxed and serene amidst the cool hues.
 
-Selective Attention:
-The experimenter might unconsciously pay more attention to behaviors or responses that confirm their hypotheses, overlooking or downplaying conflicting information.
+After a day filled with adventure and data collection, Dr. Smith reflected on the potential impact of experimenter bias and vowed to analyze the results with rigor and impartiality
 
-Subconscious Guidance:
-Even without explicit intention, an experimenter might provide subtle cues or guidance during the experiment that directs participants toward desired outcomes.
+3) If you should make an ontology of the "experimenter bias", what classes and properties would you create? 
 
-Feedback Variability:
-The feedback given to participants may unintentionally vary based on the experimenter's expectations, leading to inconsistent reinforcement that can affect participant performance.
+Classes:
 
-Data Recording Biases:
-During data collection, an experimenter might inadvertently record or interpret data in a way that aligns with their expectations, introducing bias into the analysis.
+Researcher: Represents individuals conducting scientific studies.
+Study: Represents a research project investigating a specific topic or hypothesis.
+Experimental Room: Represents a room used in the study to expose participants to different colors.
+Participant: Represents individuals recruited to take part in the study.
+Data: Represents the information collected during the study, such as mood responses.
+Analysis: Represents the process of interpreting and analyzing collected data.
+Object Properties:
 
-Unconscious Influence on Participants:
-The experimenter's beliefs about the study's purpose or expected outcomes may inadvertently influence participants' behavior, even if this influence is not explicitly communicated.
+conductsStudy: Relates a researcher to the study they lead.
+usesExperimentalRoom: Relates a study to the experimental rooms used in the research.
+assignedToRoom: Relates a participant to the experimental room they are assigned to during the study.
+providesData: Relates a participant to the data they provide during the study.
+analyzedBy: Relates the collected data to the analysis process.
+Individuals:
 
-Confirmation Bias in Analysis:
-When analyzing data, an experimenter might selectively focus on results that confirm their expectations while downplaying or dismissing data that contradicts those expectations.
+DrSmith: An individual representing the researcher leading the study.
+ColorMoodStudy: An individual representing the specific study on the effects of color on mood.
+RedRoom, BlueRoom, YellowRoom, GreenRoom: Individuals representing the different experimental rooms painted with specific colors.
+Participant1, Participant2, Participant3, ...: Individuals representing the participants recruited for the study.
+MoodData1, MoodData2, MoodData3, ...: Individuals representing the mood data collected from each participant.
+StatisticalAnalysis: An individual representing the analysis process applied to the collected data.
 
-Post-Experiment Interpretation:
-The experimenter may interpret the results in a way that aligns with their initial hypotheses, potentially overlooking alternative explanations or failing to explore unexpected findings thoroughly.
+4) Can you make competency questions that this ontology should answer and express them both via natural language and via sparql?
 
-3) Consider the scenario "Selective Attention" and give me a small user story from it
+What are the names of the experimental rooms utilized in Dr. Smith's study on color and mood?
 
-As an experimenter conducting a study on the effects of music on concentration, I want to remain unbiased and ensure that my observations are not influenced by my expectations. However, I catch myself focusing more on participants who appear engaged and focused when they are listening to classical music, as this aligns with my hypothesis that classical music enhances concentration. I realize that my selective attention might lead to a skewed perception of the results. To mitigate this, I decide to implement a systematic approach to observe and record all participant behaviors, irrespective of whether they support or contradict my initial expectations. This involves using predefined criteria for concentration levels and avoiding any unconscious emphasis on behaviors that align with my hypothesis. By addressing selective attention, I aim to enhance the objectivity of my observations and promote a more accurate analysis of the study's outcomes.
-
-4) If you should make an ontology of the "experimenter bias", what classes and properties would you create? 
-
-**Classes**
-
-Experiment
-
-Experimenter
-
-Participant
-
-Data
-
-Variable/Condition
-
-Bias
-
-Strategy
-
-Awareness
-
-Outcome
-
-**Properties**
-
-ConductedBy (Experiment, Experimenter):
-Domain: Experiment
-Range: Experimenter
-
-Includes (Experiment, Variable/Condition):
-Domain: Experiment
-Range: Variable/Condition
-
-BiasType (Experimenter, Bias):
-Domain: Experimenter
-Range: Bias
-
-KnowledgeLevel (Experimenter, Awareness):
-Domain: Experimenter
-Range: Awareness
-
-MitigationStrategy (Experimenter, Strategy):
-Domain: Experimenter
-Range: Strategy
-
-InteractedWith (Participant, Experimenter):
-Domain: Participant
-Range: Experimenter
-
-AssignedToExperiment (Participant, Experiment):
-Domain: Participant
-Range: Experiment
-
-CollectedFrom (Data, Participant):
-Domain: Data
-Range: Participant
-
-RecordedBy (Data, Experimenter):
-Domain: Data
-Range: Experimenter
-
-AnalyzedFor (Data, Outcome):
-Domain: Data
-Range: Outcome
-
-5) Can you make competency questions that this ontology should answer and express them both via natural language and via sparql?
-
-Competency Question 1:
-"What are the key variables included in a particular experiment?"
-
-SELECT ?variable
+SELECT ?room
 WHERE {
-   ?experiment rdf:type :Experiment ;
-               :Includes ?variable .
-}
-
-Competency Question 2:
-"Which experiment was conducted by a specific experimenter?"
-
-SELECT ?experiment
-WHERE {
-   ?experiment rdf:type :Experiment ;
-               :ConductedBy :SpecificExperimenter .
+    ?study rdf:type :ColorMoodStudy ;
+           :conductsStudy :DrSmith .
+    ?study :usesExperimentalRoom ?room .
 }
 
 
-Competency Question 3:
-"How does an experimenter's bias manifest in a given study?"
+What is the distribution of participants across the experimental rooms in Dr. Smith's color mood study?
 
-SELECT ?biasType
+SELECT ?room (COUNT(?participant) AS ?participantCount)
 WHERE {
-   :SpecificExperimenter :BiasType ?biasType .
+    ?study rdf:type :ColorMoodStudy ;
+           :conductsStudy :DrSmith .
+    ?participant :assignedToRoom ?room .
+}
+GROUP BY ?room
+
+
+What were the mood responses provided by each participant in Dr. Smith's color mood study?
+
+SELECT ?participant ?moodData
+WHERE {
+    ?study rdf:type :ColorMoodStudy ;
+           :conductsStudy :DrSmith .
+    ?participant :providesData ?moodData .
 }
 
-Competency Question 4:
-"What strategies do experimenters employ to mitigate bias?"
 
-SELECT ?strategy
-WHERE {
-   :SpecificExperimenter :MitigationStrategy ?strategy .
-}
-
-Competency Question 5:
-"Which participants were assigned to a specific experiment?"
-
-SELECT ?participant
-WHERE {
-   ?participant rdf:type :Participant ;
-                :AssignedToExperiment :SpecificExperiment .
-}
