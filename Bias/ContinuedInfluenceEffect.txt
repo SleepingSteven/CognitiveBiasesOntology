@@ -132,3 +132,89 @@ Sure, here are some competency questions that can be answered using the ontology
     - **Solution**: This query would return all cognitive biases that contribute to the Continued Influence Effect.
 
 Please note that these queries are hypothetical and would require a populated RDF dataset based on the ontology to return actual results. The ontology provides a framework for structuring this data, and SPARQL queries can then be used to retrieve specific information from the dataset.
+
+postille
+Classes:
+1. Individual (e.g., John)
+2. Misinformation (e.g., Moon landing is a hoax)
+3. Correction (e.g., Moon landing is real)
+4. Topic (e.g., Space exploration)
+5. Source (e.g., Documentary, Research)
+6. Emotion (e.g., Doubt, Acceptance)
+7. Evidence (e.g., Waving flag, Absence of stars)
+
+Object Properties:
+1. believes_in (Individual -> Misinformation/Correction)
+2. originates_from (Misinformation/Correction -> Source)
+3. supports (Misinformation -> Evidence)
+4. contradicts (Correction -> Evidence)
+5. feels (Individual -> Emotion)
+6. pertains_to (Misinformation/Correction -> Topic)
+
+Data Properties:
+1. is_believed (Individual -> Boolean)
+2. is_originated (Misinformation/Correction -> Boolean)
+3. is_supported (Misinformation -> Boolean)
+4. is_contradicted (Correction -> Boolean)
+5. is_felt (Individual -> Boolean)
+6. is_pertinent (Misinformation/Correction -> Boolean)
+
+
+Competency Question: Who believes in the misinformation?
+SPARQL Query:
+SELECT ?individual
+WHERE {
+    ?individual :believes_in ?misinformation .
+    ?misinformation rdf:type :Misinformation .
+}
+
+Competency Question: What is the source of the misinformation?
+SPARQL Query:
+SELECT ?source
+WHERE {
+    ?misinformation :originates_from ?source .
+    ?misinformation rdf:type :Misinformation .
+}
+
+Competency Question: What evidence supports the misinformation?
+SPARQL Query:
+SELECT ?evidence
+WHERE {
+    ?misinformation :supports ?evidence .
+    ?misinformation rdf:type :Misinformation .
+}
+
+Competency Question: What corrections contradict the evidence?
+SPARQL Query:
+SELECT ?correction
+WHERE {
+    ?correction :contradicts ?evidence .
+    ?correction rdf:type :Correction .
+}
+
+Competency Question: What emotions does the individual feel?
+SPARQL Query:
+SELECT ?emotion
+WHERE {
+    ?individual :feels ?emotion .
+    ?individual rdf:type :Individual .
+}
+
+Competency Question: What topic does the misinformation pertain to?
+SPARQL Query:
+SELECT ?topic
+WHERE {
+    ?misinformation :pertains_to ?topic .
+    ?misinformation rdf:type :Misinformation .
+}
+
+
+The statement:
+
+SocialAgent and (isInfluenced value true) and (keepInfluencing some (Information and (isCorrect value false)))
+
+describes a specific subset of SocialAgent instances that satisfy all the conditions. It does not impose any requirements on all SocialAgent instances.
+
+So, an instance can be a SocialAgent without satisfying these conditions. However, to be considered part of this specific subset of SocialAgent instances (those that are influenced by incorrect Information), it must satisfy all these conditions.
+
+In other words, these conditions are not necessary for an instance to be admitted into the SocialAgent class, but they are necessary for an instance to be considered as being influenced by incorrect Information.
