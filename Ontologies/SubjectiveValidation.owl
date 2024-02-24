@@ -3,6 +3,7 @@
      xml:base="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation"
      xmlns:ac="http://www.ontology.se/odp/content/owl/Action.owl"
      xmlns:ec="http://krisnadhi.github.io/onto/event.owl"
+     xmlns:en="http://etna.istc.cnr.it/framester2/conceptnet/5.7.0/c/en/"
      xmlns:fs="http://etna.istc.cnr.it/framester2/data/framestercore/"
      xmlns:acf="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl"
      xmlns:cbo="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation#"
@@ -14,7 +15,9 @@
      xmlns:exob="https://raw.githubusercontent.com/eureadit/crowdsourcing-ontology/master/owl/crowdsourcing-evidences.owl.ttl"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:wiki="https://en.wiktionary.org/"
+     xmlns:event="http://krisnadhi.github.io/onto/event.owl#"
      xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:Action="http://www.ontology.se/odp/content/owl/Action.owl#"
      xmlns:dbpedia="https://www.dbpedia.org/">
     <owl:Ontology rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation">
         <terms:created>10-02-2024</terms:created>
@@ -29,7 +32,7 @@
 
 Within the temperature data, there is a vague statement that is not clear in its implications. John, being prone to subjective validation bias, tends to interpret ambiguous information in a way that aligns with his existing belief.
 
-John notices a piece of information in the data that appears to support his climate change belief. Due to his subjective validation bias, he readily accepts and reinforces this confirming information. Simultaneously, there is another piece of information challenging aspects of his climate change belief within the temperature data. John, influenced by subjective validation bias, may find it difficult to accept or acknowledge this conflicting information.
+Simultaneously, there is another piece of information challenging aspects of his climate change belief within the temperature data. John, influenced by subjective validation bias, may find it difficult to accept or acknowledge this conflicting information.
 
 As John navigates through the information, he realizes how his subjective validation bias plays a role in selectively perceiving data that aligns with his pre-existing beliefs. He becomes aware of the challenge of objectively assessing information when influenced by subjective validation bias.
 
@@ -108,7 +111,6 @@ In essence, subjective validation is a confirmation bias towards information tha
     <!-- http://etna.istc.cnr.it/framester2/conceptnet/5.7.0/c/en/challenges -->
 
     <owl:ObjectProperty rdf:about="http://etna.istc.cnr.it/framester2/conceptnet/5.7.0/c/en/challenges">
-        <owl:inverseOf rdf:resource="http://etna.istc.cnr.it/framester2/conceptnet/5.7.0/c/en/confirms"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation#Challenge"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation#Belief"/>
         <rdfs:comment>Links the challenge to the belief it challenges.</rdfs:comment>
@@ -142,6 +144,7 @@ In essence, subjective validation is a confirmation bias towards information tha
         <rdfs:domain rdf:resource="http://www.ontology.se/odp/content/owl/Action.owl#Action"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation#BehavioralOutcome"/>
         <rdfs:comment>(owl:TransitiveProperty) A causal relation between actions, i.e. one action is the cause of another action. For example, the action of &quot;swimming&quot; is a consequence of &quot;jumping into deep water&quot;. The property is transitive.</rdfs:comment>
+        <rdfs:comment>This property express the Action taken by the SocialAgent to the BehavioralOutcome the SocialAgent has after the ingestion of information.</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -180,7 +183,7 @@ In essence, subjective validation is a confirmation bias towards information tha
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation#providesInformation">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation#Statement"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation#Belief"/>
-        <rdfs:comment>Relates an Information to a Belief. The information that can be ambiguous strongly influences the beliefe</rdfs:comment>
+        <rdfs:comment>Relates a Statement to a Belief. The information that can be ambiguous strongly influences the beliefe</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -190,7 +193,7 @@ In essence, subjective validation is a confirmation bias towards information tha
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation#takesAction">
         <rdfs:domain rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#SocialAgent"/>
         <rdfs:range rdf:resource="http://www.ontology.se/odp/content/owl/Action.owl#Action"/>
-        <rdfs:comment>Links the actor to the action they take.</rdfs:comment>
+        <rdfs:comment>Links the SocialAgent to the action they take.</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -216,16 +219,6 @@ In essence, subjective validation is a confirmation bias towards information tha
     
 
 
-    <!-- http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation#hasChallenge -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation#hasChallenge">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation#Challenge"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
-        <rdfs:comment>Indicates whether the challenge is actually challenging.</rdfs:comment>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation#hasComplexity -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation#hasComplexity">
@@ -236,12 +229,19 @@ In essence, subjective validation is a confirmation bias towards information tha
     
 
 
-    <!-- http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation#hasSupport -->
+    <!-- http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation#isSupportedByAgent -->
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation#hasSupport">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation#Confirmation"/>
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation#isSupportedByAgent">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation#Challenge"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation#Confirmation"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
-        <rdfs:comment>Indicates whether the confirmation has support</rdfs:comment>
+        <rdfs:comment>This data property aim to express that if the confirmation is supported by the agent&apos;s thoughts it will be accepted and it will confirm and reinforce the belief. If the challeng has the support by the agent he/she will be more prone to challenge his/her belief</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -302,30 +302,6 @@ In essence, subjective validation is a confirmation bias towards information tha
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation#holds"/>
-                        <owl:someValuesFrom>
-                            <owl:Class>
-                                <owl:intersectionOf rdf:parseType="Collection">
-                                    <rdf:Description rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation#Belief"/>
-                                    <owl:Restriction>
-                                        <owl:onProperty rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation#hasSupport"/>
-                                        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
-                                    </owl:Restriction>
-                                </owl:intersectionOf>
-                            </owl:Class>
-                        </owl:someValuesFrom>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation#takesAction"/>
-                        <owl:someValuesFrom rdf:resource="http://www.ontology.se/odp/content/owl/Action.owl#Action"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
         <rdfs:comment>(owl:Class) Any individual whose existence is granted simply by its social communicability and capability of action (through some PhysicalAgent)</rdfs:comment>
         <rdfs:comment>Represents a person who experiences subjective validation.</rdfs:comment>
         <rdfs:comment>a SocialAgent (John) holds some Belief and is related to an InformationObject that is complex. This could represent the scenario where John, who holds a belief about climate change, comes across complex temperature data.</rdfs:comment>
@@ -338,7 +314,7 @@ In essence, subjective validation is a confirmation bias towards information tha
 
     <owl:Class rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation#BehavioralOutcome">
         <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/eureadit/crowdsourcing-ontology/master/owl/crowdsourcing-evidences.owl.ttl#Observation"/>
-        <rdfs:comment>Represents the behavioral changes in thoughts or actions resulting from subjective validation in a particular context.</rdfs:comment>
+        <rdfs:comment>Represents the behavioral changes in thoughts or actions resulting from subjective validation in a particular context. In the user story the BehavioralOutcome is positive in the sense that the SocialAgent (e.g. John), realizes he is affected by the subjective validation bias and so he gets that ambiguous information can influence his belief due to the fact that he doesn&apos;t understand them properly and so just interpret them the way he is prone to do. The BehavioralOutcome could also be negative in the sense that the SocialAgent could not realize that the subjective validation is influencing his/her thoughts and this could lead to a even stronger reinforcement of the Agent&apos;s belief by only seeking information that confirm that belief</rdfs:comment>
     </owl:Class>
     
 
@@ -354,37 +330,8 @@ In essence, subjective validation is a confirmation bias towards information tha
     <!-- http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation#Challenge -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation#Challenge">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://krisnadhi.github.io/onto/event.owl#hasInformationObject"/>
-                        <owl:someValuesFrom>
-                            <owl:Class>
-                                <owl:intersectionOf rdf:parseType="Collection">
-                                    <rdf:Description rdf:about="http://krisnadhi.github.io/onto/event.owl#InformationObject"/>
-                                    <owl:Restriction>
-                                        <owl:onProperty rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation#hasComplexity"/>
-                                        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
-                                    </owl:Restriction>
-                                </owl:intersectionOf>
-                            </owl:Class>
-                        </owl:someValuesFrom>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation#holds"/>
-                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation#Belief"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation#hasChallenge"/>
-                        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation#Statement"/>
-        <rdfs:comment>Represents the act of perceiving information as opposing or challenging a belief.</rdfs:comment>
-        <rdfs:comment>a Challenge is considered challenging (hasChallenge value true) if it is related to an InformationObject that is complex (hasComplexity value true) and is perceived by a SocialAgent who holds a Belief. This could represent the scenario where John perceives challenging information within complex temperature data that opposes his belief about climate change.</rdfs:comment>
+        <rdfs:comment>Represents the information as opposing or challenging a belief.</rdfs:comment>
     </owl:Class>
     
 
@@ -392,37 +339,9 @@ In essence, subjective validation is a confirmation bias towards information tha
     <!-- http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation#Confirmation -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation#Confirmation">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://krisnadhi.github.io/onto/event.owl#hasInformationObject"/>
-                        <owl:someValuesFrom>
-                            <owl:Class>
-                                <owl:intersectionOf rdf:parseType="Collection">
-                                    <rdf:Description rdf:about="http://krisnadhi.github.io/onto/event.owl#InformationObject"/>
-                                    <owl:Restriction>
-                                        <owl:onProperty rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation#hasComplexity"/>
-                                        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
-                                    </owl:Restriction>
-                                </owl:intersectionOf>
-                            </owl:Class>
-                        </owl:someValuesFrom>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation#holds"/>
-                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation#Belief"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation#hasSupport"/>
-                        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation#Statement"/>
-        <rdfs:comment>Represents the act of perceiving information as supporting or confirming a belief.</rdfs:comment>
-        <rdfs:comment>a Confirmation is considered supportive (hasSupport value true) if it is related to an InformationObject that is complex (hasComplexity value true) and is perceived by a SocialAgent who holds a Belief. This could represent the scenario where John perceives supportive information within complex temperature data that confirms his belief about climate change.</rdfs:comment>
+        <rdfs:comment>a Confirmation is considered supportive (hasSupport value true) if it is related to an InformationObject that is complex (hasComplexity value true) and is related to an ambiguous Statement (hasAmbiguity value true). This could represent the scenario where John perceives supportive information within complex temperature data that confirms his belief about climate change.</rdfs:comment>
+        <rdfs:comment>Represents the information as supporting or confirming a belief.</rdfs:comment>
     </owl:Class>
     
 
@@ -433,22 +352,13 @@ In essence, subjective validation is a confirmation bias towards information tha
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://krisnadhi.github.io/onto/event.owl#hasInformationObject"/>
-                        <owl:someValuesFrom>
-                            <owl:Class>
-                                <owl:intersectionOf rdf:parseType="Collection">
-                                    <rdf:Description rdf:about="http://krisnadhi.github.io/onto/event.owl#InformationObject"/>
-                                    <owl:Restriction>
-                                        <owl:onProperty rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation#hasComplexity"/>
-                                        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
-                                    </owl:Restriction>
-                                </owl:intersectionOf>
-                            </owl:Class>
-                        </owl:someValuesFrom>
-                    </owl:Restriction>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation#Statement"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation#hasAmbiguity"/>
+                        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation#hasComplexity"/>
                         <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -492,6 +402,8 @@ In essence, subjective validation is a confirmation bias towards information tha
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation#InfoChallengingJohnBelief">
         <rdf:type rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation#Challenge"/>
+        <en:challenges rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation#John&apos;sBelief"/>
+        <isSupportedByAgent rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isSupportedByAgent>
     </owl:NamedIndividual>
     
 
@@ -500,6 +412,8 @@ In essence, subjective validation is a confirmation bias towards information tha
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation#InfoSupportingJohnBelief">
         <rdf:type rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation#Confirmation"/>
+        <en:confirms rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation#John&apos;sBelief"/>
+        <isSupportedByAgent rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isSupportedByAgent>
     </owl:NamedIndividual>
     
 
@@ -508,14 +422,29 @@ In essence, subjective validation is a confirmation bias towards information tha
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation#John">
         <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#SocialAgent"/>
+        <event:hasInformationObject rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation#TemperatureData"/>
+        <holds rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation#John&apos;sBelief"/>
+        <interpret rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation#StatementIstance"/>
+        <takesAction rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation#NavigatingThroughInfo"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation#NavigatingTroughInfo -->
+    <!-- http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation#NavigatingThroughInfo -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation#NavigatingTroughInfo">
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation#NavigatingThroughInfo">
         <rdf:type rdf:resource="http://www.ontology.se/odp/content/owl/Action.owl#Action"/>
+        <Action:has_consequence rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation#DecisionToSeekChallengingInfo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation#StatementIstance -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation#StatementIstance">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation#Statement"/>
+        <providesInformation rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation#John&apos;sBelief"/>
+        <hasAmbiguity rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</hasAmbiguity>
     </owl:NamedIndividual>
     
 
@@ -528,18 +457,11 @@ In essence, subjective validation is a confirmation bias towards information tha
     
 
 
-    <!-- http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation#VagueStatement -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation#VagueStatement">
-        <rdf:type rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation#Statement"/>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation#John&apos;sBelief -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation#John&apos;sBelief">
         <rdf:type rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation#Belief"/>
+        <influences rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation#NavigatingThroughInfo"/>
     </owl:NamedIndividual>
 </rdf:RDF>
 

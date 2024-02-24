@@ -18,8 +18,12 @@
     <owl:Ontology rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/continued_influence_effect">
         <terms:created>15-02-2024</terms:created>
         <terms:creator>Matteo Guenci</terms:creator>
-        <terms:creator>The Continued Influence Effect Ontology</terms:creator>
-        <terms:creator>The Continued Influence Effect section of the Cognitive Bias Ontology.</terms:creator>
+        <terms:description>The Continued Influence Effect section of the Cognitive Bias Ontology.</terms:description>
+        <terms:title>The Continued Influence Effect Ontology</terms:title>
+        <has_component>http://etna.istc.cnr.it/framester2/data/framestercore/</has_component>
+        <has_component>http://krisnadhi.github.io/onto/event.owl</has_component>
+        <has_component>http://ontologydesignpatterns.org/cp/owl/topic.owl</has_component>
+        <has_component>http://www.ontologydesignpatterns.org/ont/dul/DUL.owl</has_component>
         <user_story>Meet John, a middle-aged man who grew up during the height of the space race. He&apos;s always been fascinated by space exploration, but he stumbled upon a documentary that claimed the moon landing was a hoax. The documentary presented various arguments, such as the waving flag and the absence of stars in the photos, which led John to question the authenticity of the moon landing.
 
 Despite his doubts, John decided to do his own research. He read numerous articles and watched interviews with astronauts and scientists. Each source debunked the hoax claims and provided logical explanations for the arguments presented in the documentary. For example, the flag appeared to wave due to the way it was planted and the lack of air resistance on the moon, and the stars weren&apos;t visible in the photos due to the camera settings used.
@@ -64,6 +68,12 @@ Eventually, John realized that he needed to actively remind himself of the facts
     <!-- http://purl.org/dc/terms/title -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
+    
+
+
+    <!-- http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/continued_influence_effect#has_component -->
+
+    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/continued_influence_effect#has_component"/>
     
 
 
