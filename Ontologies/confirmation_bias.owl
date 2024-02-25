@@ -84,18 +84,18 @@
     
 
 
-    <!-- http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/confirmation-bias/concerns -->
+    <!-- http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/confirmation_bias/concerns -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/confirmation-bias/concerns">
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/confirmation_bias/concerns">
         <rdfs:domain rdf:resource="http://etna.istc.cnr.it/framester2/data/framestercore/Categorization"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/confirmation_bias#Information"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/confirmation-bias/https://raw.githubusercontent.com/modellingDH/odp_experience/master/owl/cp_experience.owl.rdfxml#isEngagedIn -->
+    <!-- http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/confirmation_bias/https://raw.githubusercontent.com/modellingDH/odp_experience/master/owl/cp_experience.owl.rdfxml#isEngagedIn -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/confirmation-bias/https://raw.githubusercontent.com/modellingDH/odp_experience/master/owl/cp_experience.owl.rdfxml#isEngagedIn">
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/confirmation_bias/https://raw.githubusercontent.com/modellingDH/odp_experience/master/owl/cp_experience.owl.rdfxml#isEngagedIn">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/confirmation_bias#Individual"/>
         <rdfs:range rdf:resource="http://etna.istc.cnr.it/framester2/data/framestercore/Categorization"/>
     </owl:ObjectProperty>
@@ -169,9 +169,9 @@
     
 
 
-    <!-- http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/confirmation-bias/isConsidered -->
+    <!-- http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/confirmation_bias/isConsidered -->
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/confirmation-bias/isConsidered">
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/confirmation_bias/isConsidered">
         <rdfs:domain rdf:resource="http://etna.istc.cnr.it/framester2/data/framestercore/Categorization"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
     </owl:DatatypeProperty>
@@ -263,10 +263,10 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/confirmation_bias#CategorizationTrue">
         <rdf:type rdf:resource="http://etna.istc.cnr.it/framester2/data/framestercore/Categorization"/>
-        <confirmation-bias:concerns rdf:resource="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/confirmation_bias#Evidence"/>
+        <confirmation_bias:concerns rdf:resource="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/confirmation_bias#Evidence"/>
         <isDeterminedBy rdf:resource="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/confirmation_bias#Evidence"/>
         <isDeterminedBy rdf:resource="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/confirmation_bias#MedicalOpinion"/>
-        <confirmation-bias:isConsidered rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</confirmation-bias:isConsidered>
+        <confirmation_bias:isConsidered rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</confirmation_bias:isConsidered>
     </owl:NamedIndividual>
     
 
@@ -313,10 +313,10 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/confirmation_bias.owl/CategorizationFalse">
         <rdf:type rdf:resource="http://etna.istc.cnr.it/framester2/data/framestercore/Categorization"/>
-        <confirmation-bias:concerns rdf:resource="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/confirmation_bias.owl/Differentiation"/>
+        <confirmation_bias:concerns rdf:resource="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/confirmation_bias.owl/Differentiation"/>
         <isDeterminedBy rdf:resource="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/confirmation_bias#MedicalOpinion"/>
         <isDeterminedBy rdf:resource="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/confirmation_bias.owl/Differentiation"/>
-        <confirmation-bias:isConsidered rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</confirmation-bias:isConsidered>
+        <confirmation_bias:isConsidered rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</confirmation_bias:isConsidered>
     </owl:NamedIndividual>
     
 
