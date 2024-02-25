@@ -1,15 +1,13 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/confirmation_bias#"
      xml:base="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/confirmation_bias"
+     xmlns:eo="https://raw.githubusercontent.com/modellingDH/odp_experience/master/owl/eo.owl.rdfxml#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:terms="http://purl.org/dc/terms/"
-     xmlns:fs="https://w3id.org/framester/"
-     xmlns:eo="https://raw.githubusercontent.com/modellingDH/odp_experience/master/owl/eo.owl.rdfxml#"
-     xmlns:foaf="http://xmlns.com/foaf/0.1/"
      xmlns:classification="http://www.ontologydesignpatterns.org/cp/owl/classification.owl#"
      xmlns:confirmation_bias="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/confirmation_bias#">
     <owl:Ontology rdf:about="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/confirmation_bias">
@@ -58,6 +56,18 @@
     
 
 
+    <!-- http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/confirmation_bias#concerns -->
+
+    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/confirmation_bias#concerns"/>
+    
+
+
+    <!-- http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/confirmation_bias#isConsidered -->
+
+    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/confirmation_bias#isConsidered"/>
+    
+
+
     <!-- http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/confirmation_bias#scenario -->
 
     <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/confirmation_bias#scenario"/>
@@ -80,24 +90,6 @@
     <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/cp/owl/classification.owl#classifies">
         <rdfs:domain rdf:resource="http://etna.istc.cnr.it/framester2/data/framestercore/Opinion"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/confirmation_bias#Information"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/confirmation_bias/concerns -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/confirmation_bias/concerns">
-        <rdfs:domain rdf:resource="http://etna.istc.cnr.it/framester2/data/framestercore/Categorization"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/confirmation_bias#Information"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/confirmation_bias/https://raw.githubusercontent.com/modellingDH/odp_experience/master/owl/eo.owl.rdfxml#isEngagedIn -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/confirmation_bias/https://raw.githubusercontent.com/modellingDH/odp_experience/master/owl/eo.owl.rdfxml#isEngagedIn">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/confirmation_bias#Individual"/>
-        <rdfs:range rdf:resource="http://etna.istc.cnr.it/framester2/data/framestercore/Categorization"/>
     </owl:ObjectProperty>
     
 
@@ -154,6 +146,15 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/confirmation_bias#supportsBelief">
         <rdfs:domain rdf:resource="http://etna.istc.cnr.it/framester2/data/framestercore/Evidence"/>
         <rdfs:range rdf:resource="http://etna.istc.cnr.it/framester2/data/framestercore/Opinion"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://raw.githubusercontent.com/modellingDH/odp_experience/master/owl/eo.owl.rdfxml#isEngagedIn -->
+
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/modellingDH/odp_experience/master/owl/eo.owl.rdfxml#isEngagedIn">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/confirmation_bias#Individual"/>
+        <rdfs:range rdf:resource="http://etna.istc.cnr.it/framester2/data/framestercore/Categorization"/>
     </owl:ObjectProperty>
     
 
@@ -263,10 +264,10 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/confirmation_bias#CategorizationTrue">
         <rdf:type rdf:resource="http://etna.istc.cnr.it/framester2/data/framestercore/Categorization"/>
-        <confirmation_bias:concerns rdf:resource="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/confirmation_bias#Evidence"/>
         <isDeterminedBy rdf:resource="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/confirmation_bias#Evidence"/>
         <isDeterminedBy rdf:resource="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/confirmation_bias#MedicalOpinion"/>
-        <confirmation_bias:isConsidered rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</confirmation_bias:isConsidered>
+        <concerns rdf:resource="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/confirmation_bias#Evidence"/>
+        <isConsidered rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isConsidered>
     </owl:NamedIndividual>
     
 
@@ -300,11 +301,11 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/confirmation_bias#Patient">
         <rdf:type rdf:resource="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/confirmation_bias#Individual"/>
         <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
-        <eo:isEngagedIn rdf:resource="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/confirmation_bias#CategorizationTrue"/>
-        <eo:isEngagedIn rdf:resource="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/confirmation_bias.owl/CategorizationFalse"/>
         <hasBelief rdf:resource="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/confirmation_bias#MedicalOpinion"/>
         <receivesInformation rdf:resource="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/confirmation_bias#Evidence"/>
         <receivesInformation rdf:resource="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/confirmation_bias.owl/Differentiation"/>
+        <eo:isEngagedIn rdf:resource="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/confirmation_bias#CategorizationTrue"/>
+        <eo:isEngagedIn rdf:resource="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/confirmation_bias.owl/CategorizationFalse"/>
     </owl:NamedIndividual>
     
 
@@ -313,10 +314,10 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/confirmation_bias.owl/CategorizationFalse">
         <rdf:type rdf:resource="http://etna.istc.cnr.it/framester2/data/framestercore/Categorization"/>
-        <confirmation_bias:concerns rdf:resource="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/confirmation_bias.owl/Differentiation"/>
         <isDeterminedBy rdf:resource="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/confirmation_bias#MedicalOpinion"/>
         <isDeterminedBy rdf:resource="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/confirmation_bias.owl/Differentiation"/>
-        <confirmation_bias:isConsidered rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</confirmation_bias:isConsidered>
+        <concerns rdf:resource="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/confirmation_bias.owl/Differentiation"/>
+        <isConsidered rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isConsidered>
     </owl:NamedIndividual>
     
 
@@ -334,5 +335,5 @@
 
 
 
-<!-- Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
 
