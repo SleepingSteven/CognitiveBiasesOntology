@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://www.semanticweb.org/hp/ontologies/2024/gaia/selectiveperception//"
-     xml:base="http://www.semanticweb.org/hp/ontologies/2024/gaia/selectiveperception//"
+<rdf:RDF xmlns="http://www.semanticweb.org/hp/ontologies/2024/gaia/CognitiveBiasOntology/selective-perception#"
+     xml:base="http://www.semanticweb.org/hp/ontologies/2024/gaia/CognitiveBiasOntology/selective-perception"
      xmlns:cbo="http://www.semanticweb.org/hp/ontologies/2024/gaia/CognitiveBiasOntology/selective-perception#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -9,13 +9,13 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:conceptnet="http://api.conceptnet.io"
-     xmlns:selectiveperception="http://www.semanticweb.org/hp/ontologies/2024/gaia/selectiveperception/#">
-    <owl:Ontology rdf:about="http://www.semanticweb.org/hp/ontologies/2024/gaia/selectiveperception/">
+     xmlns:selective-perception="http://www.semanticweb.org/hp/ontologies/2024/gaia/CognitiveBiasOntology/selective-perception##">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/hp/ontologies/2024/gaia/CognitiveBiasOntology/selective-perception#">
         <terms:created>2024-02-16</terms:created>
         <terms:creator>Gaia Ortona</terms:creator>
         <terms:description>The ontology designed to formalize the &quot;Selective perception bias&quot;</terms:description>
         <terms:title>Selective Perception Bias Ontology</terms:title>
-        <selectiveperception:scenario>Relationship Expectations: a person entering a new relationship might selectively perceive their partner&apos;s positive qualities while minimizing or rationalizing any negative behaviors, especially in the early stages of the relationship.</selectiveperception:scenario>
+        <selective-perception:scenario>Relationship Expectations: a person entering a new relationship might selectively perceive their partner&apos;s positive qualities while minimizing or rationalizing any negative behaviors, especially in the early stages of the relationship.</selective-perception:scenario>
         <rdfs:comment>This is the ontology designed for the &quot;Selective perception bias&quot;</rdfs:comment>
     </owl:Ontology>
     
@@ -56,9 +56,9 @@
     
 
 
-    <!-- http://www.semanticweb.org/hp/ontologies/2024/gaia/selectiveperception/#scenario -->
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/gaia/CognitiveBiasOntology/selective-perception##scenario -->
 
-    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2024/gaia/selectiveperception/#scenario"/>
+    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2024/gaia/CognitiveBiasOntology/selective-perception##scenario"/>
     
 
 
@@ -73,51 +73,60 @@
     
 
 
-    <!-- http://www.semanticweb.org/hp/ontologies/2024/gaia/selectiveperception/#confirms -->
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/gaia/CognitiveBiasOntology/selective-perception#selectivelyFilters -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2024/gaia/selectiveperception/#confirms">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/gaia/selectiveperception/#Information"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2024/gaia/CognitiveBiasOntology/selective-perception#selectivelyFilters">
+        <rdfs:domain rdf:resource="https://w3id.org/framester/conceptnet/5.7.0/c/en/filtering_mechanism"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/gaia/CognitiveBiasOntology/selective-perception##Information"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/gaia/CognitiveBiasOntology/selective-perception##confirms -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2024/gaia/CognitiveBiasOntology/selective-perception##confirms">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/gaia/CognitiveBiasOntology/selective-perception##Information"/>
         <rdfs:range rdf:resource="https://w3id.org/framester/conceptnet/5.7.0/c/en/belief_system"/>
         <rdfs:comment>relates an instance of information to the belief system it supports, indicating confirmation bias.</rdfs:comment>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/hp/ontologies/2024/gaia/selectiveperception/#encounters -->
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/gaia/CognitiveBiasOntology/selective-perception##encounters -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2024/gaia/selectiveperception/#encounters">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/gaia/selectiveperception/#Individual"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/gaia/selectiveperception/#Information"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2024/gaia/CognitiveBiasOntology/selective-perception##encounters">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/gaia/CognitiveBiasOntology/selective-perception##Individual"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/gaia/CognitiveBiasOntology/selective-perception##Information"/>
         <rdfs:comment>relates an individual to information they come across.</rdfs:comment>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/hp/ontologies/2024/gaia/selectiveperception/#hasBeliefSystem -->
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/gaia/CognitiveBiasOntology/selective-perception##hasBeliefSystem -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2024/gaia/selectiveperception/#hasBeliefSystem">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/gaia/selectiveperception/#Individual"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2024/gaia/CognitiveBiasOntology/selective-perception##hasBeliefSystem">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/gaia/CognitiveBiasOntology/selective-perception##Individual"/>
         <rdfs:range rdf:resource="https://w3id.org/framester/conceptnet/5.7.0/c/en/belief_system"/>
         <rdfs:comment>relates an individual to their set of pre-existing beliefs.</rdfs:comment>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/hp/ontologies/2024/gaia/selectiveperception/#hasFilteringMechanism -->
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/gaia/CognitiveBiasOntology/selective-perception##hasFilteringMechanism -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2024/gaia/selectiveperception/#hasFilteringMechanism">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/gaia/selectiveperception/#Individual"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2024/gaia/CognitiveBiasOntology/selective-perception##hasFilteringMechanism">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/gaia/CognitiveBiasOntology/selective-perception##Individual"/>
         <rdfs:range rdf:resource="https://w3id.org/framester/conceptnet/5.7.0/c/en/filtering_mechanism"/>
         <rdfs:comment>associates an individual with their cognitive process of selectively filtering information.</rdfs:comment>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/hp/ontologies/2024/gaia/selectiveperception/#selectivelyPerceives -->
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/gaia/CognitiveBiasOntology/selective-perception##selectivelyPerceives -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2024/gaia/selectiveperception/#selectivelyPerceives">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/gaia/selectiveperception/#Individual"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/gaia/selectiveperception/#Information"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2024/gaia/CognitiveBiasOntology/selective-perception##selectivelyPerceives">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/gaia/CognitiveBiasOntology/selective-perception##Individual"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/gaia/CognitiveBiasOntology/selective-perception##Information"/>
         <rdfs:comment>describes the relationship between an individual and the information they selectively perceive based on their biases</rdfs:comment>
     </owl:ObjectProperty>
     
@@ -134,17 +143,17 @@
     
 
 
-    <!-- http://www.semanticweb.org/hp/ontologies/2024/gaia/selectiveperception/#Individual -->
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/gaia/CognitiveBiasOntology/selective-perception##Individual -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2024/gaia/selectiveperception/#Individual">
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2024/gaia/CognitiveBiasOntology/selective-perception##Individual">
         <rdfs:comment>represents a person or an entity prone to selective perception bias.</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/hp/ontologies/2024/gaia/selectiveperception/#Information -->
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/gaia/CognitiveBiasOntology/selective-perception##Information -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2024/gaia/selectiveperception/#Information">
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2024/gaia/CognitiveBiasOntology/selective-perception##Information">
         <rdfs:comment>represents data, facts, or stimuli that individuals encounter.</rdfs:comment>
     </owl:Class>
     
@@ -177,36 +186,36 @@
     
 
 
-    <!-- http://www.semanticweb.org/hp/ontologies/2024/gaia/selectiveperception/Sarah -->
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/gaia/CognitiveBiasOntology/selective-perception#Sarah -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2024/gaia/selectiveperception/Sarah">
-        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/gaia/selectiveperception/#Individual"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2024/gaia/CognitiveBiasOntology/selective-perception#Sarah">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/gaia/CognitiveBiasOntology/selective-perception##Individual"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/hp/ontologies/2024/gaia/selectiveperception/good_communication -->
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/gaia/CognitiveBiasOntology/selective-perception#good_communication -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2024/gaia/selectiveperception/good_communication">
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2024/gaia/CognitiveBiasOntology/selective-perception#good_communication">
         <rdf:type rdf:resource="https://w3id.org/framester/conceptnet/5.7.0/c/en/belief_system"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/hp/ontologies/2024/gaia/selectiveperception/kindness -->
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/gaia/CognitiveBiasOntology/selective-perception#kindness -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2024/gaia/selectiveperception/kindness">
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2024/gaia/CognitiveBiasOntology/selective-perception#kindness">
         <rdf:type rdf:resource="https://w3id.org/framester/conceptnet/5.7.0/c/en/belief_system"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/hp/ontologies/2024/gaia/selectiveperception/unpleasant_behaviour -->
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/gaia/CognitiveBiasOntology/selective-perception#unpleasant_behaviour -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2024/gaia/selectiveperception/unpleasant_behaviour">
-        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/gaia/selectiveperception/#Information"/>
-        <selectiveperception:hasBeliefSystem rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/gaia/selectiveperception/good_communication"/>
-        <selectiveperception:hasBeliefSystem rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/gaia/selectiveperception/kindness"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2024/gaia/CognitiveBiasOntology/selective-perception#unpleasant_behaviour">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/gaia/CognitiveBiasOntology/selective-perception##Information"/>
+        <selective-perception:hasBeliefSystem rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/gaia/CognitiveBiasOntology/selective-perception#good_communication"/>
+        <selective-perception:hasBeliefSystem rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/gaia/CognitiveBiasOntology/selective-perception#kindness"/>
     </owl:NamedIndividual>
 </rdf:RDF>
 
