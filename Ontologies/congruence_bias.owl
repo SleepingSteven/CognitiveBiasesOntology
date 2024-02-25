@@ -7,12 +7,9 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:terms="http://purl.org/dc/terms/"
-     xmlns:ab="https://w3id.org/affectedBy#"
+     xmlns:cp_experience="https://raw.githubusercontent.com/modellingDH/odp_experience/master/owl/cp_experience.owl.rdfxml#"
      xmlns:classification="http://www.ontologydesignpatterns.org/cp/owl/classification.owl#"
-     xmlns:eo="https://raw.githubusercontent.com/modellingDH/odp_experience/master/owl/cp_experience.owl.rdfxml#"
-     xmlns:foaf="http://xmlns.com/foaf/0.1/"
-     xmlns:fs="https://w3id.org/framester/"
-     xmlns:congruence_bias="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/congruence_bias/">
+     xmlns:congruence_bias="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/congruence_bias#">
     <owl:Ontology rdf:about="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/congruence_bias">
         <terms:created>21-02-2024</terms:created>
         <terms:creator>Stefano Sorrentino</terms:creator>
@@ -127,6 +124,7 @@
         <owl:inverseOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ReflexiveProperty"/>
     </rdf:Description>
     
 
@@ -238,7 +236,11 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/congruence_bias#Compatible_information">
         <rdf:type rdf:resource="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/congruence_bias#Information"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/congruence_bias#Interpretation"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/congruence_bias#Opinion"/>
         <rdf:type rdf:resource="https://w3id.org/framester/data/framestercore/Compatibility"/>
+        <classification:isClassifiedBy rdf:resource="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/congruence_bias#Opinion"/>
+        <supportsOpinion rdf:resource="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/congruence_bias#Opinion"/>
     </owl:NamedIndividual>
     
 
@@ -248,6 +250,9 @@
     <owl:Class rdf:about="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/congruence_bias#Decision">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/congruence_bias#Decision"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/congruence_bias#Interpretation"/>
+        <strenghtens rdf:resource="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/congruence_bias#Opinion"/>
+        <cp_experience:isReflectionOn rdf:resource="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/congruence_bias#Interpretation"/>
     </owl:Class>
     
 
@@ -256,7 +261,11 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/congruence_bias#Different_information">
         <rdf:type rdf:resource="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/congruence_bias#Information"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/congruence_bias#Interpretation"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/congruence_bias#Opinion"/>
         <rdf:type rdf:resource="https://w3id.org/framester/data/framestercore/Differentiation"/>
+        <classification:isClassifiedBy rdf:resource="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/congruence_bias#Opinion"/>
+        <rejectsOpinion rdf:resource="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/congruence_bias#Opinion"/>
     </owl:NamedIndividual>
     
 
@@ -265,7 +274,13 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/congruence_bias#Interpretation">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/congruence_bias#Decision"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/congruence_bias#Information"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/congruence_bias#Interpretation"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/congruence_bias#Opinion"/>
+        <cp_experience:isReflectionOn rdf:resource="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/congruence_bias#Compatible_information"/>
+        <cp_experience:isReflectionOn rdf:resource="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/congruence_bias#Different_information"/>
+        <cp_experience:isReflectionOn rdf:resource="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/congruence_bias#Opinion"/>
     </owl:Class>
     
 
@@ -274,6 +289,8 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/congruence_bias#Opinion">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/congruence_bias#Information"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/congruence_bias#Interpretation"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/congruence_bias#Opinion"/>
     </owl:Class>
     
@@ -284,6 +301,8 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/congruence_bias#user">
         <rdf:type rdf:resource="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/congruence_bias#Individual"/>
         <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <hasOpinion rdf:resource="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/congruence_bias#Opinion"/>
+        <cp_experience:isEngagedIn rdf:resource="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/congruence_bias#Interpretation"/>
     </owl:NamedIndividual>
     
 
@@ -309,5 +328,5 @@
 
 
 
-<!-- Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
 
