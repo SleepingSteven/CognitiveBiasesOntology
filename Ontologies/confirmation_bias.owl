@@ -9,7 +9,7 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:classification="http://www.ontologydesignpatterns.org/cp/owl/classification.owl#"
-     xmlns:confirmation_bias="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/confirmation_bias#">
+     xmlns:confb="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/confirmation_bias#">
     <owl:Ontology rdf:about="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/confirmation_bias">
         <terms:created>2024-02-19</terms:created>
         <terms:creator>Stefano Sorrentino</terms:creator>
