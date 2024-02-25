@@ -152,3 +152,33 @@ Sure, here are some competency questions that could be asked about the Semmelwei
    **Answer:** This query would return all scenarios in which the Semmelweis Reflex is exhibited.
 
 Please note that these are hypothetical queries and answers. The actual results would depend on the specific instances and relationships defined in the ontology. Also, the ontology and the data would need to be stored in a SPARQL-enabled database or triplestore to execute these queries.
+
+
+postille
+
+Classes:
+1. Entity
+2. State
+3. Action
+4. Fact
+5. Perception
+6. Consequence
+7. Environment
+
+Data Properties:
+1. isAware (Entity -> xsd:boolean)
+2. isChronic (State -> xsd:boolean)
+3. isDifficult (Action -> xsd:boolean)
+4. isVerified (Fact -> xsd:boolean)
+5. isStrong (Perception -> xsd:boolean)
+6. isNegative (Consequence -> xsd:boolean)
+7. isComplex (Environment -> xsd:boolean)
+
+Object Properties:
+1. isInState (Entity -> State)
+2. requires (Entity -> Action)
+3. supports (Fact -> Action)
+4. holds (Entity -> Perception)
+5. contradicts (Perception -> Fact)
+6. leadsTo (Action -> Consequence)
+7. isAffectedBy (Entity -> Environment)

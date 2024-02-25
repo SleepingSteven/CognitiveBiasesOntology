@@ -1,0 +1,311 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/choise_supportive_bias#"
+     xml:base="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/choise_supportive_bias"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:classification="http://www.ontologydesignpatterns.org/cp/owl/classification.owl#"
+     xmlns:choice_supportive_bias="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/choice_supportive_bias/"
+     xmlns:choice_supportive_bias1="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/choice_supportive_bias#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/choise_supportive_bias">
+        <terms:created>21-02-2024</terms:created>
+        <terms:creator>Stefano Sorrentino</terms:creator>
+        <terms:decription>An ontology of the cognitive bias of the choice supportive bias</terms:decription>
+        <terms:title>Choice Supportive Bias Ontology</terms:title>
+        <choice_supportive_bias1:scenario>A user buys a has to decide between two job offers and prioritizes pros about the one he eventually choses not considering the cons,while heavily considering the cons of the discarded option</choice_supportive_bias1:scenario>
+        <rdfs:comment>This is the ontology of the cognitive bias of choice supportive bias</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/terms/created -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/created"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/creator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/decription -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/decription"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
+    
+
+
+    <!-- http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/choice_supportive_bias#scenario -->
+
+    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/choice_supportive_bias#scenario"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/cp/owl/classification.owl#classifies -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/cp/owl/classification.owl#classifies">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/choice_supportive_bias/Feature"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/choice_supportive_bias/Option"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/choice_supportive_bias/considers -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/choice_supportive_bias/considers">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/choice_supportive_bias/Individual"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/choice_supportive_bias/Feature"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/choice_supportive_bias/hasCon -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/choice_supportive_bias/hasCon">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/choice_supportive_bias/Option"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/choice_supportive_bias/NegativeFeature"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/choice_supportive_bias/hasPro -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/choice_supportive_bias/hasPro">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/choice_supportive_bias/Option"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/choice_supportive_bias/PositiveFeature"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/choice_supportive_bias/isBiasedToward -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/choice_supportive_bias/isBiasedToward">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/choice_supportive_bias/Individual"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/choice_supportive_bias/chosenOption"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/choice_supportive_bias/notConsider -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/choice_supportive_bias/notConsider">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/choice_supportive_bias/Individual"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/choice_supportive_bias/Feature"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/choice_supportive_bias/strengthens -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/choice_supportive_bias/strengthens">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/choice_supportive_bias/PositiveFeature"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/choice_supportive_bias/chosenOption"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/choice_supportive_bias/weakens -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/choice_supportive_bias/weakens">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/choice_supportive_bias/NegativeFeature"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/choice_supportive_bias/discardedOption"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#topObjectProperty -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#topObjectProperty">
+        <owl:inverseOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ReflexiveProperty"/>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/choice_supportive_bias/Feature -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/choice_supportive_bias/Feature"/>
+    
+
+
+    <!-- http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/choice_supportive_bias/Individual -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/choice_supportive_bias/Individual"/>
+    
+
+
+    <!-- http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/choice_supportive_bias/NegativeFeature -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/choice_supportive_bias/NegativeFeature">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/choice_supportive_bias/Feature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/choice_supportive_bias/Option -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/choice_supportive_bias/Option"/>
+    
+
+
+    <!-- http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/choice_supportive_bias/PositiveFeature -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/choice_supportive_bias/PositiveFeature">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/choice_supportive_bias/Feature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/choice_supportive_bias/chosenOption -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/choice_supportive_bias/chosenOption">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/choice_supportive_bias/Option"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/choice_supportive_bias/discardedOption -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/choice_supportive_bias/discardedOption">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/choice_supportive_bias/Option"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/choice_supportive_bias/Contro1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/choice_supportive_bias/Contro1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/choice_supportive_bias/Feature"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/choice_supportive_bias/NegativeFeature"/>
+        <classification:classifies rdf:resource="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/choice_supportive_bias/Opzione1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/choice_supportive_bias/Contro2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/choice_supportive_bias/Contro2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/choice_supportive_bias/Feature"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/choice_supportive_bias/NegativeFeature"/>
+        <classification:classifies rdf:resource="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/choice_supportive_bias/Opzione2"/>
+        <choice_supportive_bias:weakens rdf:resource="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/choice_supportive_bias/Opzione2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/choice_supportive_bias/Opzione1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/choice_supportive_bias/Opzione1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/choice_supportive_bias/Option"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/choice_supportive_bias/chosenOption"/>
+        <choice_supportive_bias:hasCon rdf:resource="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/choice_supportive_bias/Contro1"/>
+        <choice_supportive_bias:hasPro rdf:resource="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/choice_supportive_bias/Pro1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/choice_supportive_bias/Opzione2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/choice_supportive_bias/Opzione2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/choice_supportive_bias/Option"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/choice_supportive_bias/discardedOption"/>
+        <choice_supportive_bias:hasCon rdf:resource="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/choice_supportive_bias/Contro2"/>
+        <choice_supportive_bias:hasPro rdf:resource="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/choice_supportive_bias/Pro2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/choice_supportive_bias/Person -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/choice_supportive_bias/Person">
+        <rdf:type rdf:resource="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/choice_supportive_bias/Individual"/>
+        <choice_supportive_bias:considers rdf:resource="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/choice_supportive_bias/Contro2"/>
+        <choice_supportive_bias:considers rdf:resource="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/choice_supportive_bias/Pro1"/>
+        <choice_supportive_bias:isBiasedToward rdf:resource="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/choice_supportive_bias/Opzione1"/>
+        <choice_supportive_bias:notConsider rdf:resource="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/choice_supportive_bias/Contro1"/>
+        <choice_supportive_bias:notConsider rdf:resource="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/choice_supportive_bias/Pro2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/choice_supportive_bias/Pro1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/choice_supportive_bias/Pro1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/choice_supportive_bias/Feature"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/choice_supportive_bias/PositiveFeature"/>
+        <classification:classifies rdf:resource="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/choice_supportive_bias/Opzione1"/>
+        <choice_supportive_bias:strengthens rdf:resource="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/choice_supportive_bias/Opzione1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/choice_supportive_bias/Pro2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/choice_supportive_bias/Pro2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/choice_supportive_bias/Feature"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/choice_supportive_bias/PositiveFeature"/>
+        <classification:classifies rdf:resource="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/choice_supportive_bias/Opzione2"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+
