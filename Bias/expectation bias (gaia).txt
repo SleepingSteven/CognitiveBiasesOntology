@@ -139,4 +139,8 @@ WHERE {
   ?individual :mitigatesBiasWith ?mitigationEffort.
 }
 
+Critics:
+
+In this case the modelling made by chatGPT was quite accurate and in line with the description of the bias. I decided to implement the ontology by adding individuals related to some of the classe (hiring manager for Individual, Interview for Event and ideal_candidate for Expectation). I also replaced the IRI of the expectation and perception class with data from framester in order to allow interoperability (in the case of Perception the class name became PerceptionExperience in aligment with Framester). In addition to that, I used the Participation's ODP in this ontology as clearly shown in the UML
+
 

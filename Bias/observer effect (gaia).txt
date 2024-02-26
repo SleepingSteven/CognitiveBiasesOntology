@@ -84,4 +84,7 @@ WHERE {
           :takesPlaceIn :Metroville .
 }
 
+CRITICS
+
+In this case, chatGPT's modelling was pretty accurate. During the process of facts-checking, i had to delete or modify some classes in order to give more compactness and uniformity to the ontology (for example i put patrol as a subclass of Observation because it encapsulates the act of observation done by the detective towards the criminal). In order to make everything more interoperable i used Framester to enrich my ontology with the IntentionallyAct entity. In addition to that i used the CoParticipation's ODP to indicate the coparticipation of the detective and the criminal in the Observation's Event (the detective is the agent and the criminal is the subject influenced by the act)
 

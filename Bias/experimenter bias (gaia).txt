@@ -76,4 +76,8 @@ WHERE {
     ?participant :providesData ?moodData .
 }
 
+CRITICS
+
+This is the case in which the AI modelling was the most successful and coherent. I don't have anything to add other than the fact that some logical aspects could be compromised even though the description of the bias is well done.
+
 

@@ -81,8 +81,6 @@ selectivelyPerceives: describes the relationship between an individual and the i
 
 confirms: relates an instance of information to the belief system it supports, indicating confirmation bias.
 
-ignores: relates an instance of information to the belief system it contradicts, indicating the information is being ignored due to the bias.
-
 hasFilteringMechanism: associates an individual with their cognitive process of selectively filtering information.
 
 5) Can you make competency questions that this ontology should answer and express them both via natural language and via sparql?
@@ -139,6 +137,10 @@ WHERE {
   ?individual rdf:type :Individual.
   ?individual :hasBeliefSystem ?beliefSystem.
 }
+
+
+Critics
+In this case the modelling made by chatGPT was cute accurate and in alignment with the bibliography. I had to add individuals to the ontology in order to enrich it and make it complete (everything was executed in compliance with the scenario and the user story). In order to make the work more interoperable, i added frames taken from conceptnet and obtained through the QUOKKA platform
 
 
 

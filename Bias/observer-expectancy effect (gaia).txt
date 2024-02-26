@@ -155,5 +155,11 @@ WHERE {
    ?observation ex:isAffectedByBias ?bias.
 }
 
+CRITICS
+
+In this case, chatGPT's modelling was quite accurate. I didn't make significant changes other that introducing some individuals to enrich the ontology. I made the work more interoperable by adding a frame from Framester (the Expectation entity)
+
+
+
 
 
