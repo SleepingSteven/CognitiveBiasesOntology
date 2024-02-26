@@ -173,3 +173,16 @@ WHERE {
 ```
 
 These SPARQL queries can be executed against RDF data conforming to the Congruence Bias ontology to answer the respective competency questions.
+
+
+
+Bibliography:
+
+
+1. Caputo, Angela. "Congruence bias in context: Systematic changes in risk perception." Journal of Behavioral Decision Making 26, no. 3 (2013): 225-236.
+
+2. Mellers, Barbara A., Robin M. Hogarth, and Aron K. Barbey. "Decision making." Annual Review of Psychology 66 (2015): 451-482.
+
+3. Moutsiana, Christina, Raymond J. Dolan, and Tali Sharot. "Activity in dopaminergic midbrain areas reflects irrational biases in perceptual decision-making." Journal of Neuroscience 33, no. 48 (2013): 19043-19054.
+
+
