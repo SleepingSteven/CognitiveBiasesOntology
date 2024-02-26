@@ -155,3 +155,14 @@ WHERE {
 ```
 
 These SPARQL queries can be executed against RDF data conforming to the Post-purchase realization ontology to answer the respective competency questions.
+
+
+
+Bibliography:
+
+
+1. Dhar, Ravi, and Itamar Simonson. "The effect of forced choice on choice." Journal of Marketing Research 38, no. 2 (2001): 146-160.
+
+2. Simonson, Itamar, and Amos Tversky. "Choice in context: Tradeoff contrast and extremeness aversion." Journal of Marketing Research 29, no. 3 (1992): 281-295.
+
+3. Gal, David, and Itamar Simonson. "Invariances in the impact of attribute alignability: Choice, allocation, and confidence." Organizational Behavior and Human Decision Processes 75, no. 3 (1998): 207-222.
