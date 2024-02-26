@@ -176,3 +176,11 @@ Sure, here are five competency questions related to the ontology of confirmation
       ```
 
 These SPARQL queries can be executed against RDF data conforming to the confirmation bias ontology to answer the respective competency questions.
+
+
+
+Bibliography:
+
+Nickerson, Raymond S. "Confirmation bias: A ubiquitous phenomenon in many guises." Review of General Psychology 2, no. 2 (1998): 175-220.
+Plous, Scott. The Psychology of Judgment and Decision Making. McGraw-Hill, 1993.
+Klayman, Joshua, and Young-Won Ha. "Confirmation, disconfirmation, and information in hypothesis testing." Psychological Review 94, no. 2 (1987): 211.
