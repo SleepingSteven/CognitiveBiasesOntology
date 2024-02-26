@@ -130,7 +130,17 @@ The term was originally coined by Galai &amp; Sade (2003), and there is neurosci
 
     <owl:ObjectProperty rdf:about="http://etna.istc.cnr.it/framester2/data/framestercore/Avoiding">
         <rdfs:domain rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#SocialAgent"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/ostrich_effect#NegativeInformation"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://etna.istc.cnr.it/framester2/data/framestercore/Information"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/ostrich_effect#isNegative"/>
+                        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:range>
         <rdfs:comment>This property indicates that the individual is avoiding the negative information.</rdfs:comment>
     </owl:ObjectProperty>
     
@@ -162,7 +172,7 @@ The term was originally coined by Galai &amp; Sade (2003), and there is neurosci
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://etna.istc.cnr.it/framester2/data/framestercore/Feeling"/>
-                    <rdf:Description rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/ostrich_effect#NegativeInformation"/>
+                    <rdf:Description rdf:about="http://etna.istc.cnr.it/framester2/data/framestercore/Information"/>
                     <owl:Class>
                         <owl:intersectionOf rdf:parseType="Collection">
                             <rdf:Description rdf:about="http://descartes-core.org/ontologies/activities/1.0/ActivityPattern.owl#Outcome"/>
@@ -193,7 +203,7 @@ The term was originally coined by Galai &amp; Sade (2003), and there is neurosci
     <!-- http://www.ontologydesignpatterns.org/cp/owl/situation.owl#hasSetting -->
 
     <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/cp/owl/situation.owl#hasSetting">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/ostrich_effect#NegativeInformation"/>
+        <rdfs:domain rdf:resource="http://etna.istc.cnr.it/framester2/data/framestercore/Information"/>
         <rdfs:range rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/situation.owl#Situation"/>
         <rdfs:comment>This property links the negative information to the context in which it exists.</rdfs:comment>
     </owl:ObjectProperty>
@@ -217,6 +227,16 @@ The term was originally coined by Galai &amp; Sade (2003), and there is neurosci
         <rdfs:domain rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/ostrich_effect#Behavior"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
         <rdfs:comment>Denotes if the Behavior conducted by the SocialAgent is confrontational or not, leading to respectively a positive or negative outcome.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/ostrich_effect#isNegative -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/ostrich_effect#isNegative">
+        <rdfs:domain rdf:resource="http://etna.istc.cnr.it/framester2/data/framestercore/Information"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment>This data property aim to express if the information that are related to the SocialAgent&apos;s interest are negative or not.</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -273,6 +293,15 @@ The term was originally coined by Galai &amp; Sade (2003), and there is neurosci
     
 
 
+    <!-- http://etna.istc.cnr.it/framester2/data/framestercore/Information -->
+
+    <owl:Class rdf:about="http://etna.istc.cnr.it/framester2/data/framestercore/Information">
+        <rdfs:subClassOf rdf:resource="http://krisnadhi.github.io/onto/event.owl#InformationObject"/>
+        <rdfs:comment>The potentially distressing information that the individual is avoiding.</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- http://krisnadhi.github.io/onto/event.owl#InformationObject -->
 
     <owl:Class rdf:about="http://krisnadhi.github.io/onto/event.owl#InformationObject">
@@ -317,15 +346,6 @@ The term was originally coined by Galai &amp; Sade (2003), and there is neurosci
     
 
 
-    <!-- http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/ostrich_effect#NegativeInformation -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/ostrich_effect#NegativeInformation">
-        <rdfs:subClassOf rdf:resource="http://krisnadhi.github.io/onto/event.owl#InformationObject"/>
-        <rdfs:comment>The potentially distressing information that the individual is avoiding.</rdfs:comment>
-    </owl:Class>
-    
-
-
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -361,8 +381,9 @@ The term was originally coined by Galai &amp; Sade (2003), and there is neurosci
     <!-- http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/ostrich_effect#DataStructureGrade -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/ostrich_effect#DataStructureGrade">
-        <rdf:type rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/ostrich_effect#NegativeInformation"/>
+        <rdf:type rdf:resource="http://etna.istc.cnr.it/framester2/data/framestercore/Information"/>
         <situation:hasSetting rdf:resource="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/ostrich_effect#AcademicSetting"/>
+        <isNegative rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isNegative>
     </owl:NamedIndividual>
     
 
