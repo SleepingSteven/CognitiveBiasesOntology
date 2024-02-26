@@ -1,49 +1,6 @@
-Definition of Semmelweis Reflex: The Semmelweis Reflex, also known as the “Semmelweis Effect”, is a cognitive bias that describes the reflex-like tendency to reject new evidence or new knowledge because it contradicts established norms, beliefs, or paradigms1. This term is named after Ignaz Semmelweis, a Hungarian physician who discovered in 1847 that childbed fever mortality rates fell ten-fold when doctors disinfected their hands with a chlorine solution before moving from one patient to another1. Despite the overwhelming empirical evidence, his fellow doctors rejected his hand-washing suggestions, often for non-medical reasons1.
-
-User Story: Let’s consider a user story that embodies this bias. Meet Dr. Smith, a seasoned medical practitioner. Dr. Smith has always believed in a certain treatment method for a particular disease based on his years of experience. When a new research study comes out suggesting a more effective treatment method, Dr. Smith immediately dismisses it, believing that his tried-and-true method is superior. This is an example of the Semmelweis Reflex, as Dr. Smith is rejecting new knowledge that contradicts his established beliefs.
-
-Competency Questions: Based on the user story, here are some competency questions:
-
-What is the new knowledge that Dr. Smith is rejecting?
-What are the established beliefs that Dr. Smith holds?
-How does the Semmelweis Reflex affect Dr. Smith’s decision-making process?
-What might be the impact of the Semmelweis Reflex on the treatment outcomes of Dr. Smith’s patients?
-
-https://en.wikipedia.org/wiki/Semmelweis_reflex
-https://www.clearerthinking.org/post/semmelweis-reflex-definition-examples-and-effects
-
-
-Classes:
-
-Cognitive Bias: This is the parent class for all cognitive biases.
-Semmelweis Reflex: This is a subclass of Cognitive Bias. It represents the specific cognitive bias we’re focusing on.
-Properties:
-
-hasDefinition: This property links a cognitive bias to its definition.
-hasExample: This property links a cognitive bias to an example of the bias.
-affectsDecisionMaking: This property links a cognitive bias to the decision-making process it affects.
-Instances:
-
-Semmelweis Reflex Instance: This is an instance of the Semmelweis Reflex class. It represents a specific occurrence or example of Semmelweis Reflex.
-Relationships:
-
-Semmelweis Reflex Instance isA Semmelweis Reflex
-Semmelweis Reflex isA Cognitive Bias
-Semmelweis Reflex hasDefinition "The Semmelweis Reflex or 'Semmelweis Effect' is a metaphor for the reflex-like tendency to reject new evidence or new knowledge because it contradicts established norms, beliefs, or paradigms."1
-Semmelweis Reflex Instance hasExample "Dr. Smith, a seasoned medical practitioner, immediately dismisses a new research study suggesting a more effective treatment method, believing that his tried-and-true method is superior."
-Semmelweis Reflex affectsDecisionMaking "The Semmelweis Reflex can lead individuals to reject new ideas or discoveries that contradict their existing beliefs, affecting their decision-making process."
-
-
-v2:
 give me a definition of Semmelweis Reflex 
 
 The **Semmelweis Reflex**, also known as the **Semmelweis Effect**, is a metaphor for the reflex-like tendency to reject new evidence or new knowledge because it contradicts established norms, beliefs, or paradigms¹. This term is named after Ignaz Semmelweis, a Hungarian physician who discovered in 1847 that childbed fever mortality rates fell significantly when doctors disinfected their hands with a chlorine solution before moving from one patient to another¹. Despite the empirical evidence, his fellow doctors rejected his hand-washing suggestions, often for non-medical reasons¹. This phenomenon can impede scientific advancement and progress by rejecting new ideas and discoveries².
-
-Origine: conversazione con Bing, 25/1/2024
-(1) Semmelweis reflex - Wikipedia. https://en.wikipedia.org/wiki/Semmelweis_reflex.
-(2) Semmelweis Reflex: Definition, Examples and Effects. https://www.clearerthinking.org/post/semmelweis-reflex-definition-examples-and-effects.
-(3) The Semmelweis Reflex — Hypnosis for Humans. https://hypnosisforhumans.com/articles/the-semmelweis-reflex.
-(4) Semmelweis Reflex - Thinking Toolbox by Ness Labs. https://toolbox.nesslabs.com/semmelweis-reflex.
 
 Give me 10 example scenarios of the Semmelweis Reflex
 
@@ -59,15 +16,6 @@ Sure, here are some examples of the Semmelweis Reflex:
 8. **Resistance to Technological Advancements**: Some people resist new technologies (like electric cars or renewable energy sources) because they contradict established norms or threaten existing industries.
 9. **Denial of Health Risks**: Despite clear evidence linking certain behaviors to health risks (like smoking or unhealthy diets), some people reject this information because it contradicts their existing beliefs or habits.
 10. **Rejection of Psychological Research**: Some people reject findings from psychological research, such as the benefits of therapy or the impact of mental health on overall well-being, because it contradicts their personal beliefs or stigmas.
-
-These examples illustrate how the Semmelweis Reflex can impede progress and lead to a lack of trust in science and scientific institutions¹.
-
-Origine: conversazione con Bing, 25/1/2024
-(1) Semmelweis Reflex: Definition, Examples and Effects. https://www.clearerthinking.org/post/semmelweis-reflex-definition-examples-and-effects.
-(2) Semmelweis Effect: When Ideas Control Governments - Grey Dynamics. https://greydynamics.com/semmelweis-effect-ideological-stubbornness-when-ideas-control-governments/.
-(3) What is the Semmelweis Reflex? - Capable Men. https://capablemen.com/guides/what-is-the-semmelweis-reflex/.
-(4) Semmelweis reflex - Wikipedia. https://en.wikipedia.org/wiki/Semmelweis_reflex.
-(5) The Semmelweis reflex or “Semmelweis effect” is a metaphor for the .... https://u.osu.edu/korzen.1/2016/11/26/the-semmelweis-reflex-or-semmelweis-effect-is-a-metaphor-for-the-reflex-like-tendency-to-reject-new-evidence-or-new-knowledge-because-it-contradicts-established-norms-beliefs-or-paradigms/.
 
 Consider the scenario "Rejection of Psychological Research" and give me a small user story from it
 
@@ -101,84 +49,87 @@ Sure, let's expand the ontology of the "Semmelweis Reflex" to include more class
 5. `occursInField`: Links the `Semmelweis Reflex` to the `Field` in which it occurs.
 6. `hasImpact`: Links the `Semmelweis Reflex` to its `Impact`.
 
-This expanded ontology captures more aspects of the Semmelweis Reflex, including the field in which it occurs and the impact it has. It provides a more comprehensive framework for understanding and analyzing this cognitive bias. However, it's important to note that creating an ontology is an iterative process that often involves refining the classes and properties based on feedback and new insights. It's also important to remember that an ontology is a model of reality, not reality itself, and therefore it may not capture all aspects of the Semmelweis Reflex.
-
-
-
-now create a list of competency questions in the form of sparql queries and solve them with the ontology you created
-
-
-Sure, here are some competency questions that could be asked about the Semmelweis Reflex, along with corresponding SPARQL queries and how they could be answered using the ontology:
-
-1. **Question:** Who are the individuals that exhibit the Semmelweis Reflex in a specific scenario?
-   **SPARQL Query:**
-   ```
-   SELECT ?individual
-   WHERE {
-     ?individual :exhibitsInScenario "Specific Scenario".
-   }
-   ```
-   **Answer:** This query would return all individuals who exhibit the Semmelweis Reflex in the specified scenario.
-
-2. **Question:** What are the belief systems that are contradicted by new evidence?
-   **SPARQL Query:**
-   ```
-   SELECT ?beliefSystem
-   WHERE {
-     ?evidence :contradictsBeliefSystem ?beliefSystem.
-   }
-   ```
-   **Answer:** This query would return all belief systems that are contradicted by new evidence.
-
-3. **Question:** What is the impact of the Semmelweis Reflex in a specific field?
-   **SPARQL Query:**
-   ```
-   SELECT ?impact
-   WHERE {
-     ?semmelweisReflex :occursInField "Specific Field";
-                        :hasImpact ?impact.
-   }
-   ```
-   **Answer:** This query would return the impact of the Semmelweis Reflex in the specified field.
-
-4. **Question:** What are the scenarios in which the Semmelweis Reflex is exhibited?
-   **SPARQL Query:**
-   ```
-   SELECT ?scenario
-   WHERE {
-     ?semmelweisReflex :exhibitsInScenario ?scenario.
-   }
-   ```
-   **Answer:** This query would return all scenarios in which the Semmelweis Reflex is exhibited.
-
-Please note that these are hypothetical queries and answers. The actual results would depend on the specific instances and relationships defined in the ontology. Also, the ontology and the data would need to be stored in a SPARQL-enabled database or triplestore to execute these queries.
-
-
-postille
-
+After this first conversation with bing's AI assistant, I decided to modify the proposed ontology to make it more streamlined and to make it easier to consult. This is the final result:
 Classes:
-1. Entity
-2. State
-3. Action
-4. Fact
-5. Perception
-6. Consequence
-7. Environment
 
-Data Properties:
-1. isAware (Entity -> xsd:boolean)
-2. isChronic (State -> xsd:boolean)
-3. isDifficult (Action -> xsd:boolean)
-4. isVerified (Fact -> xsd:boolean)
-5. isStrong (Perception -> xsd:boolean)
-6. isNegative (Consequence -> xsd:boolean)
-7. isComplex (Environment -> xsd:boolean)
+Action
+Environment
+Fact
+Outcome
+Perception
+Situation
+SocialAgent
 
 Object Properties:
-1. isInState (Entity -> State)
-2. requires (Entity -> Action)
-3. supports (Fact -> Action)
-4. holds (Entity -> Perception)
-5. contradicts (Perception -> Fact)
-6. leadsTo (Action -> Consequence)
-7. isAffectedBy (Entity -> Environment)
+
+supports (Fact or Perception -> Action)
+rejects (SocialAgent -> Fact)
+requires (SocialAgent -> Action)
+isAffectedBy (SocialAgent -> Situation)
+holds (SocialAgent -> Perception)
+hasSetting (SocialAgent -> Environment)
+has_consequence (Action -> Outcome)
+contradicts (Perception -> Fact)
+
+Data Properties:
+
+isAware (SocialAgent -> boolean)
+isChronic (Situation -> boolean)
+isComplex (Action or Environment -> boolean)
+isNegative (Outcome -> boolean)
+isStrong (Perception -> boolean)
+isVerified (Fact -> boolean)
+
+
+create competency questions (and answers them) in the form of Sparql queries about this ontology
+
+Question: Which actions are supported by facts or perceptions? SPARQL Query:
+SELECT ?action WHERE {
+    ?fact :supports ?action.
+}
+UNION
+{
+    ?perception :supports ?action.
+}
+
+Question: Which facts are rejected by a social agent? SPARQL Query:
+SELECT ?fact WHERE {
+    ?agent :rejects ?fact.
+}
+
+Question: Which actions are required by a social agent? SPARQL Query:
+SELECT ?action WHERE {
+    ?agent :requires ?action.
+}
+
+Question: Which situations affect a social agent? SPARQL Query:
+SELECT ?situation WHERE {
+    ?agent :isAffectedBy ?situation.
+}
+
+Question: What perceptions does a social agent hold? SPARQL Query:
+SELECT ?perception WHERE {
+    ?agent :holds ?perception.
+}
+
+Question: What is the setting of a social agent? SPARQL Query:
+SELECT ?environment WHERE {
+    ?agent :hasSetting ?environment.
+}
+
+Question: What are the consequences of an action? SPARQL Query:
+SELECT ?outcome WHERE {
+    ?action :has_consequence ?outcome.
+}
+
+Question: Which perceptions contradict facts? SPARQL Query:
+SELECT ?perception ?fact WHERE {
+    ?perception :contradicts ?fact.
+}
+
+These queries can help to understand the relationships between different entities in your ontology and validate its correctness. Please note that the actual results would depend on the specific instances of these classes and properties in your ontology dataset.
+
+
+Literature consulted:
+Semmelweis Reflex: An Age-Old Prejudice. https://www.sciencedirect.com/science/article/pii/S1878875019330402
+The role of cognitive biases in reactions to bushfires. https://idl.iscram.org/files/maelarnaud/2017/2002_MaelArnaud_etal2017.pdf

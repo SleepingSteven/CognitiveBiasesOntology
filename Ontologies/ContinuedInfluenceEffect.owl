@@ -175,6 +175,8 @@ Eventually, John realized that he needed to actively remind himself of the facts
     <!-- http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/continued_influence_effect#isInfluenced -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/continued_influence_effect#isInfluenced">
+        <rdfs:domain rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#SocialAgent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
         <rdfs:comment>a data property that states if the SocialAgent is influenced by information</rdfs:comment>
     </owl:DatatypeProperty>
     
