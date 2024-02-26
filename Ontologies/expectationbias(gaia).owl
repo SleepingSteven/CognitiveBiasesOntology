@@ -58,7 +58,7 @@
     
 
 
-    <!-- http://www.semanticweb.org/hp/ontologies/2024/gaia/CognitiveBiasOntology/expectation-bias##scenario -->
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/gaia/CognitiveBiasOntology/expectation-bias#scenario -->
 
     <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2024/gaia/CognitiveBiasOntology/expectation-bias##scenario"/>
     

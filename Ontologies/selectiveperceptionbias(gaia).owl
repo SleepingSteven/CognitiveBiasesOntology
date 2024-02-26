@@ -56,7 +56,7 @@
     
 
 
-    <!-- http://www.semanticweb.org/hp/ontologies/2024/gaia/CognitiveBiasOntology/selective-perception##scenario -->
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/gaia/CognitiveBiasOntology/selective-perception#scenario -->
 
     <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2024/gaia/CognitiveBiasOntology/selective-perception##scenario"/>
     

@@ -56,7 +56,7 @@
     
 
 
-    <!-- http://www.semanticweb.org/hp/ontologies/2024/1/gaia/CognitiveBiasOntology/observer-expectancy-effect##scenario -->
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/1/gaia/CognitiveBiasOntology/observer-expectancy-effect#scenario -->
 
     <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2024/1/gaia/CognitiveBiasOntology/observer-expectancy-effect##scenario"/>
     

@@ -59,7 +59,7 @@ After a day filled with adventure and data collection, Dr. Smith reflected on th
     
 
 
-    <!-- http://www.semanticweb.org/hp/ontologies/2024/gaia/CognitiveBiasOntology/experimenterbias##scenario -->
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/gaia/CognitiveBiasOntology/experimenterbias#scenario -->
 
     <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2024/gaia/CognitiveBiasOntology/experimenterbias##scenario"/>
     

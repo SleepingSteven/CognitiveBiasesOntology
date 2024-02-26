@@ -63,7 +63,7 @@ However, as Detective Jack delved deeper into his investigation, he soon realize
     
 
 
-    <!-- http://www.semanticweb.org/hp/ontologies/2024/gaia/CognitiveBiasOntology/observer-effect##scenario -->
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/gaia/CognitiveBiasOntology/observer-effect#scenario -->
 
     <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2024/gaia/CognitiveBiasOntology/observer-effect##scenario"/>
     
