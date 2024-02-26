@@ -1,42 +1,4 @@
-Definition of Subjective Validation: Subjective validation, also known as the personal validation effect, is a cognitive bias where people consider a statement or another piece of information to be correct if it has any personal meaning or significance to them12. This bias often leads people to perceive two unrelated events to be related because their personal beliefs demand that they be related1. An example of subjective validation can be seen when someone enjoys a certain food, and they come across an article that talks about that food being healthy. They will tend to believe it more because this “validates” their preference1.
-
-User Story: Let’s consider a user story that embodies this bias. Meet Lisa, a marketing manager. Lisa has always believed that her intuition about market trends is exceptionally accurate. One day, she reads a report that suggests a trend she had previously predicted is now emerging. Despite the fact that her previous predictions have not always been accurate, she takes this as validation of her belief in her intuitive abilities. This is an example of subjective validation, as Lisa is interpreting the information in a way that confirms her existing beliefs.
-
-Competency Questions: Based on the user story, here are some competency questions:
-
-What is the belief that Lisa is validating?
-What information does Lisa interpret as validation of her belief?
-How does subjective validation affect Lisa’s perception of her intuitive abilities?
-What might be the impact of subjective validation on Lisa’s decision-making process?
-I hope this helps with your project! If you have any more questions or need further assistance, feel free to ask.
-
-https://en.wikipedia.org/wiki/Subjective_validation
-https://www.alleydog.com/glossary/definition.php?term=Subjective+Validation
-https://www.youtube.com/watch?v=AfrJlanSCAI
-
-
-Classes:
-
-Cognitive Bias: This is the parent class for all cognitive biases.
-Subjective Validation: This is a subclass of Cognitive Bias. It represents the specific cognitive bias we’re focusing on.
-Properties:
-
-hasDefinition: This property links a cognitive bias to its definition.
-hasExample: This property links a cognitive bias to an example of the bias.
-affectsDecisionMaking: This property links a cognitive bias to the decision-making process it affects.
-Instances:
-
-Subjective Validation Instance: This is an instance of the Subjective Validation class. It represents a specific occurrence or example of Subjective Validation.
-Relationships:
-
-Subjective Validation Instance isA Subjective Validation
-Subjective Validation isA Cognitive Bias
-Subjective Validation hasDefinition "Subjective validation, sometimes called personal validation effect, is a cognitive bias by which people will consider a statement or another piece of information to be correct if it has any personal meaning or significance to them."1
-Subjective Validation Instance hasExample "A person enjoys going out dancing, medical evidence then proves that dancing is wonderful for promoting cardiac health. This 'validates' the importance of dancing to this person."
-Subjective Validation affectsDecisionMaking "Subjective validation can lead individuals to believe or accept an idea or statement if it presents to them in a personal and positive way."
-
-
-v2:
+Give me a definition of Subjective Validation Cognitive bias
 
 **Subjective Validation**, also known as the **personal validation effect**, is a cognitive bias where people consider a statement or another piece of information to be correct if it has any personal meaning or significance to them¹². In other words, individuals are more likely to believe or accept an idea or statement if it presents to them in a personal and positive way¹.
 
@@ -45,11 +7,6 @@ This bias often leads people to perceive two unrelated events to be related beca
 An example of subjective validation can be found in horoscopes, which often make vague, easily generalized personal statements, sometimes referred to as "Barnum statements", designed to apply to nearly any individual¹. This can cause one to attribute future success to the horoscope and feel as if their belief in it has been validated¹.
 
 In essence, subjective validation is a confirmation bias towards information that personally benefits one's self-esteem¹. Many of the validations that are given are not necessarily because they are true about recipients but because people wish it was true about themselves¹. This effect can be seen when it comes to health. For example, if someone enjoys eating bacon and they were to come across an article that talks about bacon being healthy, they will tend to believe it more because this "validates" eating more bacon¹.
-
-Origine: conversazione con Bing, 25/1/2024
-(1) Subjective validation - Wikipedia. https://en.wikipedia.org/wiki/Subjective_validation.
-(2) Subjective Validation definition | Psychology Glossary | AlleyDog.com. https://www.alleydog.com/glossary/definition.php?term=Subjective+Validation.
-(3) What is Subjective Validation? - Capable Men. https://capablemen.com/guides/what-is-subjective-validation/.
 
 
 Give me 10 example scenarios of the Subjective Validation cognitive bias
@@ -78,50 +35,26 @@ Psychic Readings: In a psychic reading, the psychic makes general statements abo
 Personality Horoscopes: Some publications offer personality assessments based on birth months or seasons. Individuals may resonate with the characteristics assigned to their birth period, even though the descriptions are broad and could apply to many people.
 
 
-
-
-
 Consider the scenario "Personality Horoscopes" and give me a small user story from it
-
 
 Scenario:
 
 Setting the Stage:
 
-John, an individual concerned about climate change, is our user.
-He holds a strong belief in the reality of climate change, represented by the instance ClimateChangeBelief.
-Encountering Information:
+John, an individual concerned about climate change, is our user. He holds a strong belief in the reality of climate change. John comes across a set of temperature data, the temperature data is complex and contains both supportive and ambiguous information about climate change.
 
-John comes across a set of temperature data, represented by the instance TemperatureData.
-The temperature data is complex and contains both supportive and ambiguous information about climate change.
-Ambiguity in the Data:
+Within the temperature data, there is a vague statement that is not clear in its implications. John, being prone to subjective validation bias, tends to interpret ambiguous information in a way that aligns with his existing belief.
 
-Within the temperature data, there is a vague statement (VagueStatement) that is not clear in its implications.
-John, being prone to subjective validation bias, tends to interpret ambiguous information in a way that aligns with his existing belief.
-Confirmation Bias in Action:
+Simultaneously, there is another piece of information challenging aspects of his climate change belief within the temperature data. John, influenced by subjective validation bias, may find it difficult to accept or acknowledge this conflicting information.
 
-John notices a piece of information (Confirmation1) in the data that appears to support his ClimateChangeBelief.
-Due to his subjective validation bias, he readily accepts and reinforces this confirming information.
-Facing Challenges to the Belief:
+As John navigates through the information, he realizes how his subjective validation bias plays a role in selectively perceiving data that aligns with his pre-existing beliefs. He becomes aware of the challenge of objectively assessing information when influenced by subjective validation bias.
 
-Simultaneously, there is another piece of information (Challenge1) challenging aspects of his ClimateChangeBelief within the temperature data.
-John, influenced by subjective validation bias, may find it difficult to accept or acknowledge this conflicting information.
-Reflecting on Subjective Validation Bias:
+John acknowledges that being aware of his own biases is essential to critically evaluate information, especially when it comes to topics like climate change. He recognizes the importance of considering diverse perspectives and interpreting data objectively. Inspired by his newfound awareness, John decides to actively seek out information that challenges his beliefs about climate change.
 
-As John navigates through the information, he realizes how his subjective validation bias plays a role in selectively perceiving data that aligns with his pre-existing beliefs.
-He becomes aware of the challenge of objectively assessing information when influenced by subjective validation bias.
-Learning Opportunity:
+Through this exploration, John gains insights into his own cognitive biases and the impact of subjective validation on his beliefs. He becomes more conscious of the need to approach information with an open mind, considering both confirming and challenging aspects.
 
-John acknowledges that being aware of his own biases is essential to critically evaluate information, especially when it comes to topics like climate change.
-He recognizes the importance of considering diverse perspectives and interpreting data objectively.
-Behavioral Outcome - Taking Action:
+(Even if i asked for the Personality Horoscopes scenario the Bing AI assistant for some reasone decided to give me a user story about an individual called John and his little story about reviewing climate change literature, i decided to tag along).
 
-Inspired by his newfound awareness, John decides to actively seek out information that challenges his beliefs about climate change.
-This proactive behavior is represented by an instance of the class BehavioralOutcome.
-Conclusion:
-
-Through this exploration, John gains insights into his own cognitive biases and the impact of subjective validation on his beliefs.
-He becomes more conscious of the need to approach information with an open mind, considering both confirming and challenging aspects.
 
 If you had to make an ontology of the "Subject Validation", what classes and properties would you create?
 
@@ -142,59 +75,85 @@ challenges: Relates Challenge to Information, representing the act of challengin
 experiencesSubjectiveValidation: Relates an Observer to the act of experiencing subjective validation bias.
 now create a list of competency questions in the form of sparql queries and solve them with the ontology you created
 
-Sure, here are some example competency questions in the form of SPARQL queries for the ontology:
+After this first conversation with bing's AI assistant, I decided to modify the proposed ontology to make it more streamlined and to make it easier to consult. This is the final result:
+Classes:
 
-1. **Query: Retrieve all instances of the SubjectiveValidation class.**
-   ```sparql
-   SELECT ?subjectiveValidation
-   WHERE {
-      ?subjectiveValidation rdf:type :SubjectiveValidation .
-   }
-   ```
+Action
+Belief
+InformationObject
+Statement
+Challenge
+Confirmation
+Observation
+BehavioralOutcome
+SocialAgent
 
-2. **Query: Find individuals who have experienced subjective validation and the context in which it occurred.**
-   ```sparql
-   SELECT ?individual ?context
-   WHERE {
-      ?individual :isExperiencedBy ?subjectiveValidation .
-      ?subjectiveValidation :occursInContext ?context .
-   }
-   ```
+Object Properties:
 
-3. **Query: List all the statements involved in instances of subjective validation.**
-   ```sparql
-   SELECT ?subjectiveValidation ?statement
-   WHERE {
-      ?subjectiveValidation :involvesStatement ?statement .
-   }
-   ```
+challenges (Challenge -> Belief)
+confirms (Confirmation -> Belief)
+has_consequence (Action -> BehavioralOutcome)
+hasInformationObject (SocialAgent -> InformationObject)
+holds (SocialAgent -> Belief)
+influences (Belief -> Action)
+interpret (SocialAgent -> Statement)
+providesInformation (Statement -> Belief)
+takesAction (SocialAgent -> Action)
 
-4. **Query: Retrieve individuals and the specific behavioral outcomes resulting from subjective validation.**
-   ```sparql
-   SELECT ?individual ?context
-   WHERE {
-      ?individual :resultsInBehavior ?context .
-   }
-   ```
+Data Properties:
 
-5. **Query: Identify the different contexts in which subjective validation occurs.**
-   ```sparql
-   SELECT ?context
-   WHERE {
-      ?subjectiveValidation :occursInContext ?context .
-   }
-   GROUP BY ?context
-   ```
+hasAmbiguity (Statement -> boolean)
+hasComplexity (InformationObject -> boolean)
+isSupportedByAgent (Challenge or Confirmation -> boolean)
 
-6. **Query: Find all cognitive biases, including instances of SubjectiveValidation.**
-   ```sparql
-   SELECT ?cognitiveBias
-   WHERE {
-      ?cognitiveBias rdf:type :CognitiveBias .
-   }
-   ```
 
-Note: These SPARQL queries are examples and might need adjustments based on the specific structure and data in your ontology. Additionally, the queries assume a namespace prefix (`rdf:` and `:`) for the ontology, and you may need to replace those with your actual namespace declarations.
+create competency questions (and answers them) in the form of Sparql queries about this ontology
+Question: Which beliefs does John hold? SPARQL Query:
+SELECT ?belief
+WHERE {
+    ?john a :SocialAgent ;
+          :holds ?belief .
+    FILTER (str(?john) = "John")
+}
+
+Question: What information objects does John have? SPARQL Query:
+SELECT ?informationObject
+WHERE {
+    ?john a :SocialAgent ;
+          :hasInformationObject ?informationObject .
+    FILTER (str(?john) = "John")
+}
+
+Question: What actions has John taken that have consequences? SPARQL Query:
+SELECT ?action ?consequence
+WHERE {
+    ?john a :SocialAgent ;
+          :takesAction ?action .
+    ?action :has_consequence ?consequence .
+    FILTER (str(?john) = "John")
+}
+
+Question: What are the statements that John interprets as ambiguous? SPARQL Query:
+SELECT ?statement
+WHERE {
+    ?john a :SocialAgent ;
+          :interpret ?statement .
+    ?statement :hasAmbiguity "true"^^xsd:boolean .
+    FILTER (str(?john) = "John")
+}
+
+Question: What are the challenges that are supported by John? SPARQL Query:
+SELECT ?challenge
+WHERE {
+    ?challenge a :Challenge ;
+               :isSupportedByAgent "true"^^xsd:boolean .
+}
+
+Please note that these queries assume that the ontology is defined with the prefix :, and that the individuals in the ontology (like “John”) are represented as strings. You may need to adjust the queries based on the actual implementation of your ontology.
+
+Literature consulted:
+Subjective Validation: 100 of the Most Important Fallacies in Western Philosophy. https://www.researchgate.net/publication/328120833_Subjective_Validation_100_of_the_Most_Important_Fallacies_in_Western_Philosophy
+Subjective ValidationDavid Kyle Johnson. https://onlinelibrary.wiley.com/doi/epdf/10.1002/9781119165811.ch96
 
 
 postille

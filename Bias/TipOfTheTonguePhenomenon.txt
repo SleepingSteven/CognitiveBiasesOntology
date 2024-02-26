@@ -1,44 +1,3 @@
-Definition of Tip of the Tongue Phenomenon: The Tip of the Tongue (TOT) phenomenon, also known as lethologica, is a cognitive bias where an individual fails to retrieve a word or term from memory, despite having partial recall and the feeling that retrieval is imminent12. People experiencing the TOT phenomenon can often recall one or more features of the target word, such as the first letter, its syllabic stress, and words similar in sound, meaning, or both sound and meaning1. This phenomenon reveals that lexical access occurs in stages1.
-
-User Story: Let’s consider a user story that embodies this bias. Meet Emily, a college student. Emily is studying for her final exam in art history. While reviewing her notes, she comes across the name of a famous painting that she can’t fully remember. She knows that it’s a well-known work by Van Gogh, and she can vividly recall the image of the painting in her mind, but she just can’t seem to remember the name. She has a strong feeling that she knows the name and that she’s about to remember it any second now. This is an example of the Tip of the Tongue phenomenon.
-
-Competency Questions: Based on the user story, here are some competency questions:
-
-What is the information that Emily is trying to retrieve?
-What details can Emily recall about the information she’s trying to retrieve?
-How does the Tip of the Tongue phenomenon affect Emily’s study process?
-What might be the impact of the Tip of the Tongue phenomenon on Emily’s performance in her final exam?
-
-https://en.wikipedia.org/wiki/Tip_of_the_tongue
-https://psycnet.apa.org/record/2016-49439-002
-
-
-
-
-
-Classes:
-
-Cognitive Bias: This is the parent class for all cognitive biases.
-Tip of the Tongue Phenomenon: This is a subclass of Cognitive Bias. It represents the specific cognitive bias we’re focusing on.
-Properties:
-
-hasDefinition: This property links a cognitive bias to its definition.
-hasExample: This property links a cognitive bias to an example of the bias.
-affectsDecisionMaking: This property links a cognitive bias to the decision-making process it affects.
-Instances:
-
-Tip of the Tongue Phenomenon Instance: This is an instance of the Tip of the Tongue Phenomenon class. It represents a specific occurrence or example of Tip of the Tongue Phenomenon.
-Relationships:
-
-Tip of the Tongue Phenomenon Instance isA Tip of the Tongue Phenomenon
-Tip of the Tongue Phenomenon isA Cognitive Bias
-Tip of the Tongue Phenomenon hasDefinition "The Tip of the Tongue (TOT) phenomenon, also known as lethologica, is a cognitive bias where an individual fails to retrieve a word or term from memory, despite having partial recall and the feeling that retrieval is imminent."1
-Tip of the Tongue Phenomenon Instance hasExample "Emily, a college student, is studying for her final exam in art history. While reviewing her notes, she comes across the name of a famous painting that she can't fully remember. She knows that it's a well-known work by Van Gogh, and she can vividly recall the image of the painting in her mind, but she just can't seem to remember the name."
-Tip of the Tongue Phenomenon affectsDecisionMaking "The Tip of the Tongue Phenomenon can lead individuals to struggle with decision-making or communication when they are unable to fully retrieve information from their memory."
-
-
-v2:
-
 Give me a definition of the Tip of The Tongue Phenomenon (cognitive bias)
 
 The **Tip of The Tongue Phenomenon**, also known as **lethologica**, is a cognitive bias where an individual fails to retrieve a specific word or term from memory, despite having partial recall and the feeling that retrieval is imminent¹². The phenomenon's name comes from the saying, "It's on the tip of my tongue"¹.
@@ -47,10 +6,6 @@ People experiencing this phenomenon can often recall one or more features of the
 
 This phenomenon is universal and can occur more frequently with age². It's important to note that while an occasional tip-of-the-tongue state is normal, it can be referred to as an actual medical condition, known as anomic aphasia, when it becomes frequent enough to interfere with learning or daily life².
 
-Origine: conversazione con Bing, 25/1/2024
-(1) Tip of the tongue - Wikipedia. https://en.wikipedia.org/wiki/Tip_of_the_tongue.
-(2) Lethologica or Tip-of-the-Tongue Phenomenon - Verywell Mind. https://www.verywellmind.com/lethologica-tip-of-the-tongue-phenomenon-4154947.
-(3) Punta della lingua - Wikipedia. https://it.wikipedia.org/wiki/Punta_della_lingua.
 
 
 Give me 10 example scenarios of the Tip of The Tongue Phenomenon
@@ -68,8 +23,6 @@ Sure, here are 10 example scenarios where the Tip of The Tongue Phenomenon might
 9. **Famous Quotes**: You remember the gist of a famous quote and who said it, but can't recall the exact wording.
 10. **Recipes**: You're trying to remember a recipe. You remember most of the ingredients and steps, but there's one part that you can't recall.
 
-Remember, the Tip of The Tongue Phenomenon is a cognitive bias where an individual fails to retrieve a specific word or term from memory, despite having partial recall and the feeling that retrieval is imminent.
-
 
 Consider the scenario "names" and give me a small user story from it
 
@@ -86,8 +39,6 @@ Sure, here's a small user story based on the "Names" scenario:
 
 If you had to make an ontology of the "Tip of the tongue phenomenon", what classes and properties would you create?
 
-
-Sure, let's expand the ontology of the "Tip of The Tongue Phenomenon" to include more classes and properties that capture the complexity of this cognitive bias:
 
 Classes:
 
@@ -118,88 +69,74 @@ hasPartialRecall: A property of a Person indicating whether they have partial re
 hasFullRecall: A property of a Person indicating whether they have full recall of information.
 hasMemoryBlock: A property of a Person indicating whether they encounter a memory block.
 hasMemoryRetrieval: A property of a Person indicating whether they perform memory retrieval.
-now create a list of competency questions in the form of sparql queries and solve them with the ontology you created
 
 
-Sure, here are some competency questions that can be answered using the ontology of the "Tip of The Tongue Phenomenon", along with the corresponding SPARQL queries and their solutions:
+After this first conversation with bing's AI assistant, I decided to modify the proposed ontology to make it more streamlined and to make it easier to consult. This is the final result:
 
-1. **Question**: Who are the individuals experiencing the Tip of The Tongue Phenomenon?
-    - **SPARQL Query**: `SELECT ?individual WHERE { ?individual :experiences :TipOfTheTonguePhenomenon . }`
-    - **Solution**: This query would return all individuals who are experiencing the Tip of The Tongue Phenomenon.
+Classes:
 
-2. **Question**: What words or pieces of information are individuals trying to recall?
-    - **SPARQL Query**: `SELECT ?targetWord WHERE { ?individual :triesToRecall ?targetWord . }`
-    - **Solution**: This query would return all words or pieces of information that individuals are trying to recall.
+Event
+RecallAttempt
+Memory
+InformationObject
+MemoryBlock
+MemoryRetrieval
+SocialAgent
 
-3. **Question**: What bits of information can individuals recall about the target word?
-    - **SPARQL Query**: `SELECT ?partialInformation WHERE { ?individual :recalls ?partialInformation . }`
-    - **Solution**: This query would return all bits of information that individuals can recall about the target word.
+Object Properties:
 
-4. **Question**: In what contexts is the Tip of The Tongue Phenomenon being experienced?
-    - **SPARQL Query**: `SELECT DISTINCT ?context WHERE { :TipOfTheTonguePhenomenon :occursIn ?context . }`
-    - **Solution**: This query would return all unique contexts in which the Tip of The Tongue Phenomenon is being experienced.
+experiences (SocialAgent -> MemoryBlock or MemoryRetrieval)
+attemptsRecall (SocialAgent -> RecallAttempt)
+hasInformationObject (SocialAgent -> InformationObject)
+has_consequence (RecallAttempt -> MemoryBlock or MemoryRetrieval)
+lackInformationObject (SocialAgent -> InformationObject)
+resolvedBy (MemoryBlock -> MemoryRetrieval)
 
-5. **Question**: What emotions are felt by individuals during the Tip of The Tongue Phenomenon?
-    - **SPARQL Query**: `SELECT ?emotion WHERE { ?individual :feels ?emotion . }`
-    - **Solution**: This query would return all emotions felt by individuals during the Tip of The Tongue Phenomenon.
+Data Properties:
 
-6. **Question**: What cognitive processes are involved in the Tip of The Tongue Phenomenon?
-    - **SPARQL Query**: `SELECT ?cognitiveProcess WHERE { :TipOfTheTonguePhenomenon :involves ?cognitiveProcess . }`
-    - **Solution**: This query would return all cognitive processes involved in the Tip of The Tongue Phenomenon.
-
-7. **Question**: What memory traces are left by the target word in the brain?
-    - **SPARQL Query**: `SELECT ?memoryTrace WHERE { ?targetWord :leaves ?memoryTrace . }`
-    - **Solution**: This query would return all memory traces left by the target word in the brain.
-
-Please note that these queries are hypothetical and would require a populated RDF dataset based on the ontology to return actual results. The ontology provides a framework for structuring this data, and SPARQL queries can then be used to retrieve specific information from the dataset.
+isSuccessful (Memory or RecallAttempt -> boolean)
 
 
-postilla:
-In your ontology, the connection between UnsuccessfulRecall and Information can be established through the RecallAttempt class and the involves object property. Here’s how:
+This final version is comprehensive of the ODP that i found appropriate for the case. For the sake of exposition i avoided to write the prefixes of every ODP i used, which are still consultable in the .owl file or in the UML designed for this ontology.
 
-A Person makes a RecallAttempt (via the attemptsRecall property).
-This RecallAttempt involves some Information (via the involves property).
-If the RecallAttempt is blocked by a MemoryBlock (via the blocks property), it leads to an UnsuccessfulRecall (via the leadsTo property).
-So, to connect UnsuccessfulRecall to Information, you could traverse from UnsuccessfulRecall to RecallAttempt via the leadsTo property (in reverse), and then from RecallAttempt to Information via the involves property.
+create competency questions (and answers them) in the form of Sparql queries about this ontology
 
-Here’s a SPARQL query that could represent this:
-
-PREFIX : <http://www.example.org/ontology#>
-
-SELECT ?unsuccessfulRecall ?information
-WHERE {
-  ?unsuccessfulRecall :leadsTo/^:blocks ?recallAttempt .
-  ?recallAttempt :involves ?information .
+Question: Who are the social agents that experienced a memory block? SPARQL Query:
+SELECT ?socialAgent WHERE {
+  ?socialAgent rdf:type :SocialAgent .
+  ?socialAgent :experiences ?memoryBlock .
+  ?memoryBlock rdf:type :MemoryBlock .
 }
 
-This query will return pairs of unsuccessful recalls and the information involved in the recall attempts that led to them. Please replace the PREFIX with your actual ontology URI.
-
-Remember, this is just a basic example. Depending on the specific competency questions you want to answer, you might need to adjust or extend this query. For example, you could add more conditions to filter the results, or use other SPARQL features to aggregate or order the results.
-
-
-
-Tu
-and with a specific object property?
-Copilot
-If you want to connect UnsuccessfulRecall to Information using a specific object property, you would need to introduce a new object property in your ontology that directly links these two classes.
-
-For example, you could introduce a new object property called relatesTo, which connects an UnsuccessfulRecall directly to the Information it relates to.
-
-Here’s how you could define this new object property:
-
-Object Property: relatesTo
-    Domain: UnsuccessfulRecall
-    Range: Information
-
-And here’s a SPARQL query that uses this new relatesTo property to connect UnsuccessfulRecall to Information:
-
-PREFIX : <http://www.example.org/ontology#>
-
-SELECT ?unsuccessfulRecall ?information
-WHERE {
-  ?unsuccessfulRecall :relatesTo ?information .
+Question: What are the recall attempts made by Emily? SPARQL Query:
+SELECT ?recallAttempt WHERE {
+  :Emily :attemptsRecall ?recallAttempt .
+  ?recallAttempt rdf:type :RecallAttempt .
 }
 
-This query will return pairs of unsuccessful recalls and the information they relate to. Again, please replace the PREFIX with your actual ontology URI.
+Question: Which memory blocks were resolved by a memory retrieval? SPARQL Query:
+SELECT ?memoryBlock WHERE {
+  ?memoryBlock :resolvedBy ?memoryRetrieval .
+  ?memoryRetrieval rdf:type :MemoryRetrieval .
+}
 
-Remember, introducing new object properties should be done carefully, considering the overall design and coherence of your ontology. It’s important to ensure that the new property fits well with the existing classes and properties, and that it doesn’t introduce redundancy or confusion. If you’re unsure, it’s always a good idea to consult with an ontology expert or use ontology design patterns.
+Question: What information objects does Emily lack? SPARQL Query:
+SELECT ?informationObject WHERE {
+  :Emily :lackInformationObject ?informationObject .
+  ?informationObject rdf:type :InformationObject .
+}
+
+Question: Were Emily’s recall attempts successful? SPARQL Query:
+SELECT ?recallAttempt ?isSuccessful WHERE {
+  :Emily :attemptsRecall ?recallAttempt .
+  ?recallAttempt :isSuccessful ?isSuccessful .
+}
+
+Please note that these queries assume that the ontology is defined with the prefix :. Replace : with your actual ontology prefix. Also, replace rdf:type and rdf:Property with your actual ontology’s class and property predicates if they are different. The prefix rdf: is commonly used for RDF type predicates in SPARQL queries. If your ontology uses a different predicate for indicating type or property, please replace rdf:type and rdf:Property with the appropriate predicates.
+
+
+Literature consulted:
+The tip-of-the-tongue state and curiosity, December 2017Cognitive Research Principles and Implications 2(1), DOI: 10.1186/s41235-017-0065-4, Janet MetcalfeJanet MetcalfeBennett L. SchwartzPaul BloomPaul Bloom. https://www.researchgate.net/publication/318504596_The_tip-of-the-tongue_state_and_curiosity
+The tip-of-the-tongue state bias permeates unrelated concurrent decisions and behavior. https://link.springer.com/article/10.3758/s13421-019-00993-7
+“A psycholinguistic exploration of disfluency behaviour during the tip-of-the-tongue phenomenon” investigates the impact of TOTs on disfluency. https://www.researchgate.net/publication/319330057_A_psycholinguistic_exploration_of_disfluency_behaviour_during_the_tip-of-the-tongue_phenomenon
+

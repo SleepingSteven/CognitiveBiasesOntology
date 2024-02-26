@@ -1,46 +1,3 @@
-Definition of Ostrich Effect: The Ostrich Effect is a cognitive bias where people tend to avoid potentially negative but useful information, such as feedback on progress, to avoid psychological discomfort1. This effect was originally coined by Galai & Sade (2003) and is named after the common (but false) legend that ostriches bury their heads in the sand to avoid danger1. For example, people might avoid checking their bank account balance after spending a lot of money1.
-
-User Story: Let’s consider a user story that embodies this bias. Meet John, a software developer. John has been working on a project for several months. He’s aware that there are some bugs in his code, but he’s been avoiding looking at the bug reports because he’s afraid of the amount of work it might involve. Even though addressing these bugs could improve the performance of his software, he chooses to focus on adding new features instead. This is an example of the Ostrich Effect, as John is avoiding potentially negative but useful information.
-
-Competency Questions: Based on the user story, here are some competency questions:
-
-What is the nature of the information that John is avoiding?
-How could addressing the avoided information potentially benefit John’s project?
-What actions does John take as a result of the Ostrich Effect?
-How does the Ostrich Effect impact the progress of John’s project?
-
-https://en.wikipedia.org/wiki/Ostrich_effect
-https://effectiviology.com/ostrich-effect/
-https://www.techtello.com/ostrich-effect/
-
-
-Classes:
-
-Cognitive Bias: This is the parent class for all cognitive biases.
-Ostrich Effect: This is a subclass of Cognitive Bias. It represents the specific cognitive bias we’re focusing on.
-Properties:
-
-hasDefinition: This property links a cognitive bias to its definition.
-hasExample: This property links a cognitive bias to an example of the bias.
-affectsDecisionMaking: This property links a cognitive bias to the decision-making process it affects.
-Instances:
-
-Ostrich Effect Instance: This is an instance of the Ostrich Effect class. It represents a specific occurrence or example of the Ostrich Effect.
-Relationships:
-
-Ostrich Effect Instance isA Ostrich Effect
-Ostrich Effect isA Cognitive Bias
-Ostrich Effect hasDefinition "The Ostrich Effect is a cognitive bias where people tend to avoid potentially negative but useful information, such as feedback on progress, to avoid psychological discomfort."
-Ostrich Effect Instance hasExample "John, a software developer, avoids looking at bug reports because he's afraid of the amount of work it might involve."
-Ostrich Effect affectsDecisionMaking "The Ostrich Effect can lead individuals to make decisions based on incomplete information, as they avoid confronting potentially negative information."
-
-
-
-
-
-
-v2:
-
 give me a definition of ostrich effect 
 
 The Ostrich Effect, also known as the ostrich problem, is a cognitive bias where people tend to avoid potentially negative but useful information, such as feedback on progress, to avoid psychological discomfort1. This effect is named after the common (but false) legend that ostriches bury their heads in the sand to avoid danger1.
@@ -101,58 +58,75 @@ Sure, let's expand the ontology of the "Ostrich Effect" to include more classes 
 7. 'occursIn' (OstrichEffect, Context)
 This expanded ontology provides a deeper understanding of the Ostrich Effect by considering the emotional aspect, the outcomes of avoidance behavior, and the coping strategies used by individuals. It can be further refined or expanded based on the specific use case or domain of interest. Remember, the goal of an ontology is to model the domain of interest in a way that captures its essential aspects and allows for useful reasoning.
 
-now create a list of competency questions in the form of sparql queries and solve them with the ontology you created
 
-Sure, here are some competency questions that can be answered using the ontology of the "Ostrich Effect", along with the corresponding SPARQL queries and their solutions:
-
-1. **Question**: Who are the individuals exhibiting the Ostrich Effect?
-    - **SPARQL Query**: `SELECT ?individual WHERE { ?individual :avoids ?negativeInformation . }`
-    - **Solution**: This query would return all individuals who are avoiding negative information, i.e., exhibiting the Ostrich Effect.
-
-2. **Question**: In what contexts is the Ostrich Effect being exhibited?
-    - **SPARQL Query**: `SELECT ?context WHERE { ?individual :exhibitsIn ?context . }`
-    - **Solution**: This query would return all contexts in which the Ostrich Effect is being exhibited.
-
-3. **Question**: What negative information is being avoided?
-    - **SPARQL Query**: `SELECT ?negativeInformation WHERE { ?individual :avoids ?negativeInformation . }`
-    - **Solution**: This query would return all instances of negative information that are being avoided.
-
-4. **Question**: What emotions are felt by individuals when faced with negative information?
-    - **SPARQL Query**: `SELECT ?emotion WHERE { ?individual :feels ?emotion . }`
-    - **Solution**: This query would return all emotions felt by individuals when faced with negative information.
-
-5. **Question**: What are the outcomes of the Ostrich Effect?
-    - **SPARQL Query**: `SELECT ?outcome WHERE { :OstrichEffect :leadsTo ?outcome . }`
-    - **Solution**: This query would return all outcomes of the Ostrich Effect.
-
-6. **Question**: What coping strategies are used by individuals to deal with negative information?
-    - **SPARQL Query**: `SELECT ?copingStrategy WHERE { ?individual :uses ?copingStrategy . }`
-    - **Solution**: This query would return all coping strategies used by individuals to deal with negative information.
-
-Please note that these queries are hypothetical and would require a populated RDF dataset based on the ontology to return actual results. The ontology provides a framework for structuring this data, and SPARQL queries can then be used to retrieve specific information from the dataset.
-
-
-postille:
-
+After this first conversation with bing's AI assistant, I decided to modify the proposed ontology to make it more streamlined and to make it easier to consult. This is the final result:
 Classes:
 
-Individual: Represents an individual human being.
-CognitiveBias: Represents a cognitive bias that an individual might experience.
-OstrichEffect: A subclass of CognitiveBias, represents the specific bias of avoiding negative information.
-Information: Represents a piece of knowledge or data.
-NegativeInformation: A subclass of Information, represents information that could potentially cause distress or discomfort.
-AvoidanceBehavior: Represents the behavior of avoiding negative information.
-ConfrontationBehavior: Represents the behavior of confronting previously avoided negative information.
-Emotion: Represents an emotion that an individual might experience.
-Fear: A subclass of Emotion, represents the specific emotion of fear.
+Behavior
+CopingStrategy
+Feeling
+InformationObject
+NegativeInformation
+Outcome
+Situation
+SocialAgent
+
 Object Properties:
 
-experiencesBias (domain: Individual, range: CognitiveBias): Represents the relationship between an individual and the cognitive bias they experience.
-avoidsInformation (domain: Individual, range: NegativeInformation): Represents the relationship between an individual and the negative information they avoid due to the Ostrich Effect.
-confrontsInformation (domain: Individual, range: NegativeInformation): Represents the relationship between an individual and the negative information they confront after overcoming the Ostrich Effect.
-experiencesEmotion (domain: Individual, range: Emotion): Represents the relationship between an individual and the emotion they experience.
-performsBehavior (domain: Individual, range: AvoidanceBehavior or ConfrontationBehavior): Represents the relationship between an individual and the behavior they perform.
+Avoiding (SocialAgent -> NegativeInformation)
+Feeling (SocialAgent -> Feeling)
+has_consequence (Feeling or NegativeInformation or (Outcome
+ and (isPositive value true)) -> Feeling or Behavior or CopingStrategy)
+hasInformationObject (SocialAgent -> InformationObject)
+hasSetting (NegativeInformation -> Situation)
+produces (Behavior -> Outcome)
+uses (SocialAgent -> CopingStrategy)
+
 Data Properties:
 
-hasName (domain: Individual, CognitiveBias, range: xsd:string): Represents the name of an individual or a cognitive bias.
-hasFear (domain: Individual, range: xsd:boolean): Represents whether an individual has fear of confronting certain information.
+isStressful (Situation -> boolean)
+isPositive (Outcome or Feeling -> boolean)
+isConfrontational (Behavior -> boolean)
+
+now create a list of competency questions in the form of sparql queries and solve them with the ontology you created
+
+Question: Who are the social agents that are avoiding negative information? SPARQL Query:
+SELECT ?socialAgent WHERE {
+  ?socialAgent rdf:type :SocialAgent .
+  ?socialAgent :Avoiding ?negativeInformation .
+  ?negativeInformation rdf:type :NegativeInformation .
+}
+
+Question: What are the feelings associated with each social agent? SPARQL Query:
+SELECT ?socialAgent ?feeling WHERE {
+  ?socialAgent rdf:type :SocialAgent .
+  ?socialAgent :Feeling ?feeling .
+  ?feeling rdf:type :Feeling .
+}
+
+Question: What are the outcomes produced by each behavior? SPARQL Query:
+SELECT ?behavior ?outcome WHERE {
+  ?behavior rdf:type :Behavior .
+  ?behavior :produces ?outcome .
+  ?outcome rdf:type :Outcome .
+}
+
+Question: What are the situations that are stressful? SPARQL Query:
+SELECT ?situation WHERE {
+  ?situation rdf:type :Situation .
+  ?situation :isStressful true .
+}
+
+Question: What are the coping strategies used by each social agent? SPARQL Query:
+SELECT ?socialAgent ?copingStrategy WHERE {
+  ?socialAgent rdf:type :SocialAgent .
+  ?socialAgent :uses ?copingStrategy .
+  ?copingStrategy rdf:type :CopingStrategy .
+}
+
+Please note that these queries are based on the assumption that the ontology is correctly populated with instances of the classes and properties. The prefixes (like rdf:type and :SocialAgent) would need to be replaced with the actual URIs used in your ontology. Also, these queries are written in a generic form and may need to be adapted to fit the specific structure and naming conventions of your ontology.
+
+Literature consulted:
+The ostrich effect: Selective attention to information. https://www.cmu.edu/dietrich/sds/docs/loewenstein/OstrichEffect.pdf
+‘The Ostrich Problem’: Motivated Avoidance or Rejection of Information About Goal Progress. https://compass.onlinelibrary.wiley.com/doi/full/10.1111/spc3.12071
+Put your head in the sand or lose a grand? – A natural experiment of the ostrich effect and the disposition effect. https://www.diva-portal.org/smash/get/diva2:1238102/FULLTEXT01.pdf
