@@ -150,3 +150,15 @@ WHERE {
 ```
 
 These SPARQL queries can be executed against RDF data conforming to the Choice-supportive bias ontology to answer the respective competency questions.
+
+
+
+Bibliography:
+
+
+1. Sharot, Tali, Raymond J. Dolan, and Tarek Sharot. "Neural mechanisms mediating optimism bias." Nature 450, no. 7166 (2007): 102-105.
+
+2. Mather, Mara, and Christopher G. Knight. "The affective neuroscience of aging." Annual Review of Psychology 64 (2013): 23-46.
+
+3. Johnson, Marcia K., and Yaacov Trope. "Inference generation as a source of illusory truth." Current Directions in Psychological Science 27, no. 2 (2018): 107-113.
+
