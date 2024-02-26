@@ -2,14 +2,14 @@
 <rdf:RDF xmlns="http://www.semanticweb.org/hp/ontologies/2024/gaia/CognitiveBiasOntology/observer-effect#"
      xml:base="http://www.semanticweb.org/hp/ontologies/2024/gaia/CognitiveBiasOntology/observer-effect"
      xmlns:fs="https://w3id.org/framester/data/framestercore/"
+     xmlns:cbo="http://www.semanticweb.org/hp/ontologies/2024/gaia/CognitiveBiasOntology/observer-effect#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:event="http://w3id.org/daselab/onto/event#"
-     xmlns:terms="http://purl.org/dc/terms/"
-     xmlns:observer-effect="http://www.semanticweb.org/hp/ontologies/2024/gaia/CognitiveBiasOntology/observer-effect#">
+     xmlns:terms="http://purl.org/dc/terms/">
     <owl:Ontology rdf:about="http://www.semanticweb.org/hp/ontologies/2024/gaia/CognitiveBiasOntology/observer-effect#">
         <terms:created>2024-02-20</terms:created>
         <terms:creator>Gaia Ortona</terms:creator>
