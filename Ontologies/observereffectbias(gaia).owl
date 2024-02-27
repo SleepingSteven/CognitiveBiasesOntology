@@ -10,7 +10,7 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:terms="http://purl.org/dc/terms/"
-     xmlns:coparticipation="http://www.ontologydesignpatterns.org/cp/owl/coparticipation.owl#">
+     xmlns:observation="http://www.ontologydesignpatterns.org/cp/owl/observation.owl#">
     <owl:Ontology rdf:about="http://www.semanticweb.org/hp/ontologies/2024/gaia/CognitiveBiasOntology/observer-effect#">
         <terms:created>2024-02-20</terms:created>
         <terms:creator>Gaia Ortona</terms:creator>
@@ -80,21 +80,20 @@ However, as Detective Jack delved deeper into his investigation, he soon realize
     
 
 
-    <!-- http://www.ontologydesignpatterns.org/cp/owl/coparticipation.owl#coparticipatesWith -->
+    <!-- http://www.ontologydesignpatterns.org/cp/owl/observation.owl#hasObservation -->
 
-    <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/cp/owl/coparticipation.owl#coparticipatesWith">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/gaia/CognitiveBiasOntology/observer-effect#Subject"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/gaia/CognitiveBiasOntology/observer-effect#Observer"/>
+    <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/cp/owl/observation.owl#hasObservation">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/gaia/CognitiveBiasOntology/observer-effect#Observer"/>
+        <rdfs:range rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/observation.owl#Observation"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/hp/ontologies/2024/gaia/CognitiveBiasOntology/observer-effect#conducts -->
+    <!-- http://www.ontologydesignpatterns.org/cp/owl/observation.owl#hasParameter -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2024/gaia/CognitiveBiasOntology/observer-effect#conducts">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/gaia/CognitiveBiasOntology/observer-effect#Observer"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/gaia/CognitiveBiasOntology/observer-effect#Observation"/>
+    <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/cp/owl/observation.owl#hasParameter">
+        <rdfs:domain rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/observation.owl#Observation"/>
+        <rdfs:range rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/observation.owl#Parameter"/>
     </owl:ObjectProperty>
     
 
@@ -102,7 +101,7 @@ However, as Detective Jack delved deeper into his investigation, he soon realize
     <!-- http://www.semanticweb.org/hp/ontologies/2024/gaia/CognitiveBiasOntology/observer-effect#envolves -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2024/gaia/CognitiveBiasOntology/observer-effect#envolves">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/gaia/CognitiveBiasOntology/observer-effect#Observation"/>
+        <rdfs:domain rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/observation.owl#Observation"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/gaia/CognitiveBiasOntology/observer-effect#Subject"/>
     </owl:ObjectProperty>
     
@@ -112,6 +111,7 @@ However, as Detective Jack delved deeper into his investigation, he soon realize
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2024/gaia/CognitiveBiasOntology/observer-effect#influences">
         <owl:inverseOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/gaia/CognitiveBiasOntology/observer-effect#isInfluencedBy"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/gaia/CognitiveBiasOntology/observer-effect#Observer"/>
         <rdfs:range rdf:resource="https://w3id.org/framester/data/framestercore/IntentionallyAct"/>
         <rdfs:comment>It relates the Observer to the Crimanl Behaviour</rdfs:comment>
     </owl:ObjectProperty>
@@ -122,6 +122,7 @@ However, as Detective Jack delved deeper into his investigation, he soon realize
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2024/gaia/CognitiveBiasOntology/observer-effect#isInfluencedBy">
         <rdfs:domain rdf:resource="https://w3id.org/framester/data/framestercore/IntentionallyAct"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/gaia/CognitiveBiasOntology/observer-effect#Observer"/>
         <rdfs:comment>Relates the Criminal Behaviour to the person who observes it</rdfs:comment>
     </owl:ObjectProperty>
     
@@ -130,6 +131,7 @@ However, as Detective Jack delved deeper into his investigation, he soon realize
     <!-- http://www.semanticweb.org/hp/ontologies/2024/gaia/CognitiveBiasOntology/observer-effect#performs -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2024/gaia/CognitiveBiasOntology/observer-effect#performs">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/gaia/CognitiveBiasOntology/observer-effect#Subject"/>
         <rdfs:range rdf:resource="https://w3id.org/framester/data/framestercore/IntentionallyAct"/>
         <rdfs:comment>It relates the Criminal to the behaviour the are carrying out</rdfs:comment>
     </owl:ObjectProperty>
@@ -154,6 +156,22 @@ However, as Detective Jack delved deeper into his investigation, he soon realize
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/cp/owl/observation.owl#Observation -->
+
+    <owl:Class rdf:about="http://www.ontologydesignpatterns.org/cp/owl/observation.owl#Observation">
+        <rdfs:comment>it represents the observation conducted by the observer</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/cp/owl/observation.owl#Parameter -->
+
+    <owl:Class rdf:about="http://www.ontologydesignpatterns.org/cp/owl/observation.owl#Parameter">
+        <rdfs:comment>it represents the context in which the observation takes place</rdfs:comment>
+    </owl:Class>
     
 
 
@@ -182,35 +200,35 @@ However, as Detective Jack delved deeper into his investigation, he soon realize
     
 
 
-    <!-- http://www.semanticweb.org/hp/ontologies/2024/gaia/CognitiveBiasOntology/observer-effect#Observation -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2024/gaia/CognitiveBiasOntology/observer-effect#Observation"/>
-    
-
-
     <!-- http://www.semanticweb.org/hp/ontologies/2024/gaia/CognitiveBiasOntology/observer-effect#Observer -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2024/gaia/CognitiveBiasOntology/observer-effect#Observer"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2024/gaia/CognitiveBiasOntology/observer-effect#Observer">
+        <rdfs:comment>it represents the agent making the action of observation</rdfs:comment>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/hp/ontologies/2024/gaia/CognitiveBiasOntology/observer-effect#Patrol -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2024/gaia/CognitiveBiasOntology/observer-effect#Patrol">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/gaia/CognitiveBiasOntology/observer-effect#Observation"/>
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/observation.owl#Parameter"/>
     </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/hp/ontologies/2024/gaia/CognitiveBiasOntology/observer-effect#Place -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2024/gaia/CognitiveBiasOntology/observer-effect#Place"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2024/gaia/CognitiveBiasOntology/observer-effect#Place">
+        <rdfs:comment>it represents the place in which the subject operates</rdfs:comment>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/hp/ontologies/2024/gaia/CognitiveBiasOntology/observer-effect#Subject -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2024/gaia/CognitiveBiasOntology/observer-effect#Subject"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2024/gaia/CognitiveBiasOntology/observer-effect#Subject">
+        <rdfs:comment>the subject of the Observation</rdfs:comment>
+    </owl:Class>
     
 
 
@@ -269,7 +287,6 @@ However, as Detective Jack delved deeper into his investigation, he soon realize
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2024/gaia/CognitiveBiasOntology/observer-effect#jack">
         <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/gaia/CognitiveBiasOntology/observer-effect#Detective"/>
-        <coparticipation:coparticipatesWith rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/gaia/CognitiveBiasOntology/observer-effect#sly_sam"/>
         <influences rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/gaia/CognitiveBiasOntology/observer-effect#pickpocketing"/>
     </owl:NamedIndividual>
     
@@ -289,7 +306,6 @@ However, as Detective Jack delved deeper into his investigation, he soon realize
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2024/gaia/CognitiveBiasOntology/observer-effect#sly_sam">
         <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/gaia/CognitiveBiasOntology/observer-effect#Criminal"/>
-        <coparticipation:coparticipatesWith rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/gaia/CognitiveBiasOntology/observer-effect#jack"/>
         <performs rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/gaia/CognitiveBiasOntology/observer-effect#pickpocketing"/>
     </owl:NamedIndividual>
 </rdf:RDF>
