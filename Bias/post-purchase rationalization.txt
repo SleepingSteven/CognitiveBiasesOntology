@@ -158,6 +158,11 @@ These SPARQL queries can be executed against RDF data conforming to the Post-pur
 
 
 
+Considerations:
+The proposed ontology served as a starting base to develop a more fitting one that could comprehend also logical connections highlighted in the textual description of the bias and sub-classes that could describe different kind of informations.
+
+
+
 Bibliography:
 
 
