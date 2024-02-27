@@ -1,0 +1,100 @@
+Introduction to Cognitive Bias Ontology.
+
+This report documents the advancements made by our team in the ongoing project of developing a thorough ontology for cognitive biases, as part of the Knowledge Representation and Extraction (KRE) initiative. It serves as a diary detailing our progress in contributing to the Cognitive Bias Ontology. The group consists of Lucia Bertolidini, Matteo Guenci, Gaia Ortona, and Stefano Sorrentino.
+
+The project tasked us with creating a fresh ontology to categorize the various manifestations and types of cognitive biases. Our approach drew from the Cognitive Bias Codex, a convenient visual representation illustrating the 188 cognitive biases cataloged by Wikipedia. We selected two out of the 20 clusters of biases outlined in the codex, each representing a distinct category where biases manifest. These two clusters served as the foundation for the ontology developed during the project.
+
+The clusters are:
+
+"We are drawn to details that confirm our own existing beliefs" (Confermation bias, Congruence bias, Post-purchase rationalization, Choice-supportive bias, Selective perception, Observer-expectancy effect, Observer bias, Experimenter's bias, Expectation bias, Obstrich effect, Subjective validation, Continued influence effect, Semmelweis reflex)
+"We store memories differently based on how they were experienced" (Tip of the tongue phenomenon, Google effect, Next-in-line effect, Testing effect, Absent-mindedness, Levels-of-processing effect)
+
+
+Consulted Literature:
+First of all, in order to gain a deeper understanding of the biases we decided to deal with, the fundamental step was to consult the scientific literature concerning these phenomena. We preferred, as far as possible, to consult scientific and academic articles that could help us understand the structure and logical development of the patterns expressed by the cognitive biases in question.
+
+
+General Workflow:
+After learning the basics of cognitive bias, we turned our attention to the creation of ontologies. Through consultation and advice from our colleagues, we also felt that the use of the eXtreme Design (XD) methodology could be particularly useful. We started by identifying the essential requirements for designing the ontology, along with formulating a set of questions (CQs) to guide our work. Then, we examined whether pre-existing Ontology Design Patterns (ODPs) from various repositories suited our modelling requirements and could be reused. Next, we rigorously tested the ontology modules, intentionally causing errors and conducting extensive inference tests to ensure their reliability through the use of the reasoner available on Protegé. Finally, we integrated the refined ontologies into a unified module, enriching them with domain entities from large knowledge graphs.
+The next step was to actually get to work developing one by one the steps of this methodology. In general, the workflow followed to approach the development of ontologies was more or less as follows:
+- we developed with the help of artificial intelligences (such as chatGPT or bing's copilot) a definition of the bias dealt with at the time
+- once a definition was obtained, we reused it to create a short user story to be used as a basic model for the logical development of the ontology.
+- having obtained the user story we created validated our competency  related to the user story just obtained.
+- finally we used the AI to develop a first draft of the ontology which we then used as a basis for the development of the final ontology.
+- once the ontology resulting from all the changes and corrections met our quality criteria, we started testing its functionality through the Protegé reasoner
+
+
+
+ODP:
+In developing the ontologies we have tried, whenever possible, to use as many Ontology Design Patterns found on the site (link) to ensure a good structure characterised by reusability and interoperability for ontologies. The patterns used define well recurring situations, concepts and structures that often fit well with the definition of the cognitive biases discussed. Below is a list of the ODPs used:
+
+Action: http://ontologydesignpatterns.org/wiki/Submissions:Action
+The purpose of the pattern is to model actions that are proposed, planned, and performed or abandoned, together with their status and durations in time.
+The pattern allows to represent different types of actions, e.g. implemented actions or suspended actions, but does not enforce any rules such as "if an action is an instance of the class of completed actions it has to have the status 'completed' ".
+
+Classification:	http://www.ontologydesignpatterns.org/cp/owl/classification.owl
+To represent the relations between concepts (roles, task, parameters) and entities (person, events, values), which concepts can be assigned to. To formalize the application (e.g. tagging) of informal knowledge organization systems such as lexica, thesauri, subject directories, folksonomies, etc., where concepts are first-order elements.	
+It is possible to make assertions about e.g., categories, types, roles, which are typically considered at the meta-level of an ontology. Instances of Concept reify such elements, which are therefore put in the ordinary domain of an ontology. It is not possible to parametrize the classification over different dimensions e.g., time, space, etc.
+
+EventCore: http://ontologydesignpatterns.org/wiki/Submissions:EventCore
+The purpose of this pattern is to provide a minimalistic model of event where it is not always possible to separate its spatial and the temporal aspects, thus can model events that move or possess discontinuous temporal extent. Events according to this model has at least one participant, attached via a participant-role, and may have additional descriptive information through its information object.
+This pattern can model moving events and events with discontinuous temporal extents, provided an appropriate spatiotemporal extent model is used. This pattern, however, does not facilitate modeling complex relationships between events, such as causality, provenance, or correlation
+
+ActingFor: http://www.ontologydesignpatterns.org/ont/dul/DUL.owl
+To represent that some agent is acting in order to forward the action of a social (non-physical) agent.
+An ontology designer is able to express relations like delegation, working for, etc. It is not possible to express either time indexing (the situation pattern should be specialized to that purpose), nor the role or task, under which the social action is carried out by the physical agent (the descriptionandsituation pattern should be used instead).
+
+Experience & Observation: https://raw.githubusercontent.com/eureadit/crowdsourcing-ontology/master/owl/crowdsourcing-evidences.owl.ttl
+to represent the epistemological "missing link" between a cognitive activity, e.g. the interaction with a cultural object, and any evidence of the effects this activity has on the individuals that are engaged with it; what can collectively be considered as an experience.
+Adopting this pattern decomposes the lax notion of experience (e.g. through engaging in reading a book or incidentally hearing some music) into distinguishable elements that can be used in e.g. text annotation with greater precision than with a single named entity representing the experience.
+
+Situation: http://www.ontologydesignpatterns.org/cp/owl/situation.owl
+To represent contexts or situations, and the things that are contextualized.	
+We can contextualize things that have something in common, or are associated: a same place, time, view, causal link, systemic dependence, etc.
+
+An Ontology Design Pattern for Activity Reasoning: http://descartes-core.org/ontologies/activities/1.0/ActivityPattern.owl
+To incorporate the general two perspectives of activities: a workflow perspective, which are often observed in planning-related applications, and a spatiotemporal perspective, which are often found in geographic activity analysis.	
+Only two perspectives for activities are included in this pattern. While these two perspectives are commonly observed in existing work, other views toward activities may also need to be supported in future work.
+
+Topic: http://ontologydesignpatterns.org/cp/owl/topic.owl
+To represent topics and their relations.
+We are able to represent topics, subjects, or themes of something, and to organize topics into partonomic and topological structures.
+
+Participation: 	http://ontologydesignpatterns.org/cp/owl/participation.owl
+To represent participation of an object in an event.	
+It is possible to model whatever relation between objects and events. Using cardinality restrictions appropriately allows to limit the number of participants, e.g. 'life of' is a specialization of this pattern that requires a functional object property (cardinality 1. . .1).
+
+Observation: http://www.ontologydesignpatterns.org/cp/owl/observation.owl 
+The intent of this pattern is to represent observations of things, under a set of parameters. Common parameters may be the time and place of the observation, but may be any feature that is observed concerning the specific thing being observed.	
+We are able to represent the parameters of observations made.
+
+Frames:
+One of the key objectives of the project was to harmonize the ontologies with the Framester hub, thereby enriching the semantic representations of biases. This was achieved by employing QUOKKA to extract semantic frames from the user narratives and scenarios provided by the AI, and subsequently aligning them with entities within the Framester framework.
+The QUOKKA workflow is a methodical process designed for enhancing knowledge within ontological resources and knowledge bases. It involves utilizing SPARQL queries to expand queries, ultimately constructing a semantic framework within a specific domain. The goal of the QUOKKA workflow is to construct frame structures by incorporating Linked Open Data entities sourced from reputable semantic web repositories, thereby enriching knowledge graphs.
+
+Closure module:
+After modeling each individual ontology concerning our cognitive biases through Protegé, we created a single closure module, which acts as a merger of our ontologies. This closure module was thoroughly tested using Protegé's reasoner to detect any errors or inconsistencies. 
+
+Subsequently, each ontology and any associated files were hosted on Github and made accessible on a webpage to provide a dereferencable URI for each bias module.
+
+
+
+
+Problems:
+AI: Among the problems we encountered were mainly the limitations of the tools we had to deal with during the realisation of this project. In order:
+The use of chatGPT was undoubtedly useful, but the limitations implied by the 3.5Turbo model (free to date) must still be emphasised. At times, bias information was unspecific or even absent, as knowledge of this model stops at the first quarter of the year 2022. A solution to this problem was to use Bing's Copilot, which turns out to be an equivalent of ChatGPT, which has as a bonus the possibility of checking real-time information on the Internet by offering a model comparable to GPT4 for free. This allowed for more accurate consultation and more reliable outputs for the AI to call upon in the development of the project.
+Specific issues revolved around successfully aligning the ontologies proposed by the AI with their respective user stories and competency questions. Instances where the AI made hallucinatory errors were rare but still occurred. An example occurred in defining the user story for Subjective Validation Bias, where the AI generated a story entirely different from the requested one. Generally, through targeted prompting and sometimes even cross-utilization of both tools (GPT and Copilot), we managed to resolve these issues.
+
+
+ODP: Another problem was related to the choice and use of the ODPs, which did not immediately result in an immediate understanding of their use. At the beginning of our work, we tiptoed around the Ontology Design Patterns site, as we could not fully understand how elastically we could use each pattern already developed and made available on the site. This problem was overcome quite easily over time and with more careful consultation of the site, as we were able to get a general sense out of it as the project progressed through the combined use of various patterns that allowed for a more semantically accurate definition of the classes and properties involved in our ontologies.
+
+
+quokka: Aligning with Framester Frames through the use of QUOKKA initially posed a challenge for us, as the constraints of the tool often resulted in a lack of suitable concepts to use in the specific cases we were modeling. Reconciling the ontologies, both in their embryonic state and in their conceptual maturity, with the Frames obtained through QUOKKA was not easy, as this process required considerable effort. Over time, we managed to resolve this issue through more extensive research and, as mentioned earlier, with an increasingly thorough understanding of how to effectively operate within the context of this project.
+
+
+Conclusions:
+Artificial intelligence (AI) tools like GPT or Copilot serve as invaluable resources that demand a thorough understanding of their capabilities. Once mastered, they become indispensable time-savers and invaluable assistants, providing insightful ideas.
+
+However, it's essential to recognize that despite appearing informed and adept at advanced reasoning, AI-generated responses often lack reliability upon closer examination. Consequently, users must conduct additional verification to ensure the accuracy of the information provided. While AI may mimic logical reasoning to some extent, true comprehension remains a distinctly human trait. It's unrealistic to expect AI to consistently align with human thought processes. Therefore, these tools should be viewed as supplements to human expertise rather than replacements.
+
+In the realm of cognitive biases and ontology development, each bias exhibits both similarities and differences, particularly within cognitive clusters. Crafting a comprehensive ontology to encompass all biases necessitates careful planning to maintain the integrity of each bias within the structure. Some biases share such strong similarities that they could be considered interchangeable, allowing multiple biases to coexist within the same ontology using common terms.
