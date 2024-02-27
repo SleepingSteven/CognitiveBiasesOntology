@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
+        <uri id="Automatically generated entry, Timestamp=1709043738362" name="http://www.semanticweb.org/hp/ontologies/2024/1/gaia/CognitiveBiasOntology/observer-expectancy-effect" uri="observer-expectancyeffect(gaia).owl"/>
+        <uri id="Automatically generated entry, Timestamp=1709043738362" name="http://www.semanticweb.org/hp/ontologies/2024/gaia/CognitiveBiasOntology/expectation-bias#/" uri="expectationbias(gaia).owl"/>
+        <uri id="Automatically generated entry, Timestamp=1709043738362" name="http://www.semanticweb.org/hp/ontologies/2024/gaia/CognitiveBiasOntology/experimenterbias" uri="experimenterbias(gaia).owl"/>
+        <uri id="Automatically generated entry, Timestamp=1709043738362" name="http://www.semanticweb.org/hp/ontologies/2024/gaia/CognitiveBiasOntology/observer-effect" uri="observereffectbias(gaia).owl"/>
+        <uri id="Automatically generated entry, Timestamp=1709043738362" name="http://www.semanticweb.org/hp/ontologies/2024/gaia/CognitiveBiasOntology/selective-perception" uri="selectiveperceptionbias(gaia).owl"/>
+        <uri id="Automatically generated entry, Timestamp=1709043738362" name="http://www.semanticweb.org/lucia/ontologies/2023/11/google_effect" uri="GoogleEffect.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1709043738362" name="http://www.semanticweb.org/lucia/ontologies/2024/0/absent-mindedness" uri="AbsentMindedness.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1709043738362" name="http://www.semanticweb.org/lucia/ontologies/2024/0/levels_processing" uri="LevelsProcessing.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1709043738362" name="http://www.semanticweb.org/lucia/ontologies/2024/0/next-in-line" uri="NextInLine.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1709043738362" name="http://www.semanticweb.org/lucia/ontologies/2024/0/testing_effect" uri="TestingEffect.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1709043738362" name="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/ostrich_effect" uri="OstrichEffect.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1709043738362" name="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/semmelweis_reflex" uri="SemmelweisReflex.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1709043738362" name="http://www.semanticweb.org/mguen/ontologies/2024/0/CognitiveBiasOntology/subjective_validation" uri="SubjectiveValidation.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1709043738362" name="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/continued_influence_effect" uri="ContinuedInfluenceEffect.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1709043738362" name="http://www.semanticweb.org/mguen/ontologies/2024/1/CognitiveBiasOntology/tip_of_the_tongue_phenomenon" uri="TipOfTheTonguePhenomenon.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1709043738362" name="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/choise_supportive_bias" uri="choice_supportive_bias.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1709043738362" name="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/confirmation_bias" uri="confirmation_bias.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1709043738362" name="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/congruence_bias" uri="congruence_bias.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1709043738362" name="http://www.semanticweb.org/stefanosorrentino/ontologies/2024/1/post_purchase_realization" uri="post_purchase_realization.owl"/>
+    </group>
+</catalog>
