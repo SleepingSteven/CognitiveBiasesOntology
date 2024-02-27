@@ -1,4 +1,6 @@
-﻿1. Give me a definition of the Confirmation Bias
+ChatGPT conversation:
+
+1. Give me a definition of the Confirmation Bias
 
 Confirmation bias is a cognitive bias that involves the tendency of individuals to selectively seek, interpret, and remember information that confirms their preexisting beliefs or hypotheses while disregarding or undervaluing evidence that contradicts those beliefs. It leads people to unconsciously favor information that aligns with their existing attitudes, opinions, or expectations, thereby reinforcing their initial beliefs and potentially hindering objective evaluation of evidence.
 
@@ -177,6 +179,9 @@ Sure, here are five competency questions related to the ontology of confirmation
 
 These SPARQL queries can be executed against RDF data conforming to the confirmation bias ontology to answer the respective competency questions.
 
+
+Considerations:
+The proposed ontology served as a starting base to develop a more fitting one that could comprehend also logical connections highlighted in the textual description of the bias and sub-classes that could describe different kind of informations.
 
 
 Bibliography:
