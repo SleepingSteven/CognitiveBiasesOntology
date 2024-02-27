@@ -2,7 +2,6 @@
 <rdf:RDF xmlns="http://www.semanticweb.org/hp/ontologies/2024/1/gaia/CognitiveBiasOntology/observer-expectancy-effect#"
      xml:base="http://www.semanticweb.org/hp/ontologies/2024/1/gaia/CognitiveBiasOntology/observer-expectancy-effect"
      xmlns:fs="https://w3id.org/framester/data/framestercore/"
-     xmlns:cbo="http://www.semanticweb.org/hp/ontologies/2024/1/gaia/CognitiveBiasOntology/observer-expectancy-effect#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
@@ -15,7 +14,7 @@
         <dcterms:creator>Gaia Ortona</dcterms:creator>
         <dcterms:description>The ontology designed for the formalization of &quot;Observer-expectancy effect&quot;</dcterms:description>
         <dcterms:title>Observer-expectancy effect ontolgy</dcterms:title>
-        <observer-expectancy-effect:scenario>Sports Coaching: a coach who expects a particular athlete to be a star player may inadvertently focus on and highlight instances of the athlete&apos;s success, even if other team members contribute equally or more significantly.</observer-expectancy-effect:scenario>
+        <scenario>Sports Coaching: a coach who expects a particular athlete to be a star player may inadvertently focus on and highlight instances of the athlete&apos;s success, even if other team members contribute equally or more significantly.</scenario>
         <rdfs:comment>The ontology designed for the &quot;Observer-expectancy effect&quot;</rdfs:comment>
     </owl:Ontology>
     
@@ -137,7 +136,7 @@
     <!-- http://www.semanticweb.org/hp/ontologies/2024/1/gaia/CognitiveBiasOntology/observer-expectancy-effect#Bias -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2024/1/gaia/CognitiveBiasOntology/observer-expectancy-effect#Bias">
-        <rdfs:comment>represents an individual or entity conducting the observation or research.</rdfs:comment>
+        <rdfs:comment>represents the bias the observer is encountering</rdfs:comment>
     </owl:Class>
     
 
@@ -185,20 +184,12 @@
     
 
 
-    <!-- http://www.semanticweb.org/hp/ontologies/2024/1/gaia/CognitiveBiasOntology/observer-expectancy-effect#overlooking_other_players -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2024/1/gaia/CognitiveBiasOntology/observer-expectancy-effect#overlooking_other_players">
-        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/1/gaia/CognitiveBiasOntology/observer-expectancy-effect#Observation"/>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://www.semanticweb.org/hp/ontologies/2024/1/gaia/CognitiveBiasOntology/observer-expectancy-effect#Coach_Anderson -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2024/1/gaia/CognitiveBiasOntology/observer-expectancy-effect#Coach_Anderson">
         <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/1/gaia/CognitiveBiasOntology/observer-expectancy-effect#Observer"/>
-        <observer-expectancy-effect:hasExpectation rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/1/gaia/CognitiveBiasOntology/observer-expectancy-effect#Josh_successful_shots"/>
-        <observer-expectancy-effect:observes rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/1/gaia/CognitiveBiasOntology/observer-expectancy-effect#Josh"/>
+        <hasExpectation rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/1/gaia/CognitiveBiasOntology/observer-expectancy-effect#Josh_successful_shots"/>
+        <observes rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/1/gaia/CognitiveBiasOntology/observer-expectancy-effect#Josh"/>
     </owl:NamedIndividual>
     
 
@@ -215,7 +206,15 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2024/1/gaia/CognitiveBiasOntology/observer-expectancy-effect#Josh_successful_shots">
         <rdf:type rdf:resource="https://w3id.org/framester/data/framestercore/Expectation"/>
-        <observer-expectancy-effect:influencesObservation rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/1/gaia/CognitiveBiasOntology/observer-expectancy-effect#overlooking_other_players"/>
+        <influencesObservation rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/1/gaia/CognitiveBiasOntology/observer-expectancy-effect#overlooking_other_players"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/1/gaia/CognitiveBiasOntology/observer-expectancy-effect#overlooking_other_players -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2024/1/gaia/CognitiveBiasOntology/observer-expectancy-effect#overlooking_other_players">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/1/gaia/CognitiveBiasOntology/observer-expectancy-effect#Observation"/>
     </owl:NamedIndividual>
 </rdf:RDF>
 
