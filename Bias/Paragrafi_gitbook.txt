@@ -1,3 +1,14 @@
+Introduction to Cognitive Bias Ontology.
+
+This report documents the advancements made by our team in the ongoing project of developing a thorough ontology for cognitive biases, as part of the Knowledge Representation and Extraction (KRE) initiative. It serves as a diary detailing our progress in contributing to the Cognitive Bias Ontology. The group consists of Lucia Bertolidini, Matteo Guenci, Gaia Ortona, and Stefano Sorrentino.
+
+The project tasked us with creating a fresh ontology to categorize the various manifestations and types of cognitive biases. Our approach drew from the Cognitive Bias Codex, a convenient visual representation illustrating the 188 cognitive biases cataloged by Wikipedia. We selected two out of the 20 clusters of biases outlined in the codex, each representing a distinct category where biases manifest. These two clusters served as the foundation for the ontology developed during the project.
+
+The clusters are:
+
+"We are drawn to details that confirm our own existing beliefs" (Confermation bias, Congruence bias, Post-purchase rationalization, Choice-supportive bias, Selective perception, Observer-expectancy effect, Observer bias, Experimenter's bias, Expectation bias, Obstrich effect, Subjective validation, Continued influence effect, Semmelweis reflex)
+"We store memories differently based on how they were experienced" (Tip of the tongue phenomenon, Google effect, Next-in-line effect, Testing effect, Absent-mindedness, Levels-of-processing effect)
+
 
 Consulted Literature:
 First of all, in order to gain a deeper understanding of the biases we decided to deal with, the fundamental step was to consult the scientific literature concerning these phenomena. We preferred, as far as possible, to consult scientific and academic articles that could help us understand the structure and logical development of the patterns expressed by the cognitive biases in question.
@@ -59,9 +70,14 @@ We are able to represent the parameters of observations made.
 
 Frames:
 One of the key objectives of the project was to harmonize the ontologies with the Framester hub, thereby enriching the semantic representations of biases. This was achieved by employing QUOKKA to extract semantic frames from the user narratives and scenarios provided by the AI, and subsequently aligning them with entities within the Framester framework.
-
-
 The QUOKKA workflow is a methodical process designed for enhancing knowledge within ontological resources and knowledge bases. It involves utilizing SPARQL queries to expand queries, ultimately constructing a semantic framework within a specific domain. The goal of the QUOKKA workflow is to construct frame structures by incorporating Linked Open Data entities sourced from reputable semantic web repositories, thereby enriching knowledge graphs.
+
+Closure module:
+After modeling each individual ontology concerning our cognitive biases through Protegé, we created a single closure module, which acts as a merger of our ontologies. This closure module was thoroughly tested using Protegé's reasoner to detect any errors or inconsistencies. 
+
+Subsequently, each ontology and any associated files were hosted on Github and made accessible on a webpage to provide a dereferencable URI for each bias module.
+
+
 
 
 Problems:
